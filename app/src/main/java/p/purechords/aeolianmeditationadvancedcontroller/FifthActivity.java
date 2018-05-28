@@ -315,13 +315,13 @@ public class FifthActivity extends AppCompatActivity {
             sourceNote = sharedPref.getInt("sourceNote", sourceNote);
             sourceSelect = sharedPref.getInt("sourceSelect", sourceSelect);
             sourceMidiOct = sharedPref.getInt("sourceMidiOct", sourceMidiOct);
-            sourceFreq = sharedPref.getInt("sourceFreq", sourceFreq);
+            sourceFreq = sharedPref.getString("sourceFreq", sourceFreq);
 
             // fm freq
             fmNote = sharedPref.getInt("fmNote", fmNote);
             fmSelect = sharedPref.getInt("fmSelect", fmSelect);
             fmMidiOct = sharedPref.getInt("fmMidiOct", fmMidiOct);
-            fmFreq = sharedPref.getInt("fmFreq", fmFreq);
+            fmFreq = sharedPref.getString("fmFreq", fmFreq);
 
             // fm modulation
             fmDepth = sharedPref.getInt("fmDepth", fmDepth);
@@ -1056,12 +1056,12 @@ public class FifthActivity extends AppCompatActivity {
             public void onFocusChange(View v, boolean hasFocus) {
                 if (!hasFocus) {
                     if (sourceFreqGet.getText().toString().equals("")) sourceFreqGet.setText("220");
-                    sourceFreq = Integer.parseInt(sourceFreqGet.getText().toString());
+                    sourceFreq = sourceFreqGet.getText().toString();
                     if (connectionCheck == 1) {
                         getMyNetAddress();
                         String myMsgAddress = "/1/2525/1/133";
                         OscMessage myOscMessage = new OscMessage(myMsgAddress);
-                        myOscMessage.add(sourceFreq);
+                        myOscMessage.add(Integer.parseInt(sourceFreq));
                         oscP5.send(myOscMessage, getBroadcastLocation);
                     }
                 }
@@ -1073,20 +1073,17 @@ public class FifthActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             public void afterTextChanged(Editable s) {
                 String msgGetCheckS = sourceFreqGet.getText().toString();
-                if (msgGetCheckS.equals("0")) {
-                    sourceFreqGet.setText("");
-                }
                 if (!msgGetCheckS.equals("")) {
                     if (Integer.parseInt(sourceFreqGet.getText().toString()) > 1000) {
                         sourceFreqGet.setText("1000");
                     }
 
-                    sourceFreq = Integer.parseInt(sourceFreqGet.getText().toString());
+                    sourceFreq = sourceFreqGet.getText().toString();
                     if (connectionCheck == 1) {
                         getMyNetAddress();
                         String myMsgAddress = "/1/2525/1/133";
                         OscMessage myOscMessage = new OscMessage(myMsgAddress);
-                        myOscMessage.add(sourceFreq);
+                        myOscMessage.add(Integer.parseInt(sourceFreq));
                         oscP5.send(myOscMessage, getBroadcastLocation);
                     }
                 }
@@ -1141,12 +1138,12 @@ public class FifthActivity extends AppCompatActivity {
             public void onFocusChange(View v, boolean hasFocus) {
                 if (!hasFocus) {
                     if (fmFreqGet.getText().toString().equals("")) fmFreqGet.setText("220");
-                    fmFreq = Integer.parseInt(fmFreqGet.getText().toString());
+                    fmFreq = fmFreqGet.getText().toString();
                     if (connectionCheck == 1) {
                         getMyNetAddress();
                         String myMsgAddress = "/1/2525/1/137";
                         OscMessage myOscMessage = new OscMessage(myMsgAddress);
-                        myOscMessage.add(fmFreq);
+                        myOscMessage.add(Integer.parseInt(fmFreq));
                         oscP5.send(myOscMessage, getBroadcastLocation);
                     }
                 }
@@ -1158,20 +1155,17 @@ public class FifthActivity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             public void afterTextChanged(Editable s) {
                 String msgGetCheckS = fmFreqGet.getText().toString();
-                if (msgGetCheckS.equals("0")) {
-                    fmFreqGet.setText("");
-                }
                 if (!msgGetCheckS.equals("")) {
                     if (Integer.parseInt(fmFreqGet.getText().toString()) > 1000) {
                         fmFreqGet.setText("1000");
                     }
 
-                    fmFreq = Integer.parseInt(fmFreqGet.getText().toString());
+                    fmFreq = fmFreqGet.getText().toString();
                     if (connectionCheck == 1) {
                         getMyNetAddress();
                         String myMsgAddress = "/1/2525/1/137";
                         OscMessage myOscMessage = new OscMessage(myMsgAddress);
-                        myOscMessage.add(fmFreq);
+                        myOscMessage.add(Integer.parseInt(fmFreq));
                         oscP5.send(myOscMessage, getBroadcastLocation);
                     }
                 }
@@ -1989,13 +1983,13 @@ public class FifthActivity extends AppCompatActivity {
         editor.putInt("sourceNote", sourceNote);
         editor.putInt("sourceSelect", sourceSelect);
         editor.putInt("sourceMidiOct", sourceMidiOct);
-        editor.putInt("sourceFreq", sourceFreq);
+        editor.putString("sourceFreq", sourceFreq);
 
         // fm freq
         editor.putInt("fmNote", fmNote);
         editor.putInt("fmSelect", fmSelect);
         editor.putInt("fmMidiOct", fmMidiOct);
-        editor.putInt("fmFreq", fmFreq);
+        editor.putString("fmFreq", fmFreq);
 
         // fm modulation
         editor.putInt("fmDepth", fmDepth);

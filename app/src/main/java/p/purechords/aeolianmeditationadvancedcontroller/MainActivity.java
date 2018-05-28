@@ -574,13 +574,13 @@ public class MainActivity extends AppCompatActivity {
     public static int sourceNote = 0;
     public static int sourceSelect = 0;
     public static int sourceMidiOct = 0;
-    public static int sourceFreq = 0;
+    public static String sourceFreq = "0";
 
     // fm freq
     public static int fmNote = 0;
     public static int fmSelect = 0;
     public static int fmMidiOct = 0;
-    public static int fmFreq = 0;
+    public static String fmFreq = "0";
 
     // fm modulation
     public static int fmDepth = 0;
@@ -880,13 +880,13 @@ public class MainActivity extends AppCompatActivity {
              sourceNote = sharedPref.getInt("sourceNote", sourceNote);
              sourceSelect = sharedPref.getInt("sourceSelect", sourceSelect);
              sourceMidiOct = sharedPref.getInt("sourceMidiOct", sourceMidiOct);
-             sourceFreq = sharedPref.getInt("sourceFreq", sourceFreq);
+             sourceFreq = sharedPref.getString("sourceFreq", sourceFreq);
 
             // fm freq
              fmNote = sharedPref.getInt("fmNote", fmNote);
              fmSelect = sharedPref.getInt("fmSelect", fmSelect);
              fmMidiOct = sharedPref.getInt("fmMidiOct", fmMidiOct);
-             fmFreq = sharedPref.getInt("fmFreq", fmFreq);
+             fmFreq = sharedPref.getString("fmFreq", fmFreq);
 
             // fm modulation
              fmDepth = sharedPref.getInt("fmDepth", fmDepth);
@@ -2606,13 +2606,13 @@ public class MainActivity extends AppCompatActivity {
         editor.putInt("sourceNote", sourceNote);
         editor.putInt("sourceSelect", sourceSelect);
         editor.putInt("sourceMidiOct", sourceMidiOct);
-        editor.putInt("sourceFreq", sourceFreq);
+        editor.putString("sourceFreq", sourceFreq);
 
         // fm freq
         editor.putInt("fmNote", fmNote);
         editor.putInt("fmSelect", fmSelect);
         editor.putInt("fmMidiOct", fmMidiOct);
-        editor.putInt("fmFreq", fmFreq);
+        editor.putString("fmFreq", fmFreq);
 
         // fm modulation
         editor.putInt("fmDepth", fmDepth);
@@ -2646,9 +2646,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void oscEvent(OscMessage theOscMessage) {
 
-       /* System.out.println(" addrpattern: "+theOscMessage.addrPattern());
+        System.out.println(" addrpattern: "+theOscMessage.addrPattern());
         System.out.println(" typetag: "+theOscMessage.typetag());
-        System.out.println(" msg: "+theOscMessage.get(0).intValue());*/
+        System.out.println(" msg: "+theOscMessage.get(0).intValue());
              if (theOscMessage.addrPattern().equals("/1/2525/2/129")) {
                  obsInt.setValue(theOscMessage.get(0).intValue());
                  harmMix = obsInt.value;
@@ -3260,7 +3260,7 @@ public class MainActivity extends AppCompatActivity {
             sourceNote = obsIntSourceNote.value;
         }
         if (theOscMessage.addrPattern().equals("/1/2525/2/133")) {
-            obsIntSourceFreq.setValue(theOscMessage.get(0).intValue());
+            obsIntSourceFreq.setValue(String.valueOf(theOscMessage.get(0).intValue()));
             sourceFreq = obsIntSourceFreq.value;
         }
         if (theOscMessage.addrPattern().equals("/1/2525/2/134")) {
@@ -3277,7 +3277,7 @@ public class MainActivity extends AppCompatActivity {
             fmNote = obsIntFmNote.value;
         }
         if (theOscMessage.addrPattern().equals("/1/2525/2/137")) {
-            obsIntFmFreq.setValue(theOscMessage.get(0).intValue());
+            obsIntFmFreq.setValue(String.valueOf(theOscMessage.get(0).intValue()));
             fmFreq = obsIntFmFreq.value;
         }
         if (theOscMessage.addrPattern().equals("/1/2525/2/138")) {
@@ -7448,29 +7448,20 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntSourceFreq extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
 
-        public int value;
+        public String value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
 
         @Bindable
-        public int getValue()
+        public String getValue()
         {
             return value;
         }
 
-        public void setValue(int value)
+        public void setValue(String value)
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
         }
     }
 
@@ -7576,29 +7567,18 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntFmFreq extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
-
-        public int value;
-
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+        public String value;
 
         @Bindable
-        public int getValue()
+        public String getValue()
         {
             return value;
         }
 
-        public void setValue(int value)
+        public void setValue(String value)
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
         }
     }
 

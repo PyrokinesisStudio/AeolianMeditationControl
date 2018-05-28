@@ -309,13 +309,13 @@ public class FourthActivity extends AppCompatActivity {
             sourceNote = sharedPref.getInt("sourceNote", sourceNote);
             sourceSelect = sharedPref.getInt("sourceSelect", sourceSelect);
             sourceMidiOct = sharedPref.getInt("sourceMidiOct", sourceMidiOct);
-            sourceFreq = sharedPref.getInt("sourceFreq", sourceFreq);
+            sourceFreq = sharedPref.getString("sourceFreq", sourceFreq);
 
             // fm freq
             fmNote = sharedPref.getInt("fmNote", fmNote);
             fmSelect = sharedPref.getInt("fmSelect", fmSelect);
             fmMidiOct = sharedPref.getInt("fmMidiOct", fmMidiOct);
-            fmFreq = sharedPref.getInt("fmFreq", fmFreq);
+            fmFreq = sharedPref.getString("fmFreq", fmFreq);
 
             // fm modulation
             fmDepth = sharedPref.getInt("fmDepth", fmDepth);
@@ -2344,13 +2344,13 @@ public class FourthActivity extends AppCompatActivity {
         editor.putInt("sourceNote", sourceNote);
         editor.putInt("sourceSelect", sourceSelect);
         editor.putInt("sourceMidiOct", sourceMidiOct);
-        editor.putInt("sourceFreq", sourceFreq);
+        editor.putString("sourceFreq", sourceFreq);
 
         // fm freq
         editor.putInt("fmNote", fmNote);
         editor.putInt("fmSelect", fmSelect);
         editor.putInt("fmMidiOct", fmMidiOct);
-        editor.putInt("fmFreq", fmFreq);
+        editor.putString("fmFreq", fmFreq);
 
         // fm modulation
         editor.putInt("fmDepth", fmDepth);
