@@ -40,7 +40,6 @@ import java.util.Enumeration;
 import netP5.NetAddress;
 import oscP5.OscMessage;
 import oscP5.OscP5;
-import oscP5.OscProperties;
 import p.purechords.aeolianmeditationadvancedcontroller.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -2262,7 +2261,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onNothingSelected(AdapterView<?> arg0) {
-            // TODO Auto-generated method stub
+
         }
     } // end listener
 
@@ -2283,7 +2282,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onNothingSelected(AdapterView<?> arg0) {
-            // TODO Auto-generated method stub
+
         }
     } // end listener
 
@@ -2304,7 +2303,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onNothingSelected(AdapterView<?> arg0) {
-            // TODO Auto-generated method stub
+
         }
     } // end listener
 
