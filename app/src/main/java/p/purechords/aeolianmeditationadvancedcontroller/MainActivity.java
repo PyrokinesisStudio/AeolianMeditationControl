@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
     public static int myColorF = Color.parseColor("#353535");
 
     ///////////////////////////////////////////////////////// Color declarations End
-///////////
+
     ///////////////////////////////////////////////////////// OSC Variables Start
 
     // Innit OSC
@@ -9592,7 +9592,7 @@ public class MainActivity extends AppCompatActivity {
 
     //////////////////////////////////////////////////////////////////////////////////////////////
 
-   ////////////////////////////////////// Binding Adapters
+   ////////////////////////////////////// Binding Adapters start
 
     @BindingAdapter("sl_value")
     public static void setValue(Slider slider, int sliderVal) {
@@ -9607,6 +9607,9 @@ public class MainActivity extends AppCompatActivity {
             spinner.setSelection(position);
         }
     }
+    ////////////////////////////////////// Binding Adapters end
+
+    ////////////////////////////////////// Get local ip start
 
     void  getLocalIpAddress() {
         try {
@@ -9624,5 +9627,7 @@ public class MainActivity extends AppCompatActivity {
             ex.printStackTrace();
         }
     }
+
+    ////////////////////////////////////// Get local ip end
 
 } // end activity
