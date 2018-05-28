@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
     public static int myColorF = Color.parseColor("#353535");
 
     ///////////////////////////////////////////////////////// Color declarations End
-
+///////////
     ///////////////////////////////////////////////////////// OSC Variables Start
 
     // Innit OSC
