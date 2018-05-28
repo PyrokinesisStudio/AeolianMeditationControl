@@ -2647,9 +2647,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void oscEvent(OscMessage theOscMessage) {
 
-        System.out.println(" addrpattern: "+theOscMessage.addrPattern());
+       /* System.out.println(" addrpattern: "+theOscMessage.addrPattern());
         System.out.println(" typetag: "+theOscMessage.typetag());
-        System.out.println(" msg: "+theOscMessage.get(0).intValue());
+        System.out.println(" msg: "+theOscMessage.get(0).intValue());*/
              if (theOscMessage.addrPattern().equals("/1/2525/2/129")) {
                  obsInt.setValue(theOscMessage.get(0).intValue());
                  harmMix = obsInt.value;
