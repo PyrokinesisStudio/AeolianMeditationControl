@@ -2956,6 +2956,7 @@ public class ThirdActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy(); // Always call the superclass method first
         if (connectionCheck == 1) {
+            connectionCheck = 0;
             oscP5.stop();
         }
     } // end destroy
