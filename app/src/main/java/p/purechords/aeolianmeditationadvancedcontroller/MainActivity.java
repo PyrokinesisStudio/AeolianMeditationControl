@@ -2637,8 +2637,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy(); // Always call the superclass method first
-        final ToggleButton connectGet = findViewById(R.id.toggleButtonConnect);
-        if (connectGet.isChecked()) {
+        if (connectionCheck == 1) {
             oscP5.stop();
         }
     } // end destroy

@@ -2014,4 +2014,12 @@ public class FifthActivity extends AppCompatActivity {
 
     } //end pause
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy(); // Always call the superclass method first
+        if (connectionCheck == 1) {
+            oscP5.stop();
+        }
+    } // end destroy
+
 } // end activity
