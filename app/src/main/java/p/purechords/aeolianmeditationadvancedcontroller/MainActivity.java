@@ -44,7 +44,7 @@ import p.purechords.aeolianmeditationadvancedcontroller.databinding.ActivityMain
 
 public class MainActivity extends AppCompatActivity {
 
-
+    //
     ///////////////////////////////////////////////////////// Color declarations Start
 
     public static int myColorA = Color.parseColor("#FFFFFFFF");
