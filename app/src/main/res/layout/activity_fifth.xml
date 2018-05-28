@@ -1,0 +1,1303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+    <variable
+        name="obsIntSourceSelect"
+        type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntSourceSelect" />
+        <variable
+            name="obsIntSourceNote"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntSourceNote" />
+        <variable
+            name="obsIntSourceFreq"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntSourceFreq" />
+        <variable
+            name="obsIntSourceMidiOct"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntSourceMidiOct" />
+        <variable
+            name="obsIntFmSelect"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntFmSelect" />
+        <variable
+            name="obsIntFmNote"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntFmNote" />
+        <variable
+            name="obsIntFmFreq"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntFmFreq" />
+        <variable
+            name="obsIntFmMidiOct"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntFmMidiOct" />
+        <variable
+            name="obsIntFmDepth"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntFmDepth" />
+        <variable
+            name="obsIntFmDepthModDepth"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntFmDepthModDepth" />
+        <variable
+            name="obsIntFmDepthModRate"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntFmDepthModRate" />
+        <variable
+            name="obsIntFmDepthModSync"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntFmDepthModSync" />
+        <variable
+            name="obsIntFmDepthModDiv"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntFmDepthModDiv" />
+        <variable
+            name="obsIntFmDepthModRetrig"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntFmDepthModRetrig" />
+        <variable
+            name="obsIntFmFreqModDepth"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntFmFreqModDepth" />
+        <variable
+            name="obsIntFmFreqModRate"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntFmFreqModRate" />
+        <variable
+            name="obsIntFmFreqModSync"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntFmFreqModSync" />
+        <variable
+            name="obsIntFmFreqModDiv"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntFmFreqModDiv" />
+        <variable
+            name="obsIntFmFreqModRetrig"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntFmFreqModRetrig" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layoutFreqPageBackFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/metal"
+        tools:context=".FifthActivity">
+
+        <ImageView
+            android:id="@+id/imageViewScrewUL"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.01"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.02"
+            app:srcCompat="@drawable/screw2" />
+
+        <ImageView
+            android:id="@+id/imageViewScrewLL"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.01"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.98"
+            app:srcCompat="@drawable/screw2" />
+
+        <ImageView
+            android:id="@+id/imageViewScrewUR"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.99"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.02"
+            app:srcCompat="@drawable/screw2" />
+
+        <ImageView
+            android:id="@+id/imageViewScrewLR"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.99"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.98"
+            app:srcCompat="@drawable/screw2" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layoutFreqPageBackground"
+            android:layout_width="540dp"
+            android:layout_height="300dp"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageViewFreqPageBack"
+                android:layout_width="537dp"
+                android:layout_height="297dp"
+                android:background="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutSourceRandom"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:background="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.98"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.98">
+
+                <Button
+                    android:id="@+id/buttonSourceRandom"
+                    android:layout_width="37dp"
+                    android:layout_height="27dp"
+                    android:background="#ff4F75A1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textViewInnit"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Innit"
+                android:textColor="@android:color/white"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.872"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.875" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutSourceInnit"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:background="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.86"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.98">
+
+                <Button
+                    android:id="@+id/buttonSourceInnit"
+                    android:layout_width="37dp"
+                    android:layout_height="27dp"
+                    android:background="#ff4F75A1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textViewRandom"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Random"
+                android:textColor="@android:color/white"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.997"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.875" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutNavigate"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:background="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.01"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.99">
+
+                <ImageView
+                    android:id="@+id/imageViewNavigateBack"
+                    android:layout_width="247dp"
+                    android:layout_height="42dp"
+                    android:background="@android:color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layoutToHarmonicsPage"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.27"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.76">
+
+                    <Button
+                        android:id="@+id/buttonToHarmonicsPage"
+                        android:layout_width="37dp"
+                        android:layout_height="27dp"
+                        android:background="#ff4F75A1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layoutToSourcePage"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.76">
+
+                    <Button
+                        android:id="@+id/buttonToSourcePage"
+                        android:layout_width="37dp"
+                        android:layout_height="27dp"
+                        android:background="#ff4F75A1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.51"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layoutToNoisePage"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.74"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.76">
+
+                    <Button
+                        android:id="@+id/buttonToNoisePage"
+                        android:layout_width="37dp"
+                        android:layout_height="27dp"
+                        android:background="#ff4F75A1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layoutToEffectsPage"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.97"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.76">
+
+                    <Button
+                        android:id="@+id/buttonToEffectsPage"
+                        android:layout_width="37dp"
+                        android:layout_height="27dp"
+                        android:background="#ff4F75A1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layoutToMainPage"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.025"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.76">
+
+                    <Button
+                        android:id="@+id/buttonToMainPage"
+                        android:layout_width="37dp"
+                        android:layout_height="27dp"
+                        android:background="#ff4F75A1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/textViewToMain"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Main"
+                    android:textColor="@android:color/white"
+                    android:textSize="8sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.04" />
+
+                <TextView
+                    android:id="@+id/textViewToHarmonics"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Harm"
+                    android:textColor="@android:color/white"
+                    android:textSize="8sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.25"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.042" />
+
+                <TextView
+                    android:id="@+id/textViewToFreq"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Freq"
+                    android:textColor="@android:color/white"
+                    android:textSize="8sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.042" />
+
+                <TextView
+                    android:id="@+id/textViewToNoise"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Noise"
+                    android:textColor="@android:color/white"
+                    android:textSize="8sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.75"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.042" />
+
+                <TextView
+                    android:id="@+id/textViewToEffects"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Effects"
+                    android:textColor="@android:color/white"
+                    android:textSize="8sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.042" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutFreqAndFm"
+                android:layout_width="475dp"
+                android:layout_height="225dp"
+                android:background="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.1">
+
+                <ImageView
+                    android:id="@+id/imageViewFreqAndFmBack"
+                    android:layout_width="472dp"
+                    android:layout_height="222dp"
+                    android:background="@android:color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <TextView
+                    android:id="@+id/textViewSouceAndMod"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Harmonic Frequency Source and Modulation Section"
+                    android:textColor="@android:color/white"
+                    android:textSize="8sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/fmModLayout"
+                    android:layout_width="450dp"
+                    android:layout_height="100dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.95">
+
+                    <ImageView
+                        android:id="@+id/imageViewHarmonicsBack4"
+                        android:layout_width="447dp"
+                        android:layout_height="97dp"
+                        android:background="@android:color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5" />
+
+                    <ImageView
+                        android:id="@+id/imageViewSldierBack73"
+                        android:layout_width="100dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/sliderback"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.106"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.325" />
+
+                    <ImageView
+                        android:id="@+id/imageViewSldierBack74"
+                        android:layout_width="100dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/sliderback"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.397"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.325" />
+
+                    <ImageView
+                        android:id="@+id/imageViewSldierBack75"
+                        android:layout_width="100dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/sliderback"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.106"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.6" />
+
+                    <ImageView
+                        android:id="@+id/imageViewSldierBack76"
+                        android:layout_width="100dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/sliderback"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.397"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.6" />
+
+                    <ImageView
+                        android:id="@+id/imageViewSldierBack77"
+                        android:layout_width="135dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/sliderback"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0" />
+
+                    <Spinner
+                        android:id="@+id/spinnerFmDepthModDiv"
+                        android:layout_width="75dp"
+                        android:layout_height="20dp"
+                        android:entries="@array/spinnerDiv"
+                        android:popupBackground="@android:color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.797"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.337"
+                        app:selection="@{obsIntFmDepthModDiv.value}" />
+
+                    <Spinner
+                        android:id="@+id/spinnerFmFreqModDiv"
+                        android:layout_width="75dp"
+                        android:layout_height="20dp"
+                        android:entries="@array/spinnerDiv"
+                        android:popupBackground="@android:color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.797"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.587"
+                        app:selection="@{obsIntFmFreqModDiv.value}" />
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/layouttoggleButtonFmDepthModSync"
+                        android:layout_width="40dp"
+                        android:layout_height="16dp"
+                        android:background="@android:color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.597"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.321">
+
+                        <ToggleButton
+                            android:id="@+id/toggleButtonFmDepthModSync"
+                            android:layout_width="37dp"
+                            android:layout_height="13dp"
+                            android:background="#ff4F75A1"
+                            android:checked="@{obsIntFmDepthModSync.value}"
+                            android:textOff=" "
+                            android:textOn=" "
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </android.support.constraint.ConstraintLayout>
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/layouttoggleButtonFmFreqModSync"
+                        android:layout_width="40dp"
+                        android:layout_height="16dp"
+                        android:background="@android:color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.597"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.559">
+
+                        <ToggleButton
+                            android:id="@+id/toggleButtonFmFreqModSync"
+                            android:layout_width="37dp"
+                            android:layout_height="13dp"
+                            android:background="#ff4F75A1"
+                            android:checked="@{obsIntFmFreqModSync.value}"
+                            android:textOff=" "
+                            android:textOn=" "
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </android.support.constraint.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/textViewFmFreqMod"
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="Freq Mod"
+                        android:textColor="@android:color/white"
+                        android:textSize="8sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.004"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.337" />
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/layouttoggleButtonFmDepthModRetrig"
+                        android:layout_width="40dp"
+                        android:layout_height="16dp"
+                        android:background="@android:color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.96"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.321">
+
+                        <ToggleButton
+                            android:id="@+id/toggleButtonFmDepthModRetrig"
+                            android:layout_width="37dp"
+                            android:layout_height="13dp"
+                            android:background="#ff4F75A1"
+                            android:checked="@{obsIntFmDepthModRetrig.value}"
+                            android:textOff=" "
+                            android:textOn=" "
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </android.support.constraint.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/textViewFmModDiv"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Div"
+                        android:textColor="@android:color/white"
+                        android:textSize="8sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.797"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.179" />
+
+                    <TextView
+                        android:id="@+id/textViewRetrig"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Retrig"
+                        android:textColor="@android:color/white"
+                        android:textSize="8sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.997"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.179" />
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/layouttoggleButtonFmFreqModRetrig"
+                        android:layout_width="40dp"
+                        android:layout_height="16dp"
+                        android:background="@android:color/white"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.96"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.559">
+
+                        <ToggleButton
+                            android:id="@+id/toggleButtonFmFreqModRetrig"
+                            android:layout_width="37dp"
+                            android:layout_height="13dp"
+                            android:background="#ff4F75A1"
+                            android:checked="@{obsIntFmFreqModRetrig.value}"
+                            android:textOff=" "
+                            android:textOn=" "
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </android.support.constraint.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/textViewFmModSync2"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Sync"
+                        android:textColor="@android:color/white"
+                        android:textSize="8sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.597"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.179" />
+
+                    <TextView
+                        android:id="@+id/textViewFmModRate2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Rate"
+                        android:textColor="@android:color/white"
+                        android:textSize="8sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.391"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.179" />
+
+                    <TextView
+                        android:id="@+id/textViewFmModDepth"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Depth"
+                        android:textColor="@android:color/white"
+                        android:textSize="8sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.106"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.179" />
+
+                    <TextView
+                        android:id="@+id/textViewFmDepthMod"
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:text="Depth Mod"
+                        android:textColor="@android:color/white"
+                        android:textSize="8sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.004"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.587" />
+
+                    <TextView
+                        android:id="@+id/textViewFmDepth"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Depth"
+                        android:textColor="@android:color/white"
+                        android:textSize="8sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.413"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.75" />
+
+                    <TextView
+                        android:id="@+id/textViewFmMod"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Frequency Modulation"
+                        android:textColor="@android:color/white"
+                        android:textSize="8sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <com.rey.material.widget.Slider
+                        android:id="@+id/sliderFmFreqModRate"
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:keepScreenOn="true"
+                        android:padding="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:rotation="0"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.397"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.587"
+                        app:sl_alwaysFillThumb="true"
+                        app:sl_maxValue="127"
+                        app:sl_primaryColor="#7dd0f4"
+                        app:sl_secondaryColor="#7dd0f4"
+                        app:sl_textSize="12sp"
+                        app:sl_thumbFocusRadius="5dp"
+                        app:sl_thumbRadius="4dp"
+                        app:sl_thumbTouchRadius="25dp"
+                        app:sl_trackSize="1dp"
+                        app:sl_value="@{obsIntFmFreqModRate.value}" />
+
+                    <com.rey.material.widget.Slider
+                        android:id="@+id/sliderFmDepthModRate"
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:keepScreenOn="true"
+                        android:padding="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:rotation="0"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.397"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.337"
+                        app:sl_alwaysFillThumb="true"
+                        app:sl_maxValue="127"
+                        app:sl_primaryColor="#7dd0f4"
+                        app:sl_secondaryColor="#7dd0f4"
+                        app:sl_textSize="12sp"
+                        app:sl_thumbFocusRadius="5dp"
+                        app:sl_thumbRadius="4dp"
+                        app:sl_thumbTouchRadius="25dp"
+                        app:sl_trackSize="1dp"
+                        app:sl_value="@{obsIntFmDepthModRate.value}" />
+
+                    <com.rey.material.widget.Slider
+                        android:id="@+id/sliderFmDepthModDepth"
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:keepScreenOn="true"
+                        android:padding="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:rotation="0"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.106"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.296"
+                        app:sl_alwaysFillThumb="true"
+                        app:sl_maxValue="127"
+                        app:sl_primaryColor="#7dd0f4"
+                        app:sl_secondaryColor="#7dd0f4"
+                        app:sl_textSize="12sp"
+                        app:sl_thumbFocusRadius="5dp"
+                        app:sl_thumbRadius="4dp"
+                        app:sl_thumbTouchRadius="25dp"
+                        app:sl_trackSize="1dp"
+                        app:sl_value="@{obsIntFmDepthModDepth.value}" />
+
+                    <com.rey.material.widget.Slider
+                        android:id="@+id/sliderFmFreqModDepth"
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:keepScreenOn="true"
+                        android:padding="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:rotation="0"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.106"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.587"
+                        app:sl_alwaysFillThumb="true"
+                        app:sl_maxValue="127"
+                        app:sl_primaryColor="#7dd0f4"
+                        app:sl_secondaryColor="#7dd0f4"
+                        app:sl_textSize="12sp"
+                        app:sl_thumbFocusRadius="5dp"
+                        app:sl_thumbRadius="4dp"
+                        app:sl_thumbTouchRadius="25dp"
+                        app:sl_trackSize="1dp"
+                        app:sl_value="@{obsIntFmFreqModDepth.value}" />
+
+                    <com.rey.material.widget.Slider
+                        android:id="@+id/sliderFmDepth"
+                        android:layout_width="125dp"
+                        android:layout_height="20dp"
+                        android:gravity="center"
+                        android:keepScreenOn="true"
+                        android:padding="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:rotation="0"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.97"
+                        app:sl_alwaysFillThumb="true"
+                        app:sl_maxValue="127"
+                        app:sl_primaryColor="#7dd0f4"
+                        app:sl_secondaryColor="#7dd0f4"
+                        app:sl_textSize="12sp"
+                        app:sl_thumbFocusRadius="5dp"
+                        app:sl_thumbRadius="4dp"
+                        app:sl_thumbTouchRadius="25dp"
+                        app:sl_trackSize="1dp"
+                        app:sl_value="@{obsIntFmDepth.value}" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/fmSourceLayout"
+                    android:layout_width="160dp"
+                    android:layout_height="100dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.92"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.1">
+
+                    <ImageView
+                        android:id="@+id/imageViewFmBack"
+                        android:layout_width="157dp"
+                        android:layout_height="97dp"
+                        android:background="@android:color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5" />
+
+                    <Spinner
+                        android:id="@+id/spinnerFmMidiOct"
+                        android:layout_width="75dp"
+                        android:layout_height="30dp"
+                        android:entries="@array/spinnerNotes"
+                        android:popupBackground="@android:color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.971"
+                        app:selection="@{obsIntFmMidiOct.value}" />
+
+                    <Spinner
+                        android:id="@+id/spinnerFmSelect"
+                        android:layout_width="63dp"
+                        android:layout_height="30dp"
+                        android:entries="@array/spinnerNotes"
+                        android:popupBackground="@android:color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.971"
+                        app:selection="@{obsIntFmSelect.value}" />
+
+                    <Spinner
+                        android:id="@+id/spinnerFmNote"
+                        android:layout_width="75dp"
+                        android:layout_height="30dp"
+                        android:entries="@array/spinnerNotes"
+                        android:popupBackground="@android:color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.385"
+                        app:selection="@{obsIntFmNote.value}" />
+
+                    <TextView
+                        android:id="@+id/textViewFmNote"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Note"
+                        android:textColor="@android:color/white"
+                        android:textSize="8sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.179" />
+
+                    <TextView
+                        android:id="@+id/textViewFmMidiOctave"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Midi Oct"
+                        android:textColor="@android:color/white"
+                        android:textSize="8sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.617" />
+
+                    <TextView
+                        android:id="@+id/textViewFreqSourceSelect2"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Source"
+                        android:textColor="@android:color/white"
+                        android:textSize="8sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.617" />
+
+                    <TextView
+                        android:id="@+id/textViewFmFreq"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Freq"
+                        android:textColor="@android:color/white"
+                        android:textSize="8sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.179" />
+
+                    <EditText
+                        android:id="@+id/editTextFmFreq"
+                        android:layout_width="75dp"
+                        android:layout_height="30dp"
+                        android:backgroundTint="@android:color/background_light"
+                        android:digits="0123456789."
+                        android:ems="10"
+                        android:gravity="center"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:singleLine="true"
+                        android:text="220"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/background_light"
+                        android:textColorHighlight="@android:color/background_light"
+                        android:textSize="8sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.385" />
+
+                    <TextView
+                        android:id="@+id/textViewFmSource"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="FM Source"
+                        android:textColor="@android:color/white"
+                        android:textSize="8sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/freqSourceLayout"
+                    android:layout_width="160dp"
+                    android:layout_height="100dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.19"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.1">
+
+                    <ImageView
+                        android:id="@+id/imageViewSourceBack"
+                        android:layout_width="157dp"
+                        android:layout_height="97dp"
+                        android:background="@android:color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Spinner
+                        android:id="@+id/spinnerSourceMidiOct"
+                        android:layout_width="75dp"
+                        android:layout_height="30dp"
+                        android:entries="@array/spinnerNotes"
+                        android:popupBackground="@android:color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.971"
+                        app:selection="@{obsIntSourceMidiOct.value}" />
+
+                    <Spinner
+                        android:id="@+id/spinnerSourceSelect"
+                        android:layout_width="75dp"
+                        android:layout_height="30dp"
+                        android:entries="@array/spinnerNotes"
+                        android:popupBackground="@android:color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.971"
+                        app:selection="@{obsIntSourceSelect.value}" />
+
+                    <Spinner
+                        android:id="@+id/spinnerSourceNote"
+                        android:layout_width="75dp"
+                        android:layout_height="30dp"
+                        android:entries="@array/spinnerNotes"
+                        android:popupBackground="@android:color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.357"
+                        app:selection="@{obsIntSourceNote.value}" />
+
+                    <EditText
+                        android:id="@+id/editTextSourceFreq"
+                        android:layout_width="75dp"
+                        android:layout_height="30dp"
+                        android:backgroundTint="@android:color/background_light"
+                        android:digits="0123456789."
+                        android:ems="10"
+                        android:gravity="center"
+                        android:imeOptions="flagNoExtractUi"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:singleLine="true"
+                        android:text="220"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/background_light"
+                        android:textColorHighlight="@android:color/background_light"
+                        android:textSize="8sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.357" />
+
+                    <TextView
+                        android:id="@+id/textViewSourceNote"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Note"
+                        android:textColor="@android:color/white"
+                        android:textSize="8sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.179" />
+
+                    <TextView
+                        android:id="@+id/textViewSourceMidiOctave"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Midi Oct"
+                        android:textColor="@android:color/white"
+                        android:textSize="8sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.617" />
+
+                    <TextView
+                        android:id="@+id/textViewFreqSourceSelect"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Source"
+                        android:textColor="@android:color/white"
+                        android:textSize="8sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.617" />
+
+                    <TextView
+                        android:id="@+id/textViewSourceFreq"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Freq"
+                        android:textColor="@android:color/white"
+                        android:textSize="8sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.179" />
+
+                    <TextView
+                        android:id="@+id/textViewHarmonicSource"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Harmonic Source"
+                        android:textColor="@android:color/white"
+                        android:textSize="8sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </android.support.constraint.ConstraintLayout>
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+</layout>
