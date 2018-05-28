@@ -1786,7 +1786,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        // 11
+
 
         final Button buttonToEffectsPageGet = findViewById(R.id.buttonToEffectsPage);
         buttonToEffectsPageGet.setOnTouchListener(new View.OnTouchListener() {
