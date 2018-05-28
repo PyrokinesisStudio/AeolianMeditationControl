@@ -28,6 +28,8 @@ import static p.purechords.aeolianmeditationadvancedcontroller.MainActivity.*;
 
 public class SecondActivity extends AppCompatActivity {
 
+
+
     Random random = new Random();
 
     @SuppressLint("ClickableViewAccessibility")

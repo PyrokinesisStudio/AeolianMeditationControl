@@ -45,6 +45,7 @@ import p.purechords.aeolianmeditationadvancedcontroller.databinding.ActivityMain
 
 public class MainActivity extends AppCompatActivity {
 
+
     ///////////////////////////////////////////////////////// Color declarations Start
 
     public static int myColorA = Color.parseColor("#FFFFFFFF");
@@ -442,6 +443,7 @@ public class MainActivity extends AppCompatActivity {
     public static int noiseVolMod4 = 1;
 
     // noise vol rate
+
     public static int noiseVolRate1 = 1;
     public static int noiseVolRate2 = 1;
     public static int noiseVolRate3 = 1;

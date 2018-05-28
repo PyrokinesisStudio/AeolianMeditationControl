@@ -27,7 +27,9 @@ import p.purechords.aeolianmeditationadvancedcontroller.databinding.ActivityFour
 import static p.purechords.aeolianmeditationadvancedcontroller.MainActivity.*;
 
 public class FourthActivity extends AppCompatActivity {
-//
+
+
+
     Random random = new Random();
 
     @SuppressLint("ClickableViewAccessibility")
