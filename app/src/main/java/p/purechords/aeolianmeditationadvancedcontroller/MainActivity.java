@@ -2737,7 +2737,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case "/1/2525/2/24":
                     obsIntHarmMod12.setValue(theOscMessage.get(0).intValue());
-                    harmVolModDiv12 = obsIntHarmMod12.value;
+                    harmVolMod12 = obsIntHarmMod12.value;
                     break;
                 case "/1/2525/2/25":
                     obsIntHarmRate1.setValue(theOscMessage.get(0).intValue());
