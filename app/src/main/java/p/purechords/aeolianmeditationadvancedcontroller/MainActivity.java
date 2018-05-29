@@ -10,9 +10,11 @@ import android.databinding.BindingAdapter;
 import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.graphics.Rect;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
+import android.system.Os;
 import android.text.Editable;
 import android.text.InputFilter;
 import android.text.Spanned;
@@ -2227,18 +2229,6 @@ public class MainActivity extends AppCompatActivity {
 
     } // end create bundle
 
-
-    ////////////////////////////////////////// Osc Link start
-
-    void oscLink(){
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-        StrictMode.setThreadPolicy(policy);
-
-        oscP5 = new OscP5(this,9000);
-
-    }
-
-    ////////////////////////////////////////// Osc Link end
 
     public static void getMyNetAddress(){
         getBroadcastLocation = new NetAddress(ipData,portData);
@@ -9610,5 +9600,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     ////////////////////////////////////// Get local ip end
+    
+    ////////////////////////////////////////// Osc Link start
+
+    void oscLink(){
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
+        oscP5 = new OscP5(this,9000);
+
+    }
+
+    ////////////////////////////////////////// Osc Link end
+
 
 } // end activity
