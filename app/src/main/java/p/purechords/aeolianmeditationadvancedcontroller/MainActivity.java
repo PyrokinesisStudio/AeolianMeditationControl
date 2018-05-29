@@ -3771,32 +3771,20 @@ public class MainActivity extends AppCompatActivity {
                     obsIntkeyboardOct.setValue(theOscMessage.get(0).intValue());
                     keyboardOctave = obsIntkeyboardOct.value;
                     break;
-            }
+            } // end switch
 
         } // end osc listener
-
-
 
     ////////////////////////////////////////// OSC Event End
 
 
    //////////////////////////////////////////////////////////////////////////////////////////////
 
-    public interface OnIntegerChangeListener
-    {
-        public void onIntegerChanged(int newValue);
-    }
+
 
     public class ObsInt extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
-
         public int value;
-
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
 
         @Bindable
         public int getValue()
@@ -3808,10 +3796,6 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
         }
     }
 
@@ -3821,14 +3805,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseMix extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
-
         public int value;
-
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
 
         @Bindable
         public int getValue()
@@ -3840,10 +3817,6 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
         }
     }
 
@@ -3853,14 +3826,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntOutputVol extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
-
         public int value;
-
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
 
         @Bindable
         public int getValue()
@@ -3872,10 +3838,6 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
         }
     }
 
@@ -3885,8 +3847,6 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntDevicePower extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
-
         public boolean value;
 
         @Bindable
@@ -3909,7 +3869,6 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntDrone extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
 
         public boolean value;
 
@@ -3933,14 +3892,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntEnvA extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
-
         public int value;
-
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
 
         @Bindable
         public int getValue()
@@ -3952,10 +3904,6 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
         }
     }
 
@@ -3965,14 +3913,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntEnvD extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -3984,10 +3929,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -3997,14 +3939,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntEnvS extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4016,10 +3955,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4029,14 +3965,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntEnvR extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4048,10 +3981,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4061,14 +3991,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmVol1 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4080,10 +4007,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4093,14 +4017,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmVol2 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4112,10 +4033,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4125,14 +4043,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmVol3 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4144,10 +4059,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4157,14 +4069,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmVol4 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4176,10 +4085,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4189,14 +4095,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmVol5 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4208,10 +4111,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4221,14 +4121,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmVol6 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4240,10 +4137,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4253,14 +4147,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmVol7 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4272,10 +4163,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4285,14 +4173,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmVol8 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4304,10 +4189,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4317,14 +4199,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmVol9 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4336,10 +4215,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4349,14 +4225,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmVol10 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4368,10 +4241,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4381,14 +4251,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmVol11 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4400,10 +4267,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4413,14 +4277,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmVol12 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4432,10 +4293,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4445,14 +4303,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmMod1 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4464,10 +4319,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4477,14 +4329,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmMod2 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4496,10 +4345,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4509,14 +4355,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmMod3 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4528,10 +4371,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4541,14 +4381,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmMod4 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4560,10 +4397,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4573,14 +4407,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmMod5 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4592,10 +4423,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4605,14 +4433,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmMod6 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4624,10 +4449,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4637,14 +4459,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmMod7 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4656,10 +4475,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4669,14 +4485,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmMod8 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4688,10 +4501,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4701,14 +4511,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmMod9 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4720,10 +4527,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4733,14 +4537,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmMod10 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4752,10 +4553,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4765,14 +4563,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmMod11 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4784,10 +4579,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4797,14 +4589,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmMod12 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4816,10 +4605,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4829,14 +4615,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmRate1 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4848,10 +4631,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4861,14 +4641,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmRate2 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4880,10 +4657,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4893,14 +4667,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmRate3 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4912,10 +4683,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4925,14 +4693,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmRate4 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4944,10 +4709,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4957,14 +4719,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmRate5 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -4976,10 +4735,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -4989,14 +4745,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmRate6 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -5008,10 +4761,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -5021,14 +4771,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmRate7 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -5040,10 +4787,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -5053,14 +4797,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmRate8 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -5072,10 +4813,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -5085,14 +4823,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmRate9 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -5104,10 +4839,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -5117,14 +4849,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmRate10 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -5136,10 +4865,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -5149,14 +4875,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmRate11 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -5168,10 +4891,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -5181,14 +4901,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmRate12 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -5200,10 +4917,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -5214,14 +4928,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmRateRange extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -5233,10 +4944,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -5246,7 +4954,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmSync1 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -5270,7 +4978,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmSync2 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -5294,7 +5002,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmSync3 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -5318,7 +5026,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmSync4 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -5342,7 +5050,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmSync5 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -5366,7 +5074,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmSync6 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -5390,7 +5098,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmSync7 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -5414,7 +5122,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmSync8 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -5438,7 +5146,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmSync9 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -5462,7 +5170,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmSync10 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -5486,7 +5194,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmSync11 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -5510,7 +5218,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmSync12 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -5534,14 +5242,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmDiv1 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -5553,10 +5258,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -5566,14 +5268,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmDiv2 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -5585,10 +5284,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -5598,14 +5294,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmDiv3 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -5617,10 +5310,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -5630,14 +5320,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmDiv4 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -5649,10 +5336,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -5662,14 +5346,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmDiv5 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -5681,10 +5362,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -5694,14 +5372,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmDiv6 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -5713,10 +5388,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -5726,14 +5398,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmDiv7 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -5745,10 +5414,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -5758,14 +5424,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmDiv8 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -5777,10 +5440,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -5790,14 +5450,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmDiv9 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -5809,10 +5466,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -5822,14 +5476,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmDiv10 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -5841,10 +5492,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -5854,14 +5502,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmDiv11 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -5873,10 +5518,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -5886,14 +5528,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmDiv12 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -5905,10 +5544,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -5918,14 +5554,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseVol1 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -5937,10 +5570,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -5950,14 +5580,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseVol2 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -5969,10 +5596,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -5982,14 +5606,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseVol3 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6001,10 +5622,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6014,14 +5632,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseVol4 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6033,10 +5648,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6046,14 +5658,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseVolMod1 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6065,10 +5674,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6078,14 +5684,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseVolMod2 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6097,10 +5700,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6110,14 +5710,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseVolMod3 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6129,10 +5726,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6142,14 +5736,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseVolMod4 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6161,10 +5752,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6174,14 +5762,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseVolRate1 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6193,10 +5778,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6206,14 +5788,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseVolRate2 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6225,10 +5804,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6238,14 +5814,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseVolRate3 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6257,10 +5830,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6270,14 +5840,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseVolRate4 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6289,10 +5856,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6302,7 +5866,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseVolSync1 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -6326,7 +5890,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseVolSync2 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -6350,7 +5914,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseVolSync3 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -6374,7 +5938,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseVolSync4 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -6398,14 +5962,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseVolDiv1 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6417,10 +5978,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6430,14 +5988,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseVolDiv2 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6449,10 +6004,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6462,14 +6014,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseVolDiv3 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6481,10 +6030,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6494,14 +6040,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseVolDiv4 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6513,10 +6056,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6526,14 +6066,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseCut1 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6545,10 +6082,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6558,14 +6092,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseCut2 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6577,10 +6108,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6590,14 +6118,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseCut3 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6609,10 +6134,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6622,14 +6144,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseCut4 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6641,10 +6160,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6654,14 +6170,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseRes1 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6673,10 +6186,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6686,14 +6196,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseRes2 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6705,10 +6212,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6718,14 +6222,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseRes3 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6737,10 +6238,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6750,14 +6248,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseRes4 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6769,10 +6264,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6782,14 +6274,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseCutMod1 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6801,10 +6290,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6814,14 +6300,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseCutMod2 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6833,10 +6316,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6846,14 +6326,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseCutMod3 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6865,10 +6342,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6878,14 +6352,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseCutMod4 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6897,10 +6368,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6910,14 +6378,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseCutRate1 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6929,10 +6394,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6942,14 +6404,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseCutRate2 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6961,10 +6420,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -6974,14 +6430,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseCutRate3 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -6993,10 +6446,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -7006,14 +6456,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseCutRate4 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -7025,10 +6472,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -7038,14 +6482,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseCutDiv1 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -7057,10 +6498,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -7070,14 +6508,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseCutDiv2 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -7089,10 +6524,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -7102,14 +6534,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseCutDiv3 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -7121,10 +6550,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -7134,14 +6560,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseCutDiv4 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -7153,10 +6576,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -7166,7 +6586,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseCutSync1 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -7190,7 +6610,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseCutSync2 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -7214,7 +6634,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseCutSync3 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -7238,7 +6658,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseCutSync4 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -7262,7 +6682,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoisePink extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -7286,14 +6706,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseRateRangeVol extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -7305,10 +6722,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -7318,14 +6732,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseRateRangeCut extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -7337,10 +6748,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -7350,14 +6758,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntSourceSelect extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -7369,10 +6774,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -7382,14 +6784,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntSourceNote extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -7401,10 +6800,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -7437,14 +6833,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntSourceMidiOct extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -7456,10 +6849,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -7469,14 +6859,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntFmSelect extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -7488,10 +6875,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -7501,14 +6885,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntFmNote extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -7520,10 +6901,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -7554,14 +6932,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntFmMidiOct extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -7573,10 +6948,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -7586,14 +6958,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntFmDepth extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -7605,10 +6974,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -7618,14 +6984,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntFmDepthModDepth extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -7637,10 +7000,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -7650,14 +7010,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntFmDepthModRate extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -7669,10 +7026,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -7682,14 +7036,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntFmDepthModDiv extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -7701,10 +7052,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -7712,7 +7060,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntFmDepthModSync extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -7736,7 +7084,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntFmDepthModRetrig extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -7760,14 +7108,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntFmFreqModDepth extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -7779,10 +7124,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -7792,14 +7134,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntFmFreqModRate extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -7811,10 +7150,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -7824,14 +7160,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntFmFreqModDiv extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -7843,10 +7176,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -7854,7 +7184,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntFmFreqModSync extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -7878,7 +7208,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntFmFreqModRetrig extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -7902,7 +7232,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntDcKill extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -7926,7 +7256,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntDecimatePower extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -7950,14 +7280,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntDecimateReduce extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -7969,10 +7296,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -7982,14 +7306,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntDecimateMod extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -8001,10 +7322,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -8014,14 +7332,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntDecimateRate extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -8033,10 +7348,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -8046,7 +7358,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntDecimateSync extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -8070,14 +7382,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntDecimateDiv extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -8089,10 +7398,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -8102,7 +7408,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntDecimateRetrig extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -8126,7 +7432,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntFilterPower extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -8150,14 +7456,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntFilterCut extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -8169,10 +7472,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -8182,14 +7482,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntFilterRes extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -8201,10 +7498,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -8214,14 +7508,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntFilterEnv extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -8233,10 +7524,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -8246,14 +7534,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntFilterMod extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -8265,10 +7550,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -8278,14 +7560,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntFilterRate extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -8297,10 +7576,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -8310,7 +7586,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntFilterSync extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -8334,14 +7610,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntFilterDiv extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -8353,10 +7626,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -8366,7 +7636,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntFilterRetrig extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -8390,7 +7660,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntDelayPower extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -8414,14 +7684,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntDelayTime extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -8433,10 +7700,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -8446,14 +7710,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntDelayTimeR extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -8465,10 +7726,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -8478,7 +7736,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntDelaySync extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -8502,14 +7760,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntDelayDiv extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -8521,10 +7776,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -8534,14 +7786,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntDelayDivR extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -8553,10 +7802,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -8566,14 +7812,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntDelayFeed extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -8585,10 +7828,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -8598,14 +7838,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntDelayWet extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -8617,10 +7854,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -8630,7 +7864,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntChorusPower extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -8654,14 +7888,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntChorusRate extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -8673,10 +7904,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -8686,14 +7914,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntChorusDepth extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -8705,10 +7930,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -8718,14 +7940,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntChorusDelay extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -8737,10 +7956,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -8750,14 +7966,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntChorusFeed extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -8769,10 +7982,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -8782,14 +7992,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntChorusWet extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -8801,10 +8008,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -8814,7 +8018,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntReverbPower extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -8838,14 +8042,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntReverbSize extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -8857,10 +8058,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -8870,14 +8068,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntReverbDamp extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -8889,10 +8084,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -8902,14 +8094,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntReverbWidth extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -8921,10 +8110,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -8934,14 +8120,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntReverbWet extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -8953,10 +8136,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -8966,14 +8146,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntMidiChan extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -8985,10 +8162,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -8998,14 +8172,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntBpm extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -9017,10 +8188,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -9030,14 +8198,11 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntKeyboardOct extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public int value;
 
-        public void setOnIntegerChangeListener(OnIntegerChangeListener listener)
-        {
-            this.listener = listener;
-        }
+
 
         @Bindable
         public int getValue()
@@ -9049,10 +8214,7 @@ public class MainActivity extends AppCompatActivity {
         {
             this.value = value;
             notifyPropertyChanged(BR.value);
-            if(listener != null)
-            {
-                listener.onIntegerChanged(value);
-            }
+
         }
     }
 
@@ -9062,7 +8224,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmRetrig1 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -9086,7 +8248,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmRetrig2 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -9110,7 +8272,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmRetrig3 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -9134,7 +8296,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmRetrig4 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -9158,7 +8320,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmRetrig5 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -9182,7 +8344,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmRetrig6 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -9206,7 +8368,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmRetrig7 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -9230,7 +8392,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmRetrig8 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -9254,7 +8416,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmRetrig9 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -9278,7 +8440,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmRetrig10 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -9302,7 +8464,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmRetrig11 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -9326,7 +8488,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntHarmRetrig12 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -9350,7 +8512,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseVolRetrig1 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -9374,7 +8536,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseVolRetrig2 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -9398,7 +8560,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseVolRetrig3 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -9422,7 +8584,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseVolRetrig4 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -9446,7 +8608,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseCutRetrig1 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -9470,7 +8632,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseCutRetrig2 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -9494,7 +8656,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseCutRetrig3 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
@@ -9518,7 +8680,7 @@ public class MainActivity extends AppCompatActivity {
 
     public class ObsIntNoiseCutRetrig4 extends BaseObservable
     {
-        private OnIntegerChangeListener listener;
+
 
         public boolean value;
 
