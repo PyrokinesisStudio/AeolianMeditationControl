@@ -2640,1170 +2640,1145 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(" addrpattern: "+theOscMessage.addrPattern());
         System.out.println(" typetag: "+theOscMessage.typetag());
         System.out.println(" msg: "+theOscMessage.get(0).intValue());
-             if (theOscMessage.addrPattern().equals("/1/2525/2/129")) {
-                 obsInt.setValue(theOscMessage.get(0).intValue());
-                 harmMix = obsInt.value;
-            }
-             if (theOscMessage.addrPattern().equals("/1/2525/2/130")) {
-                 obsIntNoiseMix.setValue(theOscMessage.get(0).intValue());
-                 noiseMix = obsIntNoiseMix.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/189")) {
-                obsIntOutputVol.setValue(theOscMessage.get(0).intValue());
-                outputVolume = obsIntOutputVol.value;
-             }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/190")) {
-                 if (theOscMessage.get(0).intValue() == 127) {
-                     obsIntDevicePower.setValue(true);
-                     devicePower = 127;
-                 }
-                if (theOscMessage.get(0).intValue() == 0) {
-                    obsIntDevicePower.setValue(false);
-                    devicePower = 0;
-                }
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/183")) {
-                 if (theOscMessage.get(0).intValue() == 127) {
-                     obsIntDrone.setValue(true);
-                     droneVal = 127;
-            }
-                 if (theOscMessage.get(0).intValue() == 0) {
-                    obsIntDrone.setValue(false);
-                     droneVal = 0;
-            }
-             }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/184")) {
-                obsIntEnvA.setValue(theOscMessage.get(0).intValue());
-                envelopeA = obsIntEnvA.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/185")) {
-                obsIntEnvD.setValue(theOscMessage.get(0).intValue());
-                envelopeD = obsIntEnvD.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/186")) {
-                obsIntEnvS.setValue(theOscMessage.get(0).intValue());
-                envelopeS = obsIntEnvS.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/187")) {
-                obsIntEnvR.setValue(theOscMessage.get(0).intValue());
-                envelopeR = obsIntEnvR.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/1")) {
-            obsIntHarmVol1.setValue(theOscMessage.get(0).intValue());
-            harmVol1 = obsIntHarmVol1.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/2")) {
-            obsIntHarmVol2.setValue(theOscMessage.get(0).intValue());
-            harmVol2 = obsIntHarmVol2.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/3")) {
-            obsIntHarmVol3.setValue(theOscMessage.get(0).intValue());
-                harmVol3 = obsIntHarmVol3.value;
-             }
-             if (theOscMessage.addrPattern().equals("/1/2525/2/4")) {
-            obsIntHarmVol4.setValue(theOscMessage.get(0).intValue());
-                 harmVol4 = obsIntHarmVol4.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/5")) {
-            obsIntHarmVol5.setValue(theOscMessage.get(0).intValue());
-                harmVol5 = obsIntHarmVol5.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/6")) {
-            obsIntHarmVol6.setValue(theOscMessage.get(0).intValue());
-                harmVol6 = obsIntHarmVol6.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/7")) {
-            obsIntHarmVol7.setValue(theOscMessage.get(0).intValue());
-                harmVol7 = obsIntHarmVol7.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/8")) {
-            obsIntHarmVol8.setValue(theOscMessage.get(0).intValue());
-                harmVol8 = obsIntHarmVol8.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/9")) {
-            obsIntHarmVol9.setValue(theOscMessage.get(0).intValue());
-                harmVol9 = obsIntHarmVol9.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/10")) {
-            obsIntHarmVol10.setValue(theOscMessage.get(0).intValue());
-                harmVol10 = obsIntHarmVol10.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/11")) {
-            obsIntHarmVol11.setValue(theOscMessage.get(0).intValue());
-                harmVol11 = obsIntHarmVol11.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/12")) {
-            obsIntHarmVol12.setValue(theOscMessage.get(0).intValue());
-                harmVol12 = obsIntHarmVol12.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/13")) {
-            obsIntHarmMod1.setValue(theOscMessage.get(0).intValue());
-            harmVolMod1 = obsIntHarmMod1.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/14")) {
-            obsIntHarmMod2.setValue(theOscMessage.get(0).intValue());
-                harmVolMod2 = obsIntHarmMod2.value;
-             }
-             if (theOscMessage.addrPattern().equals("/1/2525/2/15")) {
-            obsIntHarmMod3.setValue(theOscMessage.get(0).intValue());
-                 harmVolMod3 = obsIntHarmMod3.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/16")) {
-            obsIntHarmMod4.setValue(theOscMessage.get(0).intValue());
-                harmVolMod4 = obsIntHarmMod4.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/17")) {
-            obsIntHarmMod5.setValue(theOscMessage.get(0).intValue());
-                harmVolMod5 = obsIntHarmMod5.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/18")) {
-            obsIntHarmMod6.setValue(theOscMessage.get(0).intValue());
-                harmVolMod6 = obsIntHarmMod6.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/19")) {
-            obsIntHarmMod7.setValue(theOscMessage.get(0).intValue());
-                harmVolMod7 = obsIntHarmMod7.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/20")) {
-            obsIntHarmMod8.setValue(theOscMessage.get(0).intValue());
-                harmVolMod8 = obsIntHarmMod8.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/21")) {
-            obsIntHarmMod9.setValue(theOscMessage.get(0).intValue());
-                harmVolMod9 = obsIntHarmMod9.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/22")) {
-            obsIntHarmMod10.setValue(theOscMessage.get(0).intValue());
-                harmVolMod10 = obsIntHarmMod10.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/23")) {
-            obsIntHarmMod11.setValue(theOscMessage.get(0).intValue());
-                harmVolMod11 = obsIntHarmMod11.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/24")) {
-            obsIntHarmMod12.setValue(theOscMessage.get(0).intValue());
-                harmVolMod12 = obsIntHarmMod12.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/25")) {
-            obsIntHarmRate1.setValue(theOscMessage.get(0).intValue());
-                harmVolRate1 = obsIntHarmRate1.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/26")) {
-            obsIntHarmRate2.setValue(theOscMessage.get(0).intValue());
-                harmVolRate2 = obsIntHarmRate2.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/27")) {
-            obsIntHarmRate3.setValue(theOscMessage.get(0).intValue());
-                harmVolRate3 = obsIntHarmRate3.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/28")) {
-            obsIntHarmRate4.setValue(theOscMessage.get(0).intValue());
-                harmVolRate4 = obsIntHarmRate4.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/29")) {
-            obsIntHarmRate5.setValue(theOscMessage.get(0).intValue());
-                harmVolRate5 = obsIntHarmRate5.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/30")) {
-            obsIntHarmRate6.setValue(theOscMessage.get(0).intValue());
-                harmVolRate6 = obsIntHarmRate6.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/31")) {
-            obsIntHarmRate7.setValue(theOscMessage.get(0).intValue());
-                harmVolRate7 = obsIntHarmRate7.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/32")) {
-            obsIntHarmRate8.setValue(theOscMessage.get(0).intValue());
-                harmVolRate8 = obsIntHarmRate8.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/33")) {
-            obsIntHarmRate9.setValue(theOscMessage.get(0).intValue());
-                harmVolRate9 = obsIntHarmRate9.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/34")) {
-            obsIntHarmRate10.setValue(theOscMessage.get(0).intValue());
-                harmVolRate10 = obsIntHarmRate10.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/35")) {
-            obsIntHarmRate11.setValue(theOscMessage.get(0).intValue());
-                harmVolRate11 = obsIntHarmRate11.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/36")) {
-            obsIntHarmRate12.setValue(theOscMessage.get(0).intValue());
-                harmVolRate12 = obsIntHarmRate12.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/37")) {
-            obsIntHarmRateRange.setValue(theOscMessage.get(0).intValue());
-                harmVolModRateRange = obsIntHarmRateRange.value;
-            }
-            if (theOscMessage.addrPattern().equals("/1/2525/2/38")) {
-                if (theOscMessage.get(0).intValue() == 127) {
-                obsIntHarmSync1.setValue(true);
-                harmVolSync1 = 127;
-                }
-                if (theOscMessage.get(0).intValue() == 0) {
-                obsIntHarmSync1.setValue(false);
-                harmVolSync1 = 0;
-                }
-            }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/39")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntHarmSync2.setValue(true);
-                harmVolSync2 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntHarmSync2.setValue(false);
-                harmVolSync2 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/40")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntHarmSync3.setValue(true);
-                harmVolSync3 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntHarmSync3.setValue(false);
-                harmVolSync3 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/41")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntHarmSync4.setValue(true);
-                harmVolSync4 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntHarmSync4.setValue(false);
-                harmVolSync4 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/42")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntHarmSync5.setValue(true);
-                harmVolSync5 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntHarmSync5.setValue(false);
-                harmVolSync5 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/43")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntHarmSync6.setValue(true);
-                harmVolSync6 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntHarmSync6.setValue(false);
-                harmVolSync6 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/44")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntHarmSync7.setValue(true);
-                harmVolSync7 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntHarmSync7.setValue(false);
-                harmVolSync7 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/45")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntHarmSync8.setValue(true);
-                harmVolSync8 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntHarmSync8.setValue(false);
-                harmVolSync8 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/46")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntHarmSync9.setValue(true);
-                harmVolSync9 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntHarmSync9.setValue(false);
-                harmVolSync9 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/47")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntHarmSync10.setValue(true);
-                harmVolSync10 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntHarmSync10.setValue(false);
-                harmVolSync10 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/48")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntHarmSync11.setValue(true);
-                harmVolSync11 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntHarmSync11.setValue(false);
-                harmVolSync11 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/49")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntHarmSync12.setValue(true);
-                harmVolSync12 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntHarmSync12.setValue(false);
-                harmVolSync12 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/50")) {
-            obsIntHarmDiv1.setValue(theOscMessage.get(0).intValue());
-            harmVolModDiv1 = obsIntHarmDiv1.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/51")) {
-            obsIntHarmDiv2.setValue(theOscMessage.get(0).intValue());
-            harmVolModDiv2 = obsIntHarmDiv2.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/52")) {
-            obsIntHarmDiv3.setValue(theOscMessage.get(0).intValue());
-            harmVolModDiv3 = obsIntHarmDiv3.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/53")) {
-            obsIntHarmDiv4.setValue(theOscMessage.get(0).intValue());
-            harmVolModDiv4 = obsIntHarmDiv4.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/54")) {
-            obsIntHarmDiv5.setValue(theOscMessage.get(0).intValue());
-            harmVolModDiv5 = obsIntHarmDiv5.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/55")) {
-            obsIntHarmDiv6.setValue(theOscMessage.get(0).intValue());
-            harmVolModDiv6 = obsIntHarmDiv6.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/56")) {
-            obsIntHarmDiv7.setValue(theOscMessage.get(0).intValue());
-            harmVolModDiv7 = obsIntHarmDiv7.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/57")) {
-            obsIntHarmDiv8.setValue(theOscMessage.get(0).intValue());
-            harmVolModDiv8 = obsIntHarmDiv8.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/58")) {
-            obsIntHarmDiv9.setValue(theOscMessage.get(0).intValue());
-            harmVolModDiv9 = obsIntHarmDiv9.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/59")) {
-            obsIntHarmDiv10.setValue(theOscMessage.get(0).intValue());
-            harmVolModDiv10 = obsIntHarmDiv10.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/60")) {
-            obsIntHarmDiv11.setValue(theOscMessage.get(0).intValue());
-            harmVolModDiv11 = obsIntHarmDiv11.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/61")) {
-            obsIntHarmDiv12.setValue(theOscMessage.get(0).intValue());
-            harmVolModDiv12 = obsIntHarmDiv12.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/74")) {
-            obsIntNoiseVol1.setValue(theOscMessage.get(0).intValue());
-            noiseVol1 = obsIntNoiseVol1.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/75")) {
-            obsIntNoiseVol2.setValue(theOscMessage.get(0).intValue());
-            noiseVol2 = obsIntNoiseVol2.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/76")) {
-            obsIntNoiseVol3.setValue(theOscMessage.get(0).intValue());
-            noiseVol3 = obsIntNoiseVol3.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/77")) {
-            obsIntNoiseVol4.setValue(theOscMessage.get(0).intValue());
-            noiseVol4 = obsIntNoiseVol4.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/78")) {
-            obsIntNoiseVolMod1.setValue(theOscMessage.get(0).intValue());
-            noiseVolMod1 = obsIntNoiseVolMod1.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/79")) {
-            obsIntNoiseVolMod2.setValue(theOscMessage.get(0).intValue());
-            noiseVolMod2 = obsIntNoiseVolMod2.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/80")) {
-            obsIntNoiseVolMod3.setValue(theOscMessage.get(0).intValue());
-            noiseVolMod3 = obsIntNoiseVolMod3.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/81")) {
-            obsIntNoiseVolMod4.setValue(theOscMessage.get(0).intValue());
-            noiseVolMod4 = obsIntNoiseVolMod4.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/82")) {
-            obsIntNoiseVolRate1.setValue(theOscMessage.get(0).intValue());
-            noiseVolRate1 = obsIntNoiseVolRate1.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/83")) {
-            obsIntNoiseVolRate2.setValue(theOscMessage.get(0).intValue());
-            noiseVolRate2 = obsIntNoiseVolRate2.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/84")) {
-            obsIntNoiseVolRate3.setValue(theOscMessage.get(0).intValue());
-            noiseVolRate3 = obsIntNoiseVolRate3.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/85")) {
-            obsIntNoiseVolRate4.setValue(theOscMessage.get(0).intValue());
-            noiseVolRate4 = obsIntNoiseVolRate4.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/87")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntNoiseVolSync1.setValue(true);
-                noiseVolSync1 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntNoiseVolSync1.setValue(false);
-                noiseVolSync1 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/88")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntNoiseVolSync2.setValue(true);
-                noiseVolSync2 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntNoiseVolSync2.setValue(false);
-                noiseVolSync2 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/89")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntNoiseVolSync3.setValue(true);
-                noiseVolSync3 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntNoiseVolSync3.setValue(false);
-                noiseVolSync3 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/90")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntNoiseVolSync4.setValue(true);
-                noiseVolSync4 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntNoiseVolSync4.setValue(false);
-                noiseVolSync4 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/95")) {
-            obsIntNoiseVolDiv1.setValue(theOscMessage.get(0).intValue());
-            noiseVolModDiv1 = obsIntNoiseVolDiv1.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/96")) {
-            obsIntNoiseVolDiv2.setValue(theOscMessage.get(0).intValue());
-            noiseVolModDiv2 = obsIntNoiseVolDiv2.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/97")) {
-            obsIntNoiseVolDiv3.setValue(theOscMessage.get(0).intValue());
-            noiseVolModDiv3 = obsIntNoiseVolDiv3.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/98")) {
-            obsIntNoiseVolDiv4.setValue(theOscMessage.get(0).intValue());
-            noiseVolModDiv4 = obsIntNoiseVolDiv4.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/99")) {
-         /*   System.out.println(" addrpattern: "+theOscMessage.addrPattern());
-            System.out.println(" typetag: "+theOscMessage.typetag());
-            System.out.println(" msg: "+theOscMessage.get(0).intValue());*/
-            obsIntNoiseCut1.setValue(theOscMessage.get(0).intValue());
-            noiseCut1 = obsIntNoiseCut1.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/100")) {
-            obsIntNoiseCut2.setValue(theOscMessage.get(0).intValue());
-            noiseCut2 = obsIntNoiseCut2.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/101")) {
-            obsIntNoiseCut3.setValue(theOscMessage.get(0).intValue());
-            noiseCut3 = obsIntNoiseCut3.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/102")) {
-            obsIntNoiseCut4.setValue(theOscMessage.get(0).intValue());
-            noiseCut4 = obsIntNoiseCut4.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/103")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntNoisePink.setValue(true);
-                noiseType = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntNoisePink.setValue(false);
-                noiseType = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/104")) {
-            obsIntNoiseRes1.setValue(theOscMessage.get(0).intValue());
-            noiseRes1 = obsIntNoiseRes1.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/105")) {
-            obsIntNoiseRes2.setValue(theOscMessage.get(0).intValue());
-            noiseRes2 = obsIntNoiseRes2.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/106")) {
-            obsIntNoiseRes3.setValue(theOscMessage.get(0).intValue());
-            noiseRes3 = obsIntNoiseRes3.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/107")) {
-            obsIntNoiseRes4.setValue(theOscMessage.get(0).intValue());
-            noiseRes4 = obsIntNoiseRes4.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/108")) {
-            obsIntNoiseCutMod1.setValue(theOscMessage.get(0).intValue());
-            noiseCutMod1 = obsIntNoiseCutMod1.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/109")) {
-            obsIntNoiseCutMod2.setValue(theOscMessage.get(0).intValue());
-            noiseCutMod2 = obsIntNoiseCutMod2.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/110")) {
-            obsIntNoiseCutMod3.setValue(theOscMessage.get(0).intValue());
-            noiseCutMod3 = obsIntNoiseCutMod3.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/111")) {
-            obsIntNoiseCutMod4.setValue(theOscMessage.get(0).intValue());
-            noiseCutMod4 = obsIntNoiseCutMod4.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/112")) {
-            obsIntNoiseCutRate1.setValue(theOscMessage.get(0).intValue());
-            noiseCutRate1 = obsIntNoiseCutRate1.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/113")) {
-            obsIntNoiseCutRate2.setValue(theOscMessage.get(0).intValue());
-            noiseCutRate2 = obsIntNoiseCutRate2.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/114")) {
-            obsIntNoiseCutRate3.setValue(theOscMessage.get(0).intValue());
-            noiseCutRate3 = obsIntNoiseCutRate3.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/115")) {
-            obsIntNoiseCutRate4.setValue(theOscMessage.get(0).intValue());
-            noiseCutRate4 = obsIntNoiseCutRate4.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/117")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntNoiseCutSync1.setValue(true);
-                noiseCutSync1 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntNoiseCutSync1.setValue(false);
-                noiseCutSync1 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/118")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntNoiseCutSync2.setValue(true);
-                noiseCutSync2 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntNoiseCutSync2.setValue(false);
-                noiseCutSync2 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/119")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntNoiseCutSync3.setValue(true);
-                noiseCutSync3 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntNoiseCutSync3.setValue(false);
-                noiseCutSync3 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/120")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntNoiseCutSync4.setValue(true);
-                noiseCutSync4 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntNoiseCutSync4.setValue(false);
-                noiseCutSync4 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/121")) {
-            obsIntNoiseCutDiv1.setValue(theOscMessage.get(0).intValue());
-            noiseCutModDiv1 = obsIntNoiseCutDiv1.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/122")) {
-            obsIntNoiseCutDiv2.setValue(theOscMessage.get(0).intValue());
-            noiseCutModDiv2 = obsIntNoiseCutDiv2.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/123")) {
-            obsIntNoiseCutDiv3.setValue(theOscMessage.get(0).intValue());
-            noiseCutModDiv3 = obsIntNoiseCutDiv3.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/124")) {
-            obsIntNoiseCutDiv4.setValue(theOscMessage.get(0).intValue());
-            noiseCutModDiv4 = obsIntNoiseCutDiv4.value;
-        }
 
-        if (theOscMessage.addrPattern().equals("/1/2525/2/131")) {
-            obsIntSourceSelect.setValue(theOscMessage.get(0).intValue());
-            sourceSelect = obsIntSourceSelect.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/132")) {
-            obsIntSourceNote.setValue(theOscMessage.get(0).intValue());
-            sourceNote = obsIntSourceNote.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/133")) {
-            obsIntSourceFreq.setValue(String.valueOf(theOscMessage.get(0).intValue()));
-            sourceFreq = obsIntSourceFreq.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/134")) {
-            obsIntSourceMidiOct.setValue(theOscMessage.get(0).intValue());
-            sourceMidiOct = obsIntSourceMidiOct.value;
-        }
-
-        if (theOscMessage.addrPattern().equals("/1/2525/2/135")) {
-            obsIntFmSelect.setValue(theOscMessage.get(0).intValue());
-            fmSelect = obsIntFmSelect.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/136")) {
-            obsIntFmNote.setValue(theOscMessage.get(0).intValue());
-            fmNote = obsIntFmNote.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/137")) {
-            obsIntFmFreq.setValue(String.valueOf(theOscMessage.get(0).intValue()));
-            fmFreq = obsIntFmFreq.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/138")) {
-            obsIntFmMidiOct.setValue(theOscMessage.get(0).intValue());
-            fmMidiOct = obsIntFmMidiOct.value;
-        }
-
-        if (theOscMessage.addrPattern().equals("/1/2525/2/139")) {
-            obsIntFmDepth.setValue(theOscMessage.get(0).intValue());
-            fmDepth = obsIntFmDepth.value;
-        }
-
-        if (theOscMessage.addrPattern().equals("/1/2525/2/140")) {
-            obsIntFmDepthModDepth.setValue(theOscMessage.get(0).intValue());
-            fmDepthModDepth = obsIntFmDepthModDepth.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/141")) {
-            obsIntFmDepthModRate.setValue(theOscMessage.get(0).intValue());
-            fmDepthModRate = obsIntFmDepthModRate.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/142")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntFmDepthModSync.setValue(true);
-                fmDepthModSync = 127;
+        String oscArg = theOscMessage.addrPattern();
+            switch (oscArg) {
+                case "/1/2525/2/129":
+                    obsInt.setValue(theOscMessage.get(0).intValue());
+                    harmMix = obsInt.value;
+                    break;
+                case "/1/2525/2/130":
+                    obsIntNoiseMix.setValue(theOscMessage.get(0).intValue());
+                    noiseMix = obsIntNoiseMix.value;
+                    break;
+                case "/1/2525/2/189":
+                    obsIntOutputVol.setValue(theOscMessage.get(0).intValue());
+                    outputVolume = obsIntOutputVol.value;
+                    break;
+                case "/1/2525/2/190":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntDevicePower.setValue(true);
+                        devicePower = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntDevicePower.setValue(false);
+                        devicePower = 0;
+                    }
+                    break;
+                case "/1/2525/2/183":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntDrone.setValue(true);
+                        droneVal = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntDrone.setValue(false);
+                        droneVal = 0;
+                    }
+                    break;
+                case "/1/2525/2/184":
+                    obsIntEnvA.setValue(theOscMessage.get(0).intValue());
+                    envelopeA = obsIntEnvA.value;
+                    break;
+                case "/1/2525/2/185":
+                    obsIntEnvD.setValue(theOscMessage.get(0).intValue());
+                    envelopeD = obsIntEnvD.value;
+                    break;
+                case "/1/2525/2/186":
+                    obsIntEnvS.setValue(theOscMessage.get(0).intValue());
+                    envelopeS = obsIntEnvS.value;
+                    break;
+                case "/1/2525/2/187":
+                    obsIntEnvR.setValue(theOscMessage.get(0).intValue());
+                    envelopeR = obsIntEnvR.value;
+                    break;
+                case "/1/2525/2/1":
+                    obsIntHarmVol1.setValue(theOscMessage.get(0).intValue());
+                    harmVol1 = obsIntHarmVol1.value;
+                    break;
+                case "/1/2525/2/2":
+                    obsIntHarmVol2.setValue(theOscMessage.get(0).intValue());
+                    harmVol2 = obsIntHarmVol2.value;
+                    break;
+                case "/1/2525/2/3":
+                    obsIntHarmVol3.setValue(theOscMessage.get(0).intValue());
+                    harmVol3 = obsIntHarmVol3.value;
+                    break;
+                case "/1/2525/2/4":
+                    obsIntHarmVol4.setValue(theOscMessage.get(0).intValue());
+                    harmVol4 = obsIntHarmVol4.value;
+                    break;
+                case "/1/2525/2/5":
+                    obsIntHarmVol5.setValue(theOscMessage.get(0).intValue());
+                    harmVol5 = obsIntHarmVol5.value;
+                    break;
+                case "/1/2525/2/6":
+                    obsIntHarmVol6.setValue(theOscMessage.get(0).intValue());
+                    harmVol6 = obsIntHarmVol6.value;
+                    break;
+                case "/1/2525/2/7":
+                    obsIntHarmVol7.setValue(theOscMessage.get(0).intValue());
+                    harmVol7 = obsIntHarmVol7.value;
+                    break;
+                case "/1/2525/2/8":
+                    obsIntHarmVol8.setValue(theOscMessage.get(0).intValue());
+                    harmVol8 = obsIntHarmVol8.value;
+                    break;
+                case "/1/2525/2/9":
+                    obsIntHarmVol9.setValue(theOscMessage.get(0).intValue());
+                    harmVol9 = obsIntHarmVol9.value;
+                    break;
+                case "/1/2525/2/10":
+                    obsIntHarmVol10.setValue(theOscMessage.get(0).intValue());
+                    harmVol10 = obsIntHarmVol10.value;
+                    break;
+                case "/1/2525/2/11":
+                    obsIntHarmVol11.setValue(theOscMessage.get(0).intValue());
+                    harmVol11 = obsIntHarmVol11.value;
+                    break;
+                case "/1/2525/2/12":
+                    obsIntHarmVol12.setValue(theOscMessage.get(0).intValue());
+                    harmVol12 = obsIntHarmVol12.value;
+                    break;
+                case "/1/2525/2/13":
+                    obsIntHarmMod1.setValue(theOscMessage.get(0).intValue());
+                    harmVolMod1 = obsIntHarmMod1.value;
+                    break;
+                case "/1/2525/2/14":
+                    obsIntHarmMod2.setValue(theOscMessage.get(0).intValue());
+                    harmVolMod2 = obsIntHarmMod2.value;
+                    break;
+                case "/1/2525/2/15":
+                    obsIntHarmMod3.setValue(theOscMessage.get(0).intValue());
+                    harmVolMod3 = obsIntHarmMod3.value;
+                    break;
+                case "/1/2525/2/16":
+                    obsIntHarmMod4.setValue(theOscMessage.get(0).intValue());
+                    harmVolMod4 = obsIntHarmMod4.value;
+                    break;
+                case "/1/2525/2/17":
+                    obsIntHarmMod5.setValue(theOscMessage.get(0).intValue());
+                    harmVolMod5 = obsIntHarmMod5.value;
+                    break;
+                case "/1/2525/2/18":
+                    obsIntHarmMod6.setValue(theOscMessage.get(0).intValue());
+                    harmVolMod6 = obsIntHarmMod6.value;
+                    break;
+                case "/1/2525/2/19":
+                    obsIntHarmMod7.setValue(theOscMessage.get(0).intValue());
+                    harmVolMod7 = obsIntHarmMod7.value;
+                    break;
+                case "/1/2525/2/20":
+                    obsIntHarmMod8.setValue(theOscMessage.get(0).intValue());
+                    harmVolMod8 = obsIntHarmMod8.value;
+                    break;
+                case "/1/2525/2/21":
+                    obsIntHarmMod9.setValue(theOscMessage.get(0).intValue());
+                    harmVolMod9 = obsIntHarmMod9.value;
+                    break;
+                case "/1/2525/2/22":
+                    obsIntHarmMod10.setValue(theOscMessage.get(0).intValue());
+                    harmVolMod10 = obsIntHarmMod10.value;
+                    break;
+                case "/1/2525/2/23":
+                    obsIntHarmMod11.setValue(theOscMessage.get(0).intValue());
+                    harmVolMod11 = obsIntHarmMod11.value;
+                    break;
+                case "/1/2525/2/24":
+                    obsIntHarmMod12.setValue(theOscMessage.get(0).intValue());
+                    harmVolModDiv12 = obsIntHarmMod12.value;
+                    break;
+                case "/1/2525/2/25":
+                    obsIntHarmRate1.setValue(theOscMessage.get(0).intValue());
+                    harmVolRate1 = obsIntHarmRate1.value;
+                    break;
+                case "/1/2525/2/26":
+                    obsIntHarmRate2.setValue(theOscMessage.get(0).intValue());
+                    harmVolRate2 = obsIntHarmRate2.value;
+                    break;
+                case "/1/2525/2/27":
+                    obsIntHarmRate3.setValue(theOscMessage.get(0).intValue());
+                    harmVolRate3 = obsIntHarmRate3.value;
+                    break;
+                case "/1/2525/2/28":
+                    obsIntHarmRate4.setValue(theOscMessage.get(0).intValue());
+                    harmVolRate4 = obsIntHarmRate4.value;
+                    break;
+                case "/1/2525/2/29":
+                    obsIntHarmRate5.setValue(theOscMessage.get(0).intValue());
+                    harmVolRate5 = obsIntHarmRate5.value;
+                    break;
+                case "/1/2525/2/30":
+                    obsIntHarmRate6.setValue(theOscMessage.get(0).intValue());
+                    harmVolRate6 = obsIntHarmRate6.value;
+                    break;
+                case "/1/2525/2/31":
+                    obsIntHarmRate7.setValue(theOscMessage.get(0).intValue());
+                    harmVolRate7 = obsIntHarmRate7.value;
+                    break;
+                case "/1/2525/2/32":
+                    obsIntHarmRate8.setValue(theOscMessage.get(0).intValue());
+                    harmVolRate8 = obsIntHarmRate8.value;
+                    break;
+                case "/1/2525/2/33":
+                    obsIntHarmRate9.setValue(theOscMessage.get(0).intValue());
+                    harmVolRate9 = obsIntHarmRate9.value;
+                    break;
+                case "/1/2525/2/34":
+                    obsIntHarmRate10.setValue(theOscMessage.get(0).intValue());
+                    harmVolRate10 = obsIntHarmRate10.value;
+                    break;
+                case "/1/2525/2/35":
+                    obsIntHarmRate11.setValue(theOscMessage.get(0).intValue());
+                    harmVolRate11 = obsIntHarmRate11.value;
+                    break;
+                case "/1/2525/2/36":
+                    obsIntHarmRate12.setValue(theOscMessage.get(0).intValue());
+                    harmVolRate12 = obsIntHarmRate12.value;
+                    break;
+                case "/1/2525/2/37":
+                    obsIntHarmRateRange.setValue(theOscMessage.get(0).intValue());
+                    harmVolModRateRange = obsIntHarmRateRange.value;
+                    break;
+                case "/1/2525/2/38":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntHarmSync1.setValue(true);
+                        harmVolSync1 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntHarmSync1.setValue(false);
+                        harmVolSync1 = 0;
+                    }
+                    break;
+                case "/1/2525/2/39":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntHarmSync2.setValue(true);
+                        harmVolSync2 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntHarmSync2.setValue(false);
+                        harmVolSync2 = 0;
+                    }
+                    break;
+                case "/1/2525/2/40":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntHarmSync3.setValue(true);
+                        harmVolSync3 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntHarmSync3.setValue(false);
+                        harmVolSync3 = 0;
+                    }
+                    break;
+                case "/1/2525/2/41":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntHarmSync4.setValue(true);
+                        harmVolSync4 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntHarmSync4.setValue(false);
+                        harmVolSync4 = 0;
+                    }
+                    break;
+                case "/1/2525/2/42":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntHarmSync5.setValue(true);
+                        harmVolSync5 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntHarmSync5.setValue(false);
+                        harmVolSync5 = 0;
+                    }
+                    break;
+                case "/1/2525/2/43":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntHarmSync6.setValue(true);
+                        harmVolSync6 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntHarmSync6.setValue(false);
+                        harmVolSync6 = 0;
+                    }
+                    break;
+                case "/1/2525/2/44":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntHarmSync7.setValue(true);
+                        harmVolSync7 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntHarmSync7.setValue(false);
+                        harmVolSync7 = 0;
+                    }
+                    break;
+                case "/1/2525/2/45":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntHarmSync8.setValue(true);
+                        harmVolSync8 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntHarmSync8.setValue(false);
+                        harmVolSync8 = 0;
+                    }
+                    break;
+                case "/1/2525/2/46":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntHarmSync9.setValue(true);
+                        harmVolSync9 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntHarmSync9.setValue(false);
+                        harmVolSync9 = 0;
+                    }
+                    break;
+                case "/1/2525/2/47":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntHarmSync10.setValue(true);
+                        harmVolSync10 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntHarmSync10.setValue(false);
+                        harmVolSync10 = 0;
+                    }
+                    break;
+                case "/1/2525/2/48":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntHarmSync11.setValue(true);
+                        harmVolSync11 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntHarmSync11.setValue(false);
+                        harmVolSync11 = 0;
+                    }
+                    break;
+                case "/1/2525/2/49":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntHarmSync12.setValue(true);
+                        harmVolSync12 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntHarmSync12.setValue(false);
+                        harmVolSync12 = 0;
+                    }
+                    break;
+                case "/1/2525/2/50":
+                    obsIntHarmDiv1.setValue(theOscMessage.get(0).intValue());
+                    harmVolModDiv1 = obsIntHarmDiv1.value;
+                    break;
+                case "/1/2525/2/51":
+                    obsIntHarmDiv2.setValue(theOscMessage.get(0).intValue());
+                    harmVolModDiv2 = obsIntHarmDiv2.value;
+                    break;
+                case "/1/2525/2/52":
+                    obsIntHarmDiv3.setValue(theOscMessage.get(0).intValue());
+                    harmVolModDiv3 = obsIntHarmDiv3.value;
+                    break;
+                case "/1/2525/2/53":
+                    obsIntHarmDiv4.setValue(theOscMessage.get(0).intValue());
+                    harmVolModDiv4 = obsIntHarmDiv4.value;
+                    break;
+                case "/1/2525/2/54":
+                    obsIntHarmDiv5.setValue(theOscMessage.get(0).intValue());
+                    harmVolModDiv5 = obsIntHarmDiv5.value;
+                    break;
+                case "/1/2525/2/55":
+                    obsIntHarmDiv6.setValue(theOscMessage.get(0).intValue());
+                    harmVolModDiv6 = obsIntHarmDiv6.value;
+                    break;
+                case "/1/2525/2/56":
+                    obsIntHarmDiv7.setValue(theOscMessage.get(0).intValue());
+                    harmVolModDiv7 = obsIntHarmDiv7.value;
+                    break;
+                case "/1/2525/2/57":
+                    obsIntHarmDiv8.setValue(theOscMessage.get(0).intValue());
+                    harmVolModDiv8 = obsIntHarmDiv8.value;
+                    break;
+                case "/1/2525/2/58":
+                    obsIntHarmDiv9.setValue(theOscMessage.get(0).intValue());
+                    harmVolModDiv9 = obsIntHarmDiv9.value;
+                    break;
+                case "/1/2525/2/59":
+                    obsIntHarmDiv10.setValue(theOscMessage.get(0).intValue());
+                    harmVolModDiv10 = obsIntHarmDiv10.value;
+                    break;
+                case "/1/2525/2/60":
+                    obsIntHarmDiv11.setValue(theOscMessage.get(0).intValue());
+                    harmVolModDiv11 = obsIntHarmDiv11.value;
+                    break;
+                case "/1/2525/2/61":
+                    obsIntHarmDiv12.setValue(theOscMessage.get(0).intValue());
+                    harmVolModDiv12 = obsIntHarmDiv12.value;
+                    break;
+                case "/1/2525/2/74":
+                    obsIntNoiseVol1.setValue(theOscMessage.get(0).intValue());
+                    noiseVol1 = obsIntNoiseVol1.value;
+                    break;
+                case "/1/2525/2/75":
+                    obsIntNoiseVol2.setValue(theOscMessage.get(0).intValue());
+                    noiseVol2 = obsIntNoiseVol2.value;
+                    break;
+                case "/1/2525/2/76":
+                    obsIntNoiseVol3.setValue(theOscMessage.get(0).intValue());
+                    noiseVol3 = obsIntNoiseVol3.value;
+                    break;
+                case "/1/2525/2/77":
+                    obsIntNoiseVol4.setValue(theOscMessage.get(0).intValue());
+                    noiseVol4 = obsIntNoiseVol4.value;
+                    break;
+                case "/1/2525/2/78":
+                    obsIntNoiseVolMod1.setValue(theOscMessage.get(0).intValue());
+                    noiseVolMod1 = obsIntNoiseVolMod1.value;
+                    break;
+                case "/1/2525/2/79":
+                    obsIntNoiseVolMod2.setValue(theOscMessage.get(0).intValue());
+                    noiseVolMod2 = obsIntNoiseVolMod2.value;
+                    break;
+                case "/1/2525/2/80":
+                    obsIntNoiseVolMod3.setValue(theOscMessage.get(0).intValue());
+                    noiseVolMod3 = obsIntNoiseVolMod3.value;
+                    break;
+                case "/1/2525/2/81":
+                    obsIntNoiseVolMod4.setValue(theOscMessage.get(0).intValue());
+                    noiseVolMod4 = obsIntNoiseVolMod4.value;
+                    break;
+                case "/1/2525/2/82":
+                    obsIntNoiseVolRate1.setValue(theOscMessage.get(0).intValue());
+                    noiseVolRate1 = obsIntNoiseVolRate1.value;
+                    break;
+                case "/1/2525/2/83":
+                    obsIntNoiseVolRate2.setValue(theOscMessage.get(0).intValue());
+                    noiseVolRate2 = obsIntNoiseVolRate2.value;
+                    break;
+                case "/1/2525/2/84":
+                    obsIntNoiseVolRate3.setValue(theOscMessage.get(0).intValue());
+                    noiseVolRate3 = obsIntNoiseVolRate3.value;
+                    break;
+                case "/1/2525/2/85":
+                    obsIntNoiseVolRate4.setValue(theOscMessage.get(0).intValue());
+                    noiseVolRate4 = obsIntNoiseVolRate4.value;
+                    break;
+                case "/1/2525/2/87":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntNoiseVolSync1.setValue(true);
+                        noiseVolSync1 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntNoiseVolSync1.setValue(false);
+                        noiseVolSync1 = 0;
+                    }
+                    break;
+                case "/1/2525/2/88":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntNoiseVolSync2.setValue(true);
+                        noiseVolSync2 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntNoiseVolSync2.setValue(false);
+                        noiseVolSync2 = 0;
+                    }
+                    break;
+                case "/1/2525/2/89":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntNoiseVolSync3.setValue(true);
+                        noiseVolSync3 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntNoiseVolSync3.setValue(false);
+                        noiseVolSync3 = 0;
+                    }
+                    break;
+                case "/1/2525/2/90":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntNoiseVolSync4.setValue(true);
+                        noiseVolSync4 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntNoiseVolSync4.setValue(false);
+                        noiseVolSync4 = 0;
+                    }
+                    break;
+                case "/1/2525/2/95":
+                    obsIntNoiseVolDiv1.setValue(theOscMessage.get(0).intValue());
+                    noiseVolModDiv1 = obsIntNoiseVolDiv1.value;
+                    break;
+                case "/1/2525/2/96":
+                    obsIntNoiseVolDiv2.setValue(theOscMessage.get(0).intValue());
+                    noiseVolModDiv2 = obsIntNoiseVolDiv2.value;
+                    break;
+                case "/1/2525/2/97":
+                    obsIntNoiseVolDiv3.setValue(theOscMessage.get(0).intValue());
+                    noiseVolModDiv3 = obsIntNoiseVolDiv3.value;
+                    break;
+                case "/1/2525/2/98":
+                    obsIntNoiseVolDiv4.setValue(theOscMessage.get(0).intValue());
+                    noiseVolModDiv4 = obsIntNoiseVolDiv4.value;
+                    break;
+                case "/1/2525/2/99":
+                    obsIntNoiseCut1.setValue(theOscMessage.get(0).intValue());
+                    noiseCut1 = obsIntNoiseCut1.value;
+                    break;
+                case "/1/2525/2/100":
+                    obsIntNoiseCut2.setValue(theOscMessage.get(0).intValue());
+                    noiseCut2 = obsIntNoiseCut2.value;
+                    break;
+                case "/1/2525/2/101":
+                    obsIntNoiseCut3.setValue(theOscMessage.get(0).intValue());
+                    noiseCut3 = obsIntNoiseCut3.value;
+                    break;
+                case "/1/2525/2/102":
+                    obsIntNoiseCut4.setValue(theOscMessage.get(0).intValue());
+                    noiseCut4 = obsIntNoiseCut4.value;
+                    break;
+                case "/1/2525/2/103":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntNoisePink.setValue(true);
+                        noiseType = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntNoisePink.setValue(false);
+                        noiseType = 0;
+                    }
+                    break;
+                case "/1/2525/2/104":
+                    obsIntNoiseRes1.setValue(theOscMessage.get(0).intValue());
+                    noiseRes1 = obsIntNoiseRes1.value;
+                    break;
+                case "/1/2525/2/105":
+                    obsIntNoiseRes2.setValue(theOscMessage.get(0).intValue());
+                    noiseRes2 = obsIntNoiseRes2.value;
+                    break;
+                case "/1/2525/2/106":
+                    obsIntNoiseRes3.setValue(theOscMessage.get(0).intValue());
+                    noiseRes3 = obsIntNoiseRes3.value;
+                    break;
+                case "/1/2525/2/107":
+                    obsIntNoiseRes4.setValue(theOscMessage.get(0).intValue());
+                    noiseRes4 = obsIntNoiseRes4.value;
+                    break;
+                case "/1/2525/2/108":
+                    obsIntNoiseCutMod1.setValue(theOscMessage.get(0).intValue());
+                    noiseCutMod1 = obsIntNoiseCutMod1.value;
+                    break;
+                case "/1/2525/2/109":
+                    obsIntNoiseCutMod2.setValue(theOscMessage.get(0).intValue());
+                    noiseCutMod2 = obsIntNoiseCutMod2.value;
+                    break;
+                case "/1/2525/2/110":
+                    obsIntNoiseCutMod3.setValue(theOscMessage.get(0).intValue());
+                    noiseCutMod3 = obsIntNoiseCutMod3.value;
+                    break;
+                case "/1/2525/2/111":
+                    obsIntNoiseCutMod4.setValue(theOscMessage.get(0).intValue());
+                    noiseCutMod4 = obsIntNoiseCutMod4.value;
+                    break;
+                case "/1/2525/2/112":
+                    obsIntNoiseCutRate1.setValue(theOscMessage.get(0).intValue());
+                    noiseCutRate1 = obsIntNoiseCutRate1.value;
+                    break;
+                case "/1/2525/2/113":
+                    obsIntNoiseCutRate2.setValue(theOscMessage.get(0).intValue());
+                    noiseCutRate2 = obsIntNoiseCutRate2.value;
+                    break;
+                case "/1/2525/2/114":
+                    obsIntNoiseCutRate3.setValue(theOscMessage.get(0).intValue());
+                    noiseCutRate3 = obsIntNoiseCutRate3.value;
+                    break;
+                case "/1/2525/2/115":
+                    obsIntNoiseCutRate4.setValue(theOscMessage.get(0).intValue());
+                    noiseCutRate4 = obsIntNoiseCutRate4.value;
+                    break;
+                case "/1/2525/2/117":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntNoiseCutSync1.setValue(true);
+                        noiseCutSync1 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntNoiseCutSync1.setValue(false);
+                        noiseCutSync1 = 0;
+                    }
+                    break;
+                case "/1/2525/2/118":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntNoiseCutSync2.setValue(true);
+                        noiseCutSync2 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntNoiseCutSync2.setValue(false);
+                        noiseCutSync2 = 0;
+                    }
+                    break;
+                case "/1/2525/2/119":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntNoiseCutSync3.setValue(true);
+                        noiseCutSync3 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntNoiseCutSync3.setValue(false);
+                        noiseCutSync3 = 0;
+                    }
+                    break;
+                case "/1/2525/2/120":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntNoiseCutSync4.setValue(true);
+                        noiseCutSync4 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntNoiseCutSync4.setValue(false);
+                        noiseCutSync4 = 0;
+                    }
+                    break;
+                case "/1/2525/2/121":
+                    obsIntNoiseCutDiv1.setValue(theOscMessage.get(0).intValue());
+                    noiseCutModDiv1 = obsIntNoiseCutDiv1.value;
+                    break;
+                case "/1/2525/2/122":
+                    obsIntNoiseCutDiv2.setValue(theOscMessage.get(0).intValue());
+                    noiseCutModDiv2 = obsIntNoiseCutDiv2.value;
+                    break;
+                case "/1/2525/2/123":
+                    obsIntNoiseCutDiv3.setValue(theOscMessage.get(0).intValue());
+                    noiseCutModDiv3 = obsIntNoiseCutDiv3.value;
+                    break;
+                case "/1/2525/2/124":
+                    obsIntNoiseCutDiv4.setValue(theOscMessage.get(0).intValue());
+                    noiseCutModDiv4 = obsIntNoiseCutDiv4.value;
+                    break;
+                case "/1/2525/2/131":
+                    obsIntSourceSelect.setValue(theOscMessage.get(0).intValue());
+                    sourceSelect = obsIntSourceSelect.value;
+                    break;
+                case "/1/2525/2/132":
+                    obsIntSourceNote.setValue(theOscMessage.get(0).intValue());
+                    sourceNote = obsIntSourceNote.value;
+                    break;
+                case "/1/2525/2/133":
+                    obsIntSourceFreq.setValue(String.valueOf(theOscMessage.get(0).intValue()));
+                    sourceFreq = obsIntSourceFreq.value;
+                    break;
+                case "/1/2525/2/134":
+                    obsIntSourceMidiOct.setValue(theOscMessage.get(0).intValue());
+                    sourceMidiOct = obsIntSourceMidiOct.value;
+                    break;
+                case "/1/2525/2/135":
+                    obsIntFmSelect.setValue(theOscMessage.get(0).intValue());
+                    fmSelect = obsIntFmSelect.value;
+                    break;
+                case "/1/2525/2/136":
+                    obsIntFmNote.setValue(theOscMessage.get(0).intValue());
+                    fmNote = obsIntFmNote.value;
+                    break;
+                case "/1/2525/2/137":
+                    obsIntFmFreq.setValue(String.valueOf(theOscMessage.get(0).intValue()));
+                    fmFreq = obsIntFmFreq.value;
+                    break;
+                case "/1/2525/2/138":
+                    obsIntFmMidiOct.setValue(theOscMessage.get(0).intValue());
+                    fmMidiOct = obsIntFmMidiOct.value;
+                    break;
+                case "/1/2525/2/139":
+                    obsIntFmDepth.setValue(theOscMessage.get(0).intValue());
+                    fmDepth = obsIntFmDepth.value;
+                    break;
+                case "/1/2525/2/140":
+                    obsIntFmDepthModDepth.setValue(theOscMessage.get(0).intValue());
+                    fmDepthModDepth = obsIntFmDepthModDepth.value;
+                    break;
+                case "/1/2525/2/141":
+                    obsIntFmDepthModRate.setValue(theOscMessage.get(0).intValue());
+                    fmDepthModRate = obsIntFmDepthModRate.value;
+                    break;
+                case "/1/2525/2/142":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntFmDepthModSync.setValue(true);
+                        fmDepthModSync = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntFmDepthModSync.setValue(false);
+                        fmDepthModSync = 0;
+                    }
+                    break;
+                case "/1/2525/2/143":
+                    obsIntFmDepthModDiv.setValue(theOscMessage.get(0).intValue());
+                    fmDepthModDiv = obsIntFmDepthModDiv.value;
+                    break;
+                case "/1/2525/2/144":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntFmDepthModRetrig.setValue(true);
+                        fmDepthModRetrig = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntFmDepthModRetrig.setValue(false);
+                        fmDepthModRetrig = 0;
+                    }
+                    break;
+                case "/1/2525/2/145":
+                    obsIntFmFreqModDepth.setValue(theOscMessage.get(0).intValue());
+                    fmFreqModDepth = obsIntFmFreqModDepth.value;
+                    break;
+                case "/1/2525/2/146":
+                    obsIntFmFreqModRate.setValue(theOscMessage.get(0).intValue());
+                    fmFreqModRate = obsIntFmFreqModRate.value;
+                    break;
+                case "/1/2525/2/147":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntFmFreqModSync.setValue(true);
+                        fmFreqModSync = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntFmFreqModSync.setValue(false);
+                        fmFreqModSync = 0;
+                    }
+                    break;
+                case "/1/2525/2/148":
+                    obsIntFmFreqModDiv.setValue(theOscMessage.get(0).intValue());
+                    fmFreqModDiv = obsIntFmFreqModDiv.value;
+                    break;
+                case "/1/2525/2/149":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntFmFreqModRetrig.setValue(true);
+                        fmFreqModRetrig = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntFmFreqModRetrig.setValue(false);
+                        fmFreqModRetrig = 0;
+                    }
+                    break;
+                case "/1/2525/2/182":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntDcKill.setValue(true);
+                        dcKill = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntDcKill.setValue(false);
+                        dcKill = 0;
+                    }
+                    break;
+                case "/1/2525/2/150":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntFilterPower.setValue(true);
+                        lpFilterPower = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntFilterPower.setValue(false);
+                        lpFilterPower = 0;
+                    }
+                    break;
+                case "/1/2525/2/151":
+                    obsIntFilterCut.setValue(theOscMessage.get(0).intValue());
+                    lpFilterCut = obsIntFilterCut.value;
+                    break;
+                case "/1/2525/2/152":
+                    obsIntFilterRes.setValue(theOscMessage.get(0).intValue());
+                    lpFilterRes = obsIntFilterRes.value;
+                    break;
+                case "/1/2525/2/198":
+                    obsIntFilterEnv.setValue(theOscMessage.get(0).intValue());
+                    lpFilterEnv = obsIntFilterEnv.value;
+                    break;
+                case "/1/2525/2/153":
+                    obsIntFilterMod.setValue(theOscMessage.get(0).intValue());
+                    lpFilterMod = obsIntFilterMod.value;
+                    break;
+                case "/1/2525/2/154":
+                    obsIntFilterRate.setValue(theOscMessage.get(0).intValue());
+                    lpFilterRate = obsIntFilterRate.value;
+                    break;
+                case "/1/2525/2/155":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntFilterSync.setValue(true);
+                        lpFilterSync = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntFilterSync.setValue(false);
+                        lpFilterSync = 0;
+                    }
+                    break;
+                case "/1/2525/2/156":
+                    obsIntFilterDiv.setValue(theOscMessage.get(0).intValue());
+                    lpFilterDiv = obsIntFilterDiv.value;
+                    break;
+                case "/1/2525/2/157":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntFilterRetrig.setValue(true);
+                        lpFilterRetrig = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntFilterRetrig.setValue(false);
+                        lpFilterRetrig = 0;
+                    }
+                    break;
+                case "/1/2525/2/158":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntDecimatePower.setValue(true);
+                        decimatorPower = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntDecimatePower.setValue(false);
+                        decimatorPower = 0;
+                    }
+                    break;
+                case "/1/2525/2/159":
+                    obsIntDecimateReduce.setValue(theOscMessage.get(0).intValue());
+                    decimatorReduce = obsIntDecimateReduce.value;
+                    break;
+                case "/1/2525/2/160":
+                    obsIntDecimateMod.setValue(theOscMessage.get(0).intValue());
+                    decimatorMod = obsIntDecimateMod.value;
+                    break;
+                case "/1/2525/2/161":
+                    obsIntDecimateRate.setValue(theOscMessage.get(0).intValue());
+                    decimatorRate = obsIntDecimateRate.value;
+                    break;
+                case "/1/2525/2/162":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntDecimateSync.setValue(true);
+                        decimatorSync = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntDecimateSync.setValue(false);
+                        decimatorSync = 0;
+                    }
+                    break;
+                case "/1/2525/2/163":
+                    obsIntDecimateDiv.setValue(theOscMessage.get(0).intValue());
+                    decimatorDiv = obsIntDecimateDiv.value;
+                    break;
+                case "/1/2525/2/164":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntDecimateRetrig.setValue(true);
+                        decimatorRetrig = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntDecimateRetrig.setValue(false);
+                        decimatorRetrig = 0;
+                    }
+                    break;
+                case "/1/2525/2/165":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntDelayPower.setValue(true);
+                        delayPower = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntDelayPower.setValue(false);
+                        delayPower = 0;
+                    }
+                    break;
+                case "/1/2525/2/166":
+                    obsIntDelayTime.setValue(theOscMessage.get(0).intValue());
+                    delayTime = obsIntDelayTime.value;
+                    break;
+                case "/1/2525/2/196":
+                    obsIntDelayTimeR.setValue(theOscMessage.get(0).intValue());
+                    delayTimeR = obsIntDelayTimeR.value;
+                    break;
+                case "/1/2525/2/167":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntDelaySync.setValue(true);
+                        delaySync = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntDelaySync.setValue(false);
+                        delaySync = 0;
+                    }
+                    break;
+                case "/1/2525/2/168":
+                    obsIntDelayDiv.setValue(theOscMessage.get(0).intValue());
+                    delayDiv = obsIntDelayDiv.value;
+                    break;
+                case "/1/2525/2/197":
+                    obsIntDelayDivR.setValue(theOscMessage.get(0).intValue());
+                    delayDivR = obsIntDelayDivR.value;
+                    break;
+                case "/1/2525/2/169":
+                    obsIntDelayFeed.setValue(theOscMessage.get(0).intValue());
+                    delayFeed = obsIntDelayFeed.value;
+                    break;
+                case "/1/2525/2/170":
+                    obsIntDelayWet.setValue(theOscMessage.get(0).intValue());
+                    delayWet = obsIntDelayWet.value;
+                    break;
+                case "/1/2525/2/171":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntChorusPower.setValue(true);
+                        chorusPower = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntChorusPower.setValue(false);
+                        chorusPower = 0;
+                    }
+                    break;
+                case "/1/2525/2/172":
+                    obsIntChorusRate.setValue(theOscMessage.get(0).intValue());
+                    chorusRate = obsIntChorusRate.value;
+                    break;
+                case "/1/2525/2/173":
+                    obsIntChorusDepth.setValue(theOscMessage.get(0).intValue());
+                    chorusDepth = obsIntChorusDepth.value;
+                    break;
+                case "/1/2525/2/174":
+                    obsIntChorusDelay.setValue(theOscMessage.get(0).intValue());
+                    chorusDelay = obsIntChorusDelay.value;
+                    break;
+                case "/1/2525/2/175":
+                    obsIntChorusFeed.setValue(theOscMessage.get(0).intValue());
+                    chorusFeed = obsIntChorusFeed.value;
+                    break;
+                case "/1/2525/2/176":
+                    obsIntChorusWet.setValue(theOscMessage.get(0).intValue());
+                    chorusWet = obsIntChorusWet.value;
+                    break;
+                case "/1/2525/2/177":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntReverbPower.setValue(true);
+                        reverbPower = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntReverbPower.setValue(false);
+                        reverbPower = 0;
+                    }
+                    break;
+                case "/1/2525/2/178":
+                    obsIntReverbSize.setValue(theOscMessage.get(0).intValue());
+                    reverbSize = obsIntReverbSize.value;
+                    break;
+                case "/1/2525/2/179":
+                    obsIntReverbDamp.setValue(theOscMessage.get(0).intValue());
+                    reverbDamp = obsIntReverbDamp.value;
+                    break;
+                case "/1/2525/2/180":
+                    obsIntReverbWidth.setValue(theOscMessage.get(0).intValue());
+                    reverbWidth = obsIntReverbWidth.value;
+                    break;
+                case "/1/2525/2/181":
+                    obsIntReverbWet.setValue(theOscMessage.get(0).intValue());
+                    reverbWet = obsIntReverbWet.value;
+                    break;
+                case "/1/2525/2/188":
+                    obsIntBpm.setValue(theOscMessage.get(0).intValue());
+                    bpmData = obsIntBpm.value;
+                    break;
+                case "/1/2525/2/191":
+                    obsIntMidiChan.setValue(theOscMessage.get(0).intValue());
+                    midiChan = obsIntMidiChan.value;
+                    break;
+                case "/1/2525/2/195":
+                    obsIntkeyboardOct.setValue(theOscMessage.get(0).intValue());
+                    keyboardOctave = obsIntkeyboardOct.value;
+                    break;
+                case "/1/2525/2/62":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntHarmRetrig1.setValue(true);
+                        harmVolRetrig1 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntHarmRetrig1.setValue(false);
+                        harmVolRetrig1 = 0;
+                    }
+                    break;
+                case "/1/2525/2/63":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntHarmRetrig2.setValue(true);
+                        harmVolRetrig2 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntHarmRetrig2.setValue(false);
+                        harmVolRetrig2 = 0;
+                    }
+                    break;
+                case "/1/2525/2/64":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntHarmRetrig3.setValue(true);
+                        harmVolRetrig3 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntHarmRetrig3.setValue(false);
+                        harmVolRetrig3 = 0;
+                    }
+                    break;
+                case "/1/2525/2/65":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntHarmRetrig4.setValue(true);
+                        harmVolRetrig4 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntHarmRetrig4.setValue(false);
+                        harmVolRetrig4 = 0;
+                    }
+                    break;
+                case "/1/2525/2/66":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntHarmRetrig5.setValue(true);
+                        harmVolRetrig5 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntHarmRetrig5.setValue(false);
+                        harmVolRetrig5 = 0;
+                    }
+                    break;
+                case "/1/2525/2/67":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntHarmRetrig6.setValue(true);
+                        harmVolRetrig6 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntHarmRetrig6.setValue(false);
+                        harmVolRetrig6 = 0;
+                    }
+                    break;
+                case "/1/2525/2/68":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntHarmRetrig7.setValue(true);
+                        harmVolRetrig7 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntHarmRetrig7.setValue(false);
+                        harmVolRetrig7 = 0;
+                    }
+                    break;
+                case "/1/2525/2/69":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntHarmRetrig8.setValue(true);
+                        harmVolRetrig8 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntHarmRetrig8.setValue(false);
+                        harmVolRetrig8 = 0;
+                    }
+                    break;
+                case "/1/2525/2/70":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntHarmRetrig9.setValue(true);
+                        harmVolRetrig9 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntHarmRetrig9.setValue(false);
+                        harmVolRetrig9 = 0;
+                    }
+                    break;
+                case "/1/2525/2/71":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntHarmRetrig10.setValue(true);
+                        harmVolRetrig10 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntHarmRetrig10.setValue(false);
+                        harmVolRetrig10 = 0;
+                    }
+                    break;
+                case "/1/2525/2/72":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntHarmRetrig11.setValue(true);
+                        harmVolRetrig11 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntHarmRetrig11.setValue(false);
+                        harmVolRetrig11 = 0;
+                    }
+                    break;
+                case "/1/2525/2/73":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntHarmRetrig12.setValue(true);
+                        harmVolRetrig12 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntHarmRetrig12.setValue(false);
+                        harmVolRetrig12 = 0;
+                    }
+                    break;
+                case "/1/2525/2/91":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntNoiseVolRetrig1.setValue(true);
+                        noiseVolRetrig1 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntNoiseVolRetrig1.setValue(false);
+                        noiseVolRetrig1 = 0;
+                    }
+                    break;
+                case "/1/2525/2/92":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntNoiseVolRetrig2.setValue(true);
+                        noiseVolRetrig2 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntNoiseVolRetrig2.setValue(false);
+                        noiseVolRetrig2 = 0;
+                    }
+                    break;
+                case "/1/2525/2/93":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntNoiseVolRetrig3.setValue(true);
+                        noiseVolRetrig3 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntNoiseVolRetrig3.setValue(false);
+                        noiseVolRetrig3 = 0;
+                    }
+                    break;
+                case "/1/2525/2/94":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntNoiseVolRetrig4.setValue(true);
+                        noiseVolRetrig4 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntNoiseVolRetrig4.setValue(false);
+                        noiseVolRetrig4 = 0;
+                    }
+                    break;
+                case "/1/2525/2/125":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntNoiseCutRetrig1.setValue(true);
+                        noiseCutRetrig1 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntNoiseCutRetrig1.setValue(false);
+                        noiseCutRetrig1 = 0;
+                    }
+                    break;
+                case "/1/2525/2/126":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntNoiseCutRetrig2.setValue(true);
+                        noiseCutRetrig2 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntNoiseCutRetrig2.setValue(false);
+                        noiseCutRetrig2 = 0;
+                    }
+                    break;
+                case "/1/2525/2/127":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntNoiseCutRetrig3.setValue(true);
+                        noiseCutRetrig3 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntNoiseCutRetrig3.setValue(false);
+                        noiseCutRetrig3 = 0;
+                    }
+                    break;
+                case "/1/2525/2/128":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntNoiseCutRetrig4.setValue(true);
+                        noiseCutRetrig4 = 127;
+                    }
+                    if (theOscMessage.get(0).intValue() == 0) {
+                        obsIntNoiseCutRetrig4.setValue(false);
+                        noiseCutRetrig4 = 0;
+                    }
+                    break;
+                case "/1/2525/2/86":
+                    obsIntNoiseRateRangeVol.setValue(theOscMessage.get(0).intValue());
+                    noiseModRateRangeVol = obsIntNoiseRateRangeVol.value;
+                    break;
+                case "/1/2525/2/116":
+                    obsIntNoiseRateRangeCut.setValue(theOscMessage.get(0).intValue());
+                    noiseModRateRangeCut = obsIntNoiseRateRangeCut.value;
+                    break;
             }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntFmDepthModSync.setValue(false);
-                fmDepthModSync = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/143")) {
-            obsIntFmDepthModDiv.setValue(theOscMessage.get(0).intValue());
-            fmDepthModDiv = obsIntFmDepthModDiv.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/144")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntFmDepthModRetrig.setValue(true);
-                fmDepthModRetrig = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntFmDepthModRetrig.setValue(false);
-                fmDepthModRetrig = 0;
-            }
-        }
-
-        if (theOscMessage.addrPattern().equals("/1/2525/2/145")) {
-            obsIntFmFreqModDepth.setValue(theOscMessage.get(0).intValue());
-            fmFreqModDepth = obsIntFmFreqModDepth.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/146")) {
-            obsIntFmFreqModRate.setValue(theOscMessage.get(0).intValue());
-            fmFreqModRate = obsIntFmFreqModRate.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/147")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntFmFreqModSync.setValue(true);
-                fmFreqModSync = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntFmFreqModSync.setValue(false);
-                fmFreqModSync = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/148")) {
-            obsIntFmFreqModDiv.setValue(theOscMessage.get(0).intValue());
-            fmFreqModDiv = obsIntFmFreqModDiv.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/149")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntFmFreqModRetrig.setValue(true);
-                fmFreqModRetrig = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntFmFreqModRetrig.setValue(false);
-                fmFreqModRetrig = 0;
-            }
-        }
-
-        if (theOscMessage.addrPattern().equals("/1/2525/2/182")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntDcKill.setValue(true);
-                dcKill = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntDcKill.setValue(false);
-                dcKill = 0;
-            }
-        }
-
-        if (theOscMessage.addrPattern().equals("/1/2525/2/150")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntFilterPower.setValue(true);
-                lpFilterPower = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntFilterPower.setValue(false);
-                lpFilterPower = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/151")) {
-            obsIntFilterCut.setValue(theOscMessage.get(0).intValue());
-            lpFilterCut = obsIntFilterCut.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/152")) {
-            obsIntFilterRes.setValue(theOscMessage.get(0).intValue());
-            lpFilterRes = obsIntFilterRes.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/198")) {
-            obsIntFilterEnv.setValue(theOscMessage.get(0).intValue());
-            lpFilterEnv = obsIntFilterEnv.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/153")) {
-            obsIntFilterMod.setValue(theOscMessage.get(0).intValue());
-            lpFilterMod = obsIntFilterMod.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/154")) {
-            obsIntFilterRate.setValue(theOscMessage.get(0).intValue());
-            lpFilterRate = obsIntFilterRate.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/155")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntFilterSync.setValue(true);
-                lpFilterSync = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntFilterSync.setValue(false);
-                lpFilterSync = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/156")) {
-            obsIntFilterDiv.setValue(theOscMessage.get(0).intValue());
-            lpFilterDiv = obsIntFilterDiv.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/157")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntFilterRetrig.setValue(true);
-                lpFilterRetrig = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntFilterRetrig.setValue(false);
-                lpFilterRetrig = 0;
-            }
-        }
-
-        if (theOscMessage.addrPattern().equals("/1/2525/2/158")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntDecimatePower.setValue(true);
-                decimatorPower = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntDecimatePower.setValue(false);
-                decimatorPower = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/159")) {
-            obsIntDecimateReduce.setValue(theOscMessage.get(0).intValue());
-            decimatorReduce = obsIntDecimateReduce.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/160")) {
-            obsIntDecimateMod.setValue(theOscMessage.get(0).intValue());
-            decimatorMod = obsIntDecimateMod.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/161")) {
-            obsIntDecimateRate.setValue(theOscMessage.get(0).intValue());
-            decimatorRate = obsIntDecimateRate.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/162")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntDecimateSync.setValue(true);
-                decimatorSync = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntDecimateSync.setValue(false);
-                decimatorSync = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/163")) {
-            obsIntDecimateDiv.setValue(theOscMessage.get(0).intValue());
-            decimatorDiv = obsIntDecimateDiv.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/164")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntDecimateRetrig.setValue(true);
-                decimatorRetrig = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntDecimateRetrig.setValue(false);
-                decimatorRetrig = 0;
-            }
-        }
-
-        if (theOscMessage.addrPattern().equals("/1/2525/2/165")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntDelayPower.setValue(true);
-                delayPower = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntDelayPower.setValue(false);
-                delayPower = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/166")) {
-            obsIntDelayTime.setValue(theOscMessage.get(0).intValue());
-            delayTime = obsIntDelayTime.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/196")) {
-            obsIntDelayTimeR.setValue(theOscMessage.get(0).intValue());
-            delayTimeR = obsIntDelayTimeR.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/167")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntDelaySync.setValue(true);
-                delaySync = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntDelaySync.setValue(false);
-                delaySync = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/168")) {
-            obsIntDelayDiv.setValue(theOscMessage.get(0).intValue());
-            delayDiv = obsIntDelayDiv.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/197")) {
-            obsIntDelayDivR.setValue(theOscMessage.get(0).intValue());
-            delayDivR = obsIntDelayDivR.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/169")) {
-            obsIntDelayFeed.setValue(theOscMessage.get(0).intValue());
-            delayFeed = obsIntDelayFeed.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/170")) {
-            obsIntDelayWet.setValue(theOscMessage.get(0).intValue());
-            delayWet = obsIntDelayWet.value;
-        }
-
-        if (theOscMessage.addrPattern().equals("/1/2525/2/171")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntChorusPower.setValue(true);
-                chorusPower = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntChorusPower.setValue(false);
-                chorusPower = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/172")) {
-            obsIntChorusRate.setValue(theOscMessage.get(0).intValue());
-            chorusRate = obsIntChorusRate.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/173")) {
-            obsIntChorusDepth.setValue(theOscMessage.get(0).intValue());
-            chorusDepth = obsIntChorusDepth.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/174")) {
-            obsIntChorusDelay.setValue(theOscMessage.get(0).intValue());
-            chorusDelay = obsIntChorusDelay.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/175")) {
-            obsIntChorusFeed.setValue(theOscMessage.get(0).intValue());
-            chorusFeed = obsIntChorusFeed.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/176")) {
-            obsIntChorusWet.setValue(theOscMessage.get(0).intValue());
-            chorusWet = obsIntChorusWet.value;
-        }
-
-        if (theOscMessage.addrPattern().equals("/1/2525/2/177")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntReverbPower.setValue(true);
-                reverbPower = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntReverbPower.setValue(false);
-                reverbPower = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/178")) {
-            obsIntReverbSize.setValue(theOscMessage.get(0).intValue());
-            reverbSize = obsIntReverbSize.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/179")) {
-            obsIntReverbDamp.setValue(theOscMessage.get(0).intValue());
-            reverbDamp = obsIntReverbDamp.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/180")) {
-            obsIntReverbWidth.setValue(theOscMessage.get(0).intValue());
-            reverbWidth = obsIntReverbWidth.value;
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/181")) {
-            obsIntReverbWet.setValue(theOscMessage.get(0).intValue());
-            reverbWet = obsIntReverbWet.value;
-        }
-
-        if (theOscMessage.addrPattern().equals("/1/2525/2/188")) {
-            obsIntBpm.setValue(theOscMessage.get(0).intValue());
-            bpmData = obsIntBpm.value;
-        }
-
-        if (theOscMessage.addrPattern().equals("/1/2525/2/191")) {
-            obsIntMidiChan.setValue(theOscMessage.get(0).intValue());
-            midiChan = obsIntMidiChan.value;
-        }
-
-        if (theOscMessage.addrPattern().equals("/1/2525/2/195")) {
-            obsIntkeyboardOct.setValue(theOscMessage.get(0).intValue());
-            keyboardOctave = obsIntkeyboardOct.value;
-        }
-
-         if (theOscMessage.addrPattern().equals("/1/2525/2/62")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntHarmRetrig1.setValue(true);
-                harmVolRetrig1 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntHarmRetrig1.setValue(false);
-                harmVolRetrig1 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/63")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntHarmRetrig2.setValue(true);
-                harmVolRetrig2 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntHarmRetrig2.setValue(false);
-                harmVolRetrig2 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/64")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntHarmRetrig3.setValue(true);
-                harmVolRetrig3 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntHarmRetrig3.setValue(false);
-                harmVolRetrig3 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/65")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntHarmRetrig4.setValue(true);
-                harmVolRetrig4 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntHarmRetrig4.setValue(false);
-                harmVolRetrig4 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/66")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntHarmRetrig5.setValue(true);
-                harmVolRetrig5 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntHarmRetrig5.setValue(false);
-                harmVolRetrig5 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/67")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntHarmRetrig6.setValue(true);
-                harmVolRetrig6 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntHarmRetrig6.setValue(false);
-                harmVolRetrig6 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/68")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntHarmRetrig7.setValue(true);
-                harmVolRetrig7 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntHarmRetrig7.setValue(false);
-                harmVolRetrig7 = 0;
-            }
-        }
-         if (theOscMessage.addrPattern().equals("/1/2525/2/69")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntHarmRetrig8.setValue(true);
-                harmVolRetrig8 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntHarmRetrig8.setValue(false);
-                harmVolRetrig8 = 0;
-            }
-        }
-         if (theOscMessage.addrPattern().equals("/1/2525/2/70")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntHarmRetrig9.setValue(true);
-                harmVolRetrig9 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntHarmRetrig9.setValue(false);
-                harmVolRetrig9 = 0;
-            }
-        }
-         if (theOscMessage.addrPattern().equals("/1/2525/2/71")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntHarmRetrig10.setValue(true);
-                harmVolRetrig10 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntHarmRetrig10.setValue(false);
-                harmVolRetrig10 = 0;
-            }
-        }
-         if (theOscMessage.addrPattern().equals("/1/2525/2/72")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntHarmRetrig11.setValue(true);
-                harmVolRetrig11 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntHarmRetrig11.setValue(false);
-                harmVolRetrig11 = 0;
-            }
-        }
-         if (theOscMessage.addrPattern().equals("/1/2525/2/73")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntHarmRetrig12.setValue(true);
-                harmVolRetrig12 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntHarmRetrig12.setValue(false);
-                harmVolRetrig12 = 0;
-            }
-        }
-
-        if (theOscMessage.addrPattern().equals("/1/2525/2/91")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntNoiseVolRetrig1.setValue(true);
-                noiseVolRetrig1 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntNoiseVolRetrig1.setValue(false);
-                noiseVolRetrig1 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/92")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntNoiseVolRetrig2.setValue(true);
-                noiseVolRetrig2 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntNoiseVolRetrig2.setValue(false);
-                noiseVolRetrig2 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/93")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntNoiseVolRetrig3.setValue(true);
-                noiseVolRetrig3 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntNoiseVolRetrig3.setValue(false);
-                noiseVolRetrig3 = 0;
-            }
-        }
-        if (theOscMessage.addrPattern().equals("/1/2525/2/94")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntNoiseVolRetrig4.setValue(true);
-                noiseVolRetrig4 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntNoiseVolRetrig4.setValue(false);
-                noiseVolRetrig4 = 0;
-            }
-        }
-
-        if (theOscMessage.addrPattern().equals("/1/2525/2/125")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntNoiseCutRetrig1.setValue(true);
-                noiseCutRetrig1 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntNoiseCutRetrig1.setValue(false);
-                noiseCutRetrig1 = 0;
-            }
-        }
-
-        if (theOscMessage.addrPattern().equals("/1/2525/2/126")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntNoiseCutRetrig2.setValue(true);
-                noiseCutRetrig2 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntNoiseCutRetrig2.setValue(false);
-                noiseCutRetrig2 = 0;
-            }
-        }
-
-        if (theOscMessage.addrPattern().equals("/1/2525/2/127")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntNoiseCutRetrig3.setValue(true);
-                noiseCutRetrig3 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntNoiseCutRetrig3.setValue(false);
-                noiseCutRetrig3 = 0;
-            }
-        }
-
-        if (theOscMessage.addrPattern().equals("/1/2525/2/128")) {
-            if (theOscMessage.get(0).intValue() == 127) {
-                obsIntNoiseCutRetrig4.setValue(true);
-                noiseCutRetrig4 = 127;
-            }
-            if (theOscMessage.get(0).intValue() == 0) {
-                obsIntNoiseCutRetrig4.setValue(false);
-                noiseCutRetrig4 = 0;
-            }
-        }
-
-        if (theOscMessage.addrPattern().equals("/1/2525/2/86")) {
-            obsIntNoiseRateRangeVol.setValue(theOscMessage.get(0).intValue());
-            noiseModRateRangeVol = obsIntNoiseRateRangeVol.value;
-        }
-
-        if (theOscMessage.addrPattern().equals("/1/2525/2/116")) {
-            obsIntNoiseRateRangeCut.setValue(theOscMessage.get(0).intValue());
-            noiseModRateRangeCut = obsIntNoiseRateRangeCut.value;
-        }
 
         } // end osc listener
 
 
 
     ////////////////////////////////////////// OSC Event End
-    //////////////////////////////////////////////////////////////////////////////////////////////
-   /* public static class ObsInt {
-        public static final ObservableInt value =
-                new ObservableInt();
-    }*/
+
 
    //////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -9600,18 +9575,73 @@ public class MainActivity extends AppCompatActivity {
     }
 
     ////////////////////////////////////// Get local ip end
-    
     ////////////////////////////////////////// Osc Link start
 
     void oscLink(){
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+       StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
         oscP5 = new OscP5(this,9000);
-
+  /*    OscStartTask oscStartTask = new OscStartTask();
+      oscStartTask.doInBackground();*/
     }
 
+
+
     ////////////////////////////////////////// Osc Link end
+
+
+ /*   // The definition of our task class
+    static class OscNsgAsync extends AsyncTask<String, Integer, String> {
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+        }
+
+        @Override
+        protected String doInBackground(String... params) {
+
+            return "All Done!";
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... values) {
+            super.onProgressUpdate(values);
+
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            super.onPostExecute(result);
+        }
+    }
+
+    // Osc Start Async
+    static class OscStartTask extends AsyncTask<String, Integer, String> {
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+
+        }
+
+        @Override
+        protected String doInBackground(String... params) {
+            oscP5 = new OscP5(this,9000);
+            return "All Done!";
+        }
+
+        @Override
+        protected void onProgressUpdate(Integer... values) {
+            super.onProgressUpdate(values);
+
+        }
+
+        @Override
+        protected void onPostExecute(String result) {
+            super.onPostExecute(result);
+        }
+    }*/
 
 
 } // end activity
