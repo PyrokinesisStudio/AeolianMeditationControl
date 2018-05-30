@@ -1236,6 +1236,41 @@ public class FourthActivity extends AppCompatActivity {
             }
         }); // end listener
 
+
+        //Inv R
+        final ToggleButton toggleButtonLpFilterInvGet = findViewById(R.id.toggleButtonLpFilterInvR);
+        if (lpFilterInv == 127) {
+            toggleButtonLpFilterInvGet.setChecked(true);
+            toggleButtonLpFilterInvGet.setBackgroundColor(myColorD);
+        }
+        toggleButtonLpFilterInvGet.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    if (connectionCheck == 1) {
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/199";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        toggleButtonLpFilterInvGet.setBackgroundColor(myColorD);
+                        myOscMessage.add(127);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        lpFilterInv = 127;
+                    }
+                } else {
+                    if (connectionCheck == 1) {
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/199";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        toggleButtonLpFilterInvGet.setBackgroundColor(myColorC);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        lpFilterInv = 0;
+                    }
+                }
+            }
+        }); // end listener
+
+
         //Power
         final ToggleButton toggleButtonLpFilterPowerGet = findViewById(R.id.toggleButtonLpFilterPower);
         if (lpFilterPower == 127) {
@@ -1398,6 +1433,39 @@ public class FourthActivity extends AppCompatActivity {
             }
         }); // end listener
 
+        // 8bit
+        final ToggleButton toggleButtonDecimator8bitGet = findViewById(R.id.toggleButtonDecimator8bit);
+        if (decimator8bit == 127) {
+            toggleButtonDecimator8bitGet.setChecked(true);
+            toggleButtonDecimator8bitGet.setBackgroundColor(myColorD);
+        }
+        toggleButtonDecimator8bitGet.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    if (connectionCheck == 1) {
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/200";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        toggleButtonDecimator8bitGet.setBackgroundColor(myColorD);
+                        myOscMessage.add(127);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        decimator8bit = 127;
+                    }
+                } else {
+                    if (connectionCheck == 1) {
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/200";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        toggleButtonDecimator8bitGet.setBackgroundColor(myColorC);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        decimator8bit = 0;
+                    }
+                }
+            }
+        }); // end listener
+
         // Power
         final ToggleButton toggleButtonDecimatorPowerGet = findViewById(R.id.toggleButtonDecimatorPower);
         if (decimatorPower == 127) {
@@ -1537,6 +1605,40 @@ public class FourthActivity extends AppCompatActivity {
             }
         }); // end listener
 
+        // Cross
+        final ToggleButton toggleButtonDelayCrossGet = findViewById(R.id.toggleButtonDelayCross);
+        if (delayCross == 127) {
+            toggleButtonDelayCrossGet.setChecked(true);
+            toggleButtonDelayCrossGet.setBackgroundColor(myColorD);
+        }
+        toggleButtonDelayCrossGet.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    if (connectionCheck == 1) {
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/201";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        toggleButtonDelayCrossGet.setBackgroundColor(myColorD);
+                        myOscMessage.add(127);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        delayCross = 127;
+                    }
+                } else {
+                    if (connectionCheck == 1) {
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/201";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        toggleButtonDelayCrossGet.setBackgroundColor(myColorC);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        delayCross = 0;
+                    }
+                }
+            }
+        }); // end listener
+
+
         // Wet
         final Slider sliderDelayWetGet = findViewById(R.id.sliderDelayWet);
         sliderDelayWetGet.setValue(delayWet, true);
@@ -1659,6 +1761,57 @@ public class FourthActivity extends AppCompatActivity {
             }
         }); // end listener
 
+        // Feed R
+        final Slider sliderChorusFeedGetR = findViewById(R.id.sliderChorusFeedR);
+        sliderChorusFeedGetR.setValue(chorusFeedR, true);
+        sliderChorusFeedGetR.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
+            @Override
+            public void onPositionChanged(Slider view, boolean fromUser, float oldPos, float newPos, int oldValue, int newValue) {
+                if (connectionCheck == 1) {
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/202";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(sliderChorusFeedGetR.getValue());
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    chorusFeedR = sliderChorusFeedGetR.getValue();
+                }
+            }
+        }); // end listener
+
+        // Cross
+        final ToggleButton toggleButtonChorusCrossGet = findViewById(R.id.toggleButtonChorusCross);
+        if (chorusCross == 127) {
+            toggleButtonChorusCrossGet.setChecked(true);
+            toggleButtonChorusCrossGet.setBackgroundColor(myColorD);
+        }
+        toggleButtonChorusCrossGet.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    if (connectionCheck == 1) {
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/203";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        toggleButtonChorusCrossGet.setBackgroundColor(myColorD);
+                        myOscMessage.add(127);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        chorusCross = 127;
+                    }
+                } else {
+                    if (connectionCheck == 1) {
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/203";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        toggleButtonChorusCrossGet.setBackgroundColor(myColorC);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        chorusCross = 0;
+                    }
+                }
+            }
+        }); // end listener
+
+
         // Wet
         final Slider sliderChorusWetGet = findViewById(R.id.sliderChorusWet);
         sliderChorusWetGet.setValue(chorusWet, true);
@@ -1726,6 +1879,40 @@ public class FourthActivity extends AppCompatActivity {
                     myOscMessage.add(sliderReverbSizeGet.getValue());
                     oscP5.send(myOscMessage, getBroadcastLocation);
                     reverbSize = sliderReverbSizeGet.getValue();
+                }
+            }
+        }); // end listener
+
+        // Delay
+        final Slider sliderReverbDelayGet = findViewById(R.id.sliderReverbDelay);
+        sliderReverbDelayGet.setValue(reverbDelay, true);
+        sliderReverbDelayGet.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
+            @Override
+            public void onPositionChanged(Slider view, boolean fromUser, float oldPos, float newPos, int oldValue, int newValue) {
+                if (connectionCheck == 1) {
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/204";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(sliderReverbDelayGet.getValue());
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    reverbDelay = sliderReverbDelayGet.getValue();
+                }
+            }
+        }); // end listener
+
+        // Hp
+        final Slider sliderReverbHpGet = findViewById(R.id.sliderReverbHp);
+        sliderReverbHpGet.setValue(reverbHp, true);
+        sliderReverbHpGet.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
+            @Override
+            public void onPositionChanged(Slider view, boolean fromUser, float oldPos, float newPos, int oldValue, int newValue) {
+                if (connectionCheck == 1) {
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/205";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(sliderReverbHpGet.getValue());
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    reverbHp = sliderReverbHpGet.getValue();
                 }
             }
         }); // end listener
