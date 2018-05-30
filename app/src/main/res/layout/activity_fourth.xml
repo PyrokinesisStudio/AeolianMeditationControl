@@ -33,6 +33,9 @@
             name="obsIntFilterRetrig"
             type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntFilterRetrig" />
         <variable
+            name="obsIntFilterInv"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntFilterInv" />
+        <variable
             name="obsIntDecimatePower"
             type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntDecimatePower" />
         <variable
@@ -53,6 +56,9 @@
         <variable
             name="obsIntDecimateRetrig"
             type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntDecimateRetrig" />
+        <variable
+            name="obsIntDecimate8bit"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntDecimate8bit" />
         <variable
             name="obsIntDelayPower"
             type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntDelayPower" />
@@ -75,6 +81,9 @@
             name="obsIntDelayFeed"
             type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntDelayFeed" />
         <variable
+            name="obsIntDelayCross"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntDelayCross" />
+        <variable
             name="obsIntDelayWet"
             type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntDelayWet" />
         <variable
@@ -93,6 +102,12 @@
             name="obsIntChorusFeed"
             type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntChorusFeed" />
         <variable
+            name="obsIntChorusFeedR"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntChorusFeedR" />
+        <variable
+            name="obsIntChorusCross"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntChorusCross" />
+        <variable
             name="obsIntChorusWet"
             type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntChorusWet" />
         <variable
@@ -101,6 +116,12 @@
         <variable
             name="obsIntReverbSize"
             type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntReverbSize" />
+        <variable
+            name="obsIntReverbDelay"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntReverbDelay" />
+        <variable
+            name="obsIntReverbHp"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntReverbHp" />
         <variable
             name="obsIntReverbDamp"
             type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntReverbDamp" />

@@ -277,6 +277,7 @@ public class MainActivity extends AppCompatActivity {
     public static ObsIntFilterSync obsIntFilterSync;
     public static ObsIntFilterDiv obsIntFilterDiv;
     public static ObsIntFilterRetrig obsIntFilterRetrig;
+    public static ObsIntFilterInv obsIntFilterInv;
 
     public static ObsIntDecimatePower obsIntDecimatePower;
     public static ObsIntDecimateReduce obsIntDecimateReduce;
@@ -285,6 +286,7 @@ public class MainActivity extends AppCompatActivity {
     public static ObsIntDecimateSync obsIntDecimateSync;
     public static ObsIntDecimateDiv obsIntDecimateDiv;
     public static ObsIntDecimateRetrig obsIntDecimateRetrig;
+    public static ObsIntDecimate8bit obsIntDecimate8bit;
 
     public static ObsIntDelayPower obsIntDelayPower;
     public static ObsIntDelayTime obsIntDelayTime;
@@ -293,6 +295,7 @@ public class MainActivity extends AppCompatActivity {
     public static ObsIntDelayDiv obsIntDelayDiv;
     public static ObsIntDelayDivR obsIntDelayDivR;
     public static ObsIntDelayFeed obsIntDelayFeed;
+    public static ObsIntDelayCross obsIntDelayCross;
     public static ObsIntDelayWet obsIntDelayWet;
 
     public static ObsIntChorusPower obsIntChorusPower;
@@ -300,10 +303,14 @@ public class MainActivity extends AppCompatActivity {
     public static ObsIntChorusDepth obsIntChorusDepth;
     public static ObsIntChorusDelay obsIntChorusDelay;
     public static ObsIntChorusFeed obsIntChorusFeed;
+    public static ObsIntChorusFeedR obsIntChorusFeedR;
+    public static ObsIntChorusCross obsIntChorusCross;
     public static ObsIntChorusWet obsIntChorusWet;
 
     public static ObsIntReverbPower obsIntReverbPower;
     public static ObsIntReverbSize obsIntReverbSize;
+    public static ObsIntReverbDelay obsIntReverbDelay;
+    public static ObsIntReverbHp obsIntReverbHp;
     public static ObsIntReverbDamp obsIntReverbDamp;
     public static ObsIntReverbWidth obsIntReverbWidth;
     public static ObsIntReverbWet obsIntReverbWet;
@@ -529,6 +536,7 @@ public class MainActivity extends AppCompatActivity {
     public static int lpFilterSync = 1;
     public static int lpFilterDiv = 1;
     public static int lpFilterRetrig = 1;
+    public static int lpFilterInv = 1;
     public static int lpFilterPower = 1;
 
     // Decimator
@@ -538,6 +546,7 @@ public class MainActivity extends AppCompatActivity {
     public static int decimatorSync = 0;
     public static int decimatorDiv = 0;
     public static int decimatorRetrig = 0;
+    public static int decimator8bit = 0;
     public static int decimatorPower = 0;
 
     // Delay
@@ -547,6 +556,7 @@ public class MainActivity extends AppCompatActivity {
     public static int delaySync = 0;
     public static int delayDiv = 0;
     public static int delayDivR = 0;
+    public static int delayCross = 0;
     public static int delayWet = 0;
     public static int delayPower = 0;
 
@@ -555,11 +565,15 @@ public class MainActivity extends AppCompatActivity {
     public static int chorusDepth = 0;
     public static int chorusDelay = 0;
     public static int chorusFeed = 0;
+    public static int chorusFeedR = 0;
+    public static int chorusCross = 0;
     public static int chorusWet = 0;
     public static int chorusPower = 0;
 
     // Reverb
     public static int reverbSize = 0;
+    public static int reverbDelay = 0;
+    public static int reverbHp = 0;
     public static int reverbDamp = 0;
     public static int reverbWidth = 0;
     public static int reverbWet = 0;
@@ -1109,6 +1123,7 @@ public class MainActivity extends AppCompatActivity {
         obsIntFilterSync = new ObsIntFilterSync();
         obsIntFilterDiv = new ObsIntFilterDiv();
         obsIntFilterRetrig = new ObsIntFilterRetrig();
+        obsIntFilterInv = new ObsIntFilterInv();
 
         obsIntDecimatePower = new ObsIntDecimatePower();
         obsIntDecimateReduce = new ObsIntDecimateReduce();
@@ -1117,6 +1132,7 @@ public class MainActivity extends AppCompatActivity {
         obsIntDecimateSync = new ObsIntDecimateSync();
         obsIntDecimateDiv = new ObsIntDecimateDiv();
         obsIntDecimateRetrig = new ObsIntDecimateRetrig();
+        obsIntDecimate8bit = new ObsIntDecimate8bit();
 
         obsIntDelayPower = new ObsIntDelayPower();
         obsIntDelayTime = new ObsIntDelayTime();
@@ -1125,6 +1141,7 @@ public class MainActivity extends AppCompatActivity {
         obsIntDelayDiv = new ObsIntDelayDiv();
         obsIntDelayDivR = new ObsIntDelayDivR();
         obsIntDelayFeed = new ObsIntDelayFeed();
+        obsIntDelayCross = new ObsIntDelayCross();
         obsIntDelayWet = new ObsIntDelayWet();
 
         obsIntChorusPower = new ObsIntChorusPower();
@@ -1132,10 +1149,14 @@ public class MainActivity extends AppCompatActivity {
         obsIntChorusDepth = new ObsIntChorusDepth();
         obsIntChorusDelay = new ObsIntChorusDelay();
         obsIntChorusFeed = new ObsIntChorusFeed();
+        obsIntChorusFeedR = new ObsIntChorusFeedR();
+        obsIntChorusCross = new ObsIntChorusCross();
         obsIntChorusWet = new ObsIntChorusWet();
 
         obsIntReverbPower = new ObsIntReverbPower();
         obsIntReverbSize = new ObsIntReverbSize();
+        obsIntReverbDelay = new ObsIntReverbDelay();
+        obsIntReverbHp = new ObsIntReverbHp();
         obsIntReverbDamp = new ObsIntReverbDamp();
         obsIntReverbWidth = new ObsIntReverbWidth();
         obsIntReverbWet = new ObsIntReverbWet();
@@ -1628,6 +1649,13 @@ public class MainActivity extends AppCompatActivity {
             obsIntFilterRetrig.setValue(false);
         }
 
+        if (lpFilterInv == 127) {
+            obsIntFilterInv.setValue(true);
+        }
+        if (lpFilterInv == 0) {
+            obsIntFilterInv.setValue(false);
+        }
+
         if (lpFilterPower == 127) {
             obsIntFilterPower.setValue(true);
         }
@@ -1654,6 +1682,13 @@ public class MainActivity extends AppCompatActivity {
             obsIntDecimateRetrig.setValue(false);
         }
 
+        if (decimator8bit == 127) {
+            obsIntDecimate8bit.setValue(true);
+        }
+        if (decimator8bit == 0) {
+            obsIntDecimate8bit.setValue(false);
+        }
+
         if (decimatorPower == 127) {
             obsIntDecimatePower.setValue(true);
         }
@@ -1675,6 +1710,13 @@ public class MainActivity extends AppCompatActivity {
             obsIntDelaySync.setValue(false);
         }
 
+        if (delayCross == 127) {
+            obsIntDelayCross.setValue(true);
+        }
+        if (delayCross == 0) {
+            obsIntDelayCross.setValue(false);
+        }
+
         if (delayPower == 127) {
             obsIntDelayPower.setValue(true);
         }
@@ -1687,7 +1729,15 @@ public class MainActivity extends AppCompatActivity {
         obsIntChorusDepth.setValue(chorusDepth);
         obsIntChorusDelay.setValue(chorusDelay);
         obsIntChorusFeed.setValue(chorusFeed);
+        obsIntChorusFeedR.setValue(chorusFeedR);
         obsIntChorusWet.setValue(chorusWet);
+
+        if (chorusCross == 127) {
+            obsIntChorusCross.setValue(true);
+        }
+        if (chorusCross == 0) {
+            obsIntChorusCross.setValue(false);
+        }
 
         if (chorusPower == 127) {
             obsIntChorusPower.setValue(true);
@@ -1697,6 +1747,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         obsIntReverbSize.setValue(reverbSize);
+        obsIntReverbDelay.setValue(reverbDelay);
+        obsIntReverbHp.setValue(reverbHp);
         obsIntReverbDamp.setValue(reverbDamp);
         obsIntReverbWidth.setValue(reverbWidth);
         obsIntReverbWet.setValue(reverbWet);
@@ -7430,6 +7482,30 @@ public class MainActivity extends AppCompatActivity {
 
     //////////////////////////////////////////////////////////////////////////////////////////////
 
+    public class ObsIntDecimate8bit extends BaseObservable
+    {
+
+
+        public boolean value;
+
+        @Bindable
+        public boolean getValue()
+        {
+            return value;
+        }
+
+        public void setValue(boolean value)
+        {
+            this.value = value;
+            notifyPropertyChanged(BR.value);
+
+        }
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
     public class ObsIntFilterPower extends BaseObservable
     {
 
@@ -7658,6 +7734,30 @@ public class MainActivity extends AppCompatActivity {
 
     //////////////////////////////////////////////////////////////////////////////////////////////
 
+    public class ObsIntFilterInv extends BaseObservable
+    {
+
+
+        public boolean value;
+
+        @Bindable
+        public boolean getValue()
+        {
+            return value;
+        }
+
+        public void setValue(boolean value)
+        {
+            this.value = value;
+            notifyPropertyChanged(BR.value);
+
+        }
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
     public class ObsIntDelayPower extends BaseObservable
     {
 
@@ -7836,6 +7936,30 @@ public class MainActivity extends AppCompatActivity {
 
     //////////////////////////////////////////////////////////////////////////////////////////////
 
+    public class ObsIntDelayCross extends BaseObservable
+    {
+
+
+        public boolean value;
+
+        @Bindable
+        public boolean getValue()
+        {
+            return value;
+        }
+
+        public void setValue(boolean value)
+        {
+            this.value = value;
+            notifyPropertyChanged(BR.value);
+
+        }
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
     public class ObsIntDelayWet extends BaseObservable
     {
 
@@ -7990,6 +8114,57 @@ public class MainActivity extends AppCompatActivity {
 
     //////////////////////////////////////////////////////////////////////////////////////////////
 
+    public class ObsIntChorusFeedR extends BaseObservable
+    {
+
+
+        public int value;
+
+
+
+        @Bindable
+        public int getValue()
+        {
+            return value;
+        }
+
+        public void setValue(int value)
+        {
+            this.value = value;
+            notifyPropertyChanged(BR.value);
+
+        }
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
+    public class ObsIntChorusCross extends BaseObservable
+    {
+
+
+        public boolean value;
+
+        @Bindable
+        public boolean getValue()
+        {
+            return value;
+        }
+
+        public void setValue(boolean value)
+        {
+            this.value = value;
+            notifyPropertyChanged(BR.value);
+
+        }
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
     public class ObsIntChorusWet extends BaseObservable
     {
 
@@ -8041,6 +8216,58 @@ public class MainActivity extends AppCompatActivity {
     //////////////////////////////////////////////////////////////////////////////////////////////
 
     public class ObsIntReverbSize extends BaseObservable
+    {
+
+
+        public int value;
+
+
+
+        @Bindable
+        public int getValue()
+        {
+            return value;
+        }
+
+        public void setValue(int value)
+        {
+            this.value = value;
+            notifyPropertyChanged(BR.value);
+
+        }
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
+    public class ObsIntReverbDelay extends BaseObservable
+    {
+
+
+        public int value;
+
+
+
+        @Bindable
+        public int getValue()
+        {
+            return value;
+        }
+
+        public void setValue(int value)
+        {
+            this.value = value;
+            notifyPropertyChanged(BR.value);
+
+        }
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
+    public class ObsIntReverbHp extends BaseObservable
     {
 
 
@@ -8698,7 +8925,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //////////////////////////////////////////////////////////////////////////////////////////////
+
 
    ////////////////////////////////////// Binding Adapters start
 
