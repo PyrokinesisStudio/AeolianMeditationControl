@@ -849,6 +849,7 @@ public class MainActivity extends AppCompatActivity {
              lpFilterSync = sharedPref.getInt("lpFilterSync", lpFilterSync);
              lpFilterDiv = sharedPref.getInt("lpFilterDiv", lpFilterDiv);
              lpFilterRetrig = sharedPref.getInt("lpFilterRetrig", lpFilterRetrig);
+             lpFilterInv = sharedPref.getInt("lpFilterInv", lpFilterInv);
              lpFilterPower = sharedPref.getInt("lpFilterPower", lpFilterPower);
 
             // Decimator
@@ -858,6 +859,7 @@ public class MainActivity extends AppCompatActivity {
              decimatorSync = sharedPref.getInt("decimatorSync", decimatorSync);
              decimatorDiv = sharedPref.getInt("decimatorDiv", decimatorDiv);
              decimatorRetrig = sharedPref.getInt("decimatorRetrig", decimatorRetrig);
+             decimator8bit = sharedPref.getInt("decimator8bit", decimator8bit);
              decimatorPower = sharedPref.getInt("decimatorPower", decimatorPower);
 
             // Delay
@@ -868,6 +870,7 @@ public class MainActivity extends AppCompatActivity {
              delayDiv = sharedPref.getInt("delayDiv", delayDiv);
              delayDivR = sharedPref.getInt("delayDivR", delayDivR);
              delayWet = sharedPref.getInt("delayWet", delayWet);
+             delayCross = sharedPref.getInt("delayCross", delayCross);
              delayPower = sharedPref.getInt("delayPower", delayPower);
 
             // Chorus
@@ -875,11 +878,15 @@ public class MainActivity extends AppCompatActivity {
              chorusDepth = sharedPref.getInt("chorusDepth", chorusDepth);
              chorusDelay = sharedPref.getInt("chorusDelay", chorusDelay);
              chorusFeed = sharedPref.getInt("chorusFeed", chorusFeed);
+             chorusFeedR = sharedPref.getInt("chorusFeedR", chorusFeedR);
+             chorusCross = sharedPref.getInt("chorusCross", chorusCross);
              chorusWet = sharedPref.getInt("chorusWet", chorusWet);
              chorusPower = sharedPref.getInt("chorusPower", chorusPower);
 
             // Reverb
              reverbSize = sharedPref.getInt("reverbSize", reverbSize);
+             reverbDelay = sharedPref.getInt("reverbDelay", reverbDelay);
+             reverbHp = sharedPref.getInt("reverbHp", reverbHp);
              reverbDamp = sharedPref.getInt("reverbDamp", reverbDamp);
              reverbWidth = sharedPref.getInt("reverbWidth", reverbWidth);
              reverbWet = sharedPref.getInt("reverbWet", reverbWet);
@@ -2601,6 +2608,7 @@ public class MainActivity extends AppCompatActivity {
         editor.putInt("lpFilterSync", lpFilterSync);
         editor.putInt("lpFilterDiv", lpFilterDiv);
         editor.putInt("lpFilterRetrig", lpFilterRetrig);
+        editor.putInt("lpFilterInv", lpFilterInv);
         editor.putInt("lpFilterPower", lpFilterPower);
 
         // Decimator
@@ -2610,6 +2618,7 @@ public class MainActivity extends AppCompatActivity {
         editor.putInt("decimatorSync", decimatorSync);
         editor.putInt("decimatorDiv", decimatorDiv);
         editor.putInt("decimatorRetrig", decimatorRetrig);
+        editor.putInt("decimator8bit", decimator8bit);
         editor.putInt("decimatorPower", decimatorPower);
 
         // Delay
@@ -2620,6 +2629,7 @@ public class MainActivity extends AppCompatActivity {
         editor.putInt("delayDiv", delayDiv);
         editor.putInt("delayDivR", delayDivR);
         editor.putInt("delayWet", delayWet);
+        editor.putInt("delayCross", delayCross);
         editor.putInt("delayPower", delayPower);
 
         // Chorus
@@ -2627,11 +2637,15 @@ public class MainActivity extends AppCompatActivity {
         editor.putInt("chorusDepth", chorusDepth);
         editor.putInt("chorusDelay", chorusDelay);
         editor.putInt("chorusFeed", chorusFeed);
+        editor.putInt("chorusFeedR", chorusFeedR);
+        editor.putInt("chorusCross", chorusCross);
         editor.putInt("chorusWet", chorusWet);
         editor.putInt("chorusPower", chorusPower);
 
         // Reverb
         editor.putInt("reverbSize", reverbSize);
+        editor.putInt("reverbDelay", reverbDelay);
+        editor.putInt("reverbHp", reverbHp);
         editor.putInt("reverbDamp", reverbDamp);
         editor.putInt("reverbWidth", reverbWidth);
         editor.putInt("reverbWet", reverbWet);
@@ -3614,6 +3628,15 @@ public class MainActivity extends AppCompatActivity {
                         obsIntFilterRetrig.setValue(false);
                         lpFilterRetrig = 0;
                     }
+                case "/1/2525/2/199":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntFilterInv.setValue(true);
+                        lpFilterInv = 127;
+                    }
+                    else {
+                        obsIntFilterInv.setValue(false);
+                        lpFilterInv = 0;
+                    }
                     break;
                 case "/1/2525/2/158":
                     if (theOscMessage.get(0).intValue() == 127) {
@@ -3661,6 +3684,17 @@ public class MainActivity extends AppCompatActivity {
                         decimatorRetrig = 0;
                     }
                     break;
+
+                case "/1/2525/2/200":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntDecimate8bit.setValue(true);
+                        decimator8bit = 127;
+                    }
+                    else {
+                        obsIntDecimate8bit.setValue(false);
+                        decimator8bit = 0;
+                    }
+                    break;
                 case "/1/2525/2/165":
                     if (theOscMessage.get(0).intValue() == 127) {
                         obsIntDelayPower.setValue(true);
@@ -3705,6 +3739,16 @@ public class MainActivity extends AppCompatActivity {
                     obsIntDelayWet.setValue(theOscMessage.get(0).intValue());
                     delayWet = obsIntDelayWet.value;
                     break;
+                case "/1/2525/2/201":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntDelayCross.setValue(true);
+                        delayCross = 127;
+                    }
+                    else {
+                        obsIntDelayCross.setValue(false);
+                        delayCross = 0;
+                    }
+                    break;
                 case "/1/2525/2/171":
                     if (theOscMessage.get(0).intValue() == 127) {
                         obsIntChorusPower.setValue(true);
@@ -3731,6 +3775,21 @@ public class MainActivity extends AppCompatActivity {
                     obsIntChorusFeed.setValue(theOscMessage.get(0).intValue());
                     chorusFeed = obsIntChorusFeed.value;
                     break;
+                case "/1/2525/2/202":
+                    obsIntChorusFeedR.setValue(theOscMessage.get(0).intValue());
+                    chorusFeedR = obsIntChorusFeedR.value;
+                    break;
+                case "/1/2525/2/203":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntChorusCross.setValue(true);
+                        chorusCross = 127;
+                    }
+                    else {
+                        obsIntChorusCross.setValue(false);
+                        chorusCross = 0;
+                    }
+                    break;
+
                 case "/1/2525/2/176":
                     obsIntChorusWet.setValue(theOscMessage.get(0).intValue());
                     chorusWet = obsIntChorusWet.value;
@@ -3748,6 +3807,14 @@ public class MainActivity extends AppCompatActivity {
                 case "/1/2525/2/178":
                     obsIntReverbSize.setValue(theOscMessage.get(0).intValue());
                     reverbSize = obsIntReverbSize.value;
+                    break;
+                case "/1/2525/2/204":
+                    obsIntReverbDelay.setValue(theOscMessage.get(0).intValue());
+                    reverbDelay = obsIntReverbDelay.value;
+                    break;
+                case "/1/2525/2/205":
+                    obsIntReverbHp.setValue(theOscMessage.get(0).intValue());
+                    reverbHp = obsIntReverbHp.value;
                     break;
                 case "/1/2525/2/179":
                     obsIntReverbDamp.setValue(theOscMessage.get(0).intValue());

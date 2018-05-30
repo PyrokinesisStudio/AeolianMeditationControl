@@ -264,6 +264,7 @@ public class SecondActivity extends AppCompatActivity {
             lpFilterSync = sharedPref.getInt("lpFilterSync", lpFilterSync);
             lpFilterDiv = sharedPref.getInt("lpFilterDiv", lpFilterDiv);
             lpFilterRetrig = sharedPref.getInt("lpFilterRetrig", lpFilterRetrig);
+            lpFilterInv = sharedPref.getInt("lpFilterInv", lpFilterInv);
             lpFilterPower = sharedPref.getInt("lpFilterPower", lpFilterPower);
 
             // Decimator
@@ -273,6 +274,7 @@ public class SecondActivity extends AppCompatActivity {
             decimatorSync = sharedPref.getInt("decimatorSync", decimatorSync);
             decimatorDiv = sharedPref.getInt("decimatorDiv", decimatorDiv);
             decimatorRetrig = sharedPref.getInt("decimatorRetrig", decimatorRetrig);
+            decimator8bit = sharedPref.getInt("decimator8bit", decimator8bit);
             decimatorPower = sharedPref.getInt("decimatorPower", decimatorPower);
 
             // Delay
@@ -283,6 +285,7 @@ public class SecondActivity extends AppCompatActivity {
             delayDiv = sharedPref.getInt("delayDiv", delayDiv);
             delayDivR = sharedPref.getInt("delayDivR", delayDivR);
             delayWet = sharedPref.getInt("delayWet", delayWet);
+            delayCross = sharedPref.getInt("delayCross", delayCross);
             delayPower = sharedPref.getInt("delayPower", delayPower);
 
             // Chorus
@@ -290,11 +293,15 @@ public class SecondActivity extends AppCompatActivity {
             chorusDepth = sharedPref.getInt("chorusDepth", chorusDepth);
             chorusDelay = sharedPref.getInt("chorusDelay", chorusDelay);
             chorusFeed = sharedPref.getInt("chorusFeed", chorusFeed);
+            chorusFeedR = sharedPref.getInt("chorusFeedR", chorusFeedR);
+            chorusCross = sharedPref.getInt("chorusCross", chorusCross);
             chorusWet = sharedPref.getInt("chorusWet", chorusWet);
             chorusPower = sharedPref.getInt("chorusPower", chorusPower);
 
             // Reverb
             reverbSize = sharedPref.getInt("reverbSize", reverbSize);
+            reverbDelay = sharedPref.getInt("reverbDelay", reverbDelay);
+            reverbHp = sharedPref.getInt("reverbHp", reverbHp);
             reverbDamp = sharedPref.getInt("reverbDamp", reverbDamp);
             reverbWidth = sharedPref.getInt("reverbWidth", reverbWidth);
             reverbWet = sharedPref.getInt("reverbWet", reverbWet);
@@ -826,6 +833,13 @@ public class SecondActivity extends AppCompatActivity {
             obsIntFilterRetrig.setValue(false);
         }
 
+        if (lpFilterInv == 127) {
+            obsIntFilterInv.setValue(true);
+        }
+        if (lpFilterInv == 0) {
+            obsIntFilterInv.setValue(false);
+        }
+
         if (lpFilterPower == 127) {
             obsIntFilterPower.setValue(true);
         }
@@ -852,6 +866,13 @@ public class SecondActivity extends AppCompatActivity {
             obsIntDecimateRetrig.setValue(false);
         }
 
+        if (decimator8bit == 127) {
+            obsIntDecimate8bit.setValue(true);
+        }
+        if (decimator8bit == 0) {
+            obsIntDecimate8bit.setValue(false);
+        }
+
         if (decimatorPower == 127) {
             obsIntDecimatePower.setValue(true);
         }
@@ -873,6 +894,13 @@ public class SecondActivity extends AppCompatActivity {
             obsIntDelaySync.setValue(false);
         }
 
+        if (delayCross == 127) {
+            obsIntDelayCross.setValue(true);
+        }
+        if (delayCross == 0) {
+            obsIntDelayCross.setValue(false);
+        }
+
         if (delayPower == 127) {
             obsIntDelayPower.setValue(true);
         }
@@ -885,7 +913,15 @@ public class SecondActivity extends AppCompatActivity {
         obsIntChorusDepth.setValue(chorusDepth);
         obsIntChorusDelay.setValue(chorusDelay);
         obsIntChorusFeed.setValue(chorusFeed);
+        obsIntChorusFeedR.setValue(chorusFeedR);
         obsIntChorusWet.setValue(chorusWet);
+
+        if (chorusCross == 127) {
+            obsIntChorusCross.setValue(true);
+        }
+        if (chorusCross == 0) {
+            obsIntChorusCross.setValue(false);
+        }
 
         if (chorusPower == 127) {
             obsIntChorusPower.setValue(true);
@@ -895,6 +931,8 @@ public class SecondActivity extends AppCompatActivity {
         }
 
         obsIntReverbSize.setValue(reverbSize);
+        obsIntReverbDelay.setValue(reverbDelay);
+        obsIntReverbHp.setValue(reverbHp);
         obsIntReverbDamp.setValue(reverbDamp);
         obsIntReverbWidth.setValue(reverbWidth);
         obsIntReverbWet.setValue(reverbWet);
@@ -3250,6 +3288,7 @@ public class SecondActivity extends AppCompatActivity {
         editor.putInt("envelopeR", envelopeR);
         editor.putInt("droneVal", droneVal);
 
+
         // main settings
         editor.putInt("devicePower", devicePower);
         editor.putInt("bpmData", bpmData);
@@ -3448,6 +3487,7 @@ public class SecondActivity extends AppCompatActivity {
         editor.putInt("lpFilterSync", lpFilterSync);
         editor.putInt("lpFilterDiv", lpFilterDiv);
         editor.putInt("lpFilterRetrig", lpFilterRetrig);
+        editor.putInt("lpFilterInv", lpFilterInv);
         editor.putInt("lpFilterPower", lpFilterPower);
 
         // Decimator
@@ -3457,6 +3497,7 @@ public class SecondActivity extends AppCompatActivity {
         editor.putInt("decimatorSync", decimatorSync);
         editor.putInt("decimatorDiv", decimatorDiv);
         editor.putInt("decimatorRetrig", decimatorRetrig);
+        editor.putInt("decimator8bit", decimator8bit);
         editor.putInt("decimatorPower", decimatorPower);
 
         // Delay
@@ -3467,6 +3508,7 @@ public class SecondActivity extends AppCompatActivity {
         editor.putInt("delayDiv", delayDiv);
         editor.putInt("delayDivR", delayDivR);
         editor.putInt("delayWet", delayWet);
+        editor.putInt("delayCross", delayCross);
         editor.putInt("delayPower", delayPower);
 
         // Chorus
@@ -3474,11 +3516,15 @@ public class SecondActivity extends AppCompatActivity {
         editor.putInt("chorusDepth", chorusDepth);
         editor.putInt("chorusDelay", chorusDelay);
         editor.putInt("chorusFeed", chorusFeed);
+        editor.putInt("chorusFeedR", chorusFeedR);
+        editor.putInt("chorusCross", chorusCross);
         editor.putInt("chorusWet", chorusWet);
         editor.putInt("chorusPower", chorusPower);
 
         // Reverb
         editor.putInt("reverbSize", reverbSize);
+        editor.putInt("reverbDelay", reverbDelay);
+        editor.putInt("reverbHp", reverbHp);
         editor.putInt("reverbDamp", reverbDamp);
         editor.putInt("reverbWidth", reverbWidth);
         editor.putInt("reverbWet", reverbWet);

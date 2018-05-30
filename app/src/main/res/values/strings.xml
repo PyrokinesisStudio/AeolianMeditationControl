@@ -254,6 +254,13 @@
         <item>249</item>
         <item>250</item>
     </string-array>
+    <string-array name="spinnerReverbSize">
+        <item>Small</item>
+        <item>Room</item>
+        <item>Hall</item>
+        <item>Church</item>
+        <item>Planet</item>
+    </string-array>
     <string-array name="spinnerRateRange">
         <item>Slow</item>
         <item>Med</item>
