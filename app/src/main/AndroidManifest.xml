@@ -27,12 +27,14 @@
         <activity
             android:name=".ThirdActivity"
             android:screenOrientation="landscape" />
-        <activity android:name=".FourthActivity"
-            android:screenOrientation="landscape"
-            />
-        <activity android:name=".FifthActivity"
-            android:screenOrientation="landscape"
-            />
+        <activity
+            android:name=".FourthActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".FifthActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".SixthActivity"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>

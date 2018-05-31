@@ -1855,9 +1855,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-
         final Button buttonToEffectsPageGet = findViewById(R.id.buttonToEffectsPage);
         buttonToEffectsPageGet.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -1870,6 +1867,22 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
                 buttonToEffectsPageGet.setBackgroundColor(myColorC);
+                return false;
+            }
+        });
+
+        final Button buttonToPerformPageGet = findViewById(R.id.buttonToPerformPage);
+        buttonToPerformPageGet.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    buttonToPerformPageGet.setBackgroundColor(myColorD);
+
+                    Intent intentBundle = new Intent(MainActivity.this, SixthActivity.class);
+                    startActivity(intentBundle);
+                    return true;
+                }
+                buttonToPerformPageGet.setBackgroundColor(myColorC);
                 return false;
             }
         });
