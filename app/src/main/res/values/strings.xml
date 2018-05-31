@@ -268,6 +268,10 @@
         <item>Fast</item>
         <item>Turbo</item>
     </string-array>
+    <string-array name="spinnerLiveMode">
+        <item>Theramin</item>
+        <item>VA</item>
+    </string-array>
     <string-array name="spinnerSource">
         <item>Freq</item>
         <item>Note</item>
