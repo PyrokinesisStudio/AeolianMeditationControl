@@ -2656,7 +2656,7 @@ public class ThirdActivity extends AppCompatActivity {
         public void onNothingSelected(AdapterView<?> arg0) {
 
         }
-    } // end listener
+    } /// end listener
 
     public class CustomOnItemSelectedListenerNoiseModRateRangeCut implements AdapterView.OnItemSelectedListener {
 
