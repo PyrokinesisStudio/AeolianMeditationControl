@@ -59,6 +59,9 @@
         <variable
             name="obsIntFmFreqModRetrig"
             type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntFmFreqModRetrig" />
+        <variable
+            name="obsIntFmRateRange"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntFmRateRange" />
     </data>
 
     <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -177,6 +180,35 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.875" />
+
+            <TextView
+                android:id="@+id/textViewRateRange"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Rate Range"
+                android:textColor="@android:color/white"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.73"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.875" />
+
+            <Spinner
+                android:id="@+id/spinnerFmRateRange"
+                android:layout_width="75dp"
+                android:layout_height="20dp"
+                android:entries="@array/spinnerRateRange"
+                android:popupBackground="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.74"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.95"
+                app:selection="@{obsIntFmRateRange.value}" />
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/layoutSourceInnit"

@@ -265,6 +265,7 @@ public class MainActivity extends AppCompatActivity {
     public static ObsIntFmFreqModSync obsIntFmFreqModSync;
     public static ObsIntFmFreqModDiv obsIntFmFreqModDiv;
     public static ObsIntFmFreqModRetrig obsIntFmFreqModRetrig;
+    public static ObsIntFmRateRange obsIntFmRateRange;
 
     public static ObsIntDcKill obsIntDcKill;
 
@@ -611,6 +612,8 @@ public class MainActivity extends AppCompatActivity {
     public static int fmDepthModDiv = 0;
     public static int fmFreqModDiv = 0;
 
+    public static int fmRateRange = 0;
+
     /////////////////////////////////////////// Freq Page - Fifth Activity Variables End
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -924,6 +927,8 @@ public class MainActivity extends AppCompatActivity {
              fmDepthModDiv = sharedPref.getInt("fmDepthModDiv", fmDepthModDiv);
              fmFreqModDiv = sharedPref.getInt("fmFreqModDiv", fmFreqModDiv);
 
+             fmRateRange = sharedPref.getInt("fmRateRange", fmRateRange);
+
             /////////////////////////////////////////// Freq Page - Fifth Activity Variables End
 
         } // end sharedpref
@@ -1118,6 +1123,7 @@ public class MainActivity extends AppCompatActivity {
         obsIntFmFreqModSync = new ObsIntFmFreqModSync();
         obsIntFmFreqModDiv = new ObsIntFmFreqModDiv();
         obsIntFmFreqModRetrig = new ObsIntFmFreqModRetrig();
+        obsIntFmRateRange = new ObsIntFmRateRange();
 
         obsIntDcKill = new ObsIntDcKill();
 
@@ -1634,6 +1640,8 @@ public class MainActivity extends AppCompatActivity {
         if (fmDepthModRetrig == 0) {
             obsIntFmFreqModRetrig.setValue(false);
         }
+
+        obsIntFmRateRange.setValue(fmRateRange);
 
         obsIntFilterCut.setValue(lpFilterCut);
         obsIntFilterRes.setValue(lpFilterRes);
@@ -2683,6 +2691,8 @@ public class MainActivity extends AppCompatActivity {
         editor.putInt("fmDepthModDiv", fmDepthModDiv);
         editor.putInt("fmFreqModDiv", fmFreqModDiv);
 
+        editor.putInt("fmRateRange", fmRateRange);
+
         /////////////////////////////////////////// Freq Page - Fifth Activity Variables End
 
         editor.apply();
@@ -3574,6 +3584,10 @@ public class MainActivity extends AppCompatActivity {
                         obsIntFmFreqModRetrig.setValue(false);
                         fmFreqModRetrig = 0;
                     }
+                    break;
+                case "/1/2525/2/206":
+                    obsIntFmRateRange.setValue(theOscMessage.get(0).intValue());
+                    fmRateRange = obsIntFmRateRange.value;
                     break;
                 case "/1/2525/2/150":
                     if (theOscMessage.get(0).intValue() == 127) {
@@ -7338,6 +7352,32 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public void setValue(boolean value)
+        {
+            this.value = value;
+            notifyPropertyChanged(BR.value);
+
+        }
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
+    public class ObsIntFmRateRange extends BaseObservable
+    {
+
+
+        public int value;
+
+
+
+        @Bindable
+        public int getValue()
+        {
+            return value;
+        }
+
+        public void setValue(int value)
         {
             this.value = value;
             notifyPropertyChanged(BR.value);

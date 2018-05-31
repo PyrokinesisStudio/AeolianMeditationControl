@@ -343,6 +343,8 @@ public class FifthActivity extends AppCompatActivity {
             fmDepthModDiv = sharedPref.getInt("fmDepthModDiv", fmDepthModDiv);
             fmFreqModDiv = sharedPref.getInt("fmFreqModDiv", fmFreqModDiv);
 
+            fmRateRange = sharedPref.getInt("fmRateRange", fmRateRange);
+
             /////////////////////////////////////////// Freq Page - Fifth Activity Variables End
 
         } // end sharedpref
@@ -816,6 +818,8 @@ public class FifthActivity extends AppCompatActivity {
             obsIntFmFreqModRetrig.setValue(false);
         }
 
+        obsIntFmRateRange.setValue(fmRateRange);
+
         obsIntFilterCut.setValue(lpFilterCut);
         obsIntFilterRes.setValue(lpFilterRes);
         obsIntFilterEnv.setValue(lpFilterEnv);
@@ -983,6 +987,7 @@ public class FifthActivity extends AppCompatActivity {
         binding.setObsIntFmFreqModSync(obsIntFmFreqModSync);
         binding.setObsIntFmFreqModDiv(obsIntFmFreqModDiv);
         binding.setObsIntFmFreqModRetrig(obsIntFmFreqModRetrig);
+        binding.setObsIntFmRateRange(obsIntFmRateRange);
 
 
         ///////////////////////////////////////////////////// Navigator Buttons Start
@@ -1471,6 +1476,16 @@ public class FifthActivity extends AppCompatActivity {
         spinnerFmFreqModDivGet.setSelection(fmFreqModDiv);
         ////////////////////// FM Freq Mod Div End
 
+        ////////////////////// FM Freq Mod Div Start
+        final Spinner spinnerFmRateRangeGet = (findViewById(R.id.spinnerFmRateRange));
+        spinnerFmRateRangeGet.setOnItemSelectedListener(new FifthActivity.CustomOnItemSelectedListenerFmRateRange());
+        ArrayAdapter adapterFmRateRange = ArrayAdapter.createFromResource(this,
+                R.array.spinnerRateRange, R.layout.spinner_item);
+        spinnerFmRateRangeGet.setAdapter(adapterFmRateRange);
+        spinnerFmRateRangeGet.setSelection(fmRateRange);
+        ////////////////////// FM Freq Mod Div End
+
+
         ///////////////////////////////////////////////////// FM End
 
         ///////////////////////////////////////////////////// Source Random Start
@@ -1503,6 +1518,8 @@ public class FifthActivity extends AppCompatActivity {
 
                         sourceFreqGet.setText(String.valueOf(Math.round(random.nextFloat() * 1000)));
                         fmFreqGet.setText(String.valueOf(Math.round(random.nextFloat() * 1000)));
+
+                        spinnerFmRateRangeGet.setSelection(Math.round(random.nextFloat() * 4), true);
 
                     }
                 }
@@ -1557,6 +1574,8 @@ public class FifthActivity extends AppCompatActivity {
 
                         toggleButtonFmDepthModSyncGet.setChecked(false);
                         toggleButtonFmDepthModSyncGet.setBackgroundColor(myColorC);
+
+                        spinnerFmRateRangeGet.setSelection(0,true);
                     }
                 }
                 return false;
@@ -1717,6 +1736,26 @@ public class FifthActivity extends AppCompatActivity {
                 OscMessage myOscMessage = new OscMessage(myMsgAddress);
                 fmMidiOct = position;
                 myOscMessage.add(Math.round((position / 11.0f) * 127.0f));
+                oscP5.send(myOscMessage, getBroadcastLocation);
+            }
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> arg0) {
+
+        }
+    } // end listener
+
+    public class CustomOnItemSelectedListenerFmRateRange implements AdapterView.OnItemSelectedListener {
+
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+            if (connectionCheck == 1) {
+                getMyNetAddress();
+                String myMsgAddress = "/1/2525/1/206";
+                OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                fmRateRange = position;
+                myOscMessage.add(Math.round((position / 5.0f) * 127.0f));
                 oscP5.send(myOscMessage, getBroadcastLocation);
             }
         }
@@ -2049,6 +2088,8 @@ public class FifthActivity extends AppCompatActivity {
         editor.putInt("fmFreqModRetrig", fmFreqModRetrig);
         editor.putInt("fmDepthModDiv", fmDepthModDiv);
         editor.putInt("fmFreqModDiv", fmFreqModDiv);
+
+        editor.putInt("fmRateRange", fmRateRange);
 
         /////////////////////////////////////////// Freq Page - Fifth Activity Variables End
 

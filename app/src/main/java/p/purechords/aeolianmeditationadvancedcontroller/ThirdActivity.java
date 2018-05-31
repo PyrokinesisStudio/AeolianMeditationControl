@@ -337,6 +337,8 @@ public class ThirdActivity extends AppCompatActivity {
             fmDepthModDiv = sharedPref.getInt("fmDepthModDiv", fmDepthModDiv);
             fmFreqModDiv = sharedPref.getInt("fmFreqModDiv", fmFreqModDiv);
 
+            fmRateRange = sharedPref.getInt("fmRateRange", fmRateRange);
+
             /////////////////////////////////////////// Freq Page - Fifth Activity Variables End
 
         } // end sharedpref
@@ -809,6 +811,8 @@ public class ThirdActivity extends AppCompatActivity {
         if (fmDepthModRetrig == 0) {
             obsIntFmFreqModRetrig.setValue(false);
         }
+
+        obsIntFmRateRange.setValue(fmRateRange);
 
         obsIntFilterCut.setValue(lpFilterCut);
         obsIntFilterRes.setValue(lpFilterRes);
@@ -2997,6 +3001,8 @@ public class ThirdActivity extends AppCompatActivity {
         editor.putInt("fmFreqModRetrig", fmFreqModRetrig);
         editor.putInt("fmDepthModDiv", fmDepthModDiv);
         editor.putInt("fmFreqModDiv", fmFreqModDiv);
+
+        editor.putInt("fmRateRange", fmRateRange);
 
         /////////////////////////////////////////// Freq Page - Fifth Activity Variables End
 
