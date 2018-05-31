@@ -2829,6 +2829,8 @@ public class SecondActivity extends AppCompatActivity {
                         spinnerHarmVolModDivGet10.setSelection(Math.round(random.nextFloat() * 21), true);
                         spinnerHarmVolModDivGet11.setSelection(Math.round(random.nextFloat() * 21), true);
                         spinnerHarmVolModDivGet12.setSelection(Math.round(random.nextFloat() * 21), true);
+
+                        spinnerHarmVolModRateRangeGet1.setSelection(Math.round(random.nextFloat() * 4), true);
                     }
                 }
                 return false;
@@ -3251,7 +3253,7 @@ public class SecondActivity extends AppCompatActivity {
                 String myMsgAddress = "/1/2525/1/37";
                 OscMessage myOscMessage = new OscMessage(myMsgAddress);
                 harmVolModRateRange = position;
-                myOscMessage.add(Math.round((position / 3.0f) * 127.0f));
+                myOscMessage.add(Math.round((position / 5.0f) * 127.0f));
                 oscP5.send(myOscMessage, getBroadcastLocation);
             }
         }

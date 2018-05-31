@@ -2354,6 +2354,9 @@ public class ThirdActivity extends AppCompatActivity {
                         spinnerNoiseCutModDivGet2.setSelection(Math.round(random.nextFloat() * 21),true);
                         spinnerNoiseCutModDivGet3.setSelection(Math.round(random.nextFloat() * 21),true);
                         spinnerNoiseCutModDivGet4.setSelection(Math.round(random.nextFloat() * 21),true);
+
+                        spinnerNoiseModRateRangeCutGet.setSelection(Math.round(random.nextFloat() * 4),true);
+                        spinnerNoiseModRateRangeVolGet.setSelection(Math.round(random.nextFloat() * 4),true);
                     }
                 }
                 return false;
@@ -2419,6 +2422,9 @@ public class ThirdActivity extends AppCompatActivity {
                         spinnerNoiseCutModDivGet2.setSelection(0,true);
                         spinnerNoiseCutModDivGet3.setSelection(0,true);
                         spinnerNoiseCutModDivGet4.setSelection(0,true);
+
+                        spinnerNoiseModRateRangeCutGet.setSelection(0,true);
+                        spinnerNoiseModRateRangeVolGet.setSelection(0,true);
 
                         toggleButtonNoiseTypeGet.setChecked(false);
                         toggleButtonNoiseTypeGet.setBackgroundColor(myColorC);
@@ -2661,7 +2667,7 @@ public class ThirdActivity extends AppCompatActivity {
                 noiseModRateRangeCut = position;
 
                 OscMessage myOscMessage = new OscMessage("/1/2525/1/116");
-                myOscMessage.add(Math.round((position / 3.0f) * 127.0f));
+                myOscMessage.add(Math.round((position / 5.0f) * 127.0f));
                 oscP5.send(myOscMessage, getBroadcastLocation);
             }
         }
@@ -2681,7 +2687,7 @@ public class ThirdActivity extends AppCompatActivity {
                 noiseModRateRangeVol = position;
 
                 OscMessage myOscMessage = new OscMessage("/1/2525/1/86");
-                myOscMessage.add(Math.round((position / 3.0f) * 127.0f));
+                myOscMessage.add(Math.round((position / 5.0f) * 127.0f));
                 oscP5.send(myOscMessage, getBroadcastLocation);
             }
         }
