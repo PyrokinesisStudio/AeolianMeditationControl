@@ -1866,22 +1866,13 @@ public class FourthActivity extends AppCompatActivity {
 
         ///////////////////////////////////////////////////// Reverb Listeners Start
 
-        // Size
-        final Slider sliderReverbSizeGet = findViewById(R.id.sliderReverbSize);
-        sliderReverbSizeGet.setValue(reverbSize, true);
-        sliderReverbSizeGet.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
-            @Override
-            public void onPositionChanged(Slider view, boolean fromUser, float oldPos, float newPos, int oldValue, int newValue) {
-                if (connectionCheck == 1) {
-                    getMyNetAddress();
-                    String myMsgAddress = "/1/2525/1/178";
-                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
-                    myOscMessage.add(sliderReverbSizeGet.getValue());
-                    oscP5.send(myOscMessage, getBroadcastLocation);
-                    reverbSize = sliderReverbSizeGet.getValue();
-                }
-            }
-        }); // end listener
+        //Size
+        final Spinner spinnerReverbSizeGet = (findViewById(R.id.spinnerReverbSize));
+        spinnerReverbSizeGet.setOnItemSelectedListener(new FourthActivity.CustomOnItemSelectedListenerReverbSize());
+        ArrayAdapter adapterReverbSize = ArrayAdapter.createFromResource(this,
+                R.array.spinnerReverbSize, R.layout.spinner_item);
+        spinnerReverbSizeGet.setAdapter(adapterReverbSize);
+        spinnerReverbSizeGet.setSelection(reverbSize);
 
         // Delay
         final Slider sliderReverbDelayGet = findViewById(R.id.sliderReverbDelay);
@@ -2074,7 +2065,7 @@ public class FourthActivity extends AppCompatActivity {
                         sliderChorusFeedGet.setValue(Math.round(random.nextFloat() * 127),true);
                         sliderChorusWetGet.setValue(Math.round(random.nextFloat() * 127),true);
 
-                        sliderReverbSizeGet.setValue(Math.round(random.nextFloat() * 127),true);
+                        spinnerReverbSizeGet.setSelection(Math.round(random.nextFloat() * 4),true);
                         sliderReverbDampGet.setValue(Math.round(random.nextFloat() * 127),true);
                         sliderReverbWidthGet.setValue(Math.round(random.nextFloat() * 127),true);
                         sliderReverbWetGet.setValue(Math.round(random.nextFloat() * 127),true);
@@ -2186,7 +2177,7 @@ public class FourthActivity extends AppCompatActivity {
                         sliderChorusFeedGet.setValue(0,true);
                         sliderChorusWetGet.setValue(0,true);
 
-                        sliderReverbSizeGet.setValue(0,true);
+                        spinnerReverbSizeGet.setSelection(0,true);
                         sliderReverbDampGet.setValue(0,true);
                         sliderReverbWidthGet.setValue(0,true);
                         sliderReverbWetGet.setValue(0,true);
@@ -2295,6 +2286,26 @@ public class FourthActivity extends AppCompatActivity {
                 OscMessage myOscMessage = new OscMessage(myMsgAddress);
                 delayDivR = position;
                 myOscMessage.add(Math.round((position / 22.0f) * 127.0f));
+                oscP5.send(myOscMessage, getBroadcastLocation);
+            }
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> arg0) {
+
+        }
+    } // end listener
+
+    public class CustomOnItemSelectedListenerReverbSize implements AdapterView.OnItemSelectedListener {
+
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+            if (connectionCheck == 1) {
+                getMyNetAddress();
+                String myMsgAddress = "/1/2525/1/178";
+                OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                reverbSize = position;
+                myOscMessage.add(Math.round((position / 5.0f) * 127.0f));
                 oscP5.send(myOscMessage, getBroadcastLocation);
             }
         }

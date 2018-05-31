@@ -2407,17 +2407,19 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.666" />
 
-                    <ImageView
-                        android:id="@+id/imageViewSldierBack68"
+                    <Spinner
+                        android:id="@+id/spinnerReverbSize"
                         android:layout_width="75dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/sliderback"
+                        android:layout_height="20dp"
+                        android:entries="@array/spinnerReverbSize"
+                        android:popupBackground="@android:color/black"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.002"
+                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.885" />
+                        app:layout_constraintVertical_bias="0.75"
+                        app:selection="@{obsIntReverbSize.value}" />
 
                     <ImageView
                         android:id="@+id/imageViewSldierBack70"
@@ -2609,32 +2611,6 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.323" />
-
-                    <com.rey.material.widget.Slider
-                        android:id="@+id/sliderReverbSize"
-                        android:layout_width="75dp"
-                        android:layout_height="15dp"
-                        android:gravity="center"
-                        android:keepScreenOn="true"
-                        android:padding="5dp"
-                        android:paddingLeft="8dp"
-                        android:paddingRight="8dp"
-                        android:rotation="0"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.733"
-                        app:sl_alwaysFillThumb="true"
-                        app:sl_maxValue="127"
-                        app:sl_primaryColor="#7dd0f4"
-                        app:sl_secondaryColor="#7dd0f4"
-                        app:sl_thumbFocusRadius="5dp"
-                        app:sl_thumbRadius="4dp"
-                        app:sl_thumbTouchRadius="25dp"
-                        app:sl_trackSize="1dp"
-                        app:sl_value="@{obsIntReverbSize.value}" />
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderReverbDelay"
