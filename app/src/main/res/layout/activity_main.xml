@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
         <variable
@@ -621,7 +621,7 @@
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/layoutNavigate"
-                android:layout_width="250dp"
+                android:layout_width="200dp"
                 android:layout_height="45dp"
                 android:background="@android:color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -633,7 +633,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewNavigateBack"
-                    android:layout_width="247dp"
+                    android:layout_width="197dp"
                     android:layout_height="42dp"
                     android:background="@android:color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -643,19 +643,19 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layoutToHarmonicsPage"
-                    android:layout_width="40dp"
+                    android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.27"
+                    app:layout_constraintHorizontal_bias="0.22"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.76">
 
                     <Button
                         android:id="@+id/buttonToHarmonicsPage"
-                        android:layout_width="37dp"
+                        android:layout_width="27dp"
                         android:layout_height="27dp"
                         android:background="#ff4F75A1"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -669,18 +669,19 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layoutToSourcePage"
-                    android:layout_width="40dp"
+                    android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.41"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.76">
 
                     <Button
                         android:id="@+id/buttonToSourcePage"
-                        android:layout_width="37dp"
+                        android:layout_width="27dp"
                         android:layout_height="27dp"
                         android:background="#ff4F75A1"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -694,19 +695,19 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layoutToNoisePage"
-                    android:layout_width="40dp"
+                    android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.74"
+                    app:layout_constraintHorizontal_bias="0.6"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.76">
 
                     <Button
                         android:id="@+id/buttonToNoisePage"
-                        android:layout_width="37dp"
+                        android:layout_width="27dp"
                         android:layout_height="27dp"
                         android:background="#ff4F75A1"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -719,19 +720,19 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layoutToEffectsPage"
-                    android:layout_width="40dp"
+                    android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.97"
+                    app:layout_constraintHorizontal_bias="0.79"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.76">
 
                     <Button
                         android:id="@+id/buttonToEffectsPage"
-                        android:layout_width="37dp"
+                        android:layout_width="27dp"
                         android:layout_height="27dp"
                         android:background="#ff4F75A1"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -744,7 +745,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layoutToMainPage"
-                    android:layout_width="40dp"
+                    android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -756,7 +757,7 @@
 
                     <Button
                         android:id="@+id/buttonToMainPage"
-                        android:layout_width="37dp"
+                        android:layout_width="27dp"
                         android:layout_height="27dp"
                         android:background="#ff4F75A1"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -769,7 +770,7 @@
 
                 <TextView
                     android:id="@+id/textViewToMain"
-                    android:layout_width="50dp"
+                    android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Main"
@@ -777,14 +778,39 @@
                     android:textSize="8sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_bias="0.023"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.04" />
+                    app:layout_constraintVertical_bias="0.029" />
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layoutToPerformPage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.98"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.76">
+
+                    <Button
+                        android:id="@+id/buttonToPerformPage"
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:background="#ff4F75A1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
 
                 <TextView
                     android:id="@+id/textViewToHarmonics"
-                    android:layout_width="50dp"
+                    android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Harm"
@@ -792,14 +818,14 @@
                     android:textSize="8sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.25"
+                    app:layout_constraintHorizontal_bias="0.217"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.042" />
+                    app:layout_constraintVertical_bias="0.029" />
 
                 <TextView
                     android:id="@+id/textViewToFreq"
-                    android:layout_width="50dp"
+                    android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Freq"
@@ -807,13 +833,14 @@
                     android:textSize="8sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.405"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.042" />
+                    app:layout_constraintVertical_bias="0.029" />
 
                 <TextView
                     android:id="@+id/textViewToNoise"
-                    android:layout_width="50dp"
+                    android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Noise"
@@ -821,14 +848,14 @@
                     android:textSize="8sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.75"
+                    app:layout_constraintHorizontal_bias="0.6"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.042" />
+                    app:layout_constraintVertical_bias="0.029" />
 
                 <TextView
                     android:id="@+id/textViewToEffects"
-                    android:layout_width="50dp"
+                    android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Effects"
@@ -836,10 +863,25 @@
                     android:textSize="8sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintHorizontal_bias="0.79"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.042" />
+                    app:layout_constraintVertical_bias="0.029" />
+
+                <TextView
+                    android:id="@+id/textViewToLive"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Live"
+                    android:textColor="@android:color/white"
+                    android:textSize="8sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.98"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.029" />
             </android.support.constraint.ConstraintLayout>
 
             <android.support.constraint.ConstraintLayout
@@ -1345,31 +1387,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.76"
                 app:srcCompat="@drawable/oslogo" />
-
-            <android.support.constraint.ConstraintLayout
-                android:id="@+id/layoutToPerformPage"
-                android:layout_width="40dp"
-                android:layout_height="30dp"
-                android:background="@android:color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.75"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.95">
-
-                <Button
-                    android:id="@+id/buttonToPerformPage"
-                    android:layout_width="37dp"
-                    android:layout_height="27dp"
-                    android:background="#ff4F75A1"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </android.support.constraint.ConstraintLayout>
 
         </android.support.constraint.ConstraintLayout>
 

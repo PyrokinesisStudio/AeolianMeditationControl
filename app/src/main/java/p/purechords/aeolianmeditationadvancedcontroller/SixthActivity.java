@@ -1,6 +1,7 @@
 package p.purechords.aeolianmeditationadvancedcontroller;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -30,6 +31,97 @@ public class SixthActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_sixth);
+
+        /////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////// Navigator Buttons Start
+        /////////////////////////////////////////////////////////////////////////////
+
+        final Button buttonHarmonicsPageGet = findViewById(R.id.buttonToHarmonicsPage);
+        buttonHarmonicsPageGet.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    buttonHarmonicsPageGet.setBackgroundColor(myColorD);
+
+                    Intent intentBundle = new Intent(SixthActivity.this, SecondActivity.class);
+                    startActivity(intentBundle);
+                    return true;
+                }
+                buttonHarmonicsPageGet.setBackgroundColor(myColorC);
+                return false;
+            }
+        });
+
+        final Button buttonToMainPageGet = findViewById(R.id.buttonToMainPage);
+        buttonToMainPageGet.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    buttonToMainPageGet.setBackgroundColor(myColorD);
+
+                    Intent intentBundle = new Intent(SixthActivity.this, MainActivity.class);
+                    startActivity(intentBundle);
+                    return true;
+                }
+                buttonToMainPageGet.setBackgroundColor(myColorC);
+                return false;
+            }
+        });
+
+        final Button buttonToSourcePageGet = findViewById(R.id.buttonToSourcePage);
+        buttonToSourcePageGet.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    buttonToSourcePageGet.setBackgroundColor(myColorD);
+
+                    Intent intentBundle = new Intent(SixthActivity.this, FifthActivity.class);
+                    startActivity(intentBundle);
+                    return true;
+                }
+                buttonToSourcePageGet.setBackgroundColor(myColorC);
+                return false;
+            }
+        });
+
+        final Button buttonToNoisePageGet = findViewById(R.id.buttonToNoisePage);
+        buttonToNoisePageGet.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    buttonToNoisePageGet.setBackgroundColor(myColorD);
+
+                    Intent intentBundle = new Intent(SixthActivity.this, ThirdActivity.class);
+                    startActivity(intentBundle);
+                    return true;
+                }
+                buttonToNoisePageGet.setBackgroundColor(myColorC);
+                return false;
+            }
+        });
+
+        final Button buttonToEffectsPageGet = findViewById(R.id.buttonToEffectsPage);
+        buttonToEffectsPageGet.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    buttonToEffectsPageGet.setBackgroundColor(myColorD);
+
+                    Intent intentBundle = new Intent(SixthActivity.this, FourthActivity.class);
+                    startActivity(intentBundle);
+                    return true;
+                }
+                buttonToEffectsPageGet.setBackgroundColor(myColorC);
+                return false;
+            }
+        });
+
+        final Button buttonToPerformPageGet = findViewById(R.id.buttonToPerformPage);
+        buttonToPerformPageGet.setBackgroundColor(myColorD);
+
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////////// Navigator Buttons End
+        ////////////////////////////////////////////////////////////////////////////////////////////
 
         final Button xyLocator1Get = findViewById(R.id.buttonXyLocator1);
         final Button xybutton1Get = findViewById(R.id.xyButtonBack1);
