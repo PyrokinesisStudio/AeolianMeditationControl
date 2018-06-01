@@ -1278,6 +1278,7 @@ public class SeventhActivity extends AppCompatActivity {
         spinnerPlayOctGet.setAdapter(adapterPlayOct);
         spinnerPlayOctGet.setSelection(playOctave);
 
+        ///////////////////////////////////////////////////////////////////// Notes Start
 
         final Button noteC1Get = findViewById(R.id.buttonNoteC1);
         noteC1Get.setOnTouchListener(new View.OnTouchListener() {
@@ -2125,6 +2126,8 @@ public class SeventhActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+        ///////////////////////////////////////////////////////////////////// Notes End
 
     } // end create
 
