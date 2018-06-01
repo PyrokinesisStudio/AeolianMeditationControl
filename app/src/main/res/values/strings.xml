@@ -273,6 +273,7 @@
         <item>VA</item>
         <item>Noise Cut</item>
         <item>Noise Vol</item>
+        <item>ADSR</item>
     </string-array>
     <string-array name="spinnerSource">
         <item>Freq</item>

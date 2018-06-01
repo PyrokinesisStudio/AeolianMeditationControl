@@ -1155,11 +1155,13 @@ public class SixthActivity extends AppCompatActivity {
                                 myOscMessage = new OscMessage(myMsgAddress);
                                 myOscMessage.add(normX);
                                 oscP5.send(myOscMessage, getBroadcastLocation);
+                                harmMix = normX;
 
                                 myMsgAddress = "/1/2525/1/133";
                                 myOscMessage = new OscMessage(myMsgAddress);
                                 myOscMessage.add(normY);
                                 oscP5.send(myOscMessage, getBroadcastLocation);
+                                sourceFreq = String.valueOf(normY);
                             }
 
                             if (xyMode == 1) {
@@ -1168,11 +1170,13 @@ public class SixthActivity extends AppCompatActivity {
                                 myOscMessage = new OscMessage(myMsgAddress);
                                 myOscMessage.add(normX);
                                 oscP5.send(myOscMessage, getBroadcastLocation);
+                                lpFilterCut = normX;
 
                                 myMsgAddress = "/1/2525/1/152";
                                 myOscMessage = new OscMessage(myMsgAddress);
                                 myOscMessage.add(normY);
                                 oscP5.send(myOscMessage, getBroadcastLocation);
+                                lpFilterRes = normY;
                             }
 
                             if (xyMode == 2) {
@@ -1181,11 +1185,13 @@ public class SixthActivity extends AppCompatActivity {
                                 myOscMessage = new OscMessage(myMsgAddress);
                                 myOscMessage.add(normX);
                                 oscP5.send(myOscMessage, getBroadcastLocation);
+                                noiseCut1 = normX;
 
                                 myMsgAddress = "/1/2525/1/100";
                                 myOscMessage = new OscMessage(myMsgAddress);
                                 myOscMessage.add(normY);
                                 oscP5.send(myOscMessage, getBroadcastLocation);
+                                noiseCut2 = normY;
                             }
 
                             if (xyMode == 3) {
@@ -1194,11 +1200,28 @@ public class SixthActivity extends AppCompatActivity {
                                 myOscMessage = new OscMessage(myMsgAddress);
                                 myOscMessage.add(normX);
                                 oscP5.send(myOscMessage, getBroadcastLocation);
+                                noiseVol1 = normX;
 
                                 myMsgAddress = "/1/2525/1/75";
                                 myOscMessage = new OscMessage(myMsgAddress);
                                 myOscMessage.add(normY);
                                 oscP5.send(myOscMessage, getBroadcastLocation);
+                                noiseVol2 = normY;
+                            }
+
+                            if (xyMode == 4) {
+                                getMyNetAddress();
+                                myMsgAddress = "/1/2525/1/184";
+                                myOscMessage = new OscMessage(myMsgAddress);
+                                myOscMessage.add(normX);
+                                oscP5.send(myOscMessage, getBroadcastLocation);
+                                envelopeA = normX;
+
+                                myMsgAddress = "/1/2525/1/185";
+                                myOscMessage = new OscMessage(myMsgAddress);
+                                myOscMessage.add(normY);
+                                oscP5.send(myOscMessage, getBroadcastLocation);
+                                envelopeD = normY;
                             }
 
                             x1valData = event.getX();
@@ -1287,11 +1310,13 @@ public class SixthActivity extends AppCompatActivity {
                                 myOscMessage = new OscMessage(myMsgAddress);
                                 myOscMessage.add(normX);
                                 oscP5.send(myOscMessage, getBroadcastLocation);
+                                fmDepth = normX;
 
                                 myMsgAddress = "/1/2525/1/137";
                                 myOscMessage = new OscMessage(myMsgAddress);
                                 myOscMessage.add(normY);
                                 oscP5.send(myOscMessage, getBroadcastLocation);
+                                fmFreq = String.valueOf(normY);
                             }
 
                             if (xyMode == 1) {
@@ -1300,11 +1325,13 @@ public class SixthActivity extends AppCompatActivity {
                                 myOscMessage = new OscMessage(myMsgAddress);
                                 myOscMessage.add(normX);
                                 oscP5.send(myOscMessage, getBroadcastLocation);
+                                lpFilterMod = normX;
 
                                 myMsgAddress = "/1/2525/1/154";
                                 myOscMessage = new OscMessage(myMsgAddress);
                                 myOscMessage.add(normY);
                                 oscP5.send(myOscMessage, getBroadcastLocation);
+                                lpFilterRate = normY;
                             }
 
                             if (xyMode == 2) {
@@ -1313,11 +1340,13 @@ public class SixthActivity extends AppCompatActivity {
                                 myOscMessage = new OscMessage(myMsgAddress);
                                 myOscMessage.add(normX);
                                 oscP5.send(myOscMessage, getBroadcastLocation);
+                                noiseCut3 = normX;
 
                                 myMsgAddress = "/1/2525/1/102";
                                 myOscMessage = new OscMessage(myMsgAddress);
                                 myOscMessage.add(normY);
                                 oscP5.send(myOscMessage, getBroadcastLocation);
+                                noiseCut4 = normY;
                             }
 
                             if (xyMode == 3) {
@@ -1326,11 +1355,28 @@ public class SixthActivity extends AppCompatActivity {
                                 myOscMessage = new OscMessage(myMsgAddress);
                                 myOscMessage.add(normX);
                                 oscP5.send(myOscMessage, getBroadcastLocation);
+                                noiseVol3 = normX;
 
                                 myMsgAddress = "/1/2525/1/77";
                                 myOscMessage = new OscMessage(myMsgAddress);
                                 myOscMessage.add(normY);
                                 oscP5.send(myOscMessage, getBroadcastLocation);
+                                noiseVol4 = normY;
+                            }
+
+                            if (xyMode == 4) {
+                                getMyNetAddress();
+                                myMsgAddress = "/1/2525/1/185";
+                                myOscMessage = new OscMessage(myMsgAddress);
+                                myOscMessage.add(normX);
+                                oscP5.send(myOscMessage, getBroadcastLocation);
+                                envelopeS = normX;
+
+                                myMsgAddress = "/1/2525/1/186";
+                                myOscMessage = new OscMessage(myMsgAddress);
+                                myOscMessage.add(normY);
+                                oscP5.send(myOscMessage, getBroadcastLocation);
+                                envelopeR = normY;
                             }
 
                             x2valData = event.getX();
