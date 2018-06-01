@@ -269,7 +269,7 @@
         <item>Turbo</item>
     </string-array>
     <string-array name="spinnerLiveMode">
-        <item>Theramin</item>
+        <item>Theremin</item>
         <item>VA</item>
         <item>Noise</item>
     </string-array>
