@@ -1256,6 +1256,51 @@ public class SixthActivity extends AppCompatActivity {
 
                             if (xyMode == 7) {
                                 getMyNetAddress();
+                                myMsgAddress = "/1/2525/1/100";
+                                myOscMessage = new OscMessage(myMsgAddress);
+                                myOscMessage.add(normX);
+                                oscP5.send(myOscMessage, getBroadcastLocation);
+                                noiseCut2 = normX;
+
+                                myMsgAddress = "/1/2525/1/105";
+                                myOscMessage = new OscMessage(myMsgAddress);
+                                myOscMessage.add(normY);
+                                oscP5.send(myOscMessage, getBroadcastLocation);
+                                noiseRes2 = normY;
+                            }
+
+                            if (xyMode == 8) {
+                                getMyNetAddress();
+                                myMsgAddress = "/1/2525/1/101";
+                                myOscMessage = new OscMessage(myMsgAddress);
+                                myOscMessage.add(normX);
+                                oscP5.send(myOscMessage, getBroadcastLocation);
+                                noiseCut3 = normX;
+
+                                myMsgAddress = "/1/2525/1/106";
+                                myOscMessage = new OscMessage(myMsgAddress);
+                                myOscMessage.add(normY);
+                                oscP5.send(myOscMessage, getBroadcastLocation);
+                                noiseRes3 = normY;
+                            }
+
+                            if (xyMode == 9) {
+                                getMyNetAddress();
+                                myMsgAddress = "/1/2525/1/102";
+                                myOscMessage = new OscMessage(myMsgAddress);
+                                myOscMessage.add(normX);
+                                oscP5.send(myOscMessage, getBroadcastLocation);
+                                noiseCut4 = normX;
+
+                                myMsgAddress = "/1/2525/1/107";
+                                myOscMessage = new OscMessage(myMsgAddress);
+                                myOscMessage.add(normY);
+                                oscP5.send(myOscMessage, getBroadcastLocation);
+                                noiseRes4 = normY;
+                            }
+
+                            if (xyMode == 10) {
+                                getMyNetAddress();
                                 myMsgAddress = "/1/2525/1/1";
                                 myOscMessage = new OscMessage(myMsgAddress);
                                 myOscMessage.add(normX);
@@ -1269,7 +1314,7 @@ public class SixthActivity extends AppCompatActivity {
                                 harmVol2 = normY;
                             }
 
-                            if (xyMode == 8) {
+                            if (xyMode == 11) {
                                 getMyNetAddress();
                                 myMsgAddress = "/1/2525/1/5";
                                 myOscMessage = new OscMessage(myMsgAddress);
@@ -1284,7 +1329,7 @@ public class SixthActivity extends AppCompatActivity {
                                 harmVol6 = normY;
                             }
 
-                            if (xyMode == 9) {
+                            if (xyMode == 12) {
                                 getMyNetAddress();
                                 myMsgAddress = "/1/2525/1/9";
                                 myOscMessage = new OscMessage(myMsgAddress);
@@ -1299,7 +1344,7 @@ public class SixthActivity extends AppCompatActivity {
                                 harmVol10 = normY;
                             }
 
-                            if (xyMode == 10) {
+                            if (xyMode == 13) {
                                 getMyNetAddress();
                                 myMsgAddress = "/1/2525/1/1";
                                 myOscMessage = new OscMessage(myMsgAddress);
@@ -1314,7 +1359,7 @@ public class SixthActivity extends AppCompatActivity {
                                 harmVol3 = normY;
                             }
 
-                            if (xyMode == 11) {
+                            if (xyMode == 14) {
                                 getMyNetAddress();
                                 myMsgAddress = "/1/2525/1/2";
                                 myOscMessage = new OscMessage(myMsgAddress);
@@ -1329,7 +1374,7 @@ public class SixthActivity extends AppCompatActivity {
                                 harmVol4 = normY;
                             }
 
-                            if (xyMode == 12) {
+                            if (xyMode == 15) {
                                 getMyNetAddress();
                                 myMsgAddress = "/1/2525/1/3";
                                 myOscMessage = new OscMessage(myMsgAddress);
@@ -1531,6 +1576,52 @@ public class SixthActivity extends AppCompatActivity {
 
                             if (xyMode == 7) {
                                 getMyNetAddress();
+                                myMsgAddress = "/1/2525/1/113";
+                                myOscMessage = new OscMessage(myMsgAddress);
+                                myOscMessage.add(normX);
+                                oscP5.send(myOscMessage, getBroadcastLocation);
+                                noiseCutRate2 = normX;
+
+                                myMsgAddress = "/1/2525/1/109";
+                                myOscMessage = new OscMessage(myMsgAddress);
+                                myOscMessage.add(normY);
+                                oscP5.send(myOscMessage, getBroadcastLocation);
+                                noiseCutMod2 = normY;
+                            }
+
+                            if (xyMode == 8) {
+                                getMyNetAddress();
+                                myMsgAddress = "/1/2525/1/114";
+                                myOscMessage = new OscMessage(myMsgAddress);
+                                myOscMessage.add(normX);
+                                oscP5.send(myOscMessage, getBroadcastLocation);
+                                noiseCutRate3 = normX;
+
+                                myMsgAddress = "/1/2525/1/110";
+                                myOscMessage = new OscMessage(myMsgAddress);
+                                myOscMessage.add(normY);
+                                oscP5.send(myOscMessage, getBroadcastLocation);
+                                noiseCutMod3 = normY;
+                            }
+
+                            if (xyMode == 9) {
+                                getMyNetAddress();
+                                myMsgAddress = "/1/2525/1/115";
+                                myOscMessage = new OscMessage(myMsgAddress);
+                                myOscMessage.add(normX);
+                                oscP5.send(myOscMessage, getBroadcastLocation);
+                                noiseCutRate4 = normX;
+
+                                myMsgAddress = "/1/2525/1/111";
+                                myOscMessage = new OscMessage(myMsgAddress);
+                                myOscMessage.add(normY);
+                                oscP5.send(myOscMessage, getBroadcastLocation);
+                                noiseCutMod4 = normY;
+                            }
+
+
+                            if (xyMode == 10) {
+                                getMyNetAddress();
                                 myMsgAddress = "/1/2525/1/3";
                                 myOscMessage = new OscMessage(myMsgAddress);
                                 myOscMessage.add(normX);
@@ -1544,7 +1635,7 @@ public class SixthActivity extends AppCompatActivity {
                                 harmVol4 = normY;
                             }
 
-                            if (xyMode == 8) {
+                            if (xyMode == 11) {
                                 getMyNetAddress();
                                 myMsgAddress = "/1/2525/1/7";
                                 myOscMessage = new OscMessage(myMsgAddress);
@@ -1559,7 +1650,7 @@ public class SixthActivity extends AppCompatActivity {
                                 harmVol8 = normY;
                             }
 
-                            if (xyMode == 9) {
+                            if (xyMode == 12) {
                                 getMyNetAddress();
                                 myMsgAddress = "/1/2525/1/11";
                                 myOscMessage = new OscMessage(myMsgAddress);
@@ -1574,7 +1665,7 @@ public class SixthActivity extends AppCompatActivity {
                                 harmVol12 = normY;
                             }
 
-                            if (xyMode == 10) {
+                            if (xyMode == 13) {
                                 getMyNetAddress();
                                 myMsgAddress = "/1/2525/1/5";
                                 myOscMessage = new OscMessage(myMsgAddress);
@@ -1589,7 +1680,7 @@ public class SixthActivity extends AppCompatActivity {
                                 harmVol7 = normY;
                             }
 
-                            if (xyMode == 11) {
+                            if (xyMode == 14) {
                                 getMyNetAddress();
                                 myMsgAddress = "/1/2525/1/6";
                                 myOscMessage = new OscMessage(myMsgAddress);
@@ -1604,7 +1695,7 @@ public class SixthActivity extends AppCompatActivity {
                                 harmVol8 = normY;
                             }
 
-                            if (xyMode == 12) {
+                            if (xyMode == 15) {
                                 getMyNetAddress();
                                 myMsgAddress = "/1/2525/1/9";
                                 myOscMessage = new OscMessage(myMsgAddress);
@@ -1826,22 +1917,70 @@ public class SixthActivity extends AppCompatActivity {
                     yParam2Get.setText("Y = Noise 1 Mod");
                     break;
                 case 7:
+                    xParam1Get.setText("X = Noise 2 Cut");
+                    yParam1Get.setText("Y = Noise 2 Res");
+                    xParam2Get.setText("X = Noise 2 Rate");
+                    yParam2Get.setText("Y = Noise 2 Mod");
+                    break;
+                case 8:
+                    xParam1Get.setText("X = Noise 3 Cut");
+                    yParam1Get.setText("Y = Noise 3 Res");
+                    xParam2Get.setText("X = Noise 3 Rate");
+                    yParam2Get.setText("Y = Noise 3 Mod");
+                    break;
+                case 9:
+                    xParam1Get.setText("X = Noise 4 Cut");
+                    yParam1Get.setText("Y = Noise 4 Res");
+                    xParam2Get.setText("X = Noise 4 Rate");
+                    yParam2Get.setText("Y = Noise 4 Mod");
+                    break;
+                case 10:
                     xParam1Get.setText("X = Harm 1 Vol");
                     yParam1Get.setText("Y = Harm 2 Vol");
                     xParam2Get.setText("X = Harm 3 Vol");
                     yParam2Get.setText("Y = Harm 4 Vol");
                     break;
-                case 8:
+                case 11:
                     xParam1Get.setText("X = Harm 5 Vol");
                     yParam1Get.setText("Y = Harm 6 Vol");
                     xParam2Get.setText("X = Harm 7 Vol");
                     yParam2Get.setText("Y = Harm 8 Vol");
                     break;
-                case 9:
+                case 12:
                     xParam1Get.setText("X = Harm 9 Vol");
                     yParam1Get.setText("Y = Harm 10 Vol");
                     xParam2Get.setText("X = Harm 11 Vol");
                     yParam2Get.setText("Y = Harm 12 Vol");
+                    break;
+                case 13:
+                    xParam1Get.setText("X = Harm 1 Vol");
+                    yParam1Get.setText("Y = Harm 3 Vol");
+                    xParam2Get.setText("X = Harm 5 Vol");
+                    yParam2Get.setText("Y = Harm 7 Vol");
+                    break;
+                case 14:
+                    xParam1Get.setText("X = Harm 2 Vol");
+                    yParam1Get.setText("Y = Harm 4 Vol");
+                    xParam2Get.setText("X = Harm 6 Vol");
+                    yParam2Get.setText("Y = Harm 8 Vol");
+                    break;
+                case 15:
+                    xParam1Get.setText("X = Harm 3 Vol");
+                    yParam1Get.setText("Y = Harm 6 Vol");
+                    xParam2Get.setText("X = Harm 9 Vol");
+                    yParam2Get.setText("Y = Harm 12 Vol");
+                    break;
+                case 16:
+                    xParam1Get.setText("X = FM Depth");
+                    yParam1Get.setText("Y = FM Mod");
+                    xParam2Get.setText("X = Chorus Rate");
+                    yParam2Get.setText("Y = Chorus Depth");
+                    break;
+                case 17:
+                    xParam1Get.setText("X = FM Depth");
+                    yParam1Get.setText("Y = FM Mod");
+                    xParam2Get.setText("X = FM Rate");
+                    yParam2Get.setText("Y = Chorus Wet");
                     break;
 
             } // end switch
