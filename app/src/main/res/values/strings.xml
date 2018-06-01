@@ -279,6 +279,8 @@
         <item>Harm 1–4</item>
         <item>Harm 5–8</item>
         <item>Harm 9–12</item>
+        <item>Harm 1357</item>
+        <item>Harm 2468</item>
     </string-array>
     <string-array name="spinnerSource">
         <item>Freq</item>
