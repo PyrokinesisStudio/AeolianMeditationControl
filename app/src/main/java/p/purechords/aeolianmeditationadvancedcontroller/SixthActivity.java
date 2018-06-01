@@ -1127,7 +1127,7 @@ public class SixthActivity extends AppCompatActivity {
                 if (xyMode == 0) {
                     normY = Math.round(((float) y / yMax) * 1000.0f);
                 }
-                if (xyMode == 1 || xyMode == 2) {
+                if (xyMode != 0) {
                     normY = Math.round(((float) y / yMax) * 127.0f);
                 }
 
@@ -1183,6 +1183,19 @@ public class SixthActivity extends AppCompatActivity {
                                 oscP5.send(myOscMessage, getBroadcastLocation);
 
                                 myMsgAddress = "/1/2525/1/100";
+                                myOscMessage = new OscMessage(myMsgAddress);
+                                myOscMessage.add(normY);
+                                oscP5.send(myOscMessage, getBroadcastLocation);
+                            }
+
+                            if (xyMode == 3) {
+                                getMyNetAddress();
+                                myMsgAddress = "/1/2525/1/74";
+                                myOscMessage = new OscMessage(myMsgAddress);
+                                myOscMessage.add(normX);
+                                oscP5.send(myOscMessage, getBroadcastLocation);
+
+                                myMsgAddress = "/1/2525/1/75";
                                 myOscMessage = new OscMessage(myMsgAddress);
                                 myOscMessage.add(normY);
                                 oscP5.send(myOscMessage, getBroadcastLocation);
@@ -1246,7 +1259,7 @@ public class SixthActivity extends AppCompatActivity {
                 if (xyMode == 0) {
                     normY = Math.round(((float) y / yMax) * 100.0f);
                 }
-                if (xyMode == 1 || xyMode == 2) {
+                if (xyMode != 0) {
                     normY = Math.round(((float) y / yMax) * 127.0f);
                 }
 
@@ -1307,6 +1320,19 @@ public class SixthActivity extends AppCompatActivity {
                                 oscP5.send(myOscMessage, getBroadcastLocation);
                             }
 
+                            if (xyMode == 3) {
+                                getMyNetAddress();
+                                myMsgAddress = "/1/2525/1/76";
+                                myOscMessage = new OscMessage(myMsgAddress);
+                                myOscMessage.add(normX);
+                                oscP5.send(myOscMessage, getBroadcastLocation);
+
+                                myMsgAddress = "/1/2525/1/77";
+                                myOscMessage = new OscMessage(myMsgAddress);
+                                myOscMessage.add(normY);
+                                oscP5.send(myOscMessage, getBroadcastLocation);
+                            }
+
                             x2valData = event.getX();
                             y2valData = event.getY();
 
@@ -1345,244 +1371,6 @@ public class SixthActivity extends AppCompatActivity {
                 R.array.spinnerLiveMode, R.layout.spinner_item);
         spinnerXyModeGet.setAdapter(adapterXyMode);
         spinnerXyModeGet.setSelection(xyMode);
-
-        final Button buttonModeInnitGet = findViewById(R.id.buttonModeInnit);
-        buttonModeInnitGet.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_UP) {
-                    buttonModeInnitGet.setBackgroundColor(myColorC);
-                    if (connectionCheck == 1) {
-                        if (xyMode == 0) {
-
-                            xyTrig1Get.setChecked(true);
-                            xyTrig1Get.setBackgroundColor(myColorD);
-
-                            xyTrig2Get.setChecked(false);
-                            xyTrig2Get.setBackgroundColor(myColorC);
-
-                            getMyNetAddress();
-                            String myMsgAddress = "/1/2525/1/130"; // noise mix silent
-                            OscMessage myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(0);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            noiseMix = 0;
-
-                            myMsgAddress = "/1/2525/1/1";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(100);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            harmVol1 = 100;
-
-                            myMsgAddress = "/1/2525/1/183";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(127);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            droneVal = 127;
-
-                            myMsgAddress = "/1/2525/1/2";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(0);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            harmVol2 = 0;
-
-                            myMsgAddress = "/1/2525/1/3";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(0);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            harmVol3 = 0;
-
-                            myMsgAddress = "/1/2525/1/4";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(0);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            harmVol4 = 0;
-
-                            myMsgAddress = "/1/2525/1/5";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(0);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            harmVol5 = 0;
-
-                            myMsgAddress = "/1/2525/1/6";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(0);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            harmVol6 = 0;
-
-                            myMsgAddress = "/1/2525/1/7";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(0);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            harmVol7 = 0;
-
-                            myMsgAddress = "/1/2525/1/8";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(0);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            harmVol8 = 0;
-
-                            myMsgAddress = "/1/2525/1/9";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(0);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            harmVol9 = 0;
-
-                            myMsgAddress = "/1/2525/1/10";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(0);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            harmVol10 = 0;
-
-                            myMsgAddress = "/1/2525/1/11";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(0);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            harmVol11 = 0;
-
-                            myMsgAddress = "/1/2525/1/12";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(0);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            harmVol12 = 0;
-
-                            myMsgAddress = "/1/2525/1/13";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(0);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            harmVolMod1 = 0;
-
-                            myMsgAddress = "/1/2525/1/14";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(0);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            harmVolMod2 = 0;
-
-                            myMsgAddress = "/1/2525/1/15";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(0);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            harmVolMod3 = 0;
-
-                            myMsgAddress = "/1/2525/1/16";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(0);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            harmVolMod4 = 0;
-
-                            myMsgAddress = "/1/2525/1/17";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(0);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            harmVolMod5 = 0;
-
-                            myMsgAddress = "/1/2525/1/18";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(0);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            harmVolMod6 = 0;
-
-                            myMsgAddress = "/1/2525/1/19";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(0);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            harmVolMod7 = 0;
-
-                            myMsgAddress = "/1/2525/1/20";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(0);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            harmVolMod8 = 0;
-
-                            myMsgAddress = "/1/2525/1/21";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(0);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            harmVolMod9 = 0;
-
-                            myMsgAddress = "/1/2525/1/22";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(0);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            harmVolMod10 = 0;
-
-                            myMsgAddress = "/1/2525/1/23";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(0);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            harmVolMod11 = 0;
-
-                            myMsgAddress = "/1/2525/1/24";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(0);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            harmVolMod12 = 0;
-                        }
-
-
-
-                    if (xyMode == 1) {
-                        getMyNetAddress();
-                        String myMsgAddress = "/1/2525/1/155";
-                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
-                        myOscMessage.add(0);
-                        oscP5.send(myOscMessage, getBroadcastLocation);
-                        lpFilterSync = 0;
-                    }
-
-                    if (xyMode == 2) {
-
-                        xyTrig1Get.setChecked(true);
-                        xyTrig1Get.setBackgroundColor(myColorD);
-
-                        xyTrig2Get.setChecked(false);
-                        xyTrig2Get.setBackgroundColor(myColorC);
-
-                            getMyNetAddress();
-                            String myMsgAddress = "/1/2525/1/129"; // harmonics mix silent
-                            OscMessage myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(0);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            harmMix = 0;
-
-                            myMsgAddress = "/1/2525/1/130"; // noise mix full
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(127);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            noiseMix = 127;
-
-                            myMsgAddress = "/1/2525/1/74";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(63);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            noiseVol1 = 63;
-
-                            myMsgAddress = "/1/2525/1/75";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(63);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            noiseVol1 = 63;
-
-                            myMsgAddress = "/1/2525/1/76";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(63);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            noiseVol1 = 63;
-
-                            myMsgAddress = "/1/2525/1/77";
-                            myOscMessage = new OscMessage(myMsgAddress);
-                            myOscMessage.add(63);
-                            oscP5.send(myOscMessage, getBroadcastLocation);
-                            noiseVol1 = 63;
-                    }
-                }
-
-                    return true;
-                }
-                buttonModeInnitGet.setBackgroundColor(myColorD);
-                return false;
-            }
-        });
 
         final ToggleButton droneGet = findViewById(R.id.toggleButtonDrone);
         if (droneVal == 127) {

@@ -271,7 +271,8 @@
     <string-array name="spinnerLiveMode">
         <item>Theremin</item>
         <item>VA</item>
-        <item>Noise</item>
+        <item>Noise Cut</item>
+        <item>Noise Vol</item>
     </string-array>
     <string-array name="spinnerSource">
         <item>Freq</item>
