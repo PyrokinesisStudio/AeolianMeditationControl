@@ -355,6 +355,12 @@ public class FifthActivity extends AppCompatActivity {
 
             /////////////////////////////////////////// Live Page - Sixth Activity Variables End
 
+            /////////////////////////////////////////// Play Page - Seventh Activity Variables Start
+
+            playOctave = sharedPref.getInt("playOctave", playOctave);
+
+            /////////////////////////////////////////// Play Page - Seventh Activity Variables End
+
         } // end sharedpref
 
         ///////////////////////////////////////////////////// Shared Preferences  End
@@ -2124,6 +2130,12 @@ public class FifthActivity extends AppCompatActivity {
         editor.putInt("xyTrig2", xyTrig2);
 
         /////////////////////////////////////////// Live Page - Sixth Activity Variables End
+
+        /////////////////////////////////////////// Play Page - Seventh Activity Variables Start
+
+        editor.putInt("playOctave", playOctave);
+
+        /////////////////////////////////////////// Play Page - Seventh Activity Variables End
 
         editor.apply();
 

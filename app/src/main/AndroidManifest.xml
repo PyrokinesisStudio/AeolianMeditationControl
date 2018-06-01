@@ -33,7 +33,10 @@
         <activity
             android:name=".FifthActivity"
             android:screenOrientation="landscape" />
-        <activity android:name=".SixthActivity"
+        <activity
+            android:name=".SixthActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".SeventhActivity"
             android:screenOrientation="landscape" />
     </application>
 

@@ -291,6 +291,17 @@
         <item>Note</item>
         <item>Midi</item>
     </string-array>
+    <string-array name="spinnerPlayOct">
+        <item>C0</item>
+        <item>C1</item>
+        <item>C2</item>
+        <item>C3</item>
+        <item>C4</item>
+        <item>C5</item>
+        <item>C6</item>
+        <item>C7</item>
+        <item>C8</item>
+    </string-array>
     <string-array name="spinnerMidiChan">
         <item>1</item>
         <item>2</item>

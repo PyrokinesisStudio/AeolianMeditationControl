@@ -3,7 +3,6 @@ package p.purechords.aeolianmeditationadvancedcontroller;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -11,31 +10,24 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.ToggleButton;
 
 import oscP5.OscMessage;
-import p.purechords.aeolianmeditationadvancedcontroller.databinding.ActivitySixthBinding;
 
 import static p.purechords.aeolianmeditationadvancedcontroller.MainActivity.*;
 
-public class SixthActivity extends AppCompatActivity {
+public class SeventhActivity extends AppCompatActivity {
 
-    Float x1valData = 1.0f;
-    Float y1valData = 1.0f;
-    Float x2valData = 1.0f;
-    Float y2valData = 1.0f;
+    int limit = 0;
+
+
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
 
-        // Set layout with binding
-        ActivitySixthBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_sixth);
+        setContentView(R.layout.activity_seventh);
 
         ///////////////////////////////////////////////////// Shared Preferences Start
         SharedPreferences sharedPref= getSharedPreferences("OsAmaControlPref", 0);
@@ -968,27 +960,9 @@ public class SixthActivity extends AppCompatActivity {
         /////////////////////////////////////////// Observable set end
         ////////////////////////////////////////////////////////////////
 
-        binding.setObsIntDrone(obsIntDrone);
-
         /////////////////////////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////// Navigator Buttons Start
         /////////////////////////////////////////////////////////////////////////////
-
-        final Button buttonHarmonicsPageGet = findViewById(R.id.buttonToHarmonicsPage);
-        buttonHarmonicsPageGet.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_UP) {
-                    buttonHarmonicsPageGet.setBackgroundColor(myColorD);
-
-                    Intent intentBundle = new Intent(SixthActivity.this, SecondActivity.class);
-                    startActivity(intentBundle);
-                    return true;
-                }
-                buttonHarmonicsPageGet.setBackgroundColor(myColorC);
-                return false;
-            }
-        });
 
         final Button buttonToMainPageGet = findViewById(R.id.buttonToMainPage);
         buttonToMainPageGet.setOnTouchListener(new View.OnTouchListener() {
@@ -997,11 +971,27 @@ public class SixthActivity extends AppCompatActivity {
                 if (event.getAction() == MotionEvent.ACTION_UP) {
                     buttonToMainPageGet.setBackgroundColor(myColorD);
 
-                    Intent intentBundle = new Intent(SixthActivity.this, MainActivity.class);
+                    Intent intentBundle = new Intent(SeventhActivity.this, MainActivity.class);
                     startActivity(intentBundle);
                     return true;
                 }
                 buttonToMainPageGet.setBackgroundColor(myColorC);
+                return false;
+            }
+        });
+
+        final Button buttonHarmonicsPageGet = findViewById(R.id.buttonToHarmonicsPage);
+        buttonHarmonicsPageGet.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    buttonHarmonicsPageGet.setBackgroundColor(myColorD);
+
+                    Intent intentBundle = new Intent(SeventhActivity.this, SecondActivity.class);
+                    startActivity(intentBundle);
+                    return true;
+                }
+                buttonHarmonicsPageGet.setBackgroundColor(myColorC);
                 return false;
             }
         });
@@ -1013,7 +1003,7 @@ public class SixthActivity extends AppCompatActivity {
                 if (event.getAction() == MotionEvent.ACTION_UP) {
                     buttonToSourcePageGet.setBackgroundColor(myColorD);
 
-                    Intent intentBundle = new Intent(SixthActivity.this, FifthActivity.class);
+                    Intent intentBundle = new Intent(SeventhActivity.this, FifthActivity.class);
                     startActivity(intentBundle);
                     return true;
                 }
@@ -1029,7 +1019,7 @@ public class SixthActivity extends AppCompatActivity {
                 if (event.getAction() == MotionEvent.ACTION_UP) {
                     buttonToNoisePageGet.setBackgroundColor(myColorD);
 
-                    Intent intentBundle = new Intent(SixthActivity.this, ThirdActivity.class);
+                    Intent intentBundle = new Intent(SeventhActivity.this, ThirdActivity.class);
                     startActivity(intentBundle);
                     return true;
                 }
@@ -1045,7 +1035,7 @@ public class SixthActivity extends AppCompatActivity {
                 if (event.getAction() == MotionEvent.ACTION_UP) {
                     buttonToEffectsPageGet.setBackgroundColor(myColorD);
 
-                    Intent intentBundle = new Intent(SixthActivity.this, FourthActivity.class);
+                    Intent intentBundle = new Intent(SeventhActivity.this, FourthActivity.class);
                     startActivity(intentBundle);
                     return true;
                 }
@@ -1055,942 +1045,899 @@ public class SixthActivity extends AppCompatActivity {
         });
 
         final Button buttonToPerformPageGet = findViewById(R.id.buttonToPerformPage);
-        buttonToPerformPageGet.setBackgroundColor(myColorD);
+        buttonToPerformPageGet.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    buttonToPerformPageGet.setBackgroundColor(myColorD);
+
+                    Intent intentBundle = new Intent(SeventhActivity.this, SixthActivity.class);
+                    startActivity(intentBundle);
+                    return true;
+                }
+                buttonToPerformPageGet.setBackgroundColor(myColorC);
+                return false;
+            }
+        });
+
+       /* final Button buttonPlayPageGet = findViewById(R.id.buttonToPlayPage);
+        buttonPlayPageGet.setBackgroundColor(myColorD);*/
 
         ////////////////////////////////////////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////// Navigator Buttons End
         ////////////////////////////////////////////////////////////////////////////////////////////
 
-        final ToggleButton xyTrig1Get = findViewById(R.id.toggleButtonXyTrig1);
-        if (xyTrig1 == 1) {
-            xyTrig1Get.setChecked(true);
-            xyTrig1Get.setBackgroundColor(myColorD);
-        }
-        xyTrig1Get.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    xyTrig1Get.setBackgroundColor(myColorD);
-                    xyTrig1 = 1;
-                } else {
-                    xyTrig1Get.setBackgroundColor(myColorC);
-                    xyTrig1 = 0;
-                }
-            }
-        });
-
-        final ToggleButton xyTrig2Get = findViewById(R.id.toggleButtonXyTrig2);
-        if (xyTrig2 == 1) {
-            xyTrig2Get.setChecked(true);
-            xyTrig2Get.setBackgroundColor(myColorD);
-        }
-        xyTrig2Get.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    xyTrig2Get.setBackgroundColor(myColorD);
-                    xyTrig2 = 1;
-                } else {
-                    xyTrig2Get.setBackgroundColor(myColorC);
-                    xyTrig2 = 0;
-                }
-            }
-        });
+        Spinner spinnerPlayOctGet = (findViewById(R.id.spinnerPlayOct));
+        spinnerPlayOctGet.setOnItemSelectedListener(new SeventhActivity.CustomOnItemSelectedListenerPlayOct());
+        ArrayAdapter adapterPlayOct = ArrayAdapter.createFromResource(this,
+                R.array.spinnerPlayOct, R.layout.spinner_item);
+        spinnerPlayOctGet.setAdapter(adapterPlayOct);
+        spinnerPlayOctGet.setSelection(playOctave);
 
 
-        ////////////////////////////////////////////////////////////////////////////////////////////
-        ///////////////////////////////////////////////////// XY Listeners Start
-        ////////////////////////////////////////////////////////////////////////////////////////////
-
-        ///////////////////////////////////////////////////// XY 1  Start
-
-        final Button xyLocator1Get = findViewById(R.id.buttonXyLocator1);
-        final Button xybutton1Get = findViewById(R.id.xyButtonBack1);
-        xybutton1Get.setOnTouchListener(new View.OnTouchListener() {
+        final Button noteC1Get = findViewById(R.id.buttonNoteC1);
+        noteC1Get.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                int xMax = xybutton1Get.getWidth();
-                int yMax = xybutton1Get.getHeight();
 
-                int x = Math.round(event.getX());
-                if (x < 0){x = 0;}
-                if (x > xMax){
-                    x = xMax;
-                }
-
-                int normX = Math.round(((float) x / xMax) * 127.0f);
-
-                int y = Math.round(yMax - event.getY());
-                if (y < 0){y = 0;}
-                if (y > yMax){
-                    y = yMax;
-                }
-
-                int normY = 0;
-
-                if (xyMode == 0) {
-                    normY = Math.round(((float) y / yMax) * 1000.0f);
-                }
-                if (xyMode != 0) {
-                    normY = Math.round(((float) y / yMax) * 127.0f);
-                }
-
-                if (connectionCheck == 1) {
-
-                    String myMsgAddress;
-                    OscMessage myOscMessage;
-
-                    switch (event.getAction()) {
-                        case MotionEvent.ACTION_DOWN:
-                            xybutton1Get.setBackgroundColor(myColorD);
-                            if (xyTrig1Get.isChecked()) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/194";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(127);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                            }
-                            break;
-                        case MotionEvent.ACTION_MOVE:
-
-                            if (xyMode == 0) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/129";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmMix = normX;
-
-                                myMsgAddress = "/1/2525/1/133";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                sourceFreq = String.valueOf(normY);
-                            }
-
-                            if (xyMode == 1) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/151";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                lpFilterCut = normX;
-
-                                myMsgAddress = "/1/2525/1/152";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                lpFilterRes = normY;
-                            }
-
-                            if (xyMode == 2) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/99";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCut1 = normX;
-
-                                myMsgAddress = "/1/2525/1/100";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCut2 = normY;
-                            }
-
-                            if (xyMode == 3) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/74";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseVol1 = normX;
-
-                                myMsgAddress = "/1/2525/1/75";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseVol2 = normY;
-                            }
-
-                            if (xyMode == 4) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/184";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                envelopeA = normX;
-
-                                myMsgAddress = "/1/2525/1/185";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                envelopeD = normY;
-                            }
-
-                            if (xyMode == 5) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/172";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                chorusRate = normX;
-
-                                myMsgAddress = "/1/2525/1/173";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                chorusDepth = normY;
-                            }
-
-                            if (xyMode == 6) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/99";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCut1 = normX;
-
-                                myMsgAddress = "/1/2525/1/104";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseRes1 = normY;
-                            }
-
-                            if (xyMode == 7) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/100";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCut2 = normX;
-
-                                myMsgAddress = "/1/2525/1/105";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseRes2 = normY;
-                            }
-
-                            if (xyMode == 8) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/101";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCut3 = normX;
-
-                                myMsgAddress = "/1/2525/1/106";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseRes3 = normY;
-                            }
-
-                            if (xyMode == 9) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/102";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCut4 = normX;
-
-                                myMsgAddress = "/1/2525/1/107";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseRes4 = normY;
-                            }
-
-                            if (xyMode == 10) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/1";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol1 = normX;
-
-                                myMsgAddress = "/1/2525/1/2";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol2 = normY;
-                            }
-
-                            if (xyMode == 11) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/5";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol5 = normX;
-
-                                myMsgAddress = "/1/2525/1/6";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol6 = normY;
-                            }
-
-                            if (xyMode == 12) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/9";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol9 = normX;
-
-                                myMsgAddress = "/1/2525/1/10";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol10 = normY;
-                            }
-
-                            if (xyMode == 13) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/1";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol1 = normX;
-
-                                myMsgAddress = "/1/2525/1/3";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol3 = normY;
-                            }
-
-                            if (xyMode == 14) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/2";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol2 = normX;
-
-                                myMsgAddress = "/1/2525/1/4";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol4 = normY;
-                            }
-
-                            if (xyMode == 15) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/3";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol3 = normX;
-
-                                myMsgAddress = "/1/2525/1/6";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol6 = normY;
-                            }
-
-                            x1valData = event.getX();
-                            y1valData = event.getY();
-
-                            xyLocator1Get.setX(x1valData);
-                            xyLocator1Get.setY(y1valData);
-
-                            break;
-
-                        case MotionEvent.ACTION_UP:
-                            if (xyTrig1Get.isChecked()) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/194";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(0);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                            }
-                            xybutton1Get.setBackgroundColor(myColorC);
-
-
-                            break;
-                    }
-                }
-                return true;
-
-            }
-        }); // end xy listener
-
-        ///////////////////////////////////////////////////// XY 1 End
-
-        ///////////////////////////////////////////////////// XY 2 Start
-
-        final Button xyLocator2Get = findViewById(R.id.buttonXyLocator2);
-        final Button xybutton2Get = findViewById(R.id.xyButtonBack2);
-        xybutton2Get.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                int xMax = xybutton2Get.getWidth();
-                int yMax = xybutton2Get.getHeight();
-
-                int x = Math.round(event.getX());
-                if (x < 0){x = 0;}
-                if (x > xMax){
-                    x = xMax;
-                }
-
-                int normX = Math.round(((float) x / xMax) * 127.0f);
-
-                int y = Math.round(yMax - event.getY());
-                if (y < 0){y = 0;}
-                if (y > yMax){
-                    y = yMax;
-                }
-
-                int normY = 0;
-
-                if (xyMode == 0) {
-                    normY = Math.round(((float) y / yMax) * 100.0f);
-                }
-                if (xyMode != 0) {
-                    normY = Math.round(((float) y / yMax) * 127.0f);
-                }
-
-                if (connectionCheck == 1) {
-
-                    String myMsgAddress;
-                    OscMessage myOscMessage;
-
-                    switch (event.getAction()) {
-                        case MotionEvent.ACTION_DOWN:
-                            if (xyTrig2Get.isChecked()) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/194";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(127);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                            }
-                            xybutton2Get.setBackgroundColor(myColorD);
-                            break;
-                        case MotionEvent.ACTION_MOVE:
-
-                            if (xyMode == 0) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/139";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                fmDepth = normX;
-
-                                myMsgAddress = "/1/2525/1/137";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                fmFreq = String.valueOf(normY);
-                            }
-
-                            if (xyMode == 1) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/153";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                lpFilterMod = normX;
-
-                                myMsgAddress = "/1/2525/1/154";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                lpFilterRate = normY;
-                            }
-
-                            if (xyMode == 2) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/101";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCut3 = normX;
-
-                                myMsgAddress = "/1/2525/1/102";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCut4 = normY;
-                            }
-
-                            if (xyMode == 3) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/76";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseVol3 = normX;
-
-                                myMsgAddress = "/1/2525/1/77";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseVol4 = normY;
-                            }
-
-                            if (xyMode == 4) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/185";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                envelopeS = normX;
-
-                                myMsgAddress = "/1/2525/1/186";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                envelopeR = normY;
-                            }
-
-                            if (xyMode == 5) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/175";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                chorusFeed = normX;
-
-                                myMsgAddress = "/1/2525/1/202";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                chorusFeedR = normY;
-                            }
-
-                            if (xyMode == 6) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/112";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCutRate1 = normX;
-
-                                myMsgAddress = "/1/2525/1/108";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCutMod1 = normY;
-                            }
-
-                            if (xyMode == 7) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/113";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCutRate2 = normX;
-
-                                myMsgAddress = "/1/2525/1/109";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCutMod2 = normY;
-                            }
-
-                            if (xyMode == 8) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/114";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCutRate3 = normX;
-
-                                myMsgAddress = "/1/2525/1/110";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCutMod3 = normY;
-                            }
-
-                            if (xyMode == 9) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/115";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCutRate4 = normX;
-
-                                myMsgAddress = "/1/2525/1/111";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCutMod4 = normY;
-                            }
-
-
-                            if (xyMode == 10) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/3";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol3 = normX;
-
-                                myMsgAddress = "/1/2525/1/4";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol4 = normY;
-                            }
-
-                            if (xyMode == 11) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/7";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol7 = normX;
-
-                                myMsgAddress = "/1/2525/1/8";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol8 = normY;
-                            }
-
-                            if (xyMode == 12) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/11";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol11 = normX;
-
-                                myMsgAddress = "/1/2525/1/12";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol12 = normY;
-                            }
-
-                            if (xyMode == 13) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/5";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol5 = normX;
-
-                                myMsgAddress = "/1/2525/1/7";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol7 = normY;
-                            }
-
-                            if (xyMode == 14) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/6";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol6 = normX;
-
-                                myMsgAddress = "/1/2525/1/8";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol8 = normY;
-                            }
-
-                            if (xyMode == 15) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/9";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol9 = normX;
-
-                                myMsgAddress = "/1/2525/1/12";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol12 = normY;
-                            }
-
-                            x2valData = event.getX();
-                            y2valData = event.getY();
-
-                            xyLocator2Get.setX(x2valData);
-                            xyLocator2Get.setY(y2valData);
-
-                            break;
-
-                        case MotionEvent.ACTION_UP:
-                            if (xyTrig2Get.isChecked()) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/194";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(0);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                            }
-                            xybutton2Get.setBackgroundColor(myColorC);
-                            break;
-                    }
-                }
-
-                return true;
-
-            }
-        }); // end xy listener
-
-        ///////////////////////////////////////////////////// XY 2 End
-
-        ////////////////////////////////////////////////////////////////////////////////////////////
-        ///////////////////////////////////////////////////// XY Listeners End
-        ////////////////////////////////////////////////////////////////////////////////////////////
-
-        Spinner spinnerXyModeGet = (findViewById(R.id.spinnerXyMode));
-        spinnerXyModeGet.setOnItemSelectedListener(new SixthActivity.CustomOnItemSelectedListenerXyMode());
-        ArrayAdapter adapterXyMode = ArrayAdapter.createFromResource(this,
-                R.array.spinnerLiveMode, R.layout.spinner_item);
-        spinnerXyModeGet.setAdapter(adapterXyMode);
-        spinnerXyModeGet.setSelection(xyMode);
-
-        final ToggleButton droneGet = findViewById(R.id.toggleButtonDrone);
-        if (droneVal == 127) {
-            droneGet.setChecked(true);
-            droneGet.setBackgroundColor(myColorD);
-        }
-        droneGet.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
                     if (connectionCheck == 1) {
+                        noteC1Get.setBackgroundColor(myColorA);
                         getMyNetAddress();
-                        String myMsgAddress = "/1/2525/1/183";
+                        String myMsgAddress = "/1/2525/1/194";
                         OscMessage myOscMessage = new OscMessage(myMsgAddress);
-                        droneGet.setBackgroundColor(myColorD);
-                        myOscMessage.add(127);
-                        oscP5.send(myOscMessage, getBroadcastLocation);
-                        droneVal = 127;
-                    }
-                } else {
-                    if (connectionCheck == 1) {
-                        getMyNetAddress();
-                        String myMsgAddress = "/1/2525/1/183";
-                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
-                        droneGet.setBackgroundColor(myColorC);
                         myOscMessage.add(0);
                         oscP5.send(myOscMessage, getBroadcastLocation);
-                        droneVal = 0;
+                        limit = 0; // reset action down limiter
                     }
+                    return true;
                 }
+                if (limit == 0) { // respond only to first touch event
+                    noteC1Get.setBackgroundColor(myColorB);
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/194";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(1);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+
+                    myMsgAddress = "/1/2525/1/207";
+                    myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(52325);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    limit = 1; // prevent stacking of action down touch events
+                }
+                return false;
+            }
+        });
+
+        final Button noteCs1Get = findViewById(R.id.buttonNoteCs1);
+        noteCs1Get.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (connectionCheck == 1) {
+                        noteCs1Get.setBackgroundColor(myColorE);
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/194";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        limit = 0; // reset action down limiter
+                    }
+                    return true;
+                }
+                if (limit == 0) { // respond only to first touch event
+                    noteCs1Get.setBackgroundColor(myColorB);
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/194";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(1);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+
+                    myMsgAddress = "/1/2525/1/207";
+                    myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(55437);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    limit = 1; // prevent stacking of action down touch events
+                }
+                return false;
+            }
+        });
+
+        final Button noteD1Get = findViewById(R.id.buttonNoteD1);
+        noteD1Get.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (connectionCheck == 1) {
+                        noteD1Get.setBackgroundColor(myColorA);
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/194";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        limit = 0; // reset action down limiter
+                    }
+                    return true;
+                }
+                if (limit == 0) { // respond only to first touch event
+
+                    noteD1Get.setBackgroundColor(myColorB);
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/194";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(1);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+
+                    myMsgAddress = "/1/2525/1/207";
+                    myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(58733);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    limit = 1; // prevent stacking of action down touch events
+                }
+                return false;
+            }
+        });
+
+        final Button noteDs1Get = findViewById(R.id.buttonNoteDs1);
+        noteDs1Get.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (connectionCheck == 1) {
+                        noteDs1Get.setBackgroundColor(myColorE);
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/194";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        limit = 0; // reset action down limiter
+                    }
+                    return true;
+                }
+                if (limit == 0) { // respond only to first touch event
+                    noteDs1Get.setBackgroundColor(myColorB);
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/194";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(1);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+
+                    myMsgAddress = "/1/2525/1/207";
+                    myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(62225);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    limit = 1; // prevent stacking of action down touch events
+                }
+                return false;
+            }
+        });
+
+        final Button noteE1Get = findViewById(R.id.buttonNoteE1);
+        noteE1Get.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (connectionCheck == 1) {
+                        noteE1Get.setBackgroundColor(myColorA);
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/194";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        limit = 0; // reset action down limiter
+                    }
+                    return true;
+                }
+                if (limit == 0) { // respond only to first touch event
+                    noteE1Get.setBackgroundColor(myColorB);
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/194";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(1);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+
+                    myMsgAddress = "/1/2525/1/207";
+                    myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(65925);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    limit = 1; // prevent stacking of action down touch events
+                }
+                return false;
             }
         });
 
 
-        final ToggleButton togglebButtonEffectsPowerAllGet = findViewById(R.id.toggleButtonEffectsPowerAll);
-        togglebButtonEffectsPowerAllGet.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        final Button noteF1Get = findViewById(R.id.buttonNoteF1);
+        noteF1Get.setOnTouchListener(new View.OnTouchListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
                     if (connectionCheck == 1) {
-                        togglebButtonEffectsPowerAllGet.setBackgroundColor(myColorD);
-
-                        String myMsgAddress = "/1/2525/1/150";
-                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
-                        myOscMessage.add(127);
-                        oscP5.send(myOscMessage, getBroadcastLocation);
-                        lpFilterPower = 127;
-
-                        myMsgAddress = "/1/2525/1/158";
-                        myOscMessage = new OscMessage(myMsgAddress);
-                        myOscMessage.add(127);
-                        oscP5.send(myOscMessage, getBroadcastLocation);
-                        decimatorPower = 127;
-
-                        myMsgAddress = "/1/2525/1/165";
-                        myOscMessage = new OscMessage(myMsgAddress);
-                        myOscMessage.add(127);
-                        oscP5.send(myOscMessage, getBroadcastLocation);
-                        delayPower = 127;
-
-                        myMsgAddress = "/1/2525/1/171";
-                        myOscMessage = new OscMessage(myMsgAddress);
-                        myOscMessage.add(127);
-                        oscP5.send(myOscMessage, getBroadcastLocation);
-                        chorusPower = 127;
-
-                        myMsgAddress = "/1/2525/1/177";
-                        myOscMessage = new OscMessage(myMsgAddress);
-                        myOscMessage.add(127);
-                        oscP5.send(myOscMessage, getBroadcastLocation);
-                        reverbPower = 127;
-                    }
-                } else {
-                    if (connectionCheck == 1) {
-                        togglebButtonEffectsPowerAllGet.setBackgroundColor(myColorC);
-
-                        String myMsgAddress = "/1/2525/1/150";
+                        noteF1Get.setBackgroundColor(myColorA);
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/194";
                         OscMessage myOscMessage = new OscMessage(myMsgAddress);
                         myOscMessage.add(0);
                         oscP5.send(myOscMessage, getBroadcastLocation);
-                        lpFilterPower = 0;
-
-                        myMsgAddress = "/1/2525/1/158";
-                        myOscMessage = new OscMessage(myMsgAddress);
-                        myOscMessage.add(0);
-                        oscP5.send(myOscMessage, getBroadcastLocation);
-                        decimatorPower = 0;
-
-                        myMsgAddress = "/1/2525/1/165";
-                        myOscMessage = new OscMessage(myMsgAddress);
-                        myOscMessage.add(0);
-                        oscP5.send(myOscMessage, getBroadcastLocation);
-                        delayPower = 0;
-
-                        myMsgAddress = "/1/2525/1/171";
-                        myOscMessage = new OscMessage(myMsgAddress);
-                        myOscMessage.add(0);
-                        oscP5.send(myOscMessage, getBroadcastLocation);
-                        chorusPower = 0;
-
-                        myMsgAddress = "/1/2525/1/177";
-                        myOscMessage = new OscMessage(myMsgAddress);
-                        myOscMessage.add(0);
-                        oscP5.send(myOscMessage, getBroadcastLocation);
-                        reverbPower = 0;
+                        limit = 0; // reset action down limiter
                     }
+                    return true;
                 }
-            }
-        }); // end listener
+                if (limit == 0) { // respond only to first touch event
+                    noteF1Get.setBackgroundColor(myColorB);
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/194";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(1);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
 
-        ///////////////////////////////////////////////////// Power All End
+                    myMsgAddress = "/1/2525/1/207";
+                    myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(69846);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    limit = 1; // prevent stacking of action down touch events
+                }
+                return false;
+            }
+        });
+
+        final Button noteFs1Get = findViewById(R.id.buttonNoteFs1);
+        noteFs1Get.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (connectionCheck == 1) {
+                        noteFs1Get.setBackgroundColor(myColorE);
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/194";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        limit = 0; // reset action down limiter
+                    }
+                    return true;
+                }
+                if (limit == 0) { // respond only to first touch event
+                    noteFs1Get.setBackgroundColor(myColorB);
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/194";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(1);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+
+                    myMsgAddress = "/1/2525/1/207";
+                    myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(73999);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    limit = 1; // prevent stacking of action down touch events
+                }
+                return false;
+            }
+        });
+
+        final Button noteG1Get = findViewById(R.id.buttonNoteG1);
+        noteG1Get.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (connectionCheck == 1) {
+                        noteG1Get.setBackgroundColor(myColorA);
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/194";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        limit = 0; // reset action down limiter
+                    }
+                    return true;
+                }
+                if (limit == 0) { // respond only to first touch event
+                    noteG1Get.setBackgroundColor(myColorB);
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/194";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(1);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+
+                    myMsgAddress = "/1/2525/1/207";
+                    myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(78399);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    limit = 1; // prevent stacking of action down touch events
+                }
+                return false;
+            }
+        });
+
+        final Button noteGs1Get = findViewById(R.id.buttonNoteGs1);
+        noteGs1Get.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (connectionCheck == 1) {
+                        noteGs1Get.setBackgroundColor(myColorE);
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/194";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        limit = 0; // reset action down limiter
+                    }
+                    return true;
+                }
+                if (limit == 0) { // respond only to first touch event
+                    noteGs1Get.setBackgroundColor(myColorB);
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/194";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(1);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+
+                    myMsgAddress = "/1/2525/1/207";
+                    myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(83061);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    limit = 1; // prevent stacking of action down touch events
+                }
+                return false;
+            }
+        });
+
+        final Button noteA1Get = findViewById(R.id.buttonNoteA1);
+        noteA1Get.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (connectionCheck == 1) {
+                        noteA1Get.setBackgroundColor(myColorA);
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/194";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        limit = 0; // reset action down limiter
+                    }
+                    return true;
+                }
+                if (limit == 0) { // respond only to first touch event
+                    noteA1Get.setBackgroundColor(myColorB);
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/194";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(1);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+
+                    myMsgAddress = "/1/2525/1/207";
+                    myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(88000);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    limit = 1; // prevent stacking of action down touch events
+                }
+                return false;
+            }
+        });
+
+        final Button noteAs1Get = findViewById(R.id.buttonNoteAs1);
+        noteAs1Get.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (connectionCheck == 1) {
+                        noteAs1Get.setBackgroundColor(myColorE);
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/194";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        limit = 0; // reset action down limiter
+                    }
+                    return true;
+                }
+                if (limit == 0) { // respond only to first touch event
+                    noteAs1Get.setBackgroundColor(myColorB);
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/194";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(1);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+
+                    myMsgAddress = "/1/2525/1/207";
+                    myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(93233);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    limit = 1; // prevent stacking of action down touch events
+                }
+                return false;
+            }
+        });
+
+        final Button noteB1Get = findViewById(R.id.buttonNoteB1);
+        noteB1Get.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (connectionCheck == 1) {
+                        noteB1Get.setBackgroundColor(myColorA);
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/194";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        limit = 0; // reset action down limiter
+                    }
+                    return true;
+                }
+                if (limit == 0) { // respond only to first touch event
+                    noteB1Get.setBackgroundColor(myColorB);
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/194";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(1);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+
+                    myMsgAddress = "/1/2525/1/207";
+                    myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(98777);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    limit = 1; // prevent stacking of action down touch events
+                }
+                return false;
+            }
+        });
+
+        /////////////////////////////////////////////////// end oct 1
+
+        /////////////////////////////////////////////////// start oct 2
+
+        final Button noteC2Get = findViewById(R.id.buttonNoteC2);
+        noteC2Get.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (connectionCheck == 1) {
+                        noteC2Get.setBackgroundColor(myColorA);
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/194";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        limit = 0; // reset action down limiter
+                    }
+                    return true;
+                }
+                if (limit == 0) { // respond only to first touch event
+                    noteC2Get.setBackgroundColor(myColorB);
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/194";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(1);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+
+                    myMsgAddress = "/1/2525/1/207";
+                    myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(104650);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    limit = 1; // prevent stacking of action down touch events
+                }
+                return false;
+            }
+        });
+
+        final Button noteCs2Get = findViewById(R.id.buttonNoteCs2);
+        noteCs2Get.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (connectionCheck == 1) {
+                        noteCs2Get.setBackgroundColor(myColorE);
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/194";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        limit = 0; // reset action down limiter
+                    }
+                    return true;
+                }
+                if (limit == 0) { // respond only to first touch event
+                    noteCs2Get.setBackgroundColor(myColorB);
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/194";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(1);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+
+                    myMsgAddress = "/1/2525/1/207";
+                    myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(110873);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    limit = 1; // prevent stacking of action down touch events
+                }
+                return false;
+            }
+        });
+
+        final Button noteD2Get = findViewById(R.id.buttonNoteD2);
+        noteD2Get.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (connectionCheck == 1) {
+                        noteD2Get.setBackgroundColor(myColorA);
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/194";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        limit = 0; // reset action down limiter
+                    }
+                    return true;
+                }
+                if (limit == 0) { // respond only to first touch event
+                    noteD2Get.setBackgroundColor(myColorB);
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/194";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(1);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+
+                    myMsgAddress = "/1/2525/1/207";
+                    myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(117466);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    limit = 1; // prevent stacking of action down touch events
+                }
+                return false;
+            }
+        });
+
+        final Button noteDs2Get = findViewById(R.id.buttonNoteDs2);
+        noteDs2Get.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (connectionCheck == 1) {
+                        noteDs2Get.setBackgroundColor(myColorE);
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/194";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        limit = 0; // reset action down limiter
+                    }
+                    return true;
+                }
+                if (limit == 0) { // respond only to first touch event
+                    noteDs2Get.setBackgroundColor(myColorB);
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/194";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(1);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+
+                    myMsgAddress = "/1/2525/1/207";
+                    myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(124451);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    limit = 1; // prevent stacking of action down touch events
+                }
+                return false;
+            }
+        });
+
+        final Button noteE2Get = findViewById(R.id.buttonNoteE2);
+        noteE2Get.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (connectionCheck == 1) {
+                        noteE2Get.setBackgroundColor(myColorA);
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/194";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        limit = 0; // reset action down limiter
+                    }
+                    return true;
+                }
+                if (limit == 0) { // respond only to first touch event
+                    noteE2Get.setBackgroundColor(myColorB);
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/194";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(1);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+
+                    myMsgAddress = "/1/2525/1/207";
+                    myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(131851);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    limit = 1; // prevent stacking of action down touch events
+                }
+                return false;
+            }
+        });
+
+
+        final Button noteF2Get = findViewById(R.id.buttonNoteF2);
+        noteF2Get.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (connectionCheck == 1) {
+                        noteF2Get.setBackgroundColor(myColorA);
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/194";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        limit = 0; // reset action down limiter
+                    }
+                    return true;
+                }
+                if (limit == 0) { // respond only to first touch event
+                    noteF2Get.setBackgroundColor(myColorB);
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/194";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(1);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+
+                    myMsgAddress = "/1/2525/1/207";
+                    myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(139691);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    limit = 1; // prevent stacking of action down touch events
+                }
+                return false;
+            }
+        });
+
+        final Button noteFs2Get = findViewById(R.id.buttonNoteFs2);
+        noteFs2Get.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (connectionCheck == 1) {
+                        noteFs2Get.setBackgroundColor(myColorE);
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/194";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        limit = 0; // reset action down limiter
+                    }
+                    return true;
+                }
+                if (limit == 0) { // respond only to first touch event
+                    noteFs2Get.setBackgroundColor(myColorB);
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/194";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(1);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+
+                    myMsgAddress = "/1/2525/1/207";
+                    myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(147998);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    limit = 1; // prevent stacking of action down touch events
+                }
+                return false;
+            }
+        });
+
+        final Button noteG2Get = findViewById(R.id.buttonNoteG2);
+        noteG2Get.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (connectionCheck == 1) {
+                        noteG2Get.setBackgroundColor(myColorA);
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/194";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        limit = 0; // reset action down limiter
+                    }
+                    return true;
+                }
+                if (limit == 0) { // respond only to first touch event
+                    noteG2Get.setBackgroundColor(myColorB);
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/194";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(1);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+
+                    myMsgAddress = "/1/2525/1/207";
+                    myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(156798);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    limit = 1; // prevent stacking of action down touch events
+                }
+                return false;
+            }
+        });
+
+        final Button noteGs2Get = findViewById(R.id.buttonNoteGs2);
+        noteGs2Get.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (connectionCheck == 1) {
+                        noteGs2Get.setBackgroundColor(myColorE);
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/194";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        limit = 0; // reset action down limiter
+                    }
+                    return true;
+                }
+                if (limit == 0) { // respond only to first touch event
+                    noteGs2Get.setBackgroundColor(myColorB);
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/194";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(1);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+
+                    myMsgAddress = "/1/2525/1/207";
+                    myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(166122);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    limit = 1; // prevent stacking of action down touch events
+                }
+                return false;
+            }
+        });
+
+        final Button noteA2Get = findViewById(R.id.buttonNoteA2);
+        noteA2Get.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (connectionCheck == 1) {
+                        noteA2Get.setBackgroundColor(myColorA);
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/194";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        limit = 0; // reset action down limiter
+                    }
+                    return true;
+                }
+                if (limit == 0) { // respond only to first touch event
+                    noteA2Get.setBackgroundColor(myColorB);
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/194";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(1);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+
+                    myMsgAddress = "/1/2525/1/207";
+                    myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(176000);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    limit = 1; // prevent stacking of action down touch events
+                }
+                return false;
+            }
+        });
+
+        final Button noteAs2Get = findViewById(R.id.buttonNoteAs2);
+        noteAs2Get.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (connectionCheck == 1) {
+                        noteAs2Get.setBackgroundColor(myColorE);
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/194";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        limit = 0; // reset action down limiter
+                    }
+                    return true;
+                }
+                if (limit == 0) { // respond only to first touch event
+                    noteAs2Get.setBackgroundColor(myColorB);
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/194";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(1);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+
+                    myMsgAddress = "/1/2525/1/207";
+                    myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(186466);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    limit = 1; // prevent stacking of action down touch events
+                }
+                return false;
+            }
+        });
+
+        final Button noteB2Get = findViewById(R.id.buttonNoteB2);
+        noteB2Get.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (connectionCheck == 1) {
+                        noteB2Get.setBackgroundColor(myColorA);
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/194";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        limit = 0; // reset action down limiter
+                    }
+                    return true;
+                }
+                if (limit == 0) { // respond only to first touch event
+                    noteB2Get.setBackgroundColor(myColorB);
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/194";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(1);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+
+                    myMsgAddress = "/1/2525/1/207";
+                    myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(197553);
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    limit = 1; // prevent stacking of action down touch events
+                }
+                return false;
+            }
+        });
 
     } // end create
 
-    public class CustomOnItemSelectedListenerXyMode implements AdapterView.OnItemSelectedListener {
+    public class CustomOnItemSelectedListenerPlayOct implements AdapterView.OnItemSelectedListener {
 
-        @SuppressLint("SetTextI18n")
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-            final TextView xParam1Get = findViewById(R.id.textViewXparam1);
-            final TextView yParam1Get = findViewById(R.id.textViewYparam1);
-            final TextView xParam2Get = findViewById(R.id.textViewXparam2);
-            final TextView yParam2Get = findViewById(R.id.textViewYparam2);
-
-            xyMode = position;
-            switch (xyMode) {
-                    case 0:
-                        xParam1Get.setText("X = Harmonics Mix");
-                        yParam1Get.setText("Y = Source Freq");
-                        xParam2Get.setText("X = FM Freq");
-                        yParam2Get.setText("Y = FM Depth");
-                        break;
-                case 1:
-                    xParam1Get.setText("X = Filter Cut");
-                    yParam1Get.setText("Y = Filter Res");
-                    xParam2Get.setText("X = Filter Mod");
-                    yParam2Get.setText("Y = Filter Rate");
-                    break;
-                case 2:
-                    xParam1Get.setText("X = Noise Cut 1");
-                    yParam1Get.setText("Y = Noise Cut 2");
-                    xParam2Get.setText("X = Noise Cut 3");
-                    yParam2Get.setText("Y = Noise Cut 4");
-                    break;
-                case 3:
-                    xParam1Get.setText("X = Noise Vol 1");
-                    yParam1Get.setText("Y = Noise Vol 2");
-                    xParam2Get.setText("X = Noise Vol 3");
-                    yParam2Get.setText("Y = Noise Vol 4");
-                    break;
-                case 4:
-                    xParam1Get.setText("X = Attack");
-                    yParam1Get.setText("Y = Decay");
-                    xParam2Get.setText("X = Sustain");
-                    yParam2Get.setText("Y = Release");
-                    break;
-                case 5:
-                    xParam1Get.setText("X = Chorus Rate");
-                    yParam1Get.setText("Y = Chorus Depth");
-                    xParam2Get.setText("X = Chorus FB L");
-                    yParam2Get.setText("Y = Chorus FB R");
-                    break;
-                case 6:
-                    xParam1Get.setText("X = Noise 1 Cut");
-                    yParam1Get.setText("Y = Noise 1 Res");
-                    xParam2Get.setText("X = Noise 1 Rate");
-                    yParam2Get.setText("Y = Noise 1 Mod");
-                    break;
-                case 7:
-                    xParam1Get.setText("X = Noise 2 Cut");
-                    yParam1Get.setText("Y = Noise 2 Res");
-                    xParam2Get.setText("X = Noise 2 Rate");
-                    yParam2Get.setText("Y = Noise 2 Mod");
-                    break;
-                case 8:
-                    xParam1Get.setText("X = Noise 3 Cut");
-                    yParam1Get.setText("Y = Noise 3 Res");
-                    xParam2Get.setText("X = Noise 3 Rate");
-                    yParam2Get.setText("Y = Noise 3 Mod");
-                    break;
-                case 9:
-                    xParam1Get.setText("X = Noise 4 Cut");
-                    yParam1Get.setText("Y = Noise 4 Res");
-                    xParam2Get.setText("X = Noise 4 Rate");
-                    yParam2Get.setText("Y = Noise 4 Mod");
-                    break;
-                case 10:
-                    xParam1Get.setText("X = Harm 1 Vol");
-                    yParam1Get.setText("Y = Harm 2 Vol");
-                    xParam2Get.setText("X = Harm 3 Vol");
-                    yParam2Get.setText("Y = Harm 4 Vol");
-                    break;
-                case 11:
-                    xParam1Get.setText("X = Harm 5 Vol");
-                    yParam1Get.setText("Y = Harm 6 Vol");
-                    xParam2Get.setText("X = Harm 7 Vol");
-                    yParam2Get.setText("Y = Harm 8 Vol");
-                    break;
-                case 12:
-                    xParam1Get.setText("X = Harm 9 Vol");
-                    yParam1Get.setText("Y = Harm 10 Vol");
-                    xParam2Get.setText("X = Harm 11 Vol");
-                    yParam2Get.setText("Y = Harm 12 Vol");
-                    break;
-                case 13:
-                    xParam1Get.setText("X = Harm 1 Vol");
-                    yParam1Get.setText("Y = Harm 3 Vol");
-                    xParam2Get.setText("X = Harm 5 Vol");
-                    yParam2Get.setText("Y = Harm 7 Vol");
-                    break;
-                case 14:
-                    xParam1Get.setText("X = Harm 2 Vol");
-                    yParam1Get.setText("Y = Harm 4 Vol");
-                    xParam2Get.setText("X = Harm 6 Vol");
-                    yParam2Get.setText("Y = Harm 8 Vol");
-                    break;
-                case 15:
-                    xParam1Get.setText("X = Harm 3 Vol");
-                    yParam1Get.setText("Y = Harm 6 Vol");
-                    xParam2Get.setText("X = Harm 9 Vol");
-                    yParam2Get.setText("Y = Harm 12 Vol");
-                    break;
-                case 16:
-                    xParam1Get.setText("X = FM Depth");
-                    yParam1Get.setText("Y = FM Mod");
-                    xParam2Get.setText("X = Chorus Rate");
-                    yParam2Get.setText("Y = Chorus Depth");
-                    break;
-                case 17:
-                    xParam1Get.setText("X = FM Depth");
-                    yParam1Get.setText("Y = FM Mod");
-                    xParam2Get.setText("X = FM Rate");
-                    yParam2Get.setText("Y = Chorus Wet");
-                    break;
-
-            } /// end switch
+            if (connectionCheck == 1) {
+                getMyNetAddress();
+                String myMsgAddress = "/1/2525/1/208";
+                OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                myOscMessage.add(position);
+                oscP5.send(myOscMessage, getBroadcastLocation);
+                playOctave = position;
             }
+
+        }
 
         @Override
         public void onNothingSelected(AdapterView<?> arg0) {
@@ -2323,6 +2270,7 @@ public class SixthActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy(); // Always call the superclass method first
+
         if (connectionCheck == 1) {
             connectionCheck = 0;
             oscP5.stop();
@@ -2330,3 +2278,6 @@ public class SixthActivity extends AppCompatActivity {
     } // end destroy
 
 } // end activity
+
+
+

@@ -617,10 +617,16 @@ public class MainActivity extends AppCompatActivity {
     /////////////////////////////////////////// Freq Page - Fifth Activity Variables End
 
     /////////////////////////////////////////// Live Page - Sixth Activity Variables Start
+
     public static int  xyTrig1 = 0;
     public static int  xyTrig2 = 0;
     public static int  xyMode = 0;
-    /////////////////////////////////////////// Live Page - Sixth Activity Variables End
+
+    /////////////////////////////////////////// Play Page - Seventh Activity Variables End
+
+    public static int playOctave = 0;
+
+    /////////////////////////////////////////// Play Page - Seventh Activity Variables End
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -944,6 +950,12 @@ public class MainActivity extends AppCompatActivity {
             xyTrig2 = sharedPref.getInt("xyTrig2", xyTrig2);
 
             /////////////////////////////////////////// Live Page - Sixth Activity Variables End
+
+            /////////////////////////////////////////// Play Page - Seventh Activity Variables Start
+
+            playOctave = sharedPref.getInt("playOctave", playOctave);
+
+            /////////////////////////////////////////// Play Page - Seventh Activity Variables End
 
         } // end sharedpref
 
@@ -1902,6 +1914,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        final Button buttonPlayPageGet = findViewById(R.id.buttonToPlayPage);
+        buttonPlayPageGet.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    buttonPlayPageGet.setBackgroundColor(myColorD);
+
+                    Intent intentBundle = new Intent(MainActivity.this, SeventhActivity.class);
+                    startActivity(intentBundle);
+                    return true;
+                }
+                buttonPlayPageGet.setBackgroundColor(myColorC);
+                return false;
+            }
+        });
+
         ////////////////////////////////////////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////// Navigator Buttons End
         ////////////////////////////////////////////////////////////////////////////////////////////
@@ -2732,6 +2760,12 @@ public class MainActivity extends AppCompatActivity {
         editor.putInt("xyTrig2", xyTrig2);
 
         /////////////////////////////////////////// Live Page - Sixth Activity Variables End
+
+        /////////////////////////////////////////// Play Page - Seventh Activity Variables Start
+
+        editor.putInt("playOctave", playOctave);
+
+        /////////////////////////////////////////// Play Page - Seventh Activity Variables End
 
         editor.apply();
 

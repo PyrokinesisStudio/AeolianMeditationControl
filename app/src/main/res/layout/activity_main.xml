@@ -119,6 +119,31 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutToPlayPage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.77"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.96">
+
+                <Button
+                    android:id="@+id/buttonToPlayPage"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:background="#ff4F75A1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
                 android:id="@+id/layoutMainSettings"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
