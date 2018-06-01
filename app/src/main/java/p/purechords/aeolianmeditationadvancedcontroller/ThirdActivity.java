@@ -1103,6 +1103,22 @@ public class ThirdActivity extends AppCompatActivity {
             }
         });
 
+        final Button buttonToPerformPageGet = findViewById(R.id.buttonToPerformPage);
+        buttonToPerformPageGet.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    buttonToPerformPageGet.setBackgroundColor(myColorD);
+
+                    Intent intentBundle = new Intent(ThirdActivity.this, SixthActivity.class);
+                    startActivity(intentBundle);
+                    return true;
+                }
+                buttonToPerformPageGet.setBackgroundColor(myColorC);
+                return false;
+            }
+        });
+
         ///////////////////////////////////////////////////// Navigator Buttons End
 
         ////////////////////// Harmonic Volume Sliders Start
