@@ -247,6 +247,46 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layouttoggleButtonNoiselModSyncAll"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:background="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.42"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.98">
+
+                <ToggleButton
+                    android:id="@+id/toggleButtonNoiseSyncAll"
+                    android:layout_width="37dp"
+                    android:layout_height="27dp"
+                    android:background="#ff4F75A1"
+                    android:textOff=" "
+                    android:textOn=" "
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textViewSyncAll"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Sync"
+                android:textColor="@android:color/white"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.42"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.875" />
+
             <Spinner
                 android:id="@+id/spinnerNoiseModRateRangeVol"
                 android:layout_width="75dp"
@@ -608,7 +648,7 @@
 
             <TextView
                 android:id="@+id/textViewRetrig"
-                android:layout_width="45dp"
+                android:layout_width="40dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Retrig"

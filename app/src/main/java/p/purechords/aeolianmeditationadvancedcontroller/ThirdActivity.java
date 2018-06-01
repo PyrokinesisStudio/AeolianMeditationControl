@@ -2325,6 +2325,74 @@ public class ThirdActivity extends AppCompatActivity {
 
         ////////////////////// Harmonic Volume Mod Retrig End
 
+        ////////////////////// Noise Sync All Start
+
+        final ToggleButton toggleButtonNoiseSyncAllGet = findViewById(R.id.toggleButtonNoiseSyncAll);
+        toggleButtonNoiseSyncAllGet.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    if (connectionCheck == 1) {
+                        toggleButtonNoiseSyncAllGet.setBackgroundColor(myColorD);
+
+                        toggleButtonNoiseVolModSyncGet1.setChecked(true);
+                        toggleButtonNoiseVolModSyncGet1.setBackgroundColor(myColorD);
+
+                        toggleButtonNoiseVolModSyncGet2.setChecked(true);
+                        toggleButtonNoiseVolModSyncGet2.setBackgroundColor(myColorD);
+
+                        toggleButtonNoiseVolModSyncGet3.setChecked(true);
+                        toggleButtonNoiseVolModSyncGet3.setBackgroundColor(myColorD);
+
+                        toggleButtonNoiseVolModSyncGet4.setChecked(true);
+                        toggleButtonNoiseVolModSyncGet4.setBackgroundColor(myColorD);
+
+                        toggleButtonNoiseCutModSyncGet1.setChecked(true);
+                        toggleButtonNoiseCutModSyncGet1.setBackgroundColor(myColorD);
+
+                        toggleButtonNoiseCutModSyncGet2.setChecked(true);
+                        toggleButtonNoiseCutModSyncGet2.setBackgroundColor(myColorD);
+
+                        toggleButtonNoiseCutModSyncGet3.setChecked(true);
+                        toggleButtonNoiseCutModSyncGet3.setBackgroundColor(myColorD);
+
+                        toggleButtonNoiseCutModSyncGet4.setChecked(true);
+                        toggleButtonNoiseCutModSyncGet4.setBackgroundColor(myColorD);
+                    }
+                } else {
+                    if (connectionCheck == 1) {
+                        toggleButtonNoiseSyncAllGet.setBackgroundColor(myColorC);
+
+                        toggleButtonNoiseVolModSyncGet1.setChecked(false);
+                        toggleButtonNoiseVolModSyncGet1.setBackgroundColor(myColorC);
+
+                        toggleButtonNoiseVolModSyncGet2.setChecked(false);
+                        toggleButtonNoiseVolModSyncGet2.setBackgroundColor(myColorC);
+
+                        toggleButtonNoiseVolModSyncGet3.setChecked(false);
+                        toggleButtonNoiseVolModSyncGet3.setBackgroundColor(myColorC);
+
+                        toggleButtonNoiseVolModSyncGet4.setChecked(false);
+                        toggleButtonNoiseVolModSyncGet4.setBackgroundColor(myColorC);
+
+                        toggleButtonNoiseCutModSyncGet1.setChecked(false);
+                        toggleButtonNoiseCutModSyncGet1.setBackgroundColor(myColorC);
+
+                        toggleButtonNoiseCutModSyncGet2.setChecked(false);
+                        toggleButtonNoiseCutModSyncGet2.setBackgroundColor(myColorC);
+
+                        toggleButtonNoiseCutModSyncGet3.setChecked(false);
+                        toggleButtonNoiseCutModSyncGet3.setBackgroundColor(myColorC);
+
+                        toggleButtonNoiseCutModSyncGet4.setChecked(false);
+                        toggleButtonNoiseCutModSyncGet4.setBackgroundColor(myColorC);
+                    }
+                }
+            }
+        }); // end listener
+
+        ////////////////////// Harmonic Sync All End
+
         ///////////////////////////////////////////////////// Noise Random Start
 
         final Button buttonNoiseRandomGet = findViewById(R.id.buttonNoiseRandom);
