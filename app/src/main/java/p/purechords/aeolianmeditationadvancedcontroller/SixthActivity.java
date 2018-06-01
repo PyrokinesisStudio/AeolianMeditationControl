@@ -338,6 +338,14 @@ public class SixthActivity extends AppCompatActivity {
 
             /////////////////////////////////////////// Freq Page - Fifth Activity Variables End
 
+            /////////////////////////////////////////// Live Page - Sixth Activity Variables Start
+
+            xyMode = sharedPref.getInt("xyMode", xyMode);
+            xyTrig1 = sharedPref.getInt("xyTrig1", xyTrig1);
+            xyTrig2 = sharedPref.getInt("xyTrig2", xyTrig2);
+
+            /////////////////////////////////////////// Live Page - Sixth Activity Variables End
+
         } // end sharedpref
 
         ///////////////////////////////////////////////////// Shared Preferences  End
@@ -1048,10 +1056,10 @@ public class SixthActivity extends AppCompatActivity {
         ////////////////////////////////////////////////////////////////////////////////////////////
 
         final ToggleButton xyTrig1Get = findViewById(R.id.toggleButtonXyTrig1);
-       /* if (devicePower == 127) {
-            devicePowerGet.setChecked(true);
-            devicePowerGet.setBackgroundColor(myColorD);
-        }*/
+        if (xyTrig1 == 1) {
+            xyTrig1Get.setChecked(true);
+            xyTrig1Get.setBackgroundColor(myColorD);
+        }
         xyTrig1Get.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
             @Override
@@ -1067,10 +1075,10 @@ public class SixthActivity extends AppCompatActivity {
         });
 
         final ToggleButton xyTrig2Get = findViewById(R.id.toggleButtonXyTrig2);
-       /* if (devicePower == 127) {
-            devicePowerGet.setChecked(true);
-            devicePowerGet.setBackgroundColor(myColorD);
-        }*/
+        if (xyTrig2 == 1) {
+            xyTrig2Get.setChecked(true);
+            xyTrig2Get.setBackgroundColor(myColorD);
+        }
         xyTrig2Get.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
             @Override
@@ -1702,8 +1710,8 @@ public class SixthActivity extends AppCompatActivity {
             xyMode = position;
             switch (xyMode) {
                     case 0:
-                        xParam1Get.setText("X = Source Freq");
-                        yParam1Get.setText("Y = Harmonic Mix");
+                        xParam1Get.setText("X = Harmonics Mix");
+                        yParam1Get.setText("Y = Source Freq");
                         xParam2Get.setText("X = FM Freq");
                         yParam2Get.setText("Y = FM Depth");
                         break;
@@ -1718,6 +1726,12 @@ public class SixthActivity extends AppCompatActivity {
                     yParam1Get.setText("Y = Noise Cut 2");
                     xParam2Get.setText("X = Noise Cut 3");
                     yParam2Get.setText("Y = Noise Cut 4");
+                    break;
+                case 3:
+                    xParam1Get.setText("X = Noise Vol 1");
+                    yParam1Get.setText("Y = Noise Vol 2");
+                    xParam2Get.setText("X = Noise Vol 3");
+                    yParam2Get.setText("Y = Noise Vol 4");
                     break;
 
             } // end switch
@@ -2032,6 +2046,14 @@ public class SixthActivity extends AppCompatActivity {
         editor.putInt("fmRateRange", fmRateRange);
 
         /////////////////////////////////////////// Freq Page - Fifth Activity Variables End
+
+        /////////////////////////////////////////// Live Page - Sixth Activity Variables Start
+
+        editor.putInt("xyMode", xyMode);
+        editor.putInt("xyTrig1", xyTrig1);
+        editor.putInt("xyTrig2", xyTrig2);
+
+        /////////////////////////////////////////// Live Page - Sixth Activity Variables End
 
         editor.apply();
 

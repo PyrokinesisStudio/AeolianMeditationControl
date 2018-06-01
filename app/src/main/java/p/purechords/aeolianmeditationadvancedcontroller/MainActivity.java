@@ -937,6 +937,14 @@ public class MainActivity extends AppCompatActivity {
 
             /////////////////////////////////////////// Freq Page - Fifth Activity Variables End
 
+            /////////////////////////////////////////// Live Page - Sixth Activity Variables Start
+
+            xyMode = sharedPref.getInt("xyMode", xyMode);
+            xyTrig1 = sharedPref.getInt("xyTrig1", xyTrig1);
+            xyTrig2 = sharedPref.getInt("xyTrig2", xyTrig2);
+
+            /////////////////////////////////////////// Live Page - Sixth Activity Variables End
+
         } // end sharedpref
 
         ///////////////////////////////////////////////////// Shared Preferences  End
@@ -2716,6 +2724,14 @@ public class MainActivity extends AppCompatActivity {
         editor.putInt("fmRateRange", fmRateRange);
 
         /////////////////////////////////////////// Freq Page - Fifth Activity Variables End
+
+        /////////////////////////////////////////// Live Page - Sixth Activity Variables Start
+
+        editor.putInt("xyMode", xyMode);
+        editor.putInt("xyTrig1", xyTrig1);
+        editor.putInt("xyTrig2", xyTrig2);
+
+        /////////////////////////////////////////// Live Page - Sixth Activity Variables End
 
         editor.apply();
 
