@@ -1106,6 +1106,22 @@ public class FourthActivity extends AppCompatActivity {
             }
         });
 
+        final Button buttonPlayPageGet = findViewById(R.id.buttonToPlayPage);
+        buttonPlayPageGet.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    buttonPlayPageGet.setBackgroundColor(myColorD);
+
+                    Intent intentBundle = new Intent(FourthActivity.this, SeventhActivity.class);
+                    startActivity(intentBundle);
+                    return true;
+                }
+                buttonPlayPageGet.setBackgroundColor(myColorC);
+                return false;
+            }
+        });
+
         ///////////////////////////////////////////////////// Navigator Buttons End
 
         ///////////////////////////////////////////////////// Filter Listeners Start

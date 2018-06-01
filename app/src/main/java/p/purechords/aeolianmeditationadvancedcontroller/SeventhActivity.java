@@ -1060,8 +1060,8 @@ public class SeventhActivity extends AppCompatActivity {
             }
         });
 
-       /* final Button buttonPlayPageGet = findViewById(R.id.buttonToPlayPage);
-        buttonPlayPageGet.setBackgroundColor(myColorD);*/
+        final Button buttonPlayPageGet = findViewById(R.id.buttonToPlayPage);
+        buttonPlayPageGet.setBackgroundColor(myColorD);
 
         ////////////////////////////////////////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////// Navigator Buttons End
