@@ -1329,6 +1329,21 @@ public class SixthActivity extends AppCompatActivity {
                                 harmVol4 = normY;
                             }
 
+                            if (xyMode == 12) {
+                                getMyNetAddress();
+                                myMsgAddress = "/1/2525/1/3";
+                                myOscMessage = new OscMessage(myMsgAddress);
+                                myOscMessage.add(normX);
+                                oscP5.send(myOscMessage, getBroadcastLocation);
+                                harmVol3 = normX;
+
+                                myMsgAddress = "/1/2525/1/6";
+                                myOscMessage = new OscMessage(myMsgAddress);
+                                myOscMessage.add(normY);
+                                oscP5.send(myOscMessage, getBroadcastLocation);
+                                harmVol6 = normY;
+                            }
+
                             x1valData = event.getX();
                             y1valData = event.getY();
 
@@ -1589,6 +1604,20 @@ public class SixthActivity extends AppCompatActivity {
                                 harmVol8 = normY;
                             }
 
+                            if (xyMode == 12) {
+                                getMyNetAddress();
+                                myMsgAddress = "/1/2525/1/9";
+                                myOscMessage = new OscMessage(myMsgAddress);
+                                myOscMessage.add(normX);
+                                oscP5.send(myOscMessage, getBroadcastLocation);
+                                harmVol9 = normX;
+
+                                myMsgAddress = "/1/2525/1/12";
+                                myOscMessage = new OscMessage(myMsgAddress);
+                                myOscMessage.add(normY);
+                                oscP5.send(myOscMessage, getBroadcastLocation);
+                                harmVol12 = normY;
+                            }
 
                             x2valData = event.getX();
                             y2valData = event.getY();
