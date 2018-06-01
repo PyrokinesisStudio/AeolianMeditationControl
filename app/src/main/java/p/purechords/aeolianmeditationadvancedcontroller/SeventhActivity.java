@@ -3,6 +3,7 @@ package p.purechords.aeolianmeditationadvancedcontroller;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -10,9 +11,15 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.Spinner;
+import android.widget.ToggleButton;
+
+import com.rey.material.widget.Slider;
 
 import oscP5.OscMessage;
+
+import p.purechords.aeolianmeditationadvancedcontroller.databinding.ActivitySeventhBinding;
 
 import static p.purechords.aeolianmeditationadvancedcontroller.MainActivity.*;
 
@@ -27,7 +34,8 @@ public class SeventhActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_seventh);
+        // Set layout with binding
+        ActivitySeventhBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_seventh);
 
         ///////////////////////////////////////////////////// Shared Preferences Start
         SharedPreferences sharedPref= getSharedPreferences("OsAmaControlPref", 0);
@@ -960,6 +968,12 @@ public class SeventhActivity extends AppCompatActivity {
         /////////////////////////////////////////// Observable set end
         ////////////////////////////////////////////////////////////////
 
+        binding.setObsIntDrone(obsIntDrone);
+        binding.setObsIntEnvA(obsIntEnvA);
+        binding.setObsIntEnvD(obsIntEnvD);
+        binding.setObsIntEnvS(obsIntEnvS);
+        binding.setObsIntEnvR(obsIntEnvR);
+
         /////////////////////////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////// Navigator Buttons Start
         /////////////////////////////////////////////////////////////////////////////
@@ -1067,6 +1081,196 @@ public class SeventhActivity extends AppCompatActivity {
         ///////////////////////////////////////////////////// Navigator Buttons End
         ////////////////////////////////////////////////////////////////////////////////////////////
 
+        final ToggleButton togglebButtonEffectsPowerAllGet = findViewById(R.id.toggleButtonEffectsPowerAll);
+        togglebButtonEffectsPowerAllGet.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    if (connectionCheck == 1) {
+                        togglebButtonEffectsPowerAllGet.setBackgroundColor(myColorD);
+
+                        String myMsgAddress = "/1/2525/1/150";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(127);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        lpFilterPower = 127;
+
+                        myMsgAddress = "/1/2525/1/158";
+                        myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(127);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        decimatorPower = 127;
+
+                        myMsgAddress = "/1/2525/1/165";
+                        myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(127);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        delayPower = 127;
+
+                        myMsgAddress = "/1/2525/1/171";
+                        myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(127);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        chorusPower = 127;
+
+                        myMsgAddress = "/1/2525/1/177";
+                        myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(127);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        reverbPower = 127;
+                    }
+                } else {
+                    if (connectionCheck == 1) {
+                        togglebButtonEffectsPowerAllGet.setBackgroundColor(myColorC);
+
+                        String myMsgAddress = "/1/2525/1/150";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        lpFilterPower = 0;
+
+                        myMsgAddress = "/1/2525/1/158";
+                        myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        decimatorPower = 0;
+
+                        myMsgAddress = "/1/2525/1/165";
+                        myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        delayPower = 0;
+
+                        myMsgAddress = "/1/2525/1/171";
+                        myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        chorusPower = 0;
+
+                        myMsgAddress = "/1/2525/1/177";
+                        myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        reverbPower = 0;
+                    }
+                }
+            }
+        }); // end listener
+
+        ///////////////////////////////////////////////////// Power All End
+
+        final ToggleButton droneGet = findViewById(R.id.toggleButtonDrone);
+        if (droneVal == 127) {
+            droneGet.setChecked(true);
+            droneGet.setBackgroundColor(myColorD);
+        }
+        droneGet.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    if (connectionCheck == 1) {
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/183";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        droneGet.setBackgroundColor(myColorD);
+                        myOscMessage.add(127);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        droneVal = 127;
+                    }
+                } else {
+                    if (connectionCheck == 1) {
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/183";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        droneGet.setBackgroundColor(myColorC);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        droneVal = 0;
+                    }
+                }
+            }
+        });
+
+       /* final Slider sliderOutputVolumeGet = findViewById(R.id.sliderOutputVolume);
+        sliderOutputVolumeGet.setValue(outputVolume, true);
+        sliderOutputVolumeGet.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
+            @Override
+            public void onPositionChanged(Slider view, boolean fromUser, float oldPos, float newPos, int oldValue, int newValue) {
+                if (connectionCheck == 1) {
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/189";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(sliderOutputVolumeGet.getValue());
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    outputVolume = sliderOutputVolumeGet.getValue();
+                }
+            }
+        });*/
+
+        final Slider sliderEnvAGet = findViewById(R.id.sliderEnvA);
+        sliderEnvAGet.setValue(envelopeA, true);
+        sliderEnvAGet.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
+            @Override
+            public void onPositionChanged(Slider view, boolean fromUser, float oldPos, float newPos, int oldValue, int newValue) {
+                if (connectionCheck == 1) {
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/184";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(sliderEnvAGet.getValue());
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    envelopeA = sliderEnvAGet.getValue();
+                }
+            }
+        });
+
+        final Slider sliderEnvDGet = findViewById(R.id.sliderEnvD);
+        sliderEnvDGet.setValue(envelopeD, true);
+        sliderEnvDGet.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
+            @Override
+            public void onPositionChanged(Slider view, boolean fromUser, float oldPos, float newPos, int oldValue, int newValue) {
+                if (connectionCheck == 1) {
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/185";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(sliderEnvDGet.getValue());
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    envelopeD = sliderEnvDGet.getValue();
+                }
+            }
+        });
+
+        final Slider sliderEnvSGet = findViewById(R.id.sliderEnvS);
+        sliderEnvSGet.setValue(envelopeS, true);
+        sliderEnvSGet.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
+            @Override
+            public void onPositionChanged(Slider view, boolean fromUser, float oldPos, float newPos, int oldValue, int newValue) {
+                if (connectionCheck == 1) {
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/186";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(sliderEnvSGet.getValue());
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    envelopeS = sliderEnvSGet.getValue();
+                }
+            }
+        });
+
+        final Slider sliderEnvRGet = findViewById(R.id.sliderEnvR);
+        sliderEnvRGet.setValue(envelopeR, true);
+        sliderEnvRGet.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
+            @Override
+            public void onPositionChanged(Slider view, boolean fromUser, float oldPos, float newPos, int oldValue, int newValue) {
+                if (connectionCheck == 1) {
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/187";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(sliderEnvRGet.getValue());
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    envelopeR = sliderEnvRGet.getValue();
+                }
+            }
+        });
+
         Spinner spinnerPlayOctGet = (findViewById(R.id.spinnerPlayOct));
         spinnerPlayOctGet.setOnItemSelectedListener(new SeventhActivity.CustomOnItemSelectedListenerPlayOct());
         ArrayAdapter adapterPlayOct = ArrayAdapter.createFromResource(this,
@@ -1092,7 +1296,7 @@ public class SeventhActivity extends AppCompatActivity {
                     }
                     return true;
                 }
-                if (limit == 0) { // respond only to first touch event
+                if (limit == 0 && connectionCheck == 1) { // respond only to first touch event
                     noteC1Get.setBackgroundColor(myColorB);
                     getMyNetAddress();
                     String myMsgAddress = "/1/2525/1/194";
@@ -1127,7 +1331,7 @@ public class SeventhActivity extends AppCompatActivity {
                     }
                     return true;
                 }
-                if (limit == 0) { // respond only to first touch event
+                if (limit == 0 && connectionCheck == 1) { // respond only to first touch event
                     noteCs1Get.setBackgroundColor(myColorB);
                     getMyNetAddress();
                     String myMsgAddress = "/1/2525/1/194";
@@ -1162,7 +1366,7 @@ public class SeventhActivity extends AppCompatActivity {
                     }
                     return true;
                 }
-                if (limit == 0) { // respond only to first touch event
+                if (limit == 0 && connectionCheck == 1) { // respond only to first touch event
 
                     noteD1Get.setBackgroundColor(myColorB);
                     getMyNetAddress();
@@ -1198,7 +1402,7 @@ public class SeventhActivity extends AppCompatActivity {
                     }
                     return true;
                 }
-                if (limit == 0) { // respond only to first touch event
+                if (limit == 0 && connectionCheck == 1) { // respond only to first touch event
                     noteDs1Get.setBackgroundColor(myColorB);
                     getMyNetAddress();
                     String myMsgAddress = "/1/2525/1/194";
@@ -1233,7 +1437,7 @@ public class SeventhActivity extends AppCompatActivity {
                     }
                     return true;
                 }
-                if (limit == 0) { // respond only to first touch event
+                if (limit == 0 && connectionCheck == 1) { // respond only to first touch event
                     noteE1Get.setBackgroundColor(myColorB);
                     getMyNetAddress();
                     String myMsgAddress = "/1/2525/1/194";
@@ -1269,7 +1473,7 @@ public class SeventhActivity extends AppCompatActivity {
                     }
                     return true;
                 }
-                if (limit == 0) { // respond only to first touch event
+                if (limit == 0 && connectionCheck == 1) { // respond only to first touch event
                     noteF1Get.setBackgroundColor(myColorB);
                     getMyNetAddress();
                     String myMsgAddress = "/1/2525/1/194";
@@ -1304,7 +1508,7 @@ public class SeventhActivity extends AppCompatActivity {
                     }
                     return true;
                 }
-                if (limit == 0) { // respond only to first touch event
+                if (limit == 0 && connectionCheck == 1) { // respond only to first touch event
                     noteFs1Get.setBackgroundColor(myColorB);
                     getMyNetAddress();
                     String myMsgAddress = "/1/2525/1/194";
@@ -1339,7 +1543,7 @@ public class SeventhActivity extends AppCompatActivity {
                     }
                     return true;
                 }
-                if (limit == 0) { // respond only to first touch event
+                if (limit == 0 && connectionCheck == 1) { // respond only to first touch event
                     noteG1Get.setBackgroundColor(myColorB);
                     getMyNetAddress();
                     String myMsgAddress = "/1/2525/1/194";
@@ -1374,7 +1578,7 @@ public class SeventhActivity extends AppCompatActivity {
                     }
                     return true;
                 }
-                if (limit == 0) { // respond only to first touch event
+                if (limit == 0 && connectionCheck == 1) { // respond only to first touch event
                     noteGs1Get.setBackgroundColor(myColorB);
                     getMyNetAddress();
                     String myMsgAddress = "/1/2525/1/194";
@@ -1409,7 +1613,7 @@ public class SeventhActivity extends AppCompatActivity {
                     }
                     return true;
                 }
-                if (limit == 0) { // respond only to first touch event
+                if (limit == 0 && connectionCheck == 1) { // respond only to first touch event
                     noteA1Get.setBackgroundColor(myColorB);
                     getMyNetAddress();
                     String myMsgAddress = "/1/2525/1/194";
@@ -1444,7 +1648,7 @@ public class SeventhActivity extends AppCompatActivity {
                     }
                     return true;
                 }
-                if (limit == 0) { // respond only to first touch event
+                if (limit == 0 && connectionCheck == 1) { // respond only to first touch event
                     noteAs1Get.setBackgroundColor(myColorB);
                     getMyNetAddress();
                     String myMsgAddress = "/1/2525/1/194";
@@ -1479,7 +1683,7 @@ public class SeventhActivity extends AppCompatActivity {
                     }
                     return true;
                 }
-                if (limit == 0) { // respond only to first touch event
+                if (limit == 0 && connectionCheck == 1) { // respond only to first touch event
                     noteB1Get.setBackgroundColor(myColorB);
                     getMyNetAddress();
                     String myMsgAddress = "/1/2525/1/194";
@@ -1518,7 +1722,7 @@ public class SeventhActivity extends AppCompatActivity {
                     }
                     return true;
                 }
-                if (limit == 0) { // respond only to first touch event
+                if (limit == 0 && connectionCheck == 1) { // respond only to first touch event
                     noteC2Get.setBackgroundColor(myColorB);
                     getMyNetAddress();
                     String myMsgAddress = "/1/2525/1/194";
@@ -1553,7 +1757,7 @@ public class SeventhActivity extends AppCompatActivity {
                     }
                     return true;
                 }
-                if (limit == 0) { // respond only to first touch event
+                if (limit == 0 && connectionCheck == 1) { // respond only to first touch event
                     noteCs2Get.setBackgroundColor(myColorB);
                     getMyNetAddress();
                     String myMsgAddress = "/1/2525/1/194";
@@ -1588,7 +1792,7 @@ public class SeventhActivity extends AppCompatActivity {
                     }
                     return true;
                 }
-                if (limit == 0) { // respond only to first touch event
+                if (limit == 0 && connectionCheck == 1) { // respond only to first touch event
                     noteD2Get.setBackgroundColor(myColorB);
                     getMyNetAddress();
                     String myMsgAddress = "/1/2525/1/194";
@@ -1623,7 +1827,7 @@ public class SeventhActivity extends AppCompatActivity {
                     }
                     return true;
                 }
-                if (limit == 0) { // respond only to first touch event
+                if (limit == 0 && connectionCheck == 1) { // respond only to first touch event
                     noteDs2Get.setBackgroundColor(myColorB);
                     getMyNetAddress();
                     String myMsgAddress = "/1/2525/1/194";
@@ -1658,7 +1862,7 @@ public class SeventhActivity extends AppCompatActivity {
                     }
                     return true;
                 }
-                if (limit == 0) { // respond only to first touch event
+                if (limit == 0 && connectionCheck == 1) { // respond only to first touch event
                     noteE2Get.setBackgroundColor(myColorB);
                     getMyNetAddress();
                     String myMsgAddress = "/1/2525/1/194";
@@ -1694,7 +1898,7 @@ public class SeventhActivity extends AppCompatActivity {
                     }
                     return true;
                 }
-                if (limit == 0) { // respond only to first touch event
+                if (limit == 0 && connectionCheck == 1) { // respond only to first touch event
                     noteF2Get.setBackgroundColor(myColorB);
                     getMyNetAddress();
                     String myMsgAddress = "/1/2525/1/194";
@@ -1729,7 +1933,7 @@ public class SeventhActivity extends AppCompatActivity {
                     }
                     return true;
                 }
-                if (limit == 0) { // respond only to first touch event
+                if (limit == 0 && connectionCheck == 1) { // respond only to first touch event
                     noteFs2Get.setBackgroundColor(myColorB);
                     getMyNetAddress();
                     String myMsgAddress = "/1/2525/1/194";
@@ -1764,7 +1968,7 @@ public class SeventhActivity extends AppCompatActivity {
                     }
                     return true;
                 }
-                if (limit == 0) { // respond only to first touch event
+                if (limit == 0 && connectionCheck == 1) { // respond only to first touch event
                     noteG2Get.setBackgroundColor(myColorB);
                     getMyNetAddress();
                     String myMsgAddress = "/1/2525/1/194";
@@ -1799,7 +2003,7 @@ public class SeventhActivity extends AppCompatActivity {
                     }
                     return true;
                 }
-                if (limit == 0) { // respond only to first touch event
+                if (limit == 0 && connectionCheck == 1) { // respond only to first touch event
                     noteGs2Get.setBackgroundColor(myColorB);
                     getMyNetAddress();
                     String myMsgAddress = "/1/2525/1/194";
@@ -1834,7 +2038,7 @@ public class SeventhActivity extends AppCompatActivity {
                     }
                     return true;
                 }
-                if (limit == 0) { // respond only to first touch event
+                if (limit == 0 && connectionCheck == 1) { // respond only to first touch event
                     noteA2Get.setBackgroundColor(myColorB);
                     getMyNetAddress();
                     String myMsgAddress = "/1/2525/1/194";
@@ -1869,7 +2073,7 @@ public class SeventhActivity extends AppCompatActivity {
                     }
                     return true;
                 }
-                if (limit == 0) { // respond only to first touch event
+                if (limit == 0 && connectionCheck == 1) { // respond only to first touch event
                     noteAs2Get.setBackgroundColor(myColorB);
                     getMyNetAddress();
                     String myMsgAddress = "/1/2525/1/194";
@@ -1904,7 +2108,7 @@ public class SeventhActivity extends AppCompatActivity {
                     }
                     return true;
                 }
-                if (limit == 0) { // respond only to first touch event
+                if (limit == 0 && connectionCheck == 1) { // respond only to first touch event
                     noteB2Get.setBackgroundColor(myColorB);
                     getMyNetAddress();
                     String myMsgAddress = "/1/2525/1/194";
