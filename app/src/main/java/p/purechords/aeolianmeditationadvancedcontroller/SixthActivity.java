@@ -1983,7 +1983,7 @@ public class SixthActivity extends AppCompatActivity {
                     yParam2Get.setText("Y = Chorus Wet");
                     break;
 
-            } // end switch
+            } /// end switch
             }
 
         @Override
