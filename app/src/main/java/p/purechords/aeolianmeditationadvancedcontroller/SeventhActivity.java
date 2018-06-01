@@ -969,6 +969,8 @@ public class SeventhActivity extends AppCompatActivity {
         ////////////////////////////////////////////////////////////////
 
         binding.setObsIntDrone(obsIntDrone);
+        binding.setObsIntFmDepth(obsIntFmDepth);
+        binding.setObsIntFilterCut(obsIntFilterCut);
         binding.setObsIntEnvA(obsIntEnvA);
         binding.setObsIntEnvD(obsIntEnvD);
         binding.setObsIntEnvS(obsIntEnvS);
@@ -1207,6 +1209,23 @@ public class SeventhActivity extends AppCompatActivity {
             }
         });*/
 
+        //Cut
+        final Slider sliderLpFilterCutGet = findViewById(R.id.sliderLpFilterCut);
+        sliderLpFilterCutGet.setValue(lpFilterCut, true);
+        sliderLpFilterCutGet.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
+            @Override
+            public void onPositionChanged(Slider view, boolean fromUser, float oldPos, float newPos, int oldValue, int newValue) {
+                if (connectionCheck == 1) {
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/151";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(sliderLpFilterCutGet.getValue());
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    lpFilterCut = sliderLpFilterCutGet.getValue();
+                }
+            }
+        }); // end listener
+
         final Slider sliderEnvAGet = findViewById(R.id.sliderEnvA);
         sliderEnvAGet.setValue(envelopeA, true);
         sliderEnvAGet.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
@@ -1277,6 +1296,25 @@ public class SeventhActivity extends AppCompatActivity {
                 R.array.spinnerPlayOct, R.layout.spinner_item);
         spinnerPlayOctGet.setAdapter(adapterPlayOct);
         spinnerPlayOctGet.setSelection(playOctave);
+
+
+        ////////////////////// FM Depth Start
+        final Slider sliderFmDepthGet = findViewById(R.id.sliderFmDepth);
+        sliderFmDepthGet.setValue(fmDepth, true);
+        sliderFmDepthGet.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
+            @Override
+            public void onPositionChanged(Slider view, boolean fromUser, float oldPos, float newPos, int oldValue, int newValue) {
+                if (connectionCheck == 1) {
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/139";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(sliderFmDepthGet.getValue());
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    fmDepth = sliderFmDepthGet.getValue();
+                }
+            }
+        });
+        ////////////////////// FM Depth End
 
         ///////////////////////////////////////////////////////////////////// Notes Start
 

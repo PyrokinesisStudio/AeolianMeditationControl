@@ -188,7 +188,7 @@
                     android:layout_width="75dp"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Virtual KB Oct"
+                    android:text="Device KB Oct"
                     android:textColor="@android:color/white"
                     android:textSize="8sp"
                     app:layout_constraintBottom_toBottomOf="parent"
