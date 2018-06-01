@@ -3,6 +3,7 @@ package p.purechords.aeolianmeditationadvancedcontroller;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -16,6 +17,7 @@ import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import oscP5.OscMessage;
+import p.purechords.aeolianmeditationadvancedcontroller.databinding.ActivitySixthBinding;
 
 import static p.purechords.aeolianmeditationadvancedcontroller.MainActivity.*;
 
@@ -32,7 +34,8 @@ public class SixthActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_sixth);
+        // Set layout with binding
+        ActivitySixthBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_sixth);
 
         ///////////////////////////////////////////////////// Shared Preferences Start
         SharedPreferences sharedPref= getSharedPreferences("OsAmaControlPref", 0);
@@ -951,6 +954,7 @@ public class SixthActivity extends AppCompatActivity {
         /////////////////////////////////////////// Observable set end
         ////////////////////////////////////////////////////////////////
 
+        binding.setObsIntDrone(obsIntDrone);
 
         /////////////////////////////////////////////////////////////////////////////
         ///////////////////////////////////////////////////// Navigator Buttons Start
@@ -1571,6 +1575,117 @@ public class SixthActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+        final ToggleButton droneGet = findViewById(R.id.toggleButtonDrone);
+        if (droneVal == 127) {
+            droneGet.setChecked(true);
+            droneGet.setBackgroundColor(myColorD);
+        }
+        droneGet.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    if (connectionCheck == 1) {
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/183";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        droneGet.setBackgroundColor(myColorD);
+                        myOscMessage.add(127);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        droneVal = 127;
+                    }
+                } else {
+                    if (connectionCheck == 1) {
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/183";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        droneGet.setBackgroundColor(myColorC);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        droneVal = 0;
+                    }
+                }
+            }
+        });
+
+
+        final ToggleButton togglebButtonEffectsPowerAllGet = findViewById(R.id.toggleButtonEffectsPowerAll);
+        togglebButtonEffectsPowerAllGet.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    if (connectionCheck == 1) {
+                        togglebButtonEffectsPowerAllGet.setBackgroundColor(myColorD);
+
+                        String myMsgAddress = "/1/2525/1/150";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(127);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        lpFilterPower = 127;
+
+                        myMsgAddress = "/1/2525/1/158";
+                        myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(127);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        decimatorPower = 127;
+
+                        myMsgAddress = "/1/2525/1/165";
+                        myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(127);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        delayPower = 127;
+
+                        myMsgAddress = "/1/2525/1/171";
+                        myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(127);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        chorusPower = 127;
+
+                        myMsgAddress = "/1/2525/1/177";
+                        myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(127);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        reverbPower = 127;
+                    }
+                } else {
+                    if (connectionCheck == 1) {
+                        togglebButtonEffectsPowerAllGet.setBackgroundColor(myColorC);
+
+                        String myMsgAddress = "/1/2525/1/150";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        lpFilterPower = 0;
+
+                        myMsgAddress = "/1/2525/1/158";
+                        myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        decimatorPower = 0;
+
+                        myMsgAddress = "/1/2525/1/165";
+                        myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        delayPower = 0;
+
+                        myMsgAddress = "/1/2525/1/171";
+                        myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        chorusPower = 0;
+
+                        myMsgAddress = "/1/2525/1/177";
+                        myOscMessage = new OscMessage(myMsgAddress);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        reverbPower = 0;
+                    }
+                }
+            }
+        }); // end listener
+
+        ///////////////////////////////////////////////////// Power All End
 
     } // end create
 
