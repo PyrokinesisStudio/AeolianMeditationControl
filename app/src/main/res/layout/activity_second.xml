@@ -1254,7 +1254,7 @@
                 <Spinner
                     android:id="@+id/spinnerHarmVolModDiv9"
                     android:layout_width="85dp"
-                    android:layout_height="16dp"
+                    android:layout_height="26dp"
                     android:entries="@array/spinnerNotes"
                     android:popupBackground="@android:color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1262,13 +1262,13 @@
                     app:layout_constraintHorizontal_bias="0.44"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.794"
+                    app:layout_constraintVertical_bias="0.804"
                     app:selection="@{obsIntHarmDiv9.value}" />
 
                 <Spinner
                     android:id="@+id/spinnerHarmVolModDiv10"
                     android:layout_width="85dp"
-                    android:layout_height="16dp"
+                    android:layout_height="26dp"
                     android:entries="@array/spinnerNotes"
                     android:popupBackground="@android:color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1276,13 +1276,13 @@
                     app:layout_constraintHorizontal_bias="0.625"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.794"
+                    app:layout_constraintVertical_bias="0.804"
                     app:selection="@{obsIntHarmDiv10.value}" />
 
                 <Spinner
                     android:id="@+id/spinnerHarmVolModDiv12"
                     android:layout_width="85dp"
-                    android:layout_height="16dp"
+                    android:layout_height="26dp"
                     android:entries="@array/spinnerNotes"
                     android:popupBackground="@android:color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1290,13 +1290,13 @@
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.794"
+                    app:layout_constraintVertical_bias="0.804"
                     app:selection="@{obsIntHarmDiv12.value}" />
 
                 <Spinner
                     android:id="@+id/spinnerHarmVolModDiv1"
                     android:layout_width="85dp"
-                    android:layout_height="16dp"
+                    android:layout_height="26dp"
                     android:entries="@array/spinnerNotes"
                     android:popupBackground="@android:color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1304,13 +1304,13 @@
                     app:layout_constraintHorizontal_bias="0.065"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.31"
+                    app:layout_constraintVertical_bias="0.30"
                     app:selection="@{obsIntHarmDiv1.value}" />
 
                 <Spinner
                     android:id="@+id/spinnerHarmVolModDiv2"
                     android:layout_width="85dp"
-                    android:layout_height="16dp"
+                    android:layout_height="26dp"
                     android:entries="@array/spinnerNotes"
                     android:popupBackground="@android:color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1318,13 +1318,13 @@
                     app:layout_constraintHorizontal_bias="0.252"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.31"
+                    app:layout_constraintVertical_bias="0.30"
                     app:selection="@{obsIntHarmDiv2.value}" />
 
                 <Spinner
                     android:id="@+id/spinnerHarmVolModDiv3"
                     android:layout_width="85dp"
-                    android:layout_height="16dp"
+                    android:layout_height="26dp"
                     android:entries="@array/spinnerNotes"
                     android:popupBackground="@android:color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1332,13 +1332,13 @@
                     app:layout_constraintHorizontal_bias="0.44"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.31"
+                    app:layout_constraintVertical_bias="0.30"
                     app:selection="@{obsIntHarmDiv3.value}" />
 
                 <Spinner
                     android:id="@+id/spinnerHarmVolModDiv4"
                     android:layout_width="85dp"
-                    android:layout_height="16dp"
+                    android:layout_height="26dp"
                     android:entries="@array/spinnerNotes"
                     android:popupBackground="@android:color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1346,13 +1346,13 @@
                     app:layout_constraintHorizontal_bias="0.625"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.31"
+                    app:layout_constraintVertical_bias="0.30"
                     app:selection="@{obsIntHarmDiv4.value}" />
 
                 <Spinner
                     android:id="@+id/spinnerHarmVolModDiv5"
                     android:layout_width="85dp"
-                    android:layout_height="16dp"
+                    android:layout_height="26dp"
                     android:entries="@array/spinnerNotes"
                     android:popupBackground="@android:color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1360,13 +1360,13 @@
                     app:layout_constraintHorizontal_bias="0.812"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.31"
+                    app:layout_constraintVertical_bias="0.30"
                     app:selection="@{obsIntHarmDiv5.value}" />
 
                 <Spinner
                     android:id="@+id/spinnerHarmVolModDiv6"
                     android:layout_width="85dp"
-                    android:layout_height="16dp"
+                    android:layout_height="26dp"
                     android:entries="@array/spinnerNotes"
                     android:popupBackground="@android:color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1374,13 +1374,13 @@
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.31"
+                    app:layout_constraintVertical_bias="0.30"
                     app:selection="@{obsIntHarmDiv6.value}" />
 
                 <Spinner
                     android:id="@+id/spinnerHarmVolModDiv11"
                     android:layout_width="85dp"
-                    android:layout_height="16dp"
+                    android:layout_height="26dp"
                     android:entries="@array/spinnerNotes"
                     android:popupBackground="@android:color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1388,13 +1388,13 @@
                     app:layout_constraintHorizontal_bias="0.812"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.794"
+                    app:layout_constraintVertical_bias="0.804"
                     app:selection="@{obsIntHarmDiv11.value}" />
 
                 <Spinner
                     android:id="@+id/spinnerHarmVolModDiv8"
                     android:layout_width="85dp"
-                    android:layout_height="16dp"
+                    android:layout_height="26dp"
                     android:entries="@array/spinnerNotes"
                     android:popupBackground="@android:color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1402,13 +1402,13 @@
                     app:layout_constraintHorizontal_bias="0.252"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.794"
+                    app:layout_constraintVertical_bias="0.804"
                     app:selection="@{obsIntHarmDiv8.value}" />
 
                 <Spinner
                     android:id="@+id/spinnerHarmVolModDiv7"
                     android:layout_width="85dp"
-                    android:layout_height="16dp"
+                    android:layout_height="26dp"
                     android:entries="@array/spinnerNotes"
                     android:popupBackground="@android:color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1416,7 +1416,7 @@
                     app:layout_constraintHorizontal_bias="0.065"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.794"
+                    app:layout_constraintVertical_bias="0.804"
                     app:selection="@{obsIntHarmDiv7.value}" />
 
                 <com.rey.material.widget.Slider

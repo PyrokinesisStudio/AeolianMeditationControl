@@ -557,7 +557,7 @@
             <Spinner
                 android:id="@+id/spinnerY1"
                 android:layout_width="75dp"
-                android:layout_height="11dp"
+                android:layout_height="21dp"
                 android:entries="@array/spinnerLiveMode"
                 android:popupBackground="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -565,12 +565,12 @@
                 app:layout_constraintHorizontal_bias="0.375"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.02" />
+                app:layout_constraintVertical_bias="0" />
 
             <Spinner
                 android:id="@+id/spinnerY2"
                 android:layout_width="75dp"
-                android:layout_height="11dp"
+                android:layout_height="21dp"
                 android:entries="@array/spinnerLiveMode"
                 android:popupBackground="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -578,12 +578,12 @@
                 app:layout_constraintHorizontal_bias="0.954"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.02" />
+                app:layout_constraintVertical_bias="0" />
 
             <Spinner
                 android:id="@+id/spinnerX1"
                 android:layout_width="75dp"
-                android:layout_height="11dp"
+                android:layout_height="21dp"
                 android:entries="@array/spinnerLiveMode"
                 android:popupBackground="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -591,12 +591,12 @@
                 app:layout_constraintHorizontal_bias="0.09"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.02" />
+                app:layout_constraintVertical_bias="0" />
 
             <Spinner
                 android:id="@+id/spinnerX2"
                 android:layout_width="75dp"
-                android:layout_height="11dp"
+                android:layout_height="21dp"
                 android:entries="@array/spinnerLiveMode"
                 android:popupBackground="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -604,7 +604,7 @@
                 app:layout_constraintHorizontal_bias="0.668"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.02" />
+                app:layout_constraintVertical_bias="0" />
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/layoutXY2"
