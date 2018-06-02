@@ -2025,40 +2025,6 @@ public class MainActivity extends AppCompatActivity {
         });
         ///////////////////////////////////////////////////// Envelope Trigger End
 
-        final ToggleButton devicePowerGet = findViewById(R.id.toggleButtonDevicePower);
-        if (devicePower == 127) {
-            devicePowerGet.setChecked(true);
-            devicePowerGet.setBackgroundColor(myColorD);
-        }
-        devicePowerGet.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    if (connectionCheck == 1) {
-                        getMyNetAddress();
-                        String myMsgAddress = "/1/2525/1/190";
-                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
-                        devicePowerGet.setBackgroundColor(myColorD);
-                        myOscMessage.add(127);
-                        oscP5.send(myOscMessage, getBroadcastLocation);
-                        devicePower = 127;
-                    }
-                } else {
-                    if (connectionCheck == 1) {
-                        getMyNetAddress();
-                        String myMsgAddress = "/1/2525/1/190";
-                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
-                        devicePowerGet.setBackgroundColor(myColorC);
-                        myOscMessage.add(0);
-                        oscP5.send(myOscMessage, getBroadcastLocation);
-                        devicePower = 0;
-                    }
-                }
-            }
-        });
-
-
         final ToggleButton connectGet = findViewById(R.id.toggleButtonConnect);
         if (connectionCheck == 1) {
             connectGet.setChecked(true);
@@ -2190,69 +2156,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        final Slider sliderEnvAGet = findViewById(R.id.sliderEnvA);
-        sliderEnvAGet.setValue(envelopeA, true);
-        sliderEnvAGet.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
-            @Override
-            public void onPositionChanged(Slider view, boolean fromUser, float oldPos, float newPos, int oldValue, int newValue) {
-                if (connectionCheck == 1) {
-                    getMyNetAddress();
-                    String myMsgAddress = "/1/2525/1/184";
-                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
-                    myOscMessage.add(sliderEnvAGet.getValue());
-                    oscP5.send(myOscMessage, getBroadcastLocation);
-                    envelopeA = sliderEnvAGet.getValue();
-                }
-            }
-        });
-
-        final Slider sliderEnvDGet = findViewById(R.id.sliderEnvD);
-        sliderEnvDGet.setValue(envelopeD, true);
-        sliderEnvDGet.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
-            @Override
-            public void onPositionChanged(Slider view, boolean fromUser, float oldPos, float newPos, int oldValue, int newValue) {
-                if (connectionCheck == 1) {
-                    getMyNetAddress();
-                    String myMsgAddress = "/1/2525/1/185";
-                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
-                    myOscMessage.add(sliderEnvDGet.getValue());
-                    oscP5.send(myOscMessage, getBroadcastLocation);
-                    envelopeD = sliderEnvDGet.getValue();
-                }
-            }
-        });
-
-        final Slider sliderEnvSGet = findViewById(R.id.sliderEnvS);
-        sliderEnvSGet.setValue(envelopeS, true);
-        sliderEnvSGet.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
-            @Override
-            public void onPositionChanged(Slider view, boolean fromUser, float oldPos, float newPos, int oldValue, int newValue) {
-                if (connectionCheck == 1) {
-                    getMyNetAddress();
-                    String myMsgAddress = "/1/2525/1/186";
-                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
-                    myOscMessage.add(sliderEnvSGet.getValue());
-                    oscP5.send(myOscMessage, getBroadcastLocation);
-                    envelopeS = sliderEnvSGet.getValue();
-                }
-            }
-        });
-
-        final Slider sliderEnvRGet = findViewById(R.id.sliderEnvR);
-        sliderEnvRGet.setValue(envelopeR, true);
-        sliderEnvRGet.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
-            @Override
-            public void onPositionChanged(Slider view, boolean fromUser, float oldPos, float newPos, int oldValue, int newValue) {
-                if (connectionCheck == 1) {
-                    getMyNetAddress();
-                    String myMsgAddress = "/1/2525/1/187";
-                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
-                    myOscMessage.add(sliderEnvRGet.getValue());
-                    oscP5.send(myOscMessage, getBroadcastLocation);
-                    envelopeR = sliderEnvRGet.getValue();
-                }
-            }
-        });
 
         final EditText ipGet = findViewById(R.id.editTextIP);
         InputFilter[] filters = new InputFilter[1];
