@@ -618,14 +618,14 @@ public class MainActivity extends AppCompatActivity {
 
     /////////////////////////////////////////// Live Page - Sixth Activity Variables Start
 
-    public static int  xyTrig1 = 0;
-    public static int  xyTrig2 = 0;
+    public static int xyTrig1 = 1;
+    public static int xyTrig2 = 0;
 
-    public static int xyItemX1 = 0;
-    public static int xyItemY1 = 0;
+    public static int xyItemX1 = 1;
+    public static int xyItemY1 = 39;
 
-    public static int xyItemX2 = 0;
-    public static int xyItemY2 = 0;
+    public static int xyItemX2 = 41;
+    public static int xyItemY2 = 45;
 
     /////////////////////////////////////////// Play Page - Seventh Activity Variables End
 

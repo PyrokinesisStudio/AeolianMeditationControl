@@ -297,105 +297,105 @@
         <item>Midi</item>
     </string-array>
     <string-array name="spinnerXyItem">
-        <item>Output Vol</item>
+        <item>Out Vol</item>
         <item>Harm Mix</item>
         <item>Noise Mix</item>
-        <item>Harm Vol 1</item>
-        <item>Harm Vol 2</item>
-        <item>Harm Vol 3</item>
-        <item>Harm Vol 4</item>
-        <item>Harm Vol 5</item>
-        <item>Harm Vol 6</item>
-        <item>Harm Vol 7</item>
-        <item>Harm Vol 8</item>
-        <item>Harm Vol 9</item>
-        <item>Harm Vol 10</item>
-        <item>Harm Vol 11</item>
-        <item>Harm Vol 12</item>
-        <item>Harm Mod 1</item>
-        <item>Harm Mod 2</item>
-        <item>Harm Mod 3</item>
-        <item>Harm Mod 4</item>
-        <item>Harm Mod 5</item>
-        <item>Harm Mod 6</item>
-        <item>Harm Mod 7</item>
-        <item>Harm Mod 8</item>
-        <item>Harm Mod 9</item>
-        <item>Harm Mod 10</item>
-        <item>Harm Mod 11</item>
-        <item>Harm Mod 12</item>
-        <item>Harm Rate 1</item>
-        <item>Harm Rate 2</item>
-        <item>Harm Rate 3</item>
-        <item>Harm Rate 4</item>
-        <item>Harm Rate 5</item>
-        <item>Harm Rate 6</item>
-        <item>Harm Rate 7</item>
-        <item>Harm Rate 8</item>
-        <item>Harm Rate 9</item>
-        <item>Harm Rate 10</item>
-        <item>Harm Rate 11</item>
-        <item>Harm Rate 12</item>
+        <item>Harm V1</item>
+        <item>Harm V2</item>
+        <item>Harm V3</item>
+        <item>Harm V4</item>
+        <item>Harm V5</item>
+        <item>Harm V6</item>
+        <item>Harm V7</item>
+        <item>Harm V8</item>
+        <item>Harm V9</item>
+        <item>Harm V10</item>
+        <item>Harm V11</item>
+        <item>Harm V12</item>
+        <item>Harm M1</item>
+        <item>Harm M2</item>
+        <item>Harm M3</item>
+        <item>Harm M4</item>
+        <item>Harm M5</item>
+        <item>Harm M6</item>
+        <item>Harm M7</item>
+        <item>Harm M8</item>
+        <item>Harm M9</item>
+        <item>Harm M10</item>
+        <item>Harm M11</item>
+        <item>Harm M12</item>
+        <item>Harm R1</item>
+        <item>Harm R2</item>
+        <item>Harm R3</item>
+        <item>Harm R4</item>
+        <item>Harm R5</item>
+        <item>Harm R6</item>
+        <item>Harm R7</item>
+        <item>Harm R8</item>
+        <item>Harm R9</item>
+        <item>Harm R10</item>
+        <item>Harm R11</item>
+        <item>Harm R12</item>
         <item>Source Freq</item>
         <item>FM Freq</item>
         <item>FM Depth</item>
-        <item>FM Depth Mod</item>
-        <item>FM Depth Rate</item>
-        <item>FM Freq Mod</item>
-        <item>FM Freq Rate</item>
-        <item>Noise Vol 1</item>
-        <item>Noise Vol 2</item>
-        <item>Noise Vol 3</item>
-        <item>Noise Vol 4</item>
-        <item>Noise VMod 1</item>
-        <item>Noise VMod 2</item>
-        <item>Noise VMod 3</item>
-        <item>Noise VMod 4</item>
-        <item>Noise VRate 1</item>
-        <item>Noise VRate 2</item>
-        <item>Noise VRate 3</item>
-        <item>Noise VRate 4</item>
-        <item>Noise Cut 1</item>
-        <item>Noise Cut 1</item>
-        <item>Noise Cut 1</item>
-        <item>Noise Cut 1</item>
-        <item>Noise Res 1</item>
-        <item>Noise Res 2</item>
-        <item>Noise Res 3</item>
-        <item>Noise Res 4</item>
-        <item>Noise Mod 1</item>
-        <item>Noise Mod 2</item>
-        <item>Noise Mod 3</item>
-        <item>Noise Mod 4</item>
-        <item>Noise Rate 1</item>
-        <item>Noise Rate 2</item>
-        <item>Noise Rate 3</item>
-        <item>Noise Rate 4</item>
-        <item>Filter Cut</item>
-        <item>Filter Res</item>
-        <item>Filter Env</item>
-        <item>Filter Mod</item>
-        <item>Filter Rate</item>
-        <item>Reducer Reduce</item>
-        <item>Reducer Mod</item>
-        <item>Reducer Rate</item>
+        <item>FM F Mod</item>
+        <item>FM F Rate</item>
+        <item>FM D Mod</item>
+        <item>FM D Rate</item>
+        <item>Noise V1</item>
+        <item>Noise V2</item>
+        <item>Noise V3</item>
+        <item>Noise V4</item>
+        <item>Noise VM1</item>
+        <item>Noise VM2</item>
+        <item>Noise VM3</item>
+        <item>Noise VM4</item>
+        <item>Noise VR1</item>
+        <item>Noise VR2</item>
+        <item>Noise VR3</item>
+        <item>Noise VR4</item>
+        <item>Noise C1</item>
+        <item>Noise C2</item>
+        <item>Noise C3</item>
+        <item>Noise C4</item>
+        <item>Noise R1</item>
+        <item>Noise R2</item>
+        <item>Noise R3</item>
+        <item>Noise R4</item>
+        <item>Noise CM1</item>
+        <item>Noise CM2</item>
+        <item>Noise CM3</item>
+        <item>Noise CM4</item>
+        <item>Noise CR1</item>
+        <item>Noise CR2</item>
+        <item>Noise CR3</item>
+        <item>Noise CR4</item>
+        <item>LP Cut</item>
+        <item>LP Res</item>
+        <item>LP Env</item>
+        <item>LP Mod</item>
+        <item>LP Rate</item>
+        <item>Redux Redux</item>
+        <item>Redux Mod</item>
+        <item>Redux Rate</item>
         <item>Delay Feed</item>
         <item>Delay Wet</item>
-        <item>Chorus Rate</item>
-        <item>Chorus Depth</item>
-        <item>Chorus Delay</item>
-        <item>Chorus FB L</item>
-        <item>Chorus FB R</item>
-        <item>Chorus Wet</item>
-        <item>Reverb Delay</item>
-        <item>Reverb HP</item>
-        <item>Reverb Damp</item>
-        <item>Reverb Stereo</item>
-        <item>Reverb Wet</item>
-        <item>Env Attack</item>
-        <item>Env Decay</item>
-        <item>Env Sustain</item>
-        <item>Env Release</item>
+        <item>Chor Rate</item>
+        <item>Chor Depth</item>
+        <item>Chor Delay</item>
+        <item>Chor FB L</item>
+        <item>Chor FB R</item>
+        <item>Chor Wet</item>
+        <item>Verb Delay</item>
+        <item>Verb HP</item>
+        <item>Verb Damp</item>
+        <item>Verb Stereo</item>
+        <item>Verb Wet</item>
+        <item>Env A</item>
+        <item>Env D</item>
+        <item>Env S</item>
+        <item>Env R</item>
     </string-array>
     <string-array name="spinnerPlayOct">
         <item>C0</item>

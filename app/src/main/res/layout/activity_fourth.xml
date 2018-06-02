@@ -1486,7 +1486,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Decimator"
+                        android:text="Reducer"
                         android:textColor="@android:color/white"
                         android:textSize="8sp"
                         app:layout_constraintBottom_toBottomOf="parent"
