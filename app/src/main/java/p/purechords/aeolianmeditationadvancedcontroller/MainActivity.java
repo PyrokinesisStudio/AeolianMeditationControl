@@ -2025,6 +2025,8 @@ public class MainActivity extends AppCompatActivity {
         });
         ///////////////////////////////////////////////////// Envelope Trigger End
 
+        ///////////////////////////////////////////////////// Connect Button Start
+
         final ToggleButton connectGet = findViewById(R.id.toggleButtonConnect);
         if (connectionCheck == 1) {
             connectGet.setChecked(true);
@@ -2053,6 +2055,10 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        ///////////////////////////////////////////////////// Connect Button End
+
+        ///////////////////////////////////////////////////// EnvOn Button Start
 
         final ToggleButton droneGet = findViewById(R.id.toggleButtonDrone);
         if (droneVal == 127) {
@@ -2086,6 +2092,9 @@ public class MainActivity extends AppCompatActivity {
                 }
         });
 
+        ///////////////////////////////////////////////////// EnvOn Button End
+
+        // BPM
         Spinner spinnerBPMGet = (findViewById(R.id.spinnerBpm));
         spinnerBPMGet.setOnItemSelectedListener(new MainActivity.CustomOnItemSelectedListenerBPM());
         ArrayAdapter adapterBpm = ArrayAdapter.createFromResource(this,
@@ -2093,6 +2102,7 @@ public class MainActivity extends AppCompatActivity {
         spinnerBPMGet.setAdapter(adapterBpm);
         spinnerBPMGet.setSelection(bpmData);
 
+        // Midi Channel
         Spinner spinnerMidiChanGet = (findViewById(R.id.spinnerMidiChan));
         spinnerMidiChanGet.setOnItemSelectedListener(new MainActivity.CustomOnItemSelectedListenerMidiChan());
         ArrayAdapter adapterMidiChan = ArrayAdapter.createFromResource(this,
@@ -2100,6 +2110,7 @@ public class MainActivity extends AppCompatActivity {
         spinnerMidiChanGet.setAdapter(adapterMidiChan);
         spinnerMidiChanGet.setSelection(midiChan);
 
+        // PC Keyboard Octave
         Spinner spinnerKeyboardOctGet = (findViewById(R.id.spinnerKeyboardOct));
         spinnerKeyboardOctGet.setOnItemSelectedListener(new MainActivity.CustomOnItemSelectedListenerKeyboardOct());
         ArrayAdapter adapterKeyboardOct = ArrayAdapter.createFromResource(this,
@@ -2107,6 +2118,7 @@ public class MainActivity extends AppCompatActivity {
         spinnerKeyboardOctGet.setAdapter(adapterKeyboardOct);
         spinnerKeyboardOctGet.setSelection(keyboardOctave);
 
+        // Play Page Keyboard Octave
         Spinner spinnerPlayOctGet = (findViewById(R.id.spinnerPlayOct));
         spinnerPlayOctGet.setOnItemSelectedListener(new MainActivity.CustomOnItemSelectedListenerPlayOct());
         ArrayAdapter adapterPlayOct = ArrayAdapter.createFromResource(this,
@@ -2114,6 +2126,7 @@ public class MainActivity extends AppCompatActivity {
         spinnerPlayOctGet.setAdapter(adapterPlayOct);
         spinnerPlayOctGet.setSelection(playOctave);
 
+        // Harmonic Mix
         final Slider sliderHarmMixGet = findViewById(R.id.sliderHarmMix);
         sliderHarmMixGet.setValue(harmMix, true);
         sliderHarmMixGet.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
@@ -2130,6 +2143,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Noise Mix
         final Slider sliderNoiseMixGet = findViewById(R.id.sliderNoiseMix);
         sliderNoiseMixGet.setValue(noiseMix, true);
         sliderNoiseMixGet.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
@@ -2147,6 +2161,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        // Main Volume
         final Slider sliderOutputVolumeGet = findViewById(R.id.sliderOutputVolume);
         sliderOutputVolumeGet.setValue(outputVolume, true);
         sliderOutputVolumeGet.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
@@ -2163,7 +2178,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        // IP To Transmit To
         final EditText ipGet = findViewById(R.id.editTextIP);
         InputFilter[] filters = new InputFilter[1];
         filters[0] = new InputFilter() {
@@ -2224,6 +2239,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Port to transmit to
         final EditText portGet = findViewById(R.id.editTextPort);
         portGet.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @SuppressLint("SetTextI18n")
