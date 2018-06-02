@@ -287,6 +287,11 @@
         <item>Harm 36912</item>
     </string-array>
     <string-array name="spinnerSource">
+        <item>Freq/Play</item>
+        <item>Note</item>
+        <item>Midi</item>
+    </string-array>
+    <string-array name="spinnerSourceFm">
         <item>Freq</item>
         <item>Note</item>
         <item>Midi</item>

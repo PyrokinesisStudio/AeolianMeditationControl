@@ -6,6 +6,9 @@
             name="obsIntDrone"
             type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntDrone"/>
         <variable
+            name="obsIntSourceSelect"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntSourceSelect" />
+        <variable
             name="obsIntEnvA"
             type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntEnvA"/>
         <variable
@@ -56,6 +59,35 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.666" />
+
+        <TextView
+            android:id="@+id/textViewFreqSourceSelect3"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Source"
+            android:textColor="@android:color/white"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.060000002" />
+
+        <Spinner
+            android:id="@+id/spinnerSourceSelect"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:entries="@array/spinnerNotes"
+            android:popupBackground="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.07999998"
+            app:selection="@{obsIntSourceSelect.value}" />
 
         <ImageView
             android:id="@+id/imageViewSldierBack83"
@@ -254,7 +286,7 @@
             android:background="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.55"
+            app:layout_constraintHorizontal_bias="0.48"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.062">

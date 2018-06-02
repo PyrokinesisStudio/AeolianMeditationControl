@@ -1083,6 +1083,15 @@ public class SeventhActivity extends AppCompatActivity {
         ///////////////////////////////////////////////////// Navigator Buttons End
         ////////////////////////////////////////////////////////////////////////////////////////////
 
+        ////////////////////// Harmonic Source Source Select Start
+        final Spinner spinnerSourceSelectGet = (findViewById(R.id.spinnerSourceSelect));
+        spinnerSourceSelectGet.setOnItemSelectedListener(new SeventhActivity.CustomOnItemSelectedListenerSourceSelect());
+        ArrayAdapter adapterSourceSelect = ArrayAdapter.createFromResource(this,
+                R.array.spinnerSource, R.layout.spinner_item);
+        spinnerSourceSelectGet.setAdapter(adapterSourceSelect);
+        spinnerSourceSelectGet.setSelection(sourceSelect);
+        ////////////////////// Harmonic Source Source Select End
+
         final ToggleButton togglebButtonEffectsPowerAllGet = findViewById(R.id.toggleButtonEffectsPowerAll);
         togglebButtonEffectsPowerAllGet.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -2182,6 +2191,26 @@ public class SeventhActivity extends AppCompatActivity {
                 playOctave = position;
             }
 
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> arg0) {
+
+        }
+    } // end listener
+
+    public class CustomOnItemSelectedListenerSourceSelect implements AdapterView.OnItemSelectedListener {
+
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+            if (connectionCheck == 1) {
+                getMyNetAddress();
+                String myMsgAddress = "/1/2525/1/131";
+                OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                sourceSelect = position;
+                myOscMessage.add(Math.round((position / 3.0f) * 127.0f));
+                oscP5.send(myOscMessage, getBroadcastLocation);
+            }
         }
 
         @Override

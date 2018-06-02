@@ -1204,7 +1204,7 @@ public class FifthActivity extends AppCompatActivity {
         final  Spinner spinnerFmSelectGet = (findViewById(R.id.spinnerFmSelect));
         spinnerFmSelectGet.setOnItemSelectedListener(new FifthActivity.CustomOnItemSelectedListenerFmSelect());
         ArrayAdapter adapterFmSelect = ArrayAdapter.createFromResource(this,
-                R.array.spinnerSource, R.layout.spinner_item);
+                R.array.spinnerSourceFm, R.layout.spinner_item);
         spinnerFmSelectGet.setAdapter(adapterFmSelect);
         spinnerFmSelectGet.setSelection(fmSelect);
         ////////////////////// FM Source Source Select End
