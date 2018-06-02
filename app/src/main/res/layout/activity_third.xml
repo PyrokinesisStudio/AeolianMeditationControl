@@ -290,7 +290,7 @@
             <Spinner
                 android:id="@+id/spinnerNoiseModRateRangeVol"
                 android:layout_width="75dp"
-                android:layout_height="16dp"
+                android:layout_height="26dp"
                 android:entries="@array/spinnerRateRange"
                 android:popupBackground="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -298,13 +298,13 @@
                 app:layout_constraintHorizontal_bias="0.76"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.929"
+                app:layout_constraintVertical_bias="0.945"
                 app:selection="@{obsIntNoiseRateRangeVol.value}" />
 
             <Spinner
                 android:id="@+id/spinnerNoiseModRateRangeCut"
                 android:layout_width="75dp"
-                android:layout_height="16dp"
+                android:layout_height="26dp"
                 android:entries="@array/spinnerRateRange"
                 android:popupBackground="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -312,7 +312,7 @@
                 app:layout_constraintHorizontal_bias="0.76"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.986"
+                app:layout_constraintVertical_bias="0.995"
                 app:selection="@{obsIntNoiseRateRangeCut.value}" />
 
             <android.support.constraint.ConstraintLayout

@@ -1205,38 +1205,6 @@ public class SeventhActivity extends AppCompatActivity {
             }
         });
 
-       /* final Slider sliderOutputVolumeGet = findViewById(R.id.sliderOutputVolume);
-        sliderOutputVolumeGet.setValue(outputVolume, true);
-        sliderOutputVolumeGet.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
-            @Override
-            public void onPositionChanged(Slider view, boolean fromUser, float oldPos, float newPos, int oldValue, int newValue) {
-                if (connectionCheck == 1) {
-                    getMyNetAddress();
-                    String myMsgAddress = "/1/2525/1/189";
-                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
-                    myOscMessage.add(sliderOutputVolumeGet.getValue());
-                    oscP5.send(myOscMessage, getBroadcastLocation);
-                    outputVolume = sliderOutputVolumeGet.getValue();
-                }
-            }
-        });*/
-
-        //Cut
-        final Slider sliderLpFilterCutGet = findViewById(R.id.sliderLpFilterCut);
-        sliderLpFilterCutGet.setValue(lpFilterCut, true);
-        sliderLpFilterCutGet.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
-            @Override
-            public void onPositionChanged(Slider view, boolean fromUser, float oldPos, float newPos, int oldValue, int newValue) {
-                if (connectionCheck == 1) {
-                    getMyNetAddress();
-                    String myMsgAddress = "/1/2525/1/151";
-                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
-                    myOscMessage.add(sliderLpFilterCutGet.getValue());
-                    oscP5.send(myOscMessage, getBroadcastLocation);
-                    lpFilterCut = sliderLpFilterCutGet.getValue();
-                }
-            }
-        }); // end listener
 
         final Slider sliderEnvAGet = findViewById(R.id.sliderEnvA);
         sliderEnvAGet.setValue(envelopeA, true);
@@ -1309,24 +1277,6 @@ public class SeventhActivity extends AppCompatActivity {
         spinnerPlayOctGet.setAdapter(adapterPlayOct);
         spinnerPlayOctGet.setSelection(playOctave);
 
-
-        ////////////////////// FM Depth Start
-        final Slider sliderFmDepthGet = findViewById(R.id.sliderFmDepth);
-        sliderFmDepthGet.setValue(fmDepth, true);
-        sliderFmDepthGet.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
-            @Override
-            public void onPositionChanged(Slider view, boolean fromUser, float oldPos, float newPos, int oldValue, int newValue) {
-                if (connectionCheck == 1) {
-                    getMyNetAddress();
-                    String myMsgAddress = "/1/2525/1/139";
-                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
-                    myOscMessage.add(sliderFmDepthGet.getValue());
-                    oscP5.send(myOscMessage, getBroadcastLocation);
-                    fmDepth = sliderFmDepthGet.getValue();
-                }
-            }
-        });
-        ////////////////////// FM Depth End
 
         ///////////////////////////////////////////////////////////////////// Notes Start
 
