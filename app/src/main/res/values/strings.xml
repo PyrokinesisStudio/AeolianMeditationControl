@@ -296,6 +296,107 @@
         <item>Note</item>
         <item>Midi</item>
     </string-array>
+    <string-array name="spinnerXyItem">
+        <item>Output Vol</item>
+        <item>Harm Mix</item>
+        <item>Noise Mix</item>
+        <item>Harm Vol 1</item>
+        <item>Harm Vol 2</item>
+        <item>Harm Vol 3</item>
+        <item>Harm Vol 4</item>
+        <item>Harm Vol 5</item>
+        <item>Harm Vol 6</item>
+        <item>Harm Vol 7</item>
+        <item>Harm Vol 8</item>
+        <item>Harm Vol 9</item>
+        <item>Harm Vol 10</item>
+        <item>Harm Vol 11</item>
+        <item>Harm Vol 12</item>
+        <item>Harm Mod 1</item>
+        <item>Harm Mod 2</item>
+        <item>Harm Mod 3</item>
+        <item>Harm Mod 4</item>
+        <item>Harm Mod 5</item>
+        <item>Harm Mod 6</item>
+        <item>Harm Mod 7</item>
+        <item>Harm Mod 8</item>
+        <item>Harm Mod 9</item>
+        <item>Harm Mod 10</item>
+        <item>Harm Mod 11</item>
+        <item>Harm Mod 12</item>
+        <item>Harm Rate 1</item>
+        <item>Harm Rate 2</item>
+        <item>Harm Rate 3</item>
+        <item>Harm Rate 4</item>
+        <item>Harm Rate 5</item>
+        <item>Harm Rate 6</item>
+        <item>Harm Rate 7</item>
+        <item>Harm Rate 8</item>
+        <item>Harm Rate 9</item>
+        <item>Harm Rate 10</item>
+        <item>Harm Rate 11</item>
+        <item>Harm Rate 12</item>
+        <item>Source Freq</item>
+        <item>FM Freq</item>
+        <item>FM Depth</item>
+        <item>FM Depth Mod</item>
+        <item>FM Depth Rate</item>
+        <item>FM Freq Mod</item>
+        <item>FM Freq Rate</item>
+        <item>Noise Vol 1</item>
+        <item>Noise Vol 2</item>
+        <item>Noise Vol 3</item>
+        <item>Noise Vol 4</item>
+        <item>Noise VMod 1</item>
+        <item>Noise VMod 2</item>
+        <item>Noise VMod 3</item>
+        <item>Noise VMod 4</item>
+        <item>Noise VRate 1</item>
+        <item>Noise VRate 2</item>
+        <item>Noise VRate 3</item>
+        <item>Noise VRate 4</item>
+        <item>Noise Cut 1</item>
+        <item>Noise Cut 1</item>
+        <item>Noise Cut 1</item>
+        <item>Noise Cut 1</item>
+        <item>Noise Res 1</item>
+        <item>Noise Res 2</item>
+        <item>Noise Res 3</item>
+        <item>Noise Res 4</item>
+        <item>Noise Mod 1</item>
+        <item>Noise Mod 2</item>
+        <item>Noise Mod 3</item>
+        <item>Noise Mod 4</item>
+        <item>Noise Rate 1</item>
+        <item>Noise Rate 2</item>
+        <item>Noise Rate 3</item>
+        <item>Noise Rate 4</item>
+        <item>Filter Cut</item>
+        <item>Filter Res</item>
+        <item>Filter Env</item>
+        <item>Filter Mod</item>
+        <item>Filter Rate</item>
+        <item>Reducer Reduce</item>
+        <item>Reducer Mod</item>
+        <item>Reducer Rate</item>
+        <item>Delay Feed</item>
+        <item>Delay Wet</item>
+        <item>Chorus Rate</item>
+        <item>Chorus Depth</item>
+        <item>Chorus Delay</item>
+        <item>Chorus FB L</item>
+        <item>Chorus FB R</item>
+        <item>Chorus Wet</item>
+        <item>Reverb Delay</item>
+        <item>Reverb HP</item>
+        <item>Reverb Damp</item>
+        <item>Reverb Stereo</item>
+        <item>Reverb Wet</item>
+        <item>Env Attack</item>
+        <item>Env Decay</item>
+        <item>Env Sustain</item>
+        <item>Env Release</item>
+    </string-array>
     <string-array name="spinnerPlayOct">
         <item>C0</item>
         <item>C1</item>

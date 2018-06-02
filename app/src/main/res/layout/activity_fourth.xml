@@ -1494,7 +1494,7 @@
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.0" />
+                        app:layout_constraintVertical_bias="0.08" />
 
                     <TextView
                         android:id="@+id/textViewDecimatorReduce"
@@ -1916,7 +1916,7 @@
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.0" />
+                        app:layout_constraintVertical_bias="0.08" />
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderDelayFeed"
@@ -2304,7 +2304,7 @@
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.0" />
+                        app:layout_constraintVertical_bias="0.08" />
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderChorusDepth"
@@ -2613,7 +2613,7 @@
                         android:layout_width="75dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Width"
+                        android:text="Stereo"
                         android:textColor="@android:color/white"
                         android:textSize="8sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -2837,7 +2837,7 @@
                         app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.0" />
+                        app:layout_constraintVertical_bias="0.08" />
                 </android.support.constraint.ConstraintLayout>
 
             </android.support.constraint.ConstraintLayout>

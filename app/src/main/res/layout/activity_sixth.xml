@@ -494,14 +494,38 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="ContentDescription" />
 
-            <TextView
-                android:id="@+id/textViewXparam1"
+            <Spinner
+                android:id="@+id/spinnerY1"
                 android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="X = Source Freq"
-                android:textColor="@android:color/white"
-                android:textSize="8sp"
+                android:layout_height="11dp"
+                android:entries="@array/spinnerLiveMode"
+                android:popupBackground="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.33"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.02" />
+
+            <Spinner
+                android:id="@+id/spinnerY2"
+                android:layout_width="100dp"
+                android:layout_height="11dp"
+                android:entries="@array/spinnerLiveMode"
+                android:popupBackground="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.954"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.02" />
+
+            <Spinner
+                android:id="@+id/spinnerX1"
+                android:layout_width="100dp"
+                android:layout_height="11dp"
+                android:entries="@array/spinnerLiveMode"
+                android:popupBackground="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.045"
@@ -509,47 +533,15 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.02" />
 
-            <TextView
-                android:id="@+id/textViewYparam1"
+            <Spinner
+                android:id="@+id/spinnerX2"
                 android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Y = Harmonic Mix"
-                android:textColor="@android:color/white"
-                android:textSize="8sp"
+                android:layout_height="11dp"
+                android:entries="@array/spinnerLiveMode"
+                android:popupBackground="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.328"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.02" />
-
-            <TextView
-                android:id="@+id/textViewXparam2"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="X = Source Freq"
-                android:textColor="@android:color/white"
-                android:textSize="8sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.671"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.02" />
-
-            <TextView
-                android:id="@+id/textViewYparam2"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Y = Harmonic Mix"
-                android:textColor="@android:color/white"
-                android:textSize="8sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.954"
+                app:layout_constraintHorizontal_bias="0.668"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.02" />
@@ -730,34 +722,6 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
         </android.support.constraint.ConstraintLayout>
-
-        <Spinner
-            android:id="@+id/spinnerXyMode"
-            android:layout_width="75dp"
-            android:layout_height="30dp"
-            android:entries="@array/spinnerLiveMode"
-            android:popupBackground="@android:color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.98" />
-
-        <TextView
-            android:id="@+id/textViewLiveMode"
-            android:layout_width="75dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Live Mode"
-            android:textColor="@android:color/white"
-            android:textSize="8sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.875" />
 
     </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>

@@ -28,6 +28,12 @@ public class SixthActivity extends AppCompatActivity {
     Float x2valData = 1.0f;
     Float y2valData = 1.0f;
 
+    int xyItemX1 = 0;
+    int xyItemY1 = 0;
+
+    int xyItemX2 = 0;
+    int xyItemY2 = 0;
+
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -1136,7 +1142,14 @@ public class SixthActivity extends AppCompatActivity {
                     x = xMax;
                 }
 
-                int normX = Math.round(((float) x / xMax) * 127.0f);
+                int normX = 0;
+
+                if (xyItemX1 == 39 || xyItemX1 == 40) {
+                    normX = Math.round(((float) x / xMax) * 1000.0f);
+                }
+                else{
+                    normX = Math.round(((float) x / xMax) * 127.0f);
+                }
 
                 int y = Math.round(yMax - event.getY());
                 if (y < 0){y = 0;}
@@ -1146,10 +1159,10 @@ public class SixthActivity extends AppCompatActivity {
 
                 int normY = 0;
 
-                if (xyMode == 0) {
+                if (xyItemY1 == 39 || xyItemY1 == 40) {
                     normY = Math.round(((float) y / yMax) * 1000.0f);
                 }
-                if (xyMode != 0) {
+                else{
                     normY = Math.round(((float) y / yMax) * 127.0f);
                 }
 
@@ -1171,245 +1184,1598 @@ public class SixthActivity extends AppCompatActivity {
                             break;
                         case MotionEvent.ACTION_MOVE:
 
-                            if (xyMode == 0) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/129";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmMix = normX;
+                            switch (xyItemX1) {
+                                case 0: // output volume
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/189";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    outputVolume = normX;
+                                    break;
+                                case 1: // harmonics mix
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/129";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmMix = normX;
+                                    break;
+                                case 2: // noise mix
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/130";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseMix = normX;
+                                    break;
+                                case 3: //harm vol 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/1";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol1 = normX;
+                                    break;
+                                case 4: //harm vol 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/2";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol2 = normX;
+                                    break;
+                                case 5: //harm vol 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/3";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol3 = normX;
+                                    break;
+                                case 6: //harm vol 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/4";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol4 = normX;
+                                    break;
+                                case 7: //harm vol 5
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/5";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol5 = normX;
+                                    break;
+                                case 8: //harm vol 6
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/6";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol6 = normX;
+                                    break;
+                                case 9: //harm vol 7
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/7";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol7 = normX;
+                                    break;
+                                case 10: //harm vol 8
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/8";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol8 = normX;
+                                    break;
+                                case 11: // harm vol 9
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/9";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol9 = normX;
+                                    break;
+                                case 12: // harm vol 10
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/10";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol10 = normX;
+                                    break;
+                                case 13: // harm vol 11
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/11";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol11 = normX;
+                                    break;
+                                case 14: // harm vol 12
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/12";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol12 = normX;
+                                    break;
+                                case 15: // harm mod 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/13";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod1 = normX;
+                                    break;
+                                case 16: // harm mod 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/14";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod2 = normX;
+                                    break;
+                                case 17: // harm mod 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/15";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod3 = normX;
+                                    break;
+                                case 18: // harm mod 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/16";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod4 = normX;
+                                    break;
+                                case 19: // harm mod 5
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/17";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod5 = normX;
+                                    break;
+                                case 20: // harm mod 6
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/18";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod6 = normX;
+                                    break;
+                                case 21: // harm mod 7
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/19";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod7 = normX;
+                                    break;
+                                case 22: // harm mod 8
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/20";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod8 = normX;
+                                    break;
+                                case 23: // harm mod 9
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/21";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod9 = normX;
+                                    break;
+                                case 24: // harm mod 10
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/22";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod10 = normX;
+                                    break;
+                                case 25: // harm mod 11
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/23";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod11 = normX;
+                                    break;
+                                case 26: // harm mod 12
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/24";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod12 = normX;
+                                    break;
+                                case 27: // harm rate 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/25";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate1 = normX;
+                                    break;
+                                case 28: // harm rate 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/26";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate2 = normX;
+                                    break;
+                                case 29: // harm rate 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/27";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate3 = normX;
+                                    break;
+                                case 30: // harm rate 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/28";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate4 = normX;
+                                    break;
+                                case 31: // harm rate 5
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/29";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate5 = normX;
+                                    break;
+                                case 32: // harm rate 6
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/30";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate6 = normX;
+                                    break;
+                                case 33: // harm rate 7
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/31";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate7 = normX;
+                                    break;
+                                case 34: // harm rate 8
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/32";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate8 = normX;
+                                    break;
+                                case 35: // harm rate 9
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/33";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate9 = normX;
+                                    break;
+                                case 36: // harm rate 10
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/34";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate10 = normX;
+                                    break;
+                                case 37: // harm rate 11
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/35";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate11 = normX;
+                                    break;
+                                case 38: // harm rate 12
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/36";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate12 = normX;
+                                    break;
+                                case 39: // source freq
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/133";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    sourceFreq = String.valueOf(normX);
+                                    break;
+                                case 40: // source freq
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/137";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    fmFreq = String.valueOf(normX);
+                                    break;
+                                case 41: // fm depth
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/139";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    fmDepth = normX;
+                                    break;
+                                case 42: // fm depth mod depth
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/140";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    fmDepthModDepth = normX;
+                                    break;
+                                case 43: // fm depth mod rate
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/141";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    fmDepthModRate = normX;
+                                    break;
+                                case 44: // fm freq mod depth
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/145";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    fmFreqModDepth = normX;
+                                    break;
+                                case 45: // fm freq mod rate
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/146";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    fmFreqModRate = normX;
+                                    break;
+                                case 46: // noise vol 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/74";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVol1 = normX;
+                                    break;
+                                case 47: // noise vol 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/75";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVol2 = normX;
+                                    break;
+                                case 48: // noise vol 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/76";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVol3 = normX;
+                                    break;
+                                case 49: // noise vol 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/77";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVol4 = normX;
+                                    break;
+                                case 50: // noise vol mod 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/78";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolMod1 = normX;
+                                    break;
+                                case 51: // noise vol mod 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/79";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolMod2 = normX;
+                                    break;
+                                case 52: // noise vol mod 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/80";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolMod3 = normX;
+                                    break;
+                                case 53: // noise vol mod 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/81";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolMod4 = normX;
+                                    break;
+                                case 54: // noise vol rate 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/82";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolRate1 = normX;
+                                    break;
+                                case 55: // noise vol rate 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/83";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolRate2 = normX;
+                                    break;
+                                case 56: // noise vol rate 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/84";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolRate3 = normX;
+                                    break;
+                                case 57: // noise vol rate 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/88";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolRate4 = normX;
+                                    break;
+                                case 58: // noise cut 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/99";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCut1 = normX;
+                                    break;
+                                case 59: // noise cut 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/100";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCut2 = normX;
+                                    break;
+                                case 60: // noise cut 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/101";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCut3 = normX;
+                                    break;
+                                case 61: // noise cut 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/102";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCut4 = normX;
+                                    break;
+                                case 62: // noise res 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/104";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseRes1 = normX;
+                                    break;
+                                case 63: // noise res 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/105";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseRes2 = normX;
+                                    break;
+                                case 64: // noise res 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/106";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseRes3 = normX;
+                                    break;
+                                case 65: // noise res 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/107";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseRes4 = normX;
+                                    break;
+                                case 66: // noise mod 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/108";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutMod1 = normX;
+                                    break;
+                                case 67: // noise mod 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/109";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutMod2 = normX;
+                                    break;
+                                case 68: // noise mod 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/110";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutMod3 = normX;
+                                    break;
+                                case 69: // noise mod 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/111";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutMod4 = normX;
+                                    break;
+                                case 70: // noise rate 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/112";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutRate1 = normX;
+                                    break;
+                                case 71: // noise rate 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/113";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutRate2 = normX;
+                                    break;
+                                case 72: // noise rate 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/114";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutRate3 = normX;
+                                    break;
+                                case 73: // noise rate 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/115";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutRate4 = normX;
+                                    break;
+                                case 74: // Filter Cut
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/151";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    lpFilterCut = normX;
+                                    break;
+                                case 75: // Filter Res
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/152";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    lpFilterRes = normX;
+                                    break;
+                                case 76: // Filter Env
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/198";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    lpFilterEnv = normX;
+                                    break;
+                                case 77: // Filter Mod
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/153";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    lpFilterMod = normX;
+                                    break;
+                                case 78: // Filter Rate
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/154";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    lpFilterRate = normX;
+                                    break;
+                                case 79: // Reducer reduce
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/159";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    decimatorReduce = normX;
+                                    break;
+                                case 80: // Reducer mod
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/160";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    decimatorMod = normX;
+                                    break;
+                                case 81: // Reducer Rate
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/161";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    decimatorRate = normX;
+                                    break;
+                                case 82: // Delay Feed
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/169";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    delayFeed = normX;
+                                    break;
+                                case 83: // Delay Wet
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/170";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    delayWet = normX;
+                                    break;
+                                case 84: // Chorus Rate
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/172";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    chorusRate = normX;
+                                    break;
+                                case 85: // Chorus Depth
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/173";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    chorusDepth = normX;
+                                    break;
+                                case 86: // Chorus Delay
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/174";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    chorusDelay = normX;
+                                    break;
+                                case 87: // Chorus FB L
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/175";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    chorusFeed = normX;
+                                    break;
+                                case 88: // Chorus FB R
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/202";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    chorusFeedR = normX;
+                                    break;
+                                case 89: // Chorus Wet
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/176";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    chorusWet = normX;
+                                    break;
+                                case 90: // Reverb Delay
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/204";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    reverbDelay = normX;
+                                    break;
+                                case 91: // Reverb HP
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/205";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    reverbHp = normX;
+                                    break;
+                                case 92: // Reverb Damp
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/179";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    reverbDamp = normX;
+                                    break;
+                                case 93: // Reverb Width
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/180";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    reverbWidth = normX;
+                                    break;
+                                case 94: // Reverb Wet
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/181";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    reverbWet = normX;
+                                    break;
+                                case 95: // Env A
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/184";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    envelopeA = normX;
+                                    break;
+                                case 96: // Env D
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/185";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    envelopeD = normX;
+                                    break;
+                                case 97: // Env S
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/186";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    envelopeS = normX;
+                                    break;
+                                case 98: // Env R
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/187";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    envelopeR = normX;
+                                    break;
+                            } // end switch x1
 
-                                myMsgAddress = "/1/2525/1/133";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                sourceFreq = String.valueOf(normY);
-                            }
+                            //////////////////////////////////
 
-                            if (xyMode == 1) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/151";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                lpFilterCut = normX;
+                            switch (xyItemY1) {
+                                case 0: // output volume
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/189";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    outputVolume = normY;
+                                    break;
+                                case 1: // harmonics mix
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/129";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmMix = normY;
+                                    break;
+                                case 2: // noise mix
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/130";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseMix = normY;
+                                    break;
+                                case 3: //harm vol 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/1";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol1 = normY;
+                                    break;
+                                case 4: //harm vol 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/2";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol2 = normY;
+                                    break;
+                                case 5: //harm vol 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/3";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol3 = normY;
+                                    break;
+                                case 6: //harm vol 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/4";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol4 = normY;
+                                    break;
+                                case 7: //harm vol 5
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/5";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol5 = normY;
+                                    break;
+                                case 8: //harm vol 6
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/6";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol6 = normY;
+                                    break;
+                                case 9: //harm vol 7
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/7";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol7 = normY;
+                                    break;
+                                case 10: //harm vol 8
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/8";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol8 = normY;
+                                    break;
+                                case 11: // harm vol 9
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/9";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol9 = normY;
+                                    break;
+                                case 12: // harm vol 10
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/10";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol10 = normY;
+                                    break;
+                                case 13: // harm vol 11
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/11";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol11 = normY;
+                                    break;
+                                case 14: // harm vol 12
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/12";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol12 = normY;
+                                    break;
+                                case 15: // harm mod 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/13";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod1 = normY;
+                                    break;
+                                case 16: // harm mod 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/14";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod2 = normY;
+                                    break;
+                                case 17: // harm mod 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/15";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod3 = normY;
+                                    break;
+                                case 18: // harm mod 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/16";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod4 = normY;
+                                    break;
+                                case 19: // harm mod 5
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/17";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod5 = normY;
+                                    break;
+                                case 20: // harm mod 6
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/18";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod6 = normY;
+                                    break;
+                                case 21: // harm mod 7
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/19";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod7 = normY;
+                                    break;
+                                case 22: // harm mod 8
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/20";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod8 = normY;
+                                    break;
+                                case 23: // harm mod 9
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/21";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod9 = normY;
+                                    break;
+                                case 24: // harm mod 10
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/22";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod10 = normY;
+                                    break;
+                                case 25: // harm mod 11
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/23";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod11 = normY;
+                                    break;
+                                case 26: // harm mod 12
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/24";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod12 = normY;
+                                    break;
+                                case 27: // harm rate 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/25";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate1 = normY;
+                                    break;
+                                case 28: // harm rate 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/26";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate2 = normY;
+                                    break;
+                                case 29: // harm rate 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/27";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate3 = normY;
+                                    break;
+                                case 30: // harm rate 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/28";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate4 = normY;
+                                    break;
+                                case 31: // harm rate 5
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/29";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate5 = normY;
+                                    break;
+                                case 32: // harm rate 6
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/30";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate6 = normY;
+                                    break;
+                                case 33: // harm rate 7
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/31";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate7 = normY;
+                                    break;
+                                case 34: // harm rate 8
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/32";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate8 = normY;
+                                    break;
+                                case 35: // harm rate 9
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/33";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate9 = normY;
+                                    break;
+                                case 36: // harm rate 10
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/34";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate10 = normY;
+                                    break;
+                                case 37: // harm rate 11
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/35";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate11 = normY;
+                                    break;
+                                case 38: // harm rate 12
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/36";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate12 = normY;
+                                    break;
+                                case 39: // source freq
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/133";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    sourceFreq = String.valueOf(normY);
+                                    break;
+                                case 40: // source freq
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/137";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    fmFreq = String.valueOf(normY);
+                                    break;
+                                case 41: // fm depth
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/139";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    fmDepth = normY;
+                                    break;
+                                case 42: // fm depth mod depth
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/140";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    fmDepthModDepth = normY;
+                                    break;
+                                case 43: // fm depth mod rate
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/141";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    fmDepthModRate = normY;
+                                    break;
+                                case 44: // fm freq mod depth
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/145";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    fmFreqModDepth = normY;
+                                    break;
+                                case 45: // fm freq mod rate
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/146";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    fmFreqModRate = normY;
+                                    break;
+                                case 46: // noise vol 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/74";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVol1 = normY;
+                                    break;
+                                case 47: // noise vol 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/75";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVol2 = normY;
+                                    break;
+                                case 48: // noise vol 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/76";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVol3 = normY;
+                                    break;
+                                case 49: // noise vol 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/77";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVol4 = normY;
+                                    break;
+                                case 50: // noise vol mod 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/78";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolMod1 = normY;
+                                    break;
+                                case 51: // noise vol mod 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/79";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolMod2 = normY;
+                                    break;
+                                case 52: // noise vol mod 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/80";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolMod3 = normY;
+                                    break;
+                                case 53: // noise vol mod 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/81";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolMod4 = normY;
+                                    break;
+                                case 54: // noise vol rate 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/82";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolRate1 = normY;
+                                    break;
+                                case 55: // noise vol rate 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/83";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolRate2 = normY;
+                                    break;
+                                case 56: // noise vol rate 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/84";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolRate3 = normY;
+                                    break;
+                                case 57: // noise vol rate 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/88";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolRate4 = normY;
+                                    break;
+                                case 58: // noise cut 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/99";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCut1 = normY;
+                                    break;
+                                case 59: // noise cut 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/100";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCut2 = normY;
+                                    break;
+                                case 60: // noise cut 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/101";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCut3 = normY;
+                                    break;
+                                case 61: // noise cut 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/102";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCut4 = normY;
+                                    break;
+                                case 62: // noise res 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/104";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseRes1 = normY;
+                                    break;
+                                case 63: // noise res 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/105";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseRes2 = normY;
+                                    break;
+                                case 64: // noise res 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/106";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseRes3 = normY;
+                                    break;
+                                case 65: // noise res 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/107";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseRes4 = normY;
+                                    break;
+                                case 66: // noise mod 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/108";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutMod1 = normY;
+                                    break;
+                                case 67: // noise mod 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/109";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutMod2 = normY;
+                                    break;
+                                case 68: // noise mod 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/110";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutMod3 = normY;
+                                    break;
+                                case 69: // noise mod 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/111";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutMod4 = normY;
+                                    break;
+                                case 70: // noise rate 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/112";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutRate1 = normY;
+                                    break;
+                                case 71: // noise rate 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/113";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutRate2 = normY;
+                                    break;
+                                case 72: // noise rate 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/114";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutRate3 = normY;
+                                    break;
+                                case 73: // noise rate 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/115";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutRate4 = normY;
+                                    break;
+                                case 74: // Filter Cut
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/151";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    lpFilterCut = normY;
+                                    break;
+                                case 75: // Filter Res
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/152";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    lpFilterRes = normY;
+                                    break;
+                                case 76: // Filter Env
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/198";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    lpFilterEnv = normY;
+                                    break;
+                                case 77: // Filter Mod
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/153";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    lpFilterMod = normY;
+                                    break;
+                                case 78: // Filter Rate
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/154";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    lpFilterRate = normY;
+                                    break;
+                                case 79: // Reducer reduce
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/159";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    decimatorReduce = normY;
+                                    break;
+                                case 80: // Reducer mod
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/160";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    decimatorMod = normY;
+                                    break;
+                                case 81: // Reducer Rate
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/161";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    decimatorRate = normY;
+                                    break;
+                                case 82: // Delay Feed
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/169";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    delayFeed = normY;
+                                    break;
+                                case 83: // Delay Wet
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/170";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    delayWet = normY;
+                                    break;
+                                case 84: // Chorus Rate
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/172";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    chorusRate = normY;
+                                    break;
+                                case 85: // Chorus Depth
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/173";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    chorusDepth = normY;
+                                    break;
+                                case 86: // Chorus Delay
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/174";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    chorusDelay = normY;
+                                    break;
+                                case 87: // Chorus FB L
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/175";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    chorusFeed = normY;
+                                    break;
+                                case 88: // Chorus FB R
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/202";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    chorusFeedR = normY;
+                                    break;
+                                case 89: // Chorus Wet
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/176";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    chorusWet = normY;
+                                    break;
+                                case 90: // Reverb Delay
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/204";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    reverbDelay = normY;
+                                    break;
+                                case 91: // Reverb HP
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/205";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    reverbHp = normY;
+                                    break;
+                                case 92: // Reverb Damp
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/179";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    reverbDamp = normY;
+                                    break;
+                                case 93: // Reverb Width
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/180";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    reverbWidth = normY;
+                                    break;
+                                case 94: // Reverb Wet
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/181";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    reverbWet = normY;
+                                    break;
+                                case 95: // Env A
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/184";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    envelopeA = normY;
+                                    break;
+                                case 96: // Env D
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/185";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    envelopeD = normY;
+                                    break;
+                                case 97: // Env S
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/186";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    envelopeS = normY;
+                                    break;
+                                case 98: // Env R
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/187";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    envelopeR = normY;
+                                    break;
+                            } // end switch Y1
 
-                                myMsgAddress = "/1/2525/1/152";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                lpFilterRes = normY;
-                            }
-
-                            if (xyMode == 2) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/99";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCut1 = normX;
-
-                                myMsgAddress = "/1/2525/1/100";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCut2 = normY;
-                            }
-
-                            if (xyMode == 3) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/74";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseVol1 = normX;
-
-                                myMsgAddress = "/1/2525/1/75";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseVol2 = normY;
-                            }
-
-                            if (xyMode == 4) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/184";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                envelopeA = normX;
-
-                                myMsgAddress = "/1/2525/1/185";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                envelopeD = normY;
-                            }
-
-                            if (xyMode == 5) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/172";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                chorusRate = normX;
-
-                                myMsgAddress = "/1/2525/1/173";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                chorusDepth = normY;
-                            }
-
-                            if (xyMode == 6) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/99";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCut1 = normX;
-
-                                myMsgAddress = "/1/2525/1/104";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseRes1 = normY;
-                            }
-
-                            if (xyMode == 7) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/100";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCut2 = normX;
-
-                                myMsgAddress = "/1/2525/1/105";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseRes2 = normY;
-                            }
-
-                            if (xyMode == 8) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/101";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCut3 = normX;
-
-                                myMsgAddress = "/1/2525/1/106";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseRes3 = normY;
-                            }
-
-                            if (xyMode == 9) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/102";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCut4 = normX;
-
-                                myMsgAddress = "/1/2525/1/107";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseRes4 = normY;
-                            }
-
-                            if (xyMode == 10) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/1";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol1 = normX;
-
-                                myMsgAddress = "/1/2525/1/2";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol2 = normY;
-                            }
-
-                            if (xyMode == 11) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/5";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol5 = normX;
-
-                                myMsgAddress = "/1/2525/1/6";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol6 = normY;
-                            }
-
-                            if (xyMode == 12) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/9";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol9 = normX;
-
-                                myMsgAddress = "/1/2525/1/10";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol10 = normY;
-                            }
-
-                            if (xyMode == 13) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/1";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol1 = normX;
-
-                                myMsgAddress = "/1/2525/1/3";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol3 = normY;
-                            }
-
-                            if (xyMode == 14) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/2";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol2 = normX;
-
-                                myMsgAddress = "/1/2525/1/4";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol4 = normY;
-                            }
-
-                            if (xyMode == 15) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/3";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol3 = normX;
-
-                                myMsgAddress = "/1/2525/1/6";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol6 = normY;
-                            }
 
                             x1valData = event.getX();
                             y1valData = event.getY();
@@ -1456,7 +2822,14 @@ public class SixthActivity extends AppCompatActivity {
                     x = xMax;
                 }
 
-                int normX = Math.round(((float) x / xMax) * 127.0f);
+                int normX = 0;
+
+                if (xyItemX2 == 39 || xyItemX2 == 40) {
+                    normX = Math.round(((float) x / xMax) * 1000.0f);
+                }
+                else{
+                    normX = Math.round(((float) x / xMax) * 127.0f);
+                }
 
                 int y = Math.round(yMax - event.getY());
                 if (y < 0){y = 0;}
@@ -1466,12 +2839,13 @@ public class SixthActivity extends AppCompatActivity {
 
                 int normY = 0;
 
-                if (xyMode == 0) {
-                    normY = Math.round(((float) y / yMax) * 100.0f);
+                if (xyItemY2 == 39 || xyItemY2 == 40) {
+                    normY = Math.round(((float) y / yMax) * 1000.0f);
                 }
-                if (xyMode != 0) {
+                else{
                     normY = Math.round(((float) y / yMax) * 127.0f);
                 }
+
 
                 if (connectionCheck == 1) {
 
@@ -1490,247 +2864,1598 @@ public class SixthActivity extends AppCompatActivity {
                             xybutton2Get.setBackgroundColor(myColorD);
                             break;
                         case MotionEvent.ACTION_MOVE:
+                            switch (xyItemX2) {
+                                case 0: // output volume
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/189";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    outputVolume = normX;
+                                    break;
+                                case 1: // harmonics mix
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/129";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmMix = normX;
+                                    break;
+                                case 2: // noise mix
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/130";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseMix = normX;
+                                    break;
+                                case 3: //harm vol 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/1";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol1 = normX;
+                                    break;
+                                case 4: //harm vol 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/2";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol2 = normX;
+                                    break;
+                                case 5: //harm vol 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/3";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol3 = normX;
+                                    break;
+                                case 6: //harm vol 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/4";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol4 = normX;
+                                    break;
+                                case 7: //harm vol 5
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/5";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol5 = normX;
+                                    break;
+                                case 8: //harm vol 6
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/6";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol6 = normX;
+                                    break;
+                                case 9: //harm vol 7
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/7";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol7 = normX;
+                                    break;
+                                case 10: //harm vol 8
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/8";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol8 = normX;
+                                    break;
+                                case 11: // harm vol 9
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/9";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol9 = normX;
+                                    break;
+                                case 12: // harm vol 10
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/10";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol10 = normX;
+                                    break;
+                                case 13: // harm vol 11
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/11";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol11 = normX;
+                                    break;
+                                case 14: // harm vol 12
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/12";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol12 = normX;
+                                    break;
+                                case 15: // harm mod 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/13";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod1 = normX;
+                                    break;
+                                case 16: // harm mod 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/14";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod2 = normX;
+                                    break;
+                                case 17: // harm mod 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/15";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod3 = normX;
+                                    break;
+                                case 18: // harm mod 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/16";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod4 = normX;
+                                    break;
+                                case 19: // harm mod 5
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/17";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod5 = normX;
+                                    break;
+                                case 20: // harm mod 6
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/18";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod6 = normX;
+                                    break;
+                                case 21: // harm mod 7
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/19";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod7 = normX;
+                                    break;
+                                case 22: // harm mod 8
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/20";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod8 = normX;
+                                    break;
+                                case 23: // harm mod 9
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/21";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod9 = normX;
+                                    break;
+                                case 24: // harm mod 10
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/22";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod10 = normX;
+                                    break;
+                                case 25: // harm mod 11
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/23";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod11 = normX;
+                                    break;
+                                case 26: // harm mod 12
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/24";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod12 = normX;
+                                    break;
+                                case 27: // harm rate 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/25";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate1 = normX;
+                                    break;
+                                case 28: // harm rate 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/26";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate2 = normX;
+                                    break;
+                                case 29: // harm rate 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/27";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate3 = normX;
+                                    break;
+                                case 30: // harm rate 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/28";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate4 = normX;
+                                    break;
+                                case 31: // harm rate 5
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/29";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate5 = normX;
+                                    break;
+                                case 32: // harm rate 6
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/30";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate6 = normX;
+                                    break;
+                                case 33: // harm rate 7
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/31";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate7 = normX;
+                                    break;
+                                case 34: // harm rate 8
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/32";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate8 = normX;
+                                    break;
+                                case 35: // harm rate 9
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/33";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate9 = normX;
+                                    break;
+                                case 36: // harm rate 10
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/34";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate10 = normX;
+                                    break;
+                                case 37: // harm rate 11
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/35";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate11 = normX;
+                                    break;
+                                case 38: // harm rate 12
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/36";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate12 = normX;
+                                    break;
+                                case 39: // source freq
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/133";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    sourceFreq = String.valueOf(normX);
+                                    break;
+                                case 40: // source freq
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/137";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    fmFreq = String.valueOf(normX);
+                                    break;
+                                case 41: // fm depth
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/139";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    fmDepth = normX;
+                                    break;
+                                case 42: // fm depth mod depth
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/140";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    fmDepthModDepth = normX;
+                                    break;
+                                case 43: // fm depth mod rate
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/141";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    fmDepthModRate = normX;
+                                    break;
+                                case 44: // fm freq mod depth
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/145";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    fmFreqModDepth = normX;
+                                    break;
+                                case 45: // fm freq mod rate
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/146";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    fmFreqModRate = normX;
+                                    break;
+                                case 46: // noise vol 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/74";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVol1 = normX;
+                                    break;
+                                case 47: // noise vol 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/75";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVol2 = normX;
+                                    break;
+                                case 48: // noise vol 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/76";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVol3 = normX;
+                                    break;
+                                case 49: // noise vol 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/77";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVol4 = normX;
+                                    break;
+                                case 50: // noise vol mod 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/78";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolMod1 = normX;
+                                    break;
+                                case 51: // noise vol mod 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/79";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolMod2 = normX;
+                                    break;
+                                case 52: // noise vol mod 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/80";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolMod3 = normX;
+                                    break;
+                                case 53: // noise vol mod 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/81";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolMod4 = normX;
+                                    break;
+                                case 54: // noise vol rate 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/82";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolRate1 = normX;
+                                    break;
+                                case 55: // noise vol rate 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/83";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolRate2 = normX;
+                                    break;
+                                case 56: // noise vol rate 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/84";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolRate3 = normX;
+                                    break;
+                                case 57: // noise vol rate 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/88";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolRate4 = normX;
+                                    break;
+                                case 58: // noise cut 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/99";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCut1 = normX;
+                                    break;
+                                case 59: // noise cut 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/100";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCut2 = normX;
+                                    break;
+                                case 60: // noise cut 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/101";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCut3 = normX;
+                                    break;
+                                case 61: // noise cut 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/102";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCut4 = normX;
+                                    break;
+                                case 62: // noise res 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/104";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseRes1 = normX;
+                                    break;
+                                case 63: // noise res 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/105";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseRes2 = normX;
+                                    break;
+                                case 64: // noise res 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/106";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseRes3 = normX;
+                                    break;
+                                case 65: // noise res 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/107";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseRes4 = normX;
+                                    break;
+                                case 66: // noise mod 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/108";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutMod1 = normX;
+                                    break;
+                                case 67: // noise mod 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/109";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutMod2 = normX;
+                                    break;
+                                case 68: // noise mod 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/110";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutMod3 = normX;
+                                    break;
+                                case 69: // noise mod 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/111";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutMod4 = normX;
+                                    break;
+                                case 70: // noise rate 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/112";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutRate1 = normX;
+                                    break;
+                                case 71: // noise rate 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/113";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutRate2 = normX;
+                                    break;
+                                case 72: // noise rate 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/114";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutRate3 = normX;
+                                    break;
+                                case 73: // noise rate 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/115";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutRate4 = normX;
+                                    break;
+                                case 74: // Filter Cut
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/151";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    lpFilterCut = normX;
+                                    break;
+                                case 75: // Filter Res
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/152";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    lpFilterRes = normX;
+                                    break;
+                                case 76: // Filter Env
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/198";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    lpFilterEnv = normX;
+                                    break;
+                                case 77: // Filter Mod
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/153";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    lpFilterMod = normX;
+                                    break;
+                                case 78: // Filter Rate
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/154";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    lpFilterRate = normX;
+                                    break;
+                                case 79: // Reducer reduce
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/159";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    decimatorReduce = normX;
+                                    break;
+                                case 80: // Reducer mod
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/160";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    decimatorMod = normX;
+                                    break;
+                                case 81: // Reducer Rate
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/161";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    decimatorRate = normX;
+                                    break;
+                                case 82: // Delay Feed
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/169";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    delayFeed = normX;
+                                    break;
+                                case 83: // Delay Wet
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/170";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    delayWet = normX;
+                                    break;
+                                case 84: // Chorus Rate
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/172";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    chorusRate = normX;
+                                    break;
+                                case 85: // Chorus Depth
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/173";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    chorusDepth = normX;
+                                    break;
+                                case 86: // Chorus Delay
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/174";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    chorusDelay = normX;
+                                    break;
+                                case 87: // Chorus FB L
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/175";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    chorusFeed = normX;
+                                    break;
+                                case 88: // Chorus FB R
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/202";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    chorusFeedR = normX;
+                                    break;
+                                case 89: // Chorus Wet
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/176";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    chorusWet = normX;
+                                    break;
+                                case 90: // Reverb Delay
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/204";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    reverbDelay = normX;
+                                    break;
+                                case 91: // Reverb HP
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/205";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    reverbHp = normX;
+                                    break;
+                                case 92: // Reverb Damp
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/179";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    reverbDamp = normX;
+                                    break;
+                                case 93: // Reverb Width
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/180";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    reverbWidth = normX;
+                                    break;
+                                case 94: // Reverb Wet
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/181";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    reverbWet = normX;
+                                    break;
+                                case 95: // Env A
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/184";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    envelopeA = normX;
+                                    break;
+                                case 96: // Env D
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/185";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    envelopeD = normX;
+                                    break;
+                                case 97: // Env S
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/186";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    envelopeS = normX;
+                                    break;
+                                case 98: // Env R
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/187";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normX);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    envelopeR = normX;
+                                    break;
+                            } // end switch x1
 
-                            if (xyMode == 0) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/139";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                fmDepth = normX;
+                            //////////////////////////////////
 
-                                myMsgAddress = "/1/2525/1/137";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                fmFreq = String.valueOf(normY);
-                            }
+                            switch (xyItemY2) {
+                                case 0: // output volume
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/189";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    outputVolume = normY;
+                                    break;
+                                case 1: // harmonics mix
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/129";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmMix = normY;
+                                    break;
+                                case 2: // noise mix
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/130";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseMix = normY;
+                                    break;
+                                case 3: //harm vol 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/1";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol1 = normY;
+                                    break;
+                                case 4: //harm vol 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/2";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol2 = normY;
+                                    break;
+                                case 5: //harm vol 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/3";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol3 = normY;
+                                    break;
+                                case 6: //harm vol 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/4";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol4 = normY;
+                                    break;
+                                case 7: //harm vol 5
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/5";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol5 = normY;
+                                    break;
+                                case 8: //harm vol 6
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/6";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol6 = normY;
+                                    break;
+                                case 9: //harm vol 7
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/7";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol7 = normY;
+                                    break;
+                                case 10: //harm vol 8
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/8";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol8 = normY;
+                                    break;
+                                case 11: // harm vol 9
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/9";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol9 = normY;
+                                    break;
+                                case 12: // harm vol 10
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/10";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol10 = normY;
+                                    break;
+                                case 13: // harm vol 11
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/11";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol11 = normY;
+                                    break;
+                                case 14: // harm vol 12
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/12";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVol12 = normY;
+                                    break;
+                                case 15: // harm mod 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/13";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod1 = normY;
+                                    break;
+                                case 16: // harm mod 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/14";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod2 = normY;
+                                    break;
+                                case 17: // harm mod 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/15";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod3 = normY;
+                                    break;
+                                case 18: // harm mod 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/16";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod4 = normY;
+                                    break;
+                                case 19: // harm mod 5
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/17";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod5 = normY;
+                                    break;
+                                case 20: // harm mod 6
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/18";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod6 = normY;
+                                    break;
+                                case 21: // harm mod 7
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/19";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod7 = normY;
+                                    break;
+                                case 22: // harm mod 8
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/20";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod8 = normY;
+                                    break;
+                                case 23: // harm mod 9
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/21";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod9 = normY;
+                                    break;
+                                case 24: // harm mod 10
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/22";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod10 = normY;
+                                    break;
+                                case 25: // harm mod 11
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/23";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod11 = normY;
+                                    break;
+                                case 26: // harm mod 12
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/24";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolMod12 = normY;
+                                    break;
+                                case 27: // harm rate 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/25";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate1 = normY;
+                                    break;
+                                case 28: // harm rate 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/26";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate2 = normY;
+                                    break;
+                                case 29: // harm rate 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/27";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate3 = normY;
+                                    break;
+                                case 30: // harm rate 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/28";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate4 = normY;
+                                    break;
+                                case 31: // harm rate 5
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/29";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate5 = normY;
+                                    break;
+                                case 32: // harm rate 6
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/30";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate6 = normY;
+                                    break;
+                                case 33: // harm rate 7
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/31";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate7 = normY;
+                                    break;
+                                case 34: // harm rate 8
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/32";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate8 = normY;
+                                    break;
+                                case 35: // harm rate 9
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/33";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate9 = normY;
+                                    break;
+                                case 36: // harm rate 10
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/34";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate10 = normY;
+                                    break;
+                                case 37: // harm rate 11
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/35";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate11 = normY;
+                                    break;
+                                case 38: // harm rate 12
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/36";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    harmVolRate12 = normY;
+                                    break;
+                                case 39: // source freq
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/133";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    sourceFreq = String.valueOf(normY);
+                                    break;
+                                case 40: // source freq
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/137";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    fmFreq = String.valueOf(normY);
+                                    break;
+                                case 41: // fm depth
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/139";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    fmDepth = normY;
+                                    break;
+                                case 42: // fm depth mod depth
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/140";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    fmDepthModDepth = normY;
+                                    break;
+                                case 43: // fm depth mod rate
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/141";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    fmDepthModRate = normY;
+                                    break;
+                                case 44: // fm freq mod depth
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/145";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    fmFreqModDepth = normY;
+                                    break;
+                                case 45: // fm freq mod rate
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/146";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    fmFreqModRate = normY;
+                                    break;
+                                case 46: // noise vol 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/74";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVol1 = normY;
+                                    break;
+                                case 47: // noise vol 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/75";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVol2 = normY;
+                                    break;
+                                case 48: // noise vol 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/76";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVol3 = normY;
+                                    break;
+                                case 49: // noise vol 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/77";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVol4 = normY;
+                                    break;
+                                case 50: // noise vol mod 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/78";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolMod1 = normY;
+                                    break;
+                                case 51: // noise vol mod 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/79";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolMod2 = normY;
+                                    break;
+                                case 52: // noise vol mod 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/80";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolMod3 = normY;
+                                    break;
+                                case 53: // noise vol mod 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/81";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolMod4 = normY;
+                                    break;
+                                case 54: // noise vol rate 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/82";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolRate1 = normY;
+                                    break;
+                                case 55: // noise vol rate 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/83";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolRate2 = normY;
+                                    break;
+                                case 56: // noise vol rate 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/84";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolRate3 = normY;
+                                    break;
+                                case 57: // noise vol rate 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/88";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseVolRate4 = normY;
+                                    break;
+                                case 58: // noise cut 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/99";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCut1 = normY;
+                                    break;
+                                case 59: // noise cut 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/100";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCut2 = normY;
+                                    break;
+                                case 60: // noise cut 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/101";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCut3 = normY;
+                                    break;
+                                case 61: // noise cut 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/102";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCut4 = normY;
+                                    break;
+                                case 62: // noise res 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/104";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseRes1 = normY;
+                                    break;
+                                case 63: // noise res 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/105";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseRes2 = normY;
+                                    break;
+                                case 64: // noise res 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/106";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseRes3 = normY;
+                                    break;
+                                case 65: // noise res 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/107";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseRes4 = normY;
+                                    break;
+                                case 66: // noise mod 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/108";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutMod1 = normY;
+                                    break;
+                                case 67: // noise mod 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/109";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutMod2 = normY;
+                                    break;
+                                case 68: // noise mod 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/110";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutMod3 = normY;
+                                    break;
+                                case 69: // noise mod 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/111";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutMod4 = normY;
+                                    break;
+                                case 70: // noise rate 1
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/112";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutRate1 = normY;
+                                    break;
+                                case 71: // noise rate 2
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/113";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutRate2 = normY;
+                                    break;
+                                case 72: // noise rate 3
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/114";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutRate3 = normY;
+                                    break;
+                                case 73: // noise rate 4
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/115";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    noiseCutRate4 = normY;
+                                    break;
+                                case 74: // Filter Cut
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/151";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    lpFilterCut = normY;
+                                    break;
+                                case 75: // Filter Res
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/152";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    lpFilterRes = normY;
+                                    break;
+                                case 76: // Filter Env
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/198";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    lpFilterEnv = normY;
+                                    break;
+                                case 77: // Filter Mod
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/153";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    lpFilterMod = normY;
+                                    break;
+                                case 78: // Filter Rate
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/154";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    lpFilterRate = normY;
+                                    break;
+                                case 79: // Reducer reduce
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/159";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    decimatorReduce = normY;
+                                    break;
+                                case 80: // Reducer mod
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/160";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    decimatorMod = normY;
+                                    break;
+                                case 81: // Reducer Rate
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/161";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    decimatorRate = normY;
+                                    break;
+                                case 82: // Delay Feed
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/169";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    delayFeed = normY;
+                                    break;
+                                case 83: // Delay Wet
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/170";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    delayWet = normY;
+                                    break;
+                                case 84: // Chorus Rate
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/172";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    chorusRate = normY;
+                                    break;
+                                case 85: // Chorus Depth
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/173";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    chorusDepth = normY;
+                                    break;
+                                case 86: // Chorus Delay
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/174";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    chorusDelay = normY;
+                                    break;
+                                case 87: // Chorus FB L
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/175";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    chorusFeed = normY;
+                                    break;
+                                case 88: // Chorus FB R
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/202";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    chorusFeedR = normY;
+                                    break;
+                                case 89: // Chorus Wet
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/176";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    chorusWet = normY;
+                                    break;
+                                case 90: // Reverb Delay
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/204";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    reverbDelay = normY;
+                                    break;
+                                case 91: // Reverb HP
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/205";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    reverbHp = normY;
+                                    break;
+                                case 92: // Reverb Damp
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/179";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    reverbDamp = normY;
+                                    break;
+                                case 93: // Reverb Width
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/180";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    reverbWidth = normY;
+                                    break;
+                                case 94: // Reverb Wet
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/181";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    reverbWet = normY;
+                                    break;
+                                case 95: // Env A
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/184";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    envelopeA = normY;
+                                    break;
+                                case 96: // Env D
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/185";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    envelopeD = normY;
+                                    break;
+                                case 97: // Env S
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/186";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    envelopeS = normY;
+                                    break;
+                                case 98: // Env R
+                                    getMyNetAddress();
+                                    myMsgAddress = "/1/2525/1/187";
+                                    myOscMessage = new OscMessage(myMsgAddress);
+                                    myOscMessage.add(normY);
+                                    oscP5.send(myOscMessage, getBroadcastLocation);
+                                    envelopeR = normY;
+                                    break;
+                            } // end switch Y2
 
-                            if (xyMode == 1) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/153";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                lpFilterMod = normX;
-
-                                myMsgAddress = "/1/2525/1/154";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                lpFilterRate = normY;
-                            }
-
-                            if (xyMode == 2) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/101";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCut3 = normX;
-
-                                myMsgAddress = "/1/2525/1/102";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCut4 = normY;
-                            }
-
-                            if (xyMode == 3) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/76";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseVol3 = normX;
-
-                                myMsgAddress = "/1/2525/1/77";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseVol4 = normY;
-                            }
-
-                            if (xyMode == 4) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/185";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                envelopeS = normX;
-
-                                myMsgAddress = "/1/2525/1/186";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                envelopeR = normY;
-                            }
-
-                            if (xyMode == 5) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/175";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                chorusFeed = normX;
-
-                                myMsgAddress = "/1/2525/1/202";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                chorusFeedR = normY;
-                            }
-
-                            if (xyMode == 6) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/112";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCutRate1 = normX;
-
-                                myMsgAddress = "/1/2525/1/108";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCutMod1 = normY;
-                            }
-
-                            if (xyMode == 7) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/113";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCutRate2 = normX;
-
-                                myMsgAddress = "/1/2525/1/109";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCutMod2 = normY;
-                            }
-
-                            if (xyMode == 8) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/114";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCutRate3 = normX;
-
-                                myMsgAddress = "/1/2525/1/110";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCutMod3 = normY;
-                            }
-
-                            if (xyMode == 9) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/115";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCutRate4 = normX;
-
-                                myMsgAddress = "/1/2525/1/111";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                noiseCutMod4 = normY;
-                            }
-
-
-                            if (xyMode == 10) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/3";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol3 = normX;
-
-                                myMsgAddress = "/1/2525/1/4";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol4 = normY;
-                            }
-
-                            if (xyMode == 11) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/7";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol7 = normX;
-
-                                myMsgAddress = "/1/2525/1/8";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol8 = normY;
-                            }
-
-                            if (xyMode == 12) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/11";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol11 = normX;
-
-                                myMsgAddress = "/1/2525/1/12";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol12 = normY;
-                            }
-
-                            if (xyMode == 13) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/5";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol5 = normX;
-
-                                myMsgAddress = "/1/2525/1/7";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol7 = normY;
-                            }
-
-                            if (xyMode == 14) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/6";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol6 = normX;
-
-                                myMsgAddress = "/1/2525/1/8";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol8 = normY;
-                            }
-
-                            if (xyMode == 15) {
-                                getMyNetAddress();
-                                myMsgAddress = "/1/2525/1/9";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normX);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol9 = normX;
-
-                                myMsgAddress = "/1/2525/1/12";
-                                myOscMessage = new OscMessage(myMsgAddress);
-                                myOscMessage.add(normY);
-                                oscP5.send(myOscMessage, getBroadcastLocation);
-                                harmVol12 = normY;
-                            }
 
                             x2valData = event.getX();
                             y2valData = event.getY();
@@ -1764,12 +4489,40 @@ public class SixthActivity extends AppCompatActivity {
         ///////////////////////////////////////////////////// XY Listeners End
         ////////////////////////////////////////////////////////////////////////////////////////////
 
-        Spinner spinnerXyModeGet = (findViewById(R.id.spinnerXyMode));
+       /* Spinner spinnerXyModeGet = (findViewById(R.id.spinnerXyMode));
         spinnerXyModeGet.setOnItemSelectedListener(new SixthActivity.CustomOnItemSelectedListenerXyMode());
         ArrayAdapter adapterXyMode = ArrayAdapter.createFromResource(this,
                 R.array.spinnerLiveMode, R.layout.spinner_item);
         spinnerXyModeGet.setAdapter(adapterXyMode);
-        spinnerXyModeGet.setSelection(xyMode);
+        spinnerXyModeGet.setSelection(xyMode);*/
+
+        Spinner spinnerX1Get = (findViewById(R.id.spinnerX1));
+        spinnerX1Get.setOnItemSelectedListener(new SixthActivity.CustomOnItemSelectedListenerXyItemX1());
+        ArrayAdapter adapterXyItemX1 = ArrayAdapter.createFromResource(this,
+                R.array.spinnerXyItem, R.layout.spinner_item);
+        spinnerX1Get.setAdapter(adapterXyItemX1);
+        spinnerX1Get.setSelection(xyItemX1);
+
+        Spinner spinnerY1Get = (findViewById(R.id.spinnerY1));
+        spinnerY1Get.setOnItemSelectedListener(new SixthActivity.CustomOnItemSelectedListenerXyItemY1());
+        ArrayAdapter adapterXyItemY1 = ArrayAdapter.createFromResource(this,
+                R.array.spinnerXyItem, R.layout.spinner_item);
+        spinnerY1Get.setAdapter(adapterXyItemY1);
+        spinnerY1Get.setSelection(xyItemY1);
+
+        Spinner spinnerX2Get = (findViewById(R.id.spinnerX2));
+        spinnerX2Get.setOnItemSelectedListener(new SixthActivity.CustomOnItemSelectedListenerXyItemX2());
+        ArrayAdapter adapterXyItemX2 = ArrayAdapter.createFromResource(this,
+                R.array.spinnerXyItem, R.layout.spinner_item);
+        spinnerX2Get.setAdapter(adapterXyItemX2);
+        spinnerX2Get.setSelection(xyItemX2);
+
+        Spinner spinnerY2Get = (findViewById(R.id.spinnerY2));
+        spinnerY2Get.setOnItemSelectedListener(new SixthActivity.CustomOnItemSelectedListenerXyItemY2());
+        ArrayAdapter adapterXyItemY2 = ArrayAdapter.createFromResource(this,
+                R.array.spinnerXyItem, R.layout.spinner_item);
+        spinnerY2Get.setAdapter(adapterXyItemY2);
+        spinnerY2Get.setSelection(xyItemY2);
 
         final ToggleButton droneGet = findViewById(R.id.toggleButtonDrone);
         if (droneVal == 127) {
@@ -1884,129 +4637,60 @@ public class SixthActivity extends AppCompatActivity {
 
     } // end create
 
-    public class CustomOnItemSelectedListenerXyMode implements AdapterView.OnItemSelectedListener {
+
+     public class CustomOnItemSelectedListenerXyItemX1 implements AdapterView.OnItemSelectedListener {
 
         @SuppressLint("SetTextI18n")
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-            final TextView xParam1Get = findViewById(R.id.textViewXparam1);
-            final TextView yParam1Get = findViewById(R.id.textViewYparam1);
-            final TextView xParam2Get = findViewById(R.id.textViewXparam2);
-            final TextView yParam2Get = findViewById(R.id.textViewYparam2);
+            xyItemX1 = position;
 
-            xyMode = position;
-            switch (xyMode) {
-                    case 0:
-                        xParam1Get.setText("X = Harmonics Mix");
-                        yParam1Get.setText("Y = Source Freq");
-                        xParam2Get.setText("X = FM Freq");
-                        yParam2Get.setText("Y = FM Depth");
-                        break;
-                case 1:
-                    xParam1Get.setText("X = Filter Cut");
-                    yParam1Get.setText("Y = Filter Res");
-                    xParam2Get.setText("X = Filter Mod");
-                    yParam2Get.setText("Y = Filter Rate");
-                    break;
-                case 2:
-                    xParam1Get.setText("X = Noise Cut 1");
-                    yParam1Get.setText("Y = Noise Cut 2");
-                    xParam2Get.setText("X = Noise Cut 3");
-                    yParam2Get.setText("Y = Noise Cut 4");
-                    break;
-                case 3:
-                    xParam1Get.setText("X = Noise Vol 1");
-                    yParam1Get.setText("Y = Noise Vol 2");
-                    xParam2Get.setText("X = Noise Vol 3");
-                    yParam2Get.setText("Y = Noise Vol 4");
-                    break;
-                case 4:
-                    xParam1Get.setText("X = Attack");
-                    yParam1Get.setText("Y = Decay");
-                    xParam2Get.setText("X = Sustain");
-                    yParam2Get.setText("Y = Release");
-                    break;
-                case 5:
-                    xParam1Get.setText("X = Chorus Rate");
-                    yParam1Get.setText("Y = Chorus Depth");
-                    xParam2Get.setText("X = Chorus FB L");
-                    yParam2Get.setText("Y = Chorus FB R");
-                    break;
-                case 6:
-                    xParam1Get.setText("X = Noise 1 Cut");
-                    yParam1Get.setText("Y = Noise 1 Res");
-                    xParam2Get.setText("X = Noise 1 Rate");
-                    yParam2Get.setText("Y = Noise 1 Mod");
-                    break;
-                case 7:
-                    xParam1Get.setText("X = Noise 2 Cut");
-                    yParam1Get.setText("Y = Noise 2 Res");
-                    xParam2Get.setText("X = Noise 2 Rate");
-                    yParam2Get.setText("Y = Noise 2 Mod");
-                    break;
-                case 8:
-                    xParam1Get.setText("X = Noise 3 Cut");
-                    yParam1Get.setText("Y = Noise 3 Res");
-                    xParam2Get.setText("X = Noise 3 Rate");
-                    yParam2Get.setText("Y = Noise 3 Mod");
-                    break;
-                case 9:
-                    xParam1Get.setText("X = Noise 4 Cut");
-                    yParam1Get.setText("Y = Noise 4 Res");
-                    xParam2Get.setText("X = Noise 4 Rate");
-                    yParam2Get.setText("Y = Noise 4 Mod");
-                    break;
-                case 10:
-                    xParam1Get.setText("X = Harm 1 Vol");
-                    yParam1Get.setText("Y = Harm 2 Vol");
-                    xParam2Get.setText("X = Harm 3 Vol");
-                    yParam2Get.setText("Y = Harm 4 Vol");
-                    break;
-                case 11:
-                    xParam1Get.setText("X = Harm 5 Vol");
-                    yParam1Get.setText("Y = Harm 6 Vol");
-                    xParam2Get.setText("X = Harm 7 Vol");
-                    yParam2Get.setText("Y = Harm 8 Vol");
-                    break;
-                case 12:
-                    xParam1Get.setText("X = Harm 9 Vol");
-                    yParam1Get.setText("Y = Harm 10 Vol");
-                    xParam2Get.setText("X = Harm 11 Vol");
-                    yParam2Get.setText("Y = Harm 12 Vol");
-                    break;
-                case 13:
-                    xParam1Get.setText("X = Harm 1 Vol");
-                    yParam1Get.setText("Y = Harm 3 Vol");
-                    xParam2Get.setText("X = Harm 5 Vol");
-                    yParam2Get.setText("Y = Harm 7 Vol");
-                    break;
-                case 14:
-                    xParam1Get.setText("X = Harm 2 Vol");
-                    yParam1Get.setText("Y = Harm 4 Vol");
-                    xParam2Get.setText("X = Harm 6 Vol");
-                    yParam2Get.setText("Y = Harm 8 Vol");
-                    break;
-                case 15:
-                    xParam1Get.setText("X = Harm 3 Vol");
-                    yParam1Get.setText("Y = Harm 6 Vol");
-                    xParam2Get.setText("X = Harm 9 Vol");
-                    yParam2Get.setText("Y = Harm 12 Vol");
-                    break;
-                case 16:
-                    xParam1Get.setText("X = FM Depth");
-                    yParam1Get.setText("Y = FM Mod");
-                    xParam2Get.setText("X = Chorus Rate");
-                    yParam2Get.setText("Y = Chorus Depth");
-                    break;
-                case 17:
-                    xParam1Get.setText("X = FM Depth");
-                    yParam1Get.setText("Y = FM Mod");
-                    xParam2Get.setText("X = FM Rate");
-                    yParam2Get.setText("Y = Chorus Wet");
-                    break;
-
-            } /// end switch
             }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> arg0) {
+
+        }
+    } // end listener
+
+    public class CustomOnItemSelectedListenerXyItemY1 implements AdapterView.OnItemSelectedListener {
+
+        @SuppressLint("SetTextI18n")
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+            xyItemY1 = position;
+
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> arg0) {
+
+        }
+    } // end listener
+
+    public class CustomOnItemSelectedListenerXyItemX2 implements AdapterView.OnItemSelectedListener {
+
+        @SuppressLint("SetTextI18n")
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+            xyItemX2 = position;
+
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> arg0) {
+
+        }
+    } // end listener
+
+    public class CustomOnItemSelectedListenerXyItemY2 implements AdapterView.OnItemSelectedListener {
+
+        @SuppressLint("SetTextI18n")
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+            xyItemY2 = position;
+
+        }
 
         @Override
         public void onNothingSelected(AdapterView<?> arg0) {
