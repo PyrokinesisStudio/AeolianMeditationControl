@@ -2107,6 +2107,13 @@ public class MainActivity extends AppCompatActivity {
         spinnerKeyboardOctGet.setAdapter(adapterKeyboardOct);
         spinnerKeyboardOctGet.setSelection(keyboardOctave);
 
+        Spinner spinnerPlayOctGet = (findViewById(R.id.spinnerPlayOct));
+        spinnerPlayOctGet.setOnItemSelectedListener(new MainActivity.CustomOnItemSelectedListenerPlayOct());
+        ArrayAdapter adapterPlayOct = ArrayAdapter.createFromResource(this,
+                R.array.spinnerPlayOct, R.layout.spinner_item);
+        spinnerPlayOctGet.setAdapter(adapterPlayOct);
+        spinnerPlayOctGet.setSelection(playOctave);
+
         final Slider sliderHarmMixGet = findViewById(R.id.sliderHarmMix);
         sliderHarmMixGet.setValue(harmMix, true);
         sliderHarmMixGet.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
@@ -2315,6 +2322,27 @@ public class MainActivity extends AppCompatActivity {
                 myOscMessage.add(Math.round((position / 11.0f) * 127.0f));
                 oscP5.send(myOscMessage, getBroadcastLocation);
                 keyboardOctave = position;
+            }
+
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> arg0) {
+
+        }
+    } // end listener
+
+    public class CustomOnItemSelectedListenerPlayOct implements AdapterView.OnItemSelectedListener {
+
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+            if (connectionCheck == 1) {
+                getMyNetAddress();
+                String myMsgAddress = "/1/2525/1/208";
+                OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                myOscMessage.add(position);
+                oscP5.send(myOscMessage, getBroadcastLocation);
+                playOctave = position;
             }
 
         }
