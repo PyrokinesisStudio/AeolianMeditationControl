@@ -620,7 +620,12 @@ public class MainActivity extends AppCompatActivity {
 
     public static int  xyTrig1 = 0;
     public static int  xyTrig2 = 0;
-    public static int  xyMode = 0;
+
+    public static int xyItemX1 = 0;
+    public static int xyItemY1 = 0;
+
+    public static int xyItemX2 = 0;
+    public static int xyItemY2 = 0;
 
     /////////////////////////////////////////// Play Page - Seventh Activity Variables End
 
@@ -945,7 +950,10 @@ public class MainActivity extends AppCompatActivity {
 
             /////////////////////////////////////////// Live Page - Sixth Activity Variables Start
 
-            xyMode = sharedPref.getInt("xyMode", xyMode);
+            xyItemX1 = sharedPref.getInt("xyItemX1", xyItemX1);
+            xyItemY1 = sharedPref.getInt("xyItemY1", xyItemY1);
+            xyItemX2 = sharedPref.getInt("xyItemX2", xyItemX2);
+            xyItemY2 = sharedPref.getInt("xyItemY2", xyItemY2);
             xyTrig1 = sharedPref.getInt("xyTrig1", xyTrig1);
             xyTrig2 = sharedPref.getInt("xyTrig2", xyTrig2);
 
@@ -2702,7 +2710,10 @@ public class MainActivity extends AppCompatActivity {
 
         /////////////////////////////////////////// Live Page - Sixth Activity Variables Start
 
-        editor.putInt("xyMode", xyMode);
+        editor.putInt("xyItemX1", xyItemX1);
+        editor.putInt("xyItemY1", xyItemY1);
+        editor.putInt("xyItemX2", xyItemX2);
+        editor.putInt("xyItemY2", xyItemY2);
         editor.putInt("xyTrig1", xyTrig1);
         editor.putInt("xyTrig2", xyTrig2);
 

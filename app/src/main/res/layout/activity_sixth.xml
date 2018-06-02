@@ -494,22 +494,82 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="ContentDescription" />
 
+            <TextView
+                android:id="@+id/textViewX2"
+                android:layout_width="15dp"
+                android:layout_height="11dp"
+                android:gravity="center"
+                android:text="X"
+                android:textColor="@android:color/white"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.537"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.02" />
+
+            <TextView
+                android:id="@+id/textViewX1"
+                android:layout_width="15dp"
+                android:layout_height="11dp"
+                android:gravity="center"
+                android:text="X"
+                android:textColor="@android:color/white"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.036"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.02" />
+
+            <TextView
+                android:id="@+id/textViewY1"
+                android:layout_width="15dp"
+                android:layout_height="11dp"
+                android:gravity="center"
+                android:text="Y"
+                android:textColor="@android:color/white"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.28"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.02" />
+
+            <TextView
+                android:id="@+id/textViewY2"
+                android:layout_width="15dp"
+                android:layout_height="11dp"
+                android:gravity="center"
+                android:text="Y"
+                android:textColor="@android:color/white"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.78"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.02" />
+
             <Spinner
                 android:id="@+id/spinnerY1"
-                android:layout_width="100dp"
+                android:layout_width="75dp"
                 android:layout_height="11dp"
                 android:entries="@array/spinnerLiveMode"
                 android:popupBackground="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.33"
+                app:layout_constraintHorizontal_bias="0.375"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.02" />
 
             <Spinner
                 android:id="@+id/spinnerY2"
-                android:layout_width="100dp"
+                android:layout_width="75dp"
                 android:layout_height="11dp"
                 android:entries="@array/spinnerLiveMode"
                 android:popupBackground="@android:color/black"
@@ -522,20 +582,20 @@
 
             <Spinner
                 android:id="@+id/spinnerX1"
-                android:layout_width="100dp"
+                android:layout_width="75dp"
                 android:layout_height="11dp"
                 android:entries="@array/spinnerLiveMode"
                 android:popupBackground="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.045"
+                app:layout_constraintHorizontal_bias="0.09"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.02" />
 
             <Spinner
                 android:id="@+id/spinnerX2"
-                android:layout_width="100dp"
+                android:layout_width="75dp"
                 android:layout_height="11dp"
                 android:entries="@array/spinnerLiveMode"
                 android:popupBackground="@android:color/black"
@@ -642,7 +702,7 @@
             app:layout_constraintVertical_bias="0.875" />
 
         <TextView
-            android:id="@+id/textViewTheraminXyTrigger3"
+            android:id="@+id/textViewLiveSection"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:gravity="center"
