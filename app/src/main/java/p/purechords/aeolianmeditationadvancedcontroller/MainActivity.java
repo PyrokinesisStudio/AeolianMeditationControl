@@ -2343,7 +2343,7 @@ public class MainActivity extends AppCompatActivity {
                 getMyNetAddress();
                 String myMsgAddress = "/1/2525/1/195";
                 OscMessage myOscMessage = new OscMessage(myMsgAddress);
-                myOscMessage.add(Math.round((position / 11.0f) * 127.0f));
+                myOscMessage.add(Math.round((position / 6.0f) * 127.0f));
                 oscP5.send(myOscMessage, getBroadcastLocation);
                 keyboardOctave = position;
             }

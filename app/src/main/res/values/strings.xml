@@ -436,17 +436,12 @@
         <item>-5</item>
     </string-array>
     <string-array name="spinnerOctavesFlip">
-        <item>-5</item>
-        <item>-4</item>
-        <item>-3</item>
-        <item>-2</item>
-        <item>-1</item>
-        <item>0</item>
-        <item>+1</item>
-        <item>+2</item>
-        <item>+3</item>
-        <item>+4</item>
-        <item>+5</item>
+        <item>C0</item>
+        <item>C1</item>
+        <item>C2</item>
+        <item>C3</item>
+        <item>C4</item>
+        <item>C5</item>
     </string-array>
     <string-array name="spinnerDiv">
         <item>1/32t</item>
