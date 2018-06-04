@@ -728,7 +728,7 @@
                     <Spinner
                         android:id="@+id/spinnerLpFilterDiv"
                         android:layout_width="75dp"
-                        android:layout_height="16dp"
+                        android:layout_height="20dp"
                         android:entries="@array/spinnerNotes"
                         android:popupBackground="@android:color/black"
                         app:layout_constraintBottom_toBottomOf="parent"
