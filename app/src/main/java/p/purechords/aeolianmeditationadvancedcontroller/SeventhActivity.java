@@ -972,6 +972,7 @@ public class SeventhActivity extends AppCompatActivity {
         ////////////////////////////////////////////////////////////////
 
         binding.setObsIntDrone(obsIntDrone);
+        binding.setObsIntSourceSelect(obsIntSourceSelect);
         binding.setObsIntFmDepth(obsIntFmDepth);
         binding.setObsIntFilterCut(obsIntFilterCut);
         binding.setObsIntEnvA(obsIntEnvA);
