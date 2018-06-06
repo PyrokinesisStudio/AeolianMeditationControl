@@ -316,6 +316,9 @@ public class MainActivity extends AppCompatActivity {
     public static ObsIntReverbWidth obsIntReverbWidth;
     public static ObsIntReverbWet obsIntReverbWet;
 
+    public static ObsIntGlideOn obsIntGlideOn;
+    public static ObsIntGlideTime obsIntGlideTime;
+
     ///////////////////////////////////////////////////////// OSC Variables End
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -630,6 +633,8 @@ public class MainActivity extends AppCompatActivity {
     /////////////////////////////////////////// Play Page - Seventh Activity Variables End
 
     public static int playOctave = 0;
+    public static int glideOn = 0;
+    public static int glideTime = 0;
 
     /////////////////////////////////////////// Play Page - Seventh Activity Variables End
 
@@ -945,7 +950,6 @@ public class MainActivity extends AppCompatActivity {
              fmFreqModDiv = sharedPref.getInt("fmFreqModDiv", fmFreqModDiv);
 
              fmRateRange = sharedPref.getInt("fmRateRange", fmRateRange);
-
             /////////////////////////////////////////// Freq Page - Fifth Activity Variables End
 
             /////////////////////////////////////////// Live Page - Sixth Activity Variables Start
@@ -962,6 +966,8 @@ public class MainActivity extends AppCompatActivity {
             /////////////////////////////////////////// Play Page - Seventh Activity Variables Start
 
             playOctave = sharedPref.getInt("playOctave", playOctave);
+            glideOn = sharedPref.getInt("glideOn", glideOn);
+            glideTime = sharedPref.getInt("glideTime", glideTime);
 
             /////////////////////////////////////////// Play Page - Seventh Activity Variables End
 
@@ -1207,6 +1213,9 @@ public class MainActivity extends AppCompatActivity {
         obsIntReverbDamp = new ObsIntReverbDamp();
         obsIntReverbWidth = new ObsIntReverbWidth();
         obsIntReverbWet = new ObsIntReverbWet();
+
+        obsIntGlideOn = new ObsIntGlideOn();
+        obsIntGlideTime = new ObsIntGlideTime();
 
         ////////////////////////////////////////////////////////////////
         /////////////////////////////////////////// Observable set start
@@ -1815,6 +1824,15 @@ public class MainActivity extends AppCompatActivity {
         if (dcKill == 0) {
             obsIntDcKill.setValue(false);
         }
+
+        if (glideOn == 127) {
+            obsIntGlideOn.setValue(true);
+        }
+        if (glideOn == 0) {
+            obsIntGlideOn.setValue(false);
+        }
+
+        obsIntGlideTime.setValue(glideTime);
 
         ////////////////////////////////////////////////////////////////
         /////////////////////////////////////////// Observable set end
@@ -2722,6 +2740,8 @@ public class MainActivity extends AppCompatActivity {
         /////////////////////////////////////////// Play Page - Seventh Activity Variables Start
 
         editor.putInt("playOctave", playOctave);
+        editor.putInt("glideOn", glideOn);
+        editor.putInt("glideTime", glideTime);
 
         /////////////////////////////////////////// Play Page - Seventh Activity Variables End
 
@@ -3933,6 +3953,20 @@ public class MainActivity extends AppCompatActivity {
                 case "/1/2525/2/195":
                     obsIntkeyboardOct.setValue(theOscMessage.get(0).intValue());
                     keyboardOctave = obsIntkeyboardOct.value;
+                    break;
+                case "/1/2525/2/209":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntGlideOn.setValue(true);
+                        glideOn = 127;
+                    }
+                    else {
+                        obsIntGlideOn.setValue(false);
+                        glideOn = 0;
+                    }
+                    break;
+                case "/1/2525/2/210":
+                    obsIntGlideTime.setValue(theOscMessage.get(0).intValue());
+                    glideTime = obsIntGlideTime.value;
                     break;
             } // end switch
 
@@ -9062,7 +9096,53 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    //////////////////////////////////////////////////////////////////////////////////////////////
 
+    public class ObsIntGlideOn extends BaseObservable
+    {
+
+
+        public boolean value;
+
+        @Bindable
+        public boolean getValue()
+        {
+            return value;
+        }
+
+        public void setValue(boolean value)
+        {
+            this.value = value;
+            notifyPropertyChanged(BR.value);
+
+        }
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
+    public class ObsIntGlideTime extends BaseObservable
+    {
+
+
+        public int value;
+
+
+
+        @Bindable
+        public int getValue()
+        {
+            return value;
+        }
+
+        public void setValue(int value)
+        {
+            this.value = value;
+            notifyPropertyChanged(BR.value);
+
+        }
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
 
    ////////////////////////////////////// Binding Adapters start
 

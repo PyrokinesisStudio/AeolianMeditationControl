@@ -3,6 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
         <variable
+            name="obsIntGlideOn"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntGlideOn"/>
+        <variable
+            name="obsIntGlideTime"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntGlideTime"/>
+        <variable
             name="obsIntDrone"
             type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntDrone"/>
         <variable
@@ -127,9 +133,36 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.875" />
 
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layoutGlideOn"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.79"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.98">
+
+            <ToggleButton
+                android:id="@+id/toggleButtonGlideOn"
+                android:layout_width="37dp"
+                android:layout_height="27dp"
+                android:background="#ff4F75A1"
+                android:checked="@{obsIntGlideOn.value}"
+                android:textOff=" "
+                android:textOn=" "
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
         <TextView
             android:id="@+id/textViewGlideTime"
-            android:layout_width="40dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Time"
@@ -137,10 +170,46 @@
             android:textSize="8sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.96"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.875" />
+
+        <ImageView
+            android:id="@+id/imageViewSldierBack84"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:background="@drawable/sliderback"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.96" />
+
+        <com.rey.material.widget.Slider
+            android:id="@+id/sliderGlideTime"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:keepScreenOn="true"
+            android:padding="6dp"
+            android:rotation="0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.96"
+            app:sl_alwaysFillThumb="true"
+            app:sl_maxValue="127"
+            app:sl_primaryColor="#7dd0f4"
+            app:sl_secondaryColor="#7dd0f4"
+            app:sl_thumbFocusRadius="6dp"
+            app:sl_thumbRadius="5dp"
+            app:sl_thumbTouchRadius="25dp"
+            app:sl_trackSize="1dp"
+            app:sl_value="@{obsIntGlideTime.value}" />
 
         <TextView
             android:id="@+id/textViewGlideOn"
@@ -152,7 +221,7 @@
             android:textSize="8sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.84"
+            app:layout_constraintHorizontal_bias="0.79"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.875" />

@@ -352,6 +352,8 @@ public class SeventhActivity extends AppCompatActivity {
             /////////////////////////////////////////// Play Page - Seventh Activity Variables Start
 
             playOctave = sharedPref.getInt("playOctave", playOctave);
+            glideOn = sharedPref.getInt("glideOn", glideOn);
+            glideTime = sharedPref.getInt("glideTime", glideTime);
 
             /////////////////////////////////////////// Play Page - Seventh Activity Variables End
 
@@ -967,11 +969,22 @@ public class SeventhActivity extends AppCompatActivity {
             obsIntDcKill.setValue(false);
         }
 
+        if (glideOn == 127) {
+            obsIntGlideOn.setValue(true);
+        }
+        if (glideOn == 0) {
+            obsIntGlideOn.setValue(false);
+        }
+
+        obsIntGlideTime.setValue(glideTime);
+
         ////////////////////////////////////////////////////////////////
         /////////////////////////////////////////// Observable set end
         ////////////////////////////////////////////////////////////////
 
         binding.setObsIntDrone(obsIntDrone);
+        binding.setObsIntGlideOn(obsIntGlideOn);
+        binding.setObsIntGlideTime(obsIntGlideTime);
         binding.setObsIntSourceSelect(obsIntSourceSelect);
         binding.setObsIntFmDepth(obsIntFmDepth);
         binding.setObsIntFilterCut(obsIntFilterCut);
@@ -1206,6 +1219,54 @@ public class SeventhActivity extends AppCompatActivity {
             }
         });
 
+
+        final ToggleButton glideOnGet = findViewById(R.id.toggleButtonGlideOn);
+        if (glideOn == 127) {
+            glideOnGet.setChecked(true);
+            glideOnGet.setBackgroundColor(myColorD);
+        }
+        glideOnGet.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    if (connectionCheck == 1) {
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/209";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        glideOnGet.setBackgroundColor(myColorD);
+                        myOscMessage.add(127);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        glideOn = 127;
+                    }
+                } else {
+                    if (connectionCheck == 1) {
+                        getMyNetAddress();
+                        String myMsgAddress = "/1/2525/1/209";
+                        OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                        glideOnGet.setBackgroundColor(myColorC);
+                        myOscMessage.add(0);
+                        oscP5.send(myOscMessage, getBroadcastLocation);
+                        glideOn = 0;
+                    }
+                }
+            }
+        });
+
+        final Slider sliderGlideTimeGet = findViewById(R.id.sliderGlideTime);
+        sliderGlideTimeGet.setValue(glideTime, true);
+        sliderGlideTimeGet.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
+            @Override
+            public void onPositionChanged(Slider view, boolean fromUser, float oldPos, float newPos, int oldValue, int newValue) {
+                if (connectionCheck == 1) {
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/210";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(sliderGlideTimeGet.getValue());
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                    glideTime = sliderGlideTimeGet.getValue();
+                }
+            }
+        });
 
         final Slider sliderEnvAGet = findViewById(R.id.sliderEnvA);
         sliderEnvAGet.setValue(envelopeA, true);
@@ -2491,6 +2552,8 @@ public class SeventhActivity extends AppCompatActivity {
         /////////////////////////////////////////// Play Page - Seventh Activity Variables Start
 
         editor.putInt("playOctave", playOctave);
+        editor.putInt("glideOn", glideOn);
+        editor.putInt("glideTime", glideTime);
 
         /////////////////////////////////////////// Play Page - Seventh Activity Variables End
 
