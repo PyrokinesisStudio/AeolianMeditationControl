@@ -128,7 +128,37 @@
             app:layout_constraintVertical_bias="0.875" />
 
         <TextView
-            android:id="@+id/textViewEffectsPowerAll2"
+            android:id="@+id/textViewGlideTime"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Time"
+            android:textColor="@android:color/white"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.96"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.875" />
+
+        <TextView
+            android:id="@+id/textViewGlideOn"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Glide"
+            android:textColor="@android:color/white"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.84"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.875" />
+
+        <TextView
+            android:id="@+id/textViewEffectsPowerAll3"
             android:layout_width="40dp"
             android:layout_height="wrap_content"
             android:gravity="center"
