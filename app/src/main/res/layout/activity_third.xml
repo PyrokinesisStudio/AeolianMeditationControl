@@ -291,6 +291,7 @@
                 android:id="@+id/spinnerNoiseModRateRangeVol"
                 android:layout_width="75dp"
                 android:layout_height="26dp"
+                android:background="@android:color/black"
                 android:entries="@array/spinnerRateRange"
                 android:popupBackground="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -305,6 +306,7 @@
                 android:id="@+id/spinnerNoiseModRateRangeCut"
                 android:layout_width="75dp"
                 android:layout_height="26dp"
+                android:background="@android:color/black"
                 android:entries="@array/spinnerRateRange"
                 android:popupBackground="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -1183,188 +1185,6 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.78" />
 
-                <android.support.constraint.ConstraintLayout
-                    android:id="@+id/layouttoggleButtonNoiseVolModSync1"
-                    android:layout_width="125dp"
-                    android:layout_height="16dp"
-                    android:background="@android:color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.101"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.367">
-
-                    <ToggleButton
-                        android:id="@+id/toggleButtonNoiseVolModSync1"
-                        android:layout_width="122dp"
-                        android:layout_height="13dp"
-                        android:background="#ff4F75A1"
-                        android:checked="@{obsIntNoiseVolSync1.value}"
-                        android:textOff=" "
-                        android:textOn=" "
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </android.support.constraint.ConstraintLayout>
-
-                <android.support.constraint.ConstraintLayout
-                    android:id="@+id/layouttoggleButtonNoiseVolModSync2"
-                    android:layout_width="125dp"
-                    android:layout_height="16dp"
-                    android:background="@android:color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.402"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.367">
-
-                    <ToggleButton
-                        android:id="@+id/toggleButtonNoiseVolModSync2"
-                        android:layout_width="122dp"
-                        android:layout_height="13dp"
-                        android:background="#ff4F75A1"
-                        android:checked="@{obsIntNoiseVolSync2.value}"
-                        android:textOff=" "
-                        android:textOn=" "
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </android.support.constraint.ConstraintLayout>
-
-                <android.support.constraint.ConstraintLayout
-                    android:id="@+id/layouttoggleButtonNoiseVolModSync3"
-                    android:layout_width="125dp"
-                    android:layout_height="16dp"
-                    android:background="@android:color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.703"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.367">
-
-                    <ToggleButton
-                        android:id="@+id/toggleButtonNoiseVolModSync3"
-                        android:layout_width="122dp"
-                        android:layout_height="13dp"
-                        android:background="#ff4F75A1"
-                        android:checked="@{obsIntNoiseVolSync3.value}"
-                        android:textOff=" "
-                        android:textOn=" "
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </android.support.constraint.ConstraintLayout>
-
-                <android.support.constraint.ConstraintLayout
-                    android:id="@+id/layouttoggleButtonNoiseVolModSync4"
-                    android:layout_width="125dp"
-                    android:layout_height="16dp"
-                    android:background="@android:color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.367">
-
-                    <ToggleButton
-                        android:id="@+id/toggleButtonNoiseVolModSync4"
-                        android:layout_width="122dp"
-                        android:layout_height="13dp"
-                        android:background="#ff4F75A1"
-                        android:checked="@{obsIntNoiseVolSync4.value}"
-                        android:textOff=" "
-                        android:textOn=" "
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </android.support.constraint.ConstraintLayout>
-
-                <android.support.constraint.ConstraintLayout
-                    android:id="@+id/layouttoggleButtonNoiseCutModSync1"
-                    android:layout_width="125dp"
-                    android:layout_height="16dp"
-                    android:background="@android:color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.101"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.914">
-
-                    <ToggleButton
-                        android:id="@+id/toggleButtonNoiseCutModSync1"
-                        android:layout_width="122dp"
-                        android:layout_height="13dp"
-                        android:background="#ff4F75A1"
-                        android:checked="@{obsIntNoiseCutSync1.value}"
-                        android:textOff=" "
-                        android:textOn=" "
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </android.support.constraint.ConstraintLayout>
-
-                <android.support.constraint.ConstraintLayout
-                    android:id="@+id/layouttoggleButtonNoiseCutModSync2"
-                    android:layout_width="125dp"
-                    android:layout_height="16dp"
-                    android:background="@android:color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.402"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.914">
-
-                    <ToggleButton
-                        android:id="@+id/toggleButtonNoiseCutModSync2"
-                        android:layout_width="122dp"
-                        android:layout_height="13dp"
-                        android:background="#ff4F75A1"
-                        android:checked="@{obsIntNoiseCutSync2.value}"
-                        android:textOff=" "
-                        android:textOn=" "
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </android.support.constraint.ConstraintLayout>
-
-                <android.support.constraint.ConstraintLayout
-                    android:id="@+id/layouttoggleButtonNoiseCutModSync3"
-                    android:layout_width="125dp"
-                    android:layout_height="16dp"
-                    android:background="@android:color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.703"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.914">
-
-                    <ToggleButton
-                        android:id="@+id/toggleButtonNoiseCutModSync3"
-                        android:layout_width="122dp"
-                        android:layout_height="13dp"
-                        android:background="#ff4F75A1"
-                        android:checked="@{obsIntNoiseCutSync3.value}"
-                        android:textOff=" "
-                        android:textOn=" "
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </android.support.constraint.ConstraintLayout>
-
                 <TextView
                     android:id="@+id/textViewNoise"
                     android:layout_width="0dp"
@@ -1465,32 +1285,6 @@
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntNoiseVolRetrig2.value}"
-                        android:textOff=" "
-                        android:textOn=" "
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </android.support.constraint.ConstraintLayout>
-
-                <android.support.constraint.ConstraintLayout
-                    android:id="@+id/layouttoggleButtonNoiseCutModSync4"
-                    android:layout_width="125dp"
-                    android:layout_height="16dp"
-                    android:background="@android:color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.914">
-
-                    <ToggleButton
-                        android:id="@+id/toggleButtonNoiseCutModSync4"
-                        android:layout_width="122dp"
-                        android:layout_height="13dp"
-                        android:background="#ff4F75A1"
-                        android:checked="@{obsIntNoiseCutSync4.value}"
                         android:textOff=" "
                         android:textOn=" "
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -1813,6 +1607,7 @@
                     android:id="@+id/spinnerNoiseVolModDiv2"
                     android:layout_width="125dp"
                     android:layout_height="26dp"
+                    android:background="@android:color/black"
                     android:entries="@array/spinnerDiv"
                     android:popupBackground="@android:color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1827,11 +1622,12 @@
                     android:id="@+id/spinnerNoiseCutModDiv4"
                     android:layout_width="125dp"
                     android:layout_height="26dp"
+                    android:background="@android:color/black"
                     android:entries="@array/spinnerDiv"
                     android:popupBackground="@android:color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintHorizontal_bias="0.996"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.86"
@@ -1841,6 +1637,7 @@
                     android:id="@+id/spinnerNoiseVolModDiv3"
                     android:layout_width="125dp"
                     android:layout_height="26dp"
+                    android:background="@android:color/black"
                     android:entries="@array/spinnerDiv"
                     android:popupBackground="@android:color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1855,11 +1652,12 @@
                     android:id="@+id/spinnerNoiseVolModDiv4"
                     android:layout_width="125dp"
                     android:layout_height="26dp"
+                    android:background="@android:color/black"
                     android:entries="@array/spinnerDiv"
                     android:popupBackground="@android:color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintHorizontal_bias="0.996"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.293"
@@ -1869,6 +1667,7 @@
                     android:id="@+id/spinnerNoiseCutModDiv2"
                     android:layout_width="125dp"
                     android:layout_height="26dp"
+                    android:background="@android:color/black"
                     android:entries="@array/spinnerDiv"
                     android:popupBackground="@android:color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1883,6 +1682,7 @@
                     android:id="@+id/spinnerNoiseCutModDiv3"
                     android:layout_width="125dp"
                     android:layout_height="26dp"
+                    android:background="@android:color/black"
                     android:entries="@array/spinnerDiv"
                     android:popupBackground="@android:color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1897,6 +1697,7 @@
                     android:id="@+id/spinnerNoiseCutModDiv1"
                     android:layout_width="125dp"
                     android:layout_height="26dp"
+                    android:background="@android:color/black"
                     android:entries="@array/spinnerDiv"
                     android:popupBackground="@android:color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1919,7 +1720,8 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.293"
-                    app:selection="@{obsIntNoiseVolDiv1.value}" />
+                    app:selection="@{obsIntNoiseVolDiv1.value}"
+                    android:background="@android:color/black" />
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderNoiseVol1"
@@ -1947,6 +1749,188 @@
                     app:sl_trackSize="1dp"
                     app:sl_value="@{obsIntNoiseVol1.value}" />
 
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layouttoggleButtonNoiseVolModSync1"
+                    android:layout_width="125dp"
+                    android:layout_height="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.101"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.367">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonNoiseVolModSync1"
+                        android:layout_width="122dp"
+                        android:layout_height="13dp"
+                        android:background="#ff4F75A1"
+                        android:checked="@{obsIntNoiseVolSync1.value}"
+                        android:textOff=" "
+                        android:textOn=" "
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layouttoggleButtonNoiseVolModSync2"
+                    android:layout_width="125dp"
+                    android:layout_height="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.402"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.367">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonNoiseVolModSync2"
+                        android:layout_width="122dp"
+                        android:layout_height="13dp"
+                        android:background="#ff4F75A1"
+                        android:checked="@{obsIntNoiseVolSync2.value}"
+                        android:textOff=" "
+                        android:textOn=" "
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layouttoggleButtonNoiseVolModSync3"
+                    android:layout_width="125dp"
+                    android:layout_height="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.703"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.367">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonNoiseVolModSync3"
+                        android:layout_width="122dp"
+                        android:layout_height="13dp"
+                        android:background="#ff4F75A1"
+                        android:checked="@{obsIntNoiseVolSync3.value}"
+                        android:textOff=" "
+                        android:textOn=" "
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layouttoggleButtonNoiseVolModSync4"
+                    android:layout_width="125dp"
+                    android:layout_height="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.367">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonNoiseVolModSync4"
+                        android:layout_width="122dp"
+                        android:layout_height="13dp"
+                        android:background="#ff4F75A1"
+                        android:checked="@{obsIntNoiseVolSync4.value}"
+                        android:textOff=" "
+                        android:textOn=" "
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layouttoggleButtonNoiseCutModSync1"
+                    android:layout_width="125dp"
+                    android:layout_height="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.101"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.914">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonNoiseCutModSync1"
+                        android:layout_width="122dp"
+                        android:layout_height="13dp"
+                        android:background="#ff4F75A1"
+                        android:checked="@{obsIntNoiseCutSync1.value}"
+                        android:textOff=" "
+                        android:textOn=" "
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layouttoggleButtonNoiseCutModSync2"
+                    android:layout_width="125dp"
+                    android:layout_height="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.402"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.914">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonNoiseCutModSync2"
+                        android:layout_width="122dp"
+                        android:layout_height="13dp"
+                        android:background="#ff4F75A1"
+                        android:checked="@{obsIntNoiseCutSync2.value}"
+                        android:textOff=" "
+                        android:textOn=" "
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layouttoggleButtonNoiseCutModSync3"
+                    android:layout_width="125dp"
+                    android:layout_height="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.703"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.914">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonNoiseCutModSync3"
+                        android:layout_width="122dp"
+                        android:layout_height="13dp"
+                        android:background="#ff4F75A1"
+                        android:checked="@{obsIntNoiseCutSync3.value}"
+                        android:textOff=" "
+                        android:textOn=" "
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderNoiseVol2"
                     android:layout_width="125dp"
@@ -1972,6 +1956,32 @@
                     app:sl_thumbTouchRadius="25dp"
                     app:sl_trackSize="1dp"
                     app:sl_value="@{obsIntNoiseVol2.value}" />
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layouttoggleButtonNoiseCutModSync4"
+                    android:layout_width="125dp"
+                    android:layout_height="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.914">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonNoiseCutModSync4"
+                        android:layout_width="122dp"
+                        android:layout_height="13dp"
+                        android:background="#ff4F75A1"
+                        android:checked="@{obsIntNoiseCutSync4.value}"
+                        android:textOff=" "
+                        android:textOn=" "
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderNoiseVol3"

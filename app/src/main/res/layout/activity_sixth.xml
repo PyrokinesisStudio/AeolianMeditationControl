@@ -558,6 +558,7 @@
                 android:id="@+id/spinnerY1"
                 android:layout_width="75dp"
                 android:layout_height="21dp"
+                android:background="@android:color/black"
                 android:entries="@array/spinnerLiveMode"
                 android:popupBackground="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -565,12 +566,13 @@
                 app:layout_constraintHorizontal_bias="0.375"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0" />
+                app:layout_constraintVertical_bias="0.0085" />
 
             <Spinner
                 android:id="@+id/spinnerY2"
                 android:layout_width="75dp"
                 android:layout_height="21dp"
+                android:background="@android:color/black"
                 android:entries="@array/spinnerLiveMode"
                 android:popupBackground="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -578,12 +580,13 @@
                 app:layout_constraintHorizontal_bias="0.954"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0" />
+                app:layout_constraintVertical_bias="0.0085" />
 
             <Spinner
                 android:id="@+id/spinnerX1"
                 android:layout_width="75dp"
                 android:layout_height="21dp"
+                android:background="@android:color/black"
                 android:entries="@array/spinnerLiveMode"
                 android:popupBackground="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -591,12 +594,13 @@
                 app:layout_constraintHorizontal_bias="0.09"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0" />
+                app:layout_constraintVertical_bias="0.0085" />
 
             <Spinner
                 android:id="@+id/spinnerX2"
                 android:layout_width="75dp"
                 android:layout_height="21dp"
+                android:background="@android:color/black"
                 android:entries="@array/spinnerLiveMode"
                 android:popupBackground="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -604,7 +608,7 @@
                 app:layout_constraintHorizontal_bias="0.668"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0" />
+                app:layout_constraintVertical_bias="0.0085" />
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/layoutXY2"
@@ -615,7 +619,7 @@
                 app:layout_constraintHorizontal_bias="0.936"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.64">
+                app:layout_constraintVertical_bias="0.75">
 
                 <Button
                     android:id="@+id/xyButtonBack2"
@@ -654,7 +658,7 @@
                 app:layout_constraintHorizontal_bias="0.064"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.64">
+                app:layout_constraintVertical_bias="0.75">
 
                 <Button
                     android:id="@+id/xyButtonBack1"

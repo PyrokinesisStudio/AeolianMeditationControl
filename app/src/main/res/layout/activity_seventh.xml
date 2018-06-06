@@ -60,35 +60,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.666" />
 
-        <TextView
-            android:id="@+id/textViewFreqSourceSelect3"
-            android:layout_width="75dp"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Source"
-            android:textColor="@android:color/white"
-            android:textSize="8sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.060000002" />
-
-        <Spinner
-            android:id="@+id/spinnerSourceSelect"
-            android:layout_width="75dp"
-            android:layout_height="30dp"
-            android:entries="@array/spinnerNotes"
-            android:popupBackground="@android:color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.07999998"
-            app:selection="@{obsIntSourceSelect.value}" />
-
         <android.support.constraint.ConstraintLayout
             android:id="@+id/layouttoggleButtonEffectsPowerAll"
             android:layout_width="40dp"
@@ -170,6 +141,36 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.875" />
+
+        <Spinner
+            android:id="@+id/spinnerPlayOct"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:background="@android:color/black"
+            android:entries="@array/spinnerOctavesFlip"
+            android:popupBackground="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.004"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.07999998" />
+
+        <Spinner
+            android:id="@+id/spinnerSourceSelect"
+            android:layout_width="75dp"
+            android:layout_height="30dp"
+            android:background="#000000"
+            android:entries="@array/spinnerSource"
+            android:gravity="center"
+            android:popupBackground="@android:color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.997"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.07999998"
+            app:selection="@{obsIntSourceSelect.value}" />
 
         <android.support.constraint.ConstraintLayout
             android:id="@+id/layoutEnv"
@@ -414,19 +415,6 @@
                 app:sl_value="@{obsIntEnvD.value}" />
         </android.support.constraint.ConstraintLayout>
 
-        <Spinner
-            android:id="@+id/spinnerPlayOct"
-            android:layout_width="75dp"
-            android:layout_height="30dp"
-            android:entries="@array/spinnerOctavesFlip"
-            android:popupBackground="@android:color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.07999998" />
-
         <TextView
             android:id="@+id/textViewPlayOctave"
             android:layout_width="75dp"
@@ -438,6 +426,21 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.060000002" />
+
+        <TextView
+            android:id="@+id/textViewFreqSourceSelect3"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Source"
+            android:textColor="@android:color/white"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.060000002" />
