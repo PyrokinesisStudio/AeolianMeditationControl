@@ -979,6 +979,7 @@ public class SeventhActivity extends AppCompatActivity {
 
         obsIntGlideTime.setValue(glideTime);
         obsIntBendRange.setValue(bendRange);
+        obsIntPitchBend.setValue(50);
 
         ////////////////////////////////////////////////////////////////
         /////////////////////////////////////////// Observable set end
@@ -988,6 +989,7 @@ public class SeventhActivity extends AppCompatActivity {
         binding.setObsIntGlideOn(obsIntGlideOn);
         binding.setObsIntGlideTime(obsIntGlideTime);
         binding.setObsIntBendRange(obsIntBendRange);
+        binding.setObsIntPitchBend(obsIntPitchBend);
         binding.setObsIntSourceSelect(obsIntSourceSelect);
         binding.setObsIntFmDepth(obsIntFmDepth);
         binding.setObsIntFilterCut(obsIntFilterCut);
@@ -2281,7 +2283,7 @@ public class SeventhActivity extends AppCompatActivity {
                 String myMsgAddress = "/1/2525/1/212";
                 OscMessage myOscMessage = new OscMessage(myMsgAddress);
                 bendRange = position;
-                myOscMessage.add(Math.round((position / 65.0f) * 127.0f));
+                myOscMessage.add(Math.round((position / 13.0f) * 127.0f));
                 oscP5.send(myOscMessage, getBroadcastLocation);
             }
         }
@@ -2613,7 +2615,7 @@ public class SeventhActivity extends AppCompatActivity {
         editor.putInt("glideOn", glideOn);
         editor.putInt("glideTime", glideTime);
         editor.putInt("bendRange", bendRange);
-        
+
         /////////////////////////////////////////// Play Page - Seventh Activity Variables End
 
         editor.apply();

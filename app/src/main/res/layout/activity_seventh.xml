@@ -3,6 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
         <variable
+            name="obsIntPitchBend"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntPitchBend"/>
+        <variable
             name="obsIntBendRange"
             type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntBendRange"/>
         <variable
@@ -224,7 +227,7 @@
             app:sl_thumbRadius="5dp"
             app:sl_thumbTouchRadius="25dp"
             app:sl_trackSize="1dp"
-            app:sl_value="50" />
+            app:sl_value="@{obsIntPitchBend.value}" />
 
         <com.rey.material.widget.Slider
             android:id="@+id/sliderGlideTime"

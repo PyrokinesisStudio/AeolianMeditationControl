@@ -319,6 +319,7 @@ public class MainActivity extends AppCompatActivity {
     public static ObsIntGlideOn obsIntGlideOn;
     public static ObsIntGlideTime obsIntGlideTime;
     public static ObsIntBendRange obsIntBendRange;
+    public static ObsIntPitchBend obsIntPitchBend;
 
     ///////////////////////////////////////////////////////// OSC Variables End
 
@@ -1220,6 +1221,7 @@ public class MainActivity extends AppCompatActivity {
         obsIntGlideOn = new ObsIntGlideOn();
         obsIntGlideTime = new ObsIntGlideTime();
         obsIntBendRange = new ObsIntBendRange();
+        obsIntPitchBend = new ObsIntPitchBend();
 
         ////////////////////////////////////////////////////////////////
         /////////////////////////////////////////// Observable set start
@@ -3973,6 +3975,10 @@ public class MainActivity extends AppCompatActivity {
                 case "/1/2525/2/210":
                     obsIntGlideTime.setValue(theOscMessage.get(0).intValue());
                     glideTime = obsIntGlideTime.value;
+                    break;
+                case "/1/2525/2/211":
+                    obsIntPitchBend.setValue(theOscMessage.get(0).intValue());
+                    // bendRange = obsIntBendRange.value;
                     break;
                 case "/1/2525/2/212":
                     obsIntBendRange.setValue(theOscMessage.get(0).intValue());
@@ -9156,6 +9162,30 @@ public class MainActivity extends AppCompatActivity {
 
 
     public class ObsIntBendRange extends BaseObservable
+    {
+
+
+        public int value;
+
+
+
+        @Bindable
+        public int getValue()
+        {
+            return value;
+        }
+
+        public void setValue(int value)
+        {
+            this.value = value;
+            notifyPropertyChanged(BR.value);
+
+        }
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
+    public class ObsIntPitchBend extends BaseObservable
     {
 
 
