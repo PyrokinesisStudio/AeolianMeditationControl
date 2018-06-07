@@ -284,6 +284,7 @@ public class SixthActivity extends AppCompatActivity {
             delayWet = sharedPref.getInt("delayWet", delayWet);
             delayCross = sharedPref.getInt("delayCross", delayCross);
             delayPower = sharedPref.getInt("delayPower", delayPower);
+            delayChorusSwitch = sharedPref.getInt("delayChorusSwitch", delayChorusSwitch);
 
             // Chorus
             chorusRate = sharedPref.getInt("chorusRate", chorusRate);
@@ -907,6 +908,13 @@ public class SixthActivity extends AppCompatActivity {
         obsIntDelayDivR.setValue(delayDivR);
         obsIntDelayFeed.setValue(delayFeed);
         obsIntDelayWet.setValue(delayWet);
+
+        if (delayChorusSwitch == 127) {
+            obsIntDelayChorusSwitch.setValue(true);
+        }
+        if (delayChorusSwitch == 0) {
+            obsIntDelayChorusSwitch.setValue(false);
+        }
 
         if (delaySync == 127) {
             obsIntDelaySync.setValue(true);
@@ -4951,6 +4959,7 @@ public class SixthActivity extends AppCompatActivity {
         editor.putInt("delayWet", delayWet);
         editor.putInt("delayCross", delayCross);
         editor.putInt("delayPower", delayPower);
+        editor.putInt("delayChorusSwitch", delayChorusSwitch);
 
         // Chorus
         editor.putInt("chorusRate", chorusRate);

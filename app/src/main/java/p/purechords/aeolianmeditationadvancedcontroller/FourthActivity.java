@@ -14,6 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.ToggleButton;
 
 import com.rey.material.widget.Slider;
@@ -32,7 +33,7 @@ public class FourthActivity extends AppCompatActivity {
 
     Random random = new Random();
 
-    @SuppressLint("ClickableViewAccessibility")
+    @SuppressLint({"ClickableViewAccessibility", "SetTextI18n"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -285,6 +286,7 @@ public class FourthActivity extends AppCompatActivity {
             delayWet = sharedPref.getInt("delayWet", delayWet);
             delayCross = sharedPref.getInt("delayCross", delayCross);
             delayPower = sharedPref.getInt("delayPower", delayPower);
+            delayChorusSwitch = sharedPref.getInt("delayChorusSwitch", delayChorusSwitch);
 
             // Chorus
             chorusRate = sharedPref.getInt("chorusRate", chorusRate);
@@ -909,6 +911,13 @@ public class FourthActivity extends AppCompatActivity {
         obsIntDelayFeed.setValue(delayFeed);
         obsIntDelayWet.setValue(delayWet);
 
+        if (delayChorusSwitch == 127) {
+            obsIntDelayChorusSwitch.setValue(true);
+        }
+        if (delayChorusSwitch == 0) {
+            obsIntDelayChorusSwitch.setValue(false);
+        }
+
         if (delaySync == 127) {
             obsIntDelaySync.setValue(true);
         }
@@ -989,6 +998,7 @@ public class FourthActivity extends AppCompatActivity {
 
 
         binding.setObsIntDcKill(obsIntDcKill);
+        binding.setObsIntDelayChorusSwitch(obsIntDelayChorusSwitch);
 
         binding.setObsIntFilterPower(obsIntFilterPower);
         binding.setObsIntFilterCut(obsIntFilterCut);
@@ -2060,41 +2070,51 @@ public class FourthActivity extends AppCompatActivity {
 
         ///////////////////////////////////////////////////// Reverb Listeners End
 
-        ///////////////////////////////////////////////////// DC Kill Start
+        ///////////////////////////////////////////////////// Delay-Chorus Switch Start
 
-       /* final ToggleButton toggleButtonDcKillGet = findViewById(R.id.toggleButtonDcKill);
-        if (dcKill == 127) {
-            toggleButtonDcKillGet.setChecked(true);
-            toggleButtonDcKillGet.setBackgroundColor(myColorD);
+        final TextView textViewDelayChorusGet = (findViewById(R.id.textViewDelayChorus));
+        if (delayChorusSwitch == 0) {
+            textViewDelayChorusGet.setText("Delay->Chorus");
         }
-        toggleButtonDcKillGet.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        if (delayChorusSwitch == 127) {
+            textViewDelayChorusGet.setText("Chorus->Delay");
+        }
+
+        final ToggleButton toggleButtonDelayChorusGet = findViewById(R.id.toggleButtonDelayChorus);
+        if (delayChorusSwitch == 127) {
+            toggleButtonDelayChorusGet.setChecked(true);
+            toggleButtonDelayChorusGet.setBackgroundColor(myColorD);
+        }
+        toggleButtonDelayChorusGet.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     if (connectionCheck == 1) {
                         getMyNetAddress();
-                        String myMsgAddress = "/1/2525/1/182";
+                        String myMsgAddress = "/1/2525/1/213";
                         OscMessage myOscMessage = new OscMessage(myMsgAddress);
-                        toggleButtonDcKillGet.setBackgroundColor(myColorD);
+                        toggleButtonDelayChorusGet.setBackgroundColor(myColorD);
                         myOscMessage.add(127);
                         oscP5.send(myOscMessage, getBroadcastLocation);
-                        dcKill = 127;
+                        delayChorusSwitch = 127;
+                        textViewDelayChorusGet.setText("Chorus->Delay");
                     }
                 } else {
                     if (connectionCheck == 1) {
                         getMyNetAddress();
-                        String myMsgAddress = "/1/2525/1/182";
+                        String myMsgAddress = "/1/2525/1/213";
                         OscMessage myOscMessage = new OscMessage(myMsgAddress);
-                        toggleButtonDcKillGet.setBackgroundColor(myColorC);
+                        toggleButtonDelayChorusGet.setBackgroundColor(myColorC);
                         myOscMessage.add(0);
                         oscP5.send(myOscMessage, getBroadcastLocation);
-                        dcKill = 0;
+                        delayChorusSwitch = 0;
+                        textViewDelayChorusGet.setText("Delay->Chorus");
                     }
                 }
             }
-        }); // end listener*/
+        }); // end listener
 
-        ///////////////////////////////////////////////////// DC Kill End
+        ///////////////////////////////////////////////////// Delay-Chorus Switch End
 
         ///////////////////////////////////////////////////// Effects Random Start
 
@@ -2677,6 +2697,7 @@ public class FourthActivity extends AppCompatActivity {
         editor.putInt("delayWet", delayWet);
         editor.putInt("delayCross", delayCross);
         editor.putInt("delayPower", delayPower);
+        editor.putInt("delayChorusSwitch", delayChorusSwitch);
 
         // Chorus
         editor.putInt("chorusRate", chorusRate);

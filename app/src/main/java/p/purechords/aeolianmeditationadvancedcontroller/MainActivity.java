@@ -298,6 +298,7 @@ public class MainActivity extends AppCompatActivity {
     public static ObsIntDelayFeed obsIntDelayFeed;
     public static ObsIntDelayCross obsIntDelayCross;
     public static ObsIntDelayWet obsIntDelayWet;
+    public static ObsIntDelayChorusSwitch obsIntDelayChorusSwitch;
 
     public static ObsIntChorusPower obsIntChorusPower;
     public static ObsIntChorusRate obsIntChorusRate;
@@ -565,6 +566,7 @@ public class MainActivity extends AppCompatActivity {
     public static int delayCross = 0;
     public static int delayWet = 0;
     public static int delayPower = 0;
+    public static int delayChorusSwitch = 0;
 
     // Chorus
     public static int chorusRate = 0;
@@ -900,6 +902,7 @@ public class MainActivity extends AppCompatActivity {
              delayWet = sharedPref.getInt("delayWet", delayWet);
              delayCross = sharedPref.getInt("delayCross", delayCross);
              delayPower = sharedPref.getInt("delayPower", delayPower);
+             delayChorusSwitch = sharedPref.getInt("delayChorusSwitch", delayChorusSwitch);
 
             // Chorus
              chorusRate = sharedPref.getInt("chorusRate", chorusRate);
@@ -1200,6 +1203,7 @@ public class MainActivity extends AppCompatActivity {
         obsIntDelayFeed = new ObsIntDelayFeed();
         obsIntDelayCross = new ObsIntDelayCross();
         obsIntDelayWet = new ObsIntDelayWet();
+        obsIntDelayChorusSwitch = new ObsIntDelayChorusSwitch();
 
         obsIntChorusPower = new ObsIntChorusPower();
         obsIntChorusRate = new ObsIntChorusRate();
@@ -1766,6 +1770,13 @@ public class MainActivity extends AppCompatActivity {
         obsIntDelayDivR.setValue(delayDivR);
         obsIntDelayFeed.setValue(delayFeed);
         obsIntDelayWet.setValue(delayWet);
+
+        if (delayChorusSwitch == 127) {
+            obsIntDelayChorusSwitch.setValue(true);
+        }
+        if (delayChorusSwitch == 0) {
+            obsIntDelayChorusSwitch.setValue(false);
+        }
 
         if (delaySync == 127) {
             obsIntDelaySync.setValue(true);
@@ -2677,6 +2688,7 @@ public class MainActivity extends AppCompatActivity {
         editor.putInt("delayWet", delayWet);
         editor.putInt("delayCross", delayCross);
         editor.putInt("delayPower", delayPower);
+        editor.putInt("delayChorusSwitch", delayChorusSwitch);
 
         // Chorus
         editor.putInt("chorusRate", chorusRate);
@@ -3983,6 +3995,16 @@ public class MainActivity extends AppCompatActivity {
                 case "/1/2525/2/212":
                     obsIntBendRange.setValue(theOscMessage.get(0).intValue());
                     bendRange = obsIntBendRange.value;
+                    break;
+                case "/1/2525/2/213":
+                    if (theOscMessage.get(0).intValue() == 127) {
+                        obsIntDelayChorusSwitch.setValue(true);
+                        delayChorusSwitch = 127;
+                    }
+                    else {
+                        obsIntDelayChorusSwitch.setValue(false);
+                        delayChorusSwitch = 0;
+                    }
                     break;
             } // end switch
 
@@ -9208,6 +9230,31 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //////////////////////////////////////////////////////////////////////////////////////////////
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
+    public class ObsIntDelayChorusSwitch extends BaseObservable
+    {
+
+
+        public boolean value;
+
+        @Bindable
+        public boolean getValue()
+        {
+            return value;
+        }
+
+        public void setValue(boolean value)
+        {
+            this.value = value;
+            notifyPropertyChanged(BR.value);
+
+        }
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////
+
 
    ////////////////////////////////////// Binding Adapters start
 

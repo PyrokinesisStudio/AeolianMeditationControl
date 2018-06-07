@@ -6,6 +6,9 @@
         name="obsIntDcKill"
         type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntDcKill" />
         <variable
+            name="obsIntDelayChorusSwitch"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntDelayChorusSwitch" />
+        <variable
             name="obsIntFilterPower"
             type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntFilterPower" />
         <variable
@@ -301,6 +304,21 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.875" />
+
+            <TextView
+                android:id="@+id/textViewDelayChorus"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Delay->Chorus"
+                android:textColor="@android:color/white"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.625"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.875" />
@@ -608,6 +626,32 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.029" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layouttoggleButtonDcKill"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:background="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.62"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.98">
+
+                <ToggleButton
+                    android:id="@+id/toggleButtonDelayChorus"
+                    android:layout_width="37dp"
+                    android:layout_height="27dp"
+                    android:background="#ff4F75A1"
+                    android:checked="@{obsIntDelayChorusSwitch.value}"
+                    android:textOff=" "
+                    android:textOn=" "
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </android.support.constraint.ConstraintLayout>
 
             <TextView
