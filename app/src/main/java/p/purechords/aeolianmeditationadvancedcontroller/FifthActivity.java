@@ -363,6 +363,7 @@ public class FifthActivity extends AppCompatActivity {
             playOctave = sharedPref.getInt("playOctave", playOctave);
             glideOn = sharedPref.getInt("glideOn", glideOn);
             glideTime = sharedPref.getInt("glideTime", glideTime);
+            bendRange = sharedPref.getInt("bendRange", bendRange);
 
             /////////////////////////////////////////// Play Page - Seventh Activity Variables End
 
@@ -986,6 +987,7 @@ public class FifthActivity extends AppCompatActivity {
         }
 
         obsIntGlideTime.setValue(glideTime);
+        obsIntBendRange.setValue(bendRange);
 
         ////////////////////////////////////////////////////////////////
         /////////////////////////////////////////// Observable set end
@@ -2169,6 +2171,7 @@ public class FifthActivity extends AppCompatActivity {
         editor.putInt("playOctave", playOctave);
         editor.putInt("glideOn", glideOn);
         editor.putInt("glideTime", glideTime);
+        editor.putInt("bendRange", bendRange);
 
         /////////////////////////////////////////// Play Page - Seventh Activity Variables End
 

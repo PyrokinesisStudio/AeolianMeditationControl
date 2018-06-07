@@ -354,6 +354,7 @@ public class SeventhActivity extends AppCompatActivity {
             playOctave = sharedPref.getInt("playOctave", playOctave);
             glideOn = sharedPref.getInt("glideOn", glideOn);
             glideTime = sharedPref.getInt("glideTime", glideTime);
+            bendRange = sharedPref.getInt("bendRange", bendRange);
 
             /////////////////////////////////////////// Play Page - Seventh Activity Variables End
 
@@ -977,6 +978,7 @@ public class SeventhActivity extends AppCompatActivity {
         }
 
         obsIntGlideTime.setValue(glideTime);
+        obsIntBendRange.setValue(bendRange);
 
         ////////////////////////////////////////////////////////////////
         /////////////////////////////////////////// Observable set end
@@ -985,6 +987,7 @@ public class SeventhActivity extends AppCompatActivity {
         binding.setObsIntDrone(obsIntDrone);
         binding.setObsIntGlideOn(obsIntGlideOn);
         binding.setObsIntGlideTime(obsIntGlideTime);
+        binding.setObsIntBendRange(obsIntBendRange);
         binding.setObsIntSourceSelect(obsIntSourceSelect);
         binding.setObsIntFmDepth(obsIntFmDepth);
         binding.setObsIntFilterCut(obsIntFilterCut);
@@ -1252,6 +1255,36 @@ public class SeventhActivity extends AppCompatActivity {
             }
         });
 
+        final Slider sliderPitchBendGet = findViewById(R.id.sliderPitchBend);
+        sliderPitchBendGet.setValue(50, true);
+        sliderPitchBendGet.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
+            @Override
+            public void onPositionChanged(Slider view, boolean fromUser, float oldPos, float newPos, int oldValue, int newValue) {
+                if (connectionCheck == 1) {
+                    getMyNetAddress();
+                    String myMsgAddress = "/1/2525/1/211";
+                    OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                    myOscMessage.add(sliderPitchBendGet.getValue());
+                    oscP5.send(myOscMessage, getBroadcastLocation);
+                }
+            }
+        });
+
+        sliderPitchBendGet.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    if (connectionCheck == 1) {
+                        sliderPitchBendGet.setValue(50, true);
+                    }
+                    return true;
+                }
+                return false;
+            }
+        });
+
+
         final Slider sliderGlideTimeGet = findViewById(R.id.sliderGlideTime);
         sliderGlideTimeGet.setValue(glideTime, true);
         sliderGlideTimeGet.setOnPositionChangeListener(new Slider.OnPositionChangeListener() {
@@ -1339,7 +1372,12 @@ public class SeventhActivity extends AppCompatActivity {
         spinnerPlayOctGet.setAdapter(adapterPlayOct);
         spinnerPlayOctGet.setSelection(playOctave);
 
-
+        Spinner spinnerBendRangeGet = (findViewById(R.id.spinnerBendRange));
+        spinnerBendRangeGet.setOnItemSelectedListener(new SeventhActivity.CustomOnItemSelectedListenerBendRange());
+        ArrayAdapter adapterBendRange = ArrayAdapter.createFromResource(this,
+                R.array.spinnerBendRange, R.layout.spinner_item);
+        spinnerBendRangeGet.setAdapter(adapterBendRange);
+        spinnerBendRangeGet.setSelection(bendRange);
         ///////////////////////////////////////////////////////////////////// Notes Start
 
         final Button noteC1Get = findViewById(R.id.buttonNoteC1);
@@ -2234,6 +2272,26 @@ public class SeventhActivity extends AppCompatActivity {
         }
     } // end listener
 
+    public class CustomOnItemSelectedListenerBendRange implements AdapterView.OnItemSelectedListener {
+
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+            if (connectionCheck == 1) {
+                getMyNetAddress();
+                String myMsgAddress = "/1/2525/1/212";
+                OscMessage myOscMessage = new OscMessage(myMsgAddress);
+                bendRange = position;
+                myOscMessage.add(Math.round((position / 65.0f) * 127.0f));
+                oscP5.send(myOscMessage, getBroadcastLocation);
+            }
+        }
+
+        @Override
+        public void onNothingSelected(AdapterView<?> arg0) {
+
+        }
+    } // end listener
+
     @Override
     protected void onPause() {
         super.onPause(); // Always call the superclass method first
@@ -2554,7 +2612,8 @@ public class SeventhActivity extends AppCompatActivity {
         editor.putInt("playOctave", playOctave);
         editor.putInt("glideOn", glideOn);
         editor.putInt("glideTime", glideTime);
-
+        editor.putInt("bendRange", bendRange);
+        
         /////////////////////////////////////////// Play Page - Seventh Activity Variables End
 
         editor.apply();

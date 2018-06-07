@@ -345,6 +345,7 @@
                     android:id="@+id/spinnerBpm"
                     android:layout_width="75dp"
                     android:layout_height="30dp"
+                    android:background="@android:color/black"
                     android:entries="@array/spinnerBpmData"
                     android:popupBackground="@android:color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
