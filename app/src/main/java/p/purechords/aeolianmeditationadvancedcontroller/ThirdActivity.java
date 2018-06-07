@@ -1740,7 +1740,7 @@ public class ThirdActivity extends AppCompatActivity {
                     OscMessage myOscMessage = new OscMessage(myMsgAddress);
                     myOscMessage.add(sliderNoiseResGet3.getValue());
                     oscP5.send(myOscMessage, getBroadcastLocation);
-                    noiseRes1 = sliderNoiseResGet3.getValue();
+                    noiseRes3 = sliderNoiseResGet3.getValue();
                 }
             }
         }); // end listener
