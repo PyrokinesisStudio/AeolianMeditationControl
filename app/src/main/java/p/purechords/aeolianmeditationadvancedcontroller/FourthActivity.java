@@ -2111,6 +2111,7 @@ public class FourthActivity extends AppCompatActivity {
 
                         sliderLpFilterCutGet.setValue(Math.round(random.nextFloat() * 127),true);
                         sliderLpFilterResGet.setValue(Math.round(random.nextFloat() * 127),true);
+                        sliderLpFilterEnvGet.setValue(Math.round(random.nextFloat() * 127),true);
                         sliderLpFilterModGet.setValue(Math.round(random.nextFloat() * 127),true);
                         sliderLpFilterRateGet.setValue(Math.round(random.nextFloat() * 127),true);
                         spinnerLpFilterDivGet.setSelection((Math.round(random.nextFloat() * 21)),true);
@@ -2131,6 +2132,7 @@ public class FourthActivity extends AppCompatActivity {
                         }
 
                         sliderDelayTimeGet.setValue(Math.round(random.nextFloat() * 127),true);
+                        sliderDelayTimeGetR.setValue(Math.round(random.nextFloat() * 127),true);
                         sliderDelayFeedGet.setValue(Math.round(random.nextFloat() * 127),true);
 
                         if (random.nextFloat() > 0.5f){
@@ -2140,6 +2142,7 @@ public class FourthActivity extends AppCompatActivity {
 
                         sliderDelayWetGet.setValue(Math.round(random.nextFloat() * 127),true);
                         spinnerDelayDivGet.setSelection((Math.round(random.nextFloat() * 21)),true);
+                        spinnerDelayDivGetR.setSelection((Math.round(random.nextFloat() * 21)),true);
 
                         sliderChorusRateGet.setValue(Math.round(random.nextFloat() * 127),true);
                         sliderChorusDepthGet.setValue(Math.round(random.nextFloat() * 127),true);
@@ -2233,6 +2236,7 @@ public class FourthActivity extends AppCompatActivity {
 
                         sliderLpFilterCutGet.setValue(0,true);
                         sliderLpFilterResGet.setValue(0,true);
+                        sliderLpFilterEnvGet.setValue(0,true);
                         sliderLpFilterModGet.setValue(0,true);
                         sliderLpFilterRateGet.setValue(0,true);
                         spinnerLpFilterDivGet.setSelection(0,true);
@@ -2261,9 +2265,11 @@ public class FourthActivity extends AppCompatActivity {
                         toggleButtonDecimator8bitGet.setBackgroundColor(myColorC);
 
                         sliderDelayTimeGet.setValue(0,true);
+                        sliderDelayTimeGetR.setValue(0,true);
                         sliderDelayFeedGet.setValue(0,true);
                         sliderDelayWetGet.setValue(0,true);
                         spinnerDelayDivGet.setSelection(0,true);
+                        spinnerDelayDivGetR.setSelection(0,true);
 
                         toggleButtonDelaySyncGet.setChecked(false);
                         toggleButtonDelaySyncGet.setBackgroundColor(myColorC);
