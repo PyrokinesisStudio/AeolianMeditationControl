@@ -290,22 +290,22 @@
             <Spinner
                 android:id="@+id/spinnerNoiseModRateRangeVol"
                 android:layout_width="75dp"
-                android:layout_height="26dp"
+                android:layout_height="20dp"
                 android:background="@android:color/black"
                 android:entries="@array/spinnerRateRange"
                 android:popupBackground="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.76"
+                app:layout_constraintHorizontal_bias="0.761"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.945"
+                app:layout_constraintVertical_bias="0.935"
                 app:selection="@{obsIntNoiseRateRangeVol.value}" />
 
             <Spinner
                 android:id="@+id/spinnerNoiseModRateRangeCut"
                 android:layout_width="75dp"
-                android:layout_height="26dp"
+                android:layout_height="20dp"
                 android:background="@android:color/black"
                 android:entries="@array/spinnerRateRange"
                 android:popupBackground="@android:color/black"
@@ -716,7 +716,7 @@
                 app:layout_constraintHorizontal_bias="0.67"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.97" />
+                app:layout_constraintVertical_bias="0.98" />
 
             <TextView
                 android:id="@+id/textViewRangeVol"

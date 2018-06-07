@@ -3588,7 +3588,6 @@ public class SecondActivity extends AppCompatActivity {
         editor.putInt("delayPower", delayPower);
         editor.putInt("delayChorusSwitch", delayChorusSwitch);
 
-
         // Chorus
         editor.putInt("chorusRate", chorusRate);
         editor.putInt("chorusDepth", chorusDepth);
