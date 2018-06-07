@@ -2062,7 +2062,7 @@ public class FourthActivity extends AppCompatActivity {
 
         ///////////////////////////////////////////////////// DC Kill Start
 
-        final ToggleButton toggleButtonDcKillGet = findViewById(R.id.toggleButtonDcKill);
+       /* final ToggleButton toggleButtonDcKillGet = findViewById(R.id.toggleButtonDcKill);
         if (dcKill == 127) {
             toggleButtonDcKillGet.setChecked(true);
             toggleButtonDcKillGet.setBackgroundColor(myColorD);
@@ -2092,7 +2092,7 @@ public class FourthActivity extends AppCompatActivity {
                     }
                 }
             }
-        }); // end listener
+        }); // end listener*/
 
         ///////////////////////////////////////////////////// DC Kill End
 
@@ -2295,8 +2295,8 @@ public class FourthActivity extends AppCompatActivity {
                         sliderReverbWidthGet.setValue(0,true);
                         sliderReverbWetGet.setValue(0,true);
 
-                        toggleButtonDcKillGet.setChecked(false);
-                        toggleButtonDcKillGet.setBackgroundColor(myColorC);
+                     /*   toggleButtonDcKillGet.setChecked(false);
+                        toggleButtonDcKillGet.setBackgroundColor(myColorC);*/
 
                         if (togglebButtonEffectsPowerAllGet.isChecked()) {
                             togglebButtonEffectsPowerAllGet.setChecked(false);
