@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android">
 <data>
     <variable
@@ -474,19 +474,19 @@
         <android.support.constraint.ConstraintLayout
             android:id="@+id/xyLayout"
             android:layout_width="850dp"
-            android:layout_height="400dp"
+            android:layout_height="385dp"
             android:background="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.100000024">
+            app:layout_constraintVertical_bias="0.19">
 
             <ImageView
                 android:id="@+id/imageViewXyBack"
                 android:layout_width="847dp"
-                android:layout_height="397dp"
+                android:layout_height="382dp"
                 android:background="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -496,8 +496,8 @@
 
             <TextView
                 android:id="@+id/textViewX2"
-                android:layout_width="15dp"
-                android:layout_height="11dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="X"
                 android:textColor="@android:color/white"
@@ -512,7 +512,7 @@
             <TextView
                 android:id="@+id/textViewX1"
                 android:layout_width="15dp"
-                android:layout_height="11dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="X"
                 android:textColor="@android:color/white"
@@ -527,7 +527,7 @@
             <TextView
                 android:id="@+id/textViewY1"
                 android:layout_width="15dp"
-                android:layout_height="11dp"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Y"
                 android:textColor="@android:color/white"
@@ -541,8 +541,8 @@
 
             <TextView
                 android:id="@+id/textViewY2"
-                android:layout_width="15dp"
-                android:layout_height="11dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Y"
                 android:textColor="@android:color/white"
@@ -618,7 +618,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.936"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.75">
 
                 <Button
                     android:id="@+id/xyButtonBack2"
@@ -656,7 +657,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.064"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.75">
 
                 <Button
                     android:id="@+id/xyButtonBack1"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
         <variable
@@ -168,7 +168,7 @@
 
         <TextView
             android:id="@+id/textViewGlideTime"
-            android:layout_width="100dp"
+            android:layout_width="125dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Time"
@@ -183,7 +183,7 @@
 
         <ImageView
             android:id="@+id/imageViewSldierBack84"
-            android:layout_width="100dp"
+            android:layout_width="125dp"
             android:layout_height="20dp"
             android:background="@drawable/sliderback"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -195,7 +195,7 @@
 
         <ImageView
             android:id="@+id/imageViewSldierBack83"
-            android:layout_width="100dp"
+            android:layout_width="125dp"
             android:layout_height="20dp"
             android:background="@drawable/sliderback"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -203,11 +203,11 @@
             app:layout_constraintHorizontal_bias="0.01"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.135" />
+            app:layout_constraintVertical_bias="0.091" />
 
         <com.rey.material.widget.Slider
             android:id="@+id/sliderPitchBend"
-            android:layout_width="100dp"
+            android:layout_width="125dp"
             android:layout_height="20dp"
             android:gravity="center"
             android:keepScreenOn="true"
@@ -218,7 +218,7 @@
             app:layout_constraintHorizontal_bias="0.01"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.135"
+            app:layout_constraintVertical_bias="0.091"
             app:sl_alwaysFillThumb="true"
             app:sl_maxValue="100"
             app:sl_primaryColor="#7dd0f4"
@@ -231,7 +231,7 @@
 
         <com.rey.material.widget.Slider
             android:id="@+id/sliderGlideTime"
-            android:layout_width="100dp"
+            android:layout_width="125dp"
             android:layout_height="20dp"
             android:gravity="center"
             android:keepScreenOn="true"
@@ -285,7 +285,7 @@
 
         <Spinner
             android:id="@+id/spinnerPlayOct"
-            android:layout_width="150dp"
+            android:layout_width="125dp"
             android:layout_height="30dp"
             android:background="@android:color/black"
             android:entries="@array/spinnerOctavesFlip"
@@ -299,7 +299,7 @@
 
         <Spinner
             android:id="@+id/spinnerSourceSelect"
-            android:layout_width="100dp"
+            android:layout_width="125dp"
             android:layout_height="30dp"
             android:background="#000000"
             android:entries="@array/spinnerSource"
@@ -310,12 +310,12 @@
             app:layout_constraintHorizontal_bias="0.997"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.120000005"
+            app:layout_constraintVertical_bias="0.091"
             app:selection="@{obsIntSourceSelect.value}" />
 
         <Spinner
             android:id="@+id/spinnerBendRange"
-            android:layout_width="100dp"
+            android:layout_width="125dp"
             android:layout_height="30dp"
             android:background="#000000"
             android:entries="@array/spinnerBendRange"
@@ -326,7 +326,7 @@
             app:layout_constraintHorizontal_bias="0.18"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.120000005"
+            app:layout_constraintVertical_bias="0.091"
             app:selection="@{obsIntBendRange.value}" />
 
         <android.support.constraint.ConstraintLayout
@@ -574,7 +574,7 @@
 
         <TextView
             android:id="@+id/textViewPlayOctave"
-            android:layout_width="150dp"
+            android:layout_width="125dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Octave"
@@ -589,7 +589,7 @@
 
         <TextView
             android:id="@+id/textViewBendRange"
-            android:layout_width="100dp"
+            android:layout_width="125dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Bend Range"
@@ -600,11 +600,11 @@
             app:layout_constraintHorizontal_bias="0.18"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.092" />
+            app:layout_constraintVertical_bias="0.057" />
 
         <TextView
             android:id="@+id/textViewFreqSourceSelect4"
-            android:layout_width="100dp"
+            android:layout_width="125dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Source"
@@ -612,14 +612,14 @@
             android:textSize="8sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.998"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.092" />
+            app:layout_constraintVertical_bias="0.057" />
 
         <TextView
             android:id="@+id/textViewPitchBend"
-            android:layout_width="100dp"
+            android:layout_width="125dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Pitch Bend"
@@ -630,7 +630,7 @@
             app:layout_constraintHorizontal_bias="0.01"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.092" />
+            app:layout_constraintVertical_bias="0.057" />
 
         <TextView
             android:id="@+id/textViewPlaySection"
@@ -953,43 +953,31 @@
 
         <android.support.constraint.ConstraintLayout
             android:id="@+id/layoutKeys"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="870dp"
+            android:layout_height="330dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.56">
-
-            <ImageView
-                android:id="@+id/imageViewKeysBorder"
-                android:layout_width="517dp"
-                android:layout_height="183dp"
-                android:background="@android:color/background_light"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.47"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.92"
-                tools:ignore="ContentDescription" />
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/imageViewKeysBack"
-                android:layout_width="515dp"
-                android:layout_height="180dp"
+                android:layout_width="870dp"
+                android:layout_height="327dp"
                 android:background="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.501"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.62"
                 tools:ignore="ContentDescription" />
 
             <ImageView
                 android:id="@+id/imageViewKeysBack2"
-                android:layout_width="479dp"
-                android:layout_height="165dp"
+                android:layout_width="870dp"
+                android:layout_height="324dp"
                 android:background="#ff4F75A1"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -1003,7 +991,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.92"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -1019,8 +1007,8 @@
 
                     <Button
                         android:id="@+id/buttonNoteC2"
-                        android:layout_width="31dp"
-                        android:layout_height="160dp"
+                        android:layout_width="59dp"
+                        android:layout_height="320dp"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
                         android:background="@android:color/background_light"
@@ -1033,8 +1021,8 @@
 
                     <Button
                         android:id="@+id/buttonNoteE2"
-                        android:layout_width="31dp"
-                        android:layout_height="160dp"
+                        android:layout_width="59dp"
+                        android:layout_height="320dp"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="3dp"
                         android:layout_marginStart="3dp"
@@ -1050,8 +1038,8 @@
 
                     <Button
                         android:id="@+id/buttonNoteB2"
-                        android:layout_width="31dp"
-                        android:layout_height="160dp"
+                        android:layout_width="59dp"
+                        android:layout_height="320dp"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="3dp"
                         android:layout_marginStart="3dp"
@@ -1067,8 +1055,8 @@
 
                     <Button
                         android:id="@+id/buttonNoteD2"
-                        android:layout_width="31dp"
-                        android:layout_height="160dp"
+                        android:layout_width="59dp"
+                        android:layout_height="320dp"
                         android:layout_alignTop="@+id/buttonNoteC2"
                         android:layout_marginLeft="3dp"
                         android:layout_marginStart="3dp"
@@ -1084,8 +1072,8 @@
 
                     <Button
                         android:id="@+id/buttonNoteF2"
-                        android:layout_width="31dp"
-                        android:layout_height="160dp"
+                        android:layout_width="59dp"
+                        android:layout_height="320dp"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="3dp"
                         android:layout_marginStart="3dp"
@@ -1101,8 +1089,8 @@
 
                     <Button
                         android:id="@+id/buttonNoteG2"
-                        android:layout_width="31dp"
-                        android:layout_height="160dp"
+                        android:layout_width="59dp"
+                        android:layout_height="320dp"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="3dp"
                         android:layout_marginStart="3dp"
@@ -1118,8 +1106,8 @@
 
                     <Button
                         android:id="@+id/buttonNoteA2"
-                        android:layout_width="31dp"
-                        android:layout_height="160dp"
+                        android:layout_width="59dp"
+                        android:layout_height="320dp"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="3dp"
                         android:layout_marginStart="3dp"
@@ -1142,12 +1130,11 @@
 
                     <Button
                         android:id="@+id/buttonNoteCs2"
-                        android:layout_width="19dp"
-                        android:layout_height="100dp"
-                        android:layout_alignParentLeft="true"
+                        android:layout_width="38dp"
+                        android:layout_height="200dp"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        android:layout_marginStart="23dp"
+                        android:layout_marginStart="41dp"
                         android:background="@android:color/black"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1158,10 +1145,10 @@
 
                     <Button
                         android:id="@+id/buttonNoteGs2"
-                        android:layout_width="19dp"
-                        android:layout_height="100dp"
+                        android:layout_width="38dp"
+                        android:layout_height="200dp"
                         android:layout_alignTop="@+id/buttonNoteCs2"
-                        android:layout_marginLeft="16dp"
+                        android:layout_marginLeft="24dp"
                         android:layout_marginStart="15dp"
                         android:layout_toEndOf="@+id/buttonNoteFs2"
                         android:layout_toRightOf="@+id/buttonNoteFs2"
@@ -1175,13 +1162,11 @@
 
                     <Button
                         android:id="@+id/buttonNoteDs2"
-                        android:layout_width="19dp"
-                        android:layout_height="100dp"
-                        android:layout_alignTop="@+id/buttonNoteCs2"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_toEndOf="@+id/buttonNoteCs2"
-                        android:layout_toRightOf="@+id/buttonNoteCs2"
+                        android:layout_width="38dp"
+                        android:layout_height="200dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="105dp"
                         android:background="@android:color/black"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1192,10 +1177,10 @@
 
                     <Button
                         android:id="@+id/buttonNoteFs2"
-                        android:layout_width="19dp"
-                        android:layout_height="100dp"
+                        android:layout_width="38dp"
+                        android:layout_height="200dp"
                         android:layout_alignTop="@+id/buttonNoteGs2"
-                        android:layout_marginLeft="48dp"
+                        android:layout_marginLeft="84dp"
                         android:layout_marginStart="49dp"
                         android:layout_toEndOf="@+id/buttonNoteDs2"
                         android:layout_toRightOf="@+id/buttonNoteDs2"
@@ -1209,10 +1194,10 @@
 
                     <Button
                         android:id="@+id/buttonNoteAs2"
-                        android:layout_width="19dp"
-                        android:layout_height="100dp"
+                        android:layout_width="38dp"
+                        android:layout_height="200dp"
                         android:layout_alignTop="@+id/buttonNoteCs2"
-                        android:layout_marginLeft="16dp"
+                        android:layout_marginLeft="26dp"
                         android:layout_marginStart="15dp"
                         android:layout_toEndOf="@+id/buttonNoteGs2"
                         android:layout_toRightOf="@+id/buttonNoteGs2"
@@ -1237,7 +1222,7 @@
                 android:layout_alignParentTop="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.08"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -1253,8 +1238,8 @@
 
                     <Button
                         android:id="@+id/buttonNoteC1"
-                        android:layout_width="31dp"
-                        android:layout_height="160dp"
+                        android:layout_width="59dp"
+                        android:layout_height="320dp"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
                         android:background="@android:color/background_light"
@@ -1267,8 +1252,8 @@
 
                     <Button
                         android:id="@+id/buttonNoteE1"
-                        android:layout_width="31dp"
-                        android:layout_height="160dp"
+                        android:layout_width="59dp"
+                        android:layout_height="320dp"
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="3dp"
                         android:layout_toEndOf="@+id/buttonNoteD1"
@@ -1282,8 +1267,8 @@
 
                     <Button
                         android:id="@+id/buttonNoteB1"
-                        android:layout_width="31dp"
-                        android:layout_height="160dp"
+                        android:layout_width="59dp"
+                        android:layout_height="320dp"
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="3dp"
                         android:layout_toEndOf="@+id/buttonNoteA1"
@@ -1297,8 +1282,8 @@
 
                     <Button
                         android:id="@+id/buttonNoteD1"
-                        android:layout_width="31dp"
-                        android:layout_height="160dp"
+                        android:layout_width="59dp"
+                        android:layout_height="320dp"
                         android:layout_alignTop="@+id/buttonNoteC1"
                         android:layout_marginLeft="3dp"
                         android:layout_marginStart="3dp"
@@ -1314,8 +1299,8 @@
 
                     <Button
                         android:id="@+id/buttonNoteF1"
-                        android:layout_width="31dp"
-                        android:layout_height="160dp"
+                        android:layout_width="59dp"
+                        android:layout_height="320dp"
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="3dp"
                         android:layout_toEndOf="@+id/buttonNoteE1"
@@ -1329,8 +1314,8 @@
 
                     <Button
                         android:id="@+id/buttonNoteG1"
-                        android:layout_width="31dp"
-                        android:layout_height="160dp"
+                        android:layout_width="59dp"
+                        android:layout_height="320dp"
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="3dp"
                         android:layout_toEndOf="@+id/buttonNoteF1"
@@ -1344,8 +1329,8 @@
 
                     <Button
                         android:id="@+id/buttonNoteA1"
-                        android:layout_width="31dp"
-                        android:layout_height="160dp"
+                        android:layout_width="59dp"
+                        android:layout_height="320dp"
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="3dp"
                         android:layout_toEndOf="@+id/buttonNoteG1"
@@ -1366,12 +1351,11 @@
 
                     <Button
                         android:id="@+id/buttonNoteCs1"
-                        android:layout_width="19dp"
-                        android:layout_height="100dp"
-                        android:layout_alignParentLeft="true"
+                        android:layout_width="38dp"
+                        android:layout_height="200dp"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
-                        android:layout_marginStart="23dp"
+                        android:layout_marginStart="42dp"
                         android:background="@android:color/black"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1382,10 +1366,10 @@
 
                     <Button
                         android:id="@+id/buttonNoteGs1"
-                        android:layout_width="19dp"
-                        android:layout_height="100dp"
+                        android:layout_width="38dp"
+                        android:layout_height="200dp"
                         android:layout_alignTop="@+id/buttonNoteCs1"
-                        android:layout_marginLeft="16dp"
+                        android:layout_marginLeft="25dp"
                         android:layout_marginStart="15dp"
                         android:layout_toEndOf="@+id/buttonNoteFs1"
                         android:layout_toRightOf="@+id/buttonNoteFs1"
@@ -1399,13 +1383,11 @@
 
                     <Button
                         android:id="@+id/buttonNoteDs1"
-                        android:layout_width="19dp"
-                        android:layout_height="100dp"
-                        android:layout_alignTop="@+id/buttonNoteCs1"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginStart="15dp"
-                        android:layout_toEndOf="@+id/buttonNoteCs1"
-                        android:layout_toRightOf="@+id/buttonNoteCs1"
+                        android:layout_width="38dp"
+                        android:layout_height="200dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="104dp"
                         android:background="@android:color/black"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1416,10 +1398,10 @@
 
                     <Button
                         android:id="@+id/buttonNoteFs1"
-                        android:layout_width="19dp"
-                        android:layout_height="100dp"
+                        android:layout_width="38dp"
+                        android:layout_height="200dp"
                         android:layout_alignTop="@+id/buttonNoteGs1"
-                        android:layout_marginLeft="48dp"
+                        android:layout_marginLeft="85dp"
                         android:layout_marginStart="49dp"
                         android:layout_toEndOf="@+id/buttonNoteDs1"
                         android:layout_toRightOf="@+id/buttonNoteDs1"
@@ -1433,10 +1415,10 @@
 
                     <Button
                         android:id="@+id/buttonNoteAs1"
-                        android:layout_width="19dp"
-                        android:layout_height="100dp"
+                        android:layout_width="38dp"
+                        android:layout_height="200dp"
                         android:layout_alignTop="@+id/buttonNoteCs1"
-                        android:layout_marginLeft="16dp"
+                        android:layout_marginLeft="24dp"
                         android:layout_marginStart="15dp"
                         android:layout_toEndOf="@+id/buttonNoteGs1"
                         android:layout_toRightOf="@+id/buttonNoteGs1"

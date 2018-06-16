@@ -2564,19 +2564,19 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModSync12"
-                    android:layout_width="130dp"
+                    android:layout_width="128dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.999"
+                    app:layout_constraintHorizontal_bias="0.995"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.87">
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModSync12"
-                        android:layout_width="127dp"
+                        android:layout_width="125dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmSync12.value}"
@@ -2590,19 +2590,19 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModRetrig12"
-                    android:layout_width="130dp"
+                    android:layout_width="128dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.999"
+                    app:layout_constraintHorizontal_bias="0.995"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.935">
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModRetrig12"
-                        android:layout_width="127dp"
+                        android:layout_width="125dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmRetrig12.value}"
@@ -2746,19 +2746,19 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModRetrig6"
-                    android:layout_width="130dp"
+                    android:layout_width="128dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.999"
+                    app:layout_constraintHorizontal_bias="0.995"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.449">
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModRetrig6"
-                        android:layout_width="127dp"
+                        android:layout_width="125dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmRetrig6.value}"
@@ -2902,19 +2902,19 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModSync6"
-                    android:layout_width="130dp"
+                    android:layout_width="128dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.999"
+                    app:layout_constraintHorizontal_bias="0.995"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.379">
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModSync6"
-                        android:layout_width="127dp"
+                        android:layout_width="125dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmSync6.value}"
