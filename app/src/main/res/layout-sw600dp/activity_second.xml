@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
     <variable
@@ -311,7 +311,7 @@
                 app:layout_constraintHorizontal_bias="0.61"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.98">
+                app:layout_constraintVertical_bias="0.963">
 
                 <ToggleButton
                     android:id="@+id/toggleButtonHarmVolModRetrig"
@@ -354,7 +354,7 @@
                 app:layout_constraintHorizontal_bias="0.52"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.875" />
+                app:layout_constraintVertical_bias="0.86" />
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/layoutNavigate"
@@ -671,7 +671,7 @@
                 app:layout_constraintHorizontal_bias="0.52"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.98">
+                app:layout_constraintVertical_bias="0.963">
 
                 <ToggleButton
                     android:id="@+id/toggleButtonHarmSyncAll"
@@ -696,10 +696,10 @@
                 android:textSize="8sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.61"
+                app:layout_constraintHorizontal_bias="0.609"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.875" />
+                app:layout_constraintVertical_bias="0.86" />
 
             <TextView
                 android:id="@+id/textViewHarmRandom"
@@ -711,10 +711,10 @@
                 android:textSize="8sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.875"
+                app:layout_constraintHorizontal_bias="0.86"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.875" />
+                app:layout_constraintVertical_bias="0.86" />
 
             <TextView
                 android:id="@+id/textViewHarmRandom2"
@@ -726,10 +726,10 @@
                 android:textSize="8sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.97"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.875" />
+                app:layout_constraintVertical_bias="0.86" />
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/layoutHarmonicsInnit"
@@ -741,7 +741,7 @@
                 app:layout_constraintHorizontal_bias="0.86"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.98">
+                app:layout_constraintVertical_bias="0.963">
 
                 <Button
                     android:id="@+id/buttonHarmonicsInnit"
@@ -766,10 +766,10 @@
                 android:textSize="8sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.741"
+                app:layout_constraintHorizontal_bias="0.74"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.875" />
+                app:layout_constraintVertical_bias="0.86" />
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/layoutHarmonicsRandom"
@@ -778,10 +778,10 @@
                 android:background="@android:color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.98"
+                app:layout_constraintHorizontal_bias="0.97"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.98">
+                app:layout_constraintVertical_bias="0.963">
 
                 <Button
                     android:id="@+id/buttonHarmonicsRandom"
@@ -821,7 +821,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -833,7 +833,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack2"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -845,7 +845,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack3"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -857,7 +857,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack4"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -869,7 +869,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack5"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -881,7 +881,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack6"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -893,7 +893,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack7"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -905,7 +905,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack8"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -917,7 +917,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack9"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -929,7 +929,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack10"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -941,7 +941,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack11"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -953,7 +953,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack12"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -965,7 +965,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack13"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -977,7 +977,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack14"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -989,7 +989,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack15"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1001,7 +1001,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack16"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1013,7 +1013,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack17"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1025,7 +1025,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack18"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1037,7 +1037,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack22"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1049,7 +1049,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack23"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1061,7 +1061,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack24"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1073,7 +1073,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack25"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1085,7 +1085,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack26"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1097,7 +1097,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack27"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1109,7 +1109,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack28"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1121,7 +1121,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack29"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1133,7 +1133,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack30"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1145,7 +1145,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack31"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1157,7 +1157,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack32"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1169,7 +1169,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack33"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1181,7 +1181,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack34"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1193,7 +1193,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack35"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1205,7 +1205,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack36"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1217,7 +1217,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack37"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1229,7 +1229,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack38"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1241,7 +1241,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewSldierBack39"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="25dp"
                     android:background="@drawable/sliderback"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1253,7 +1253,7 @@
 
                 <Spinner
                     android:id="@+id/spinnerHarmVolModDiv9"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="26dp"
                     android:background="@android:color/black"
                     android:entries="@array/spinnerNotes"
@@ -1268,7 +1268,7 @@
 
                 <Spinner
                     android:id="@+id/spinnerHarmVolModDiv10"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="26dp"
                     android:background="@android:color/black"
                     android:entries="@array/spinnerNotes"
@@ -1283,7 +1283,7 @@
 
                 <Spinner
                     android:id="@+id/spinnerHarmVolModDiv12"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="26dp"
                     android:background="@android:color/black"
                     android:entries="@array/spinnerNotes"
@@ -1298,7 +1298,7 @@
 
                 <Spinner
                     android:id="@+id/spinnerHarmVolModDiv1"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="26dp"
                     android:background="@android:color/black"
                     android:entries="@array/spinnerNotes"
@@ -1313,7 +1313,7 @@
 
                 <Spinner
                     android:id="@+id/spinnerHarmVolModDiv2"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="26dp"
                     android:background="@android:color/black"
                     android:entries="@array/spinnerNotes"
@@ -1328,7 +1328,7 @@
 
                 <Spinner
                     android:id="@+id/spinnerHarmVolModDiv3"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="26dp"
                     android:background="@android:color/black"
                     android:entries="@array/spinnerNotes"
@@ -1343,7 +1343,7 @@
 
                 <Spinner
                     android:id="@+id/spinnerHarmVolModDiv4"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="26dp"
                     android:background="@android:color/black"
                     android:entries="@array/spinnerNotes"
@@ -1358,7 +1358,7 @@
 
                 <Spinner
                     android:id="@+id/spinnerHarmVolModDiv5"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="26dp"
                     android:background="@android:color/black"
                     android:entries="@array/spinnerNotes"
@@ -1373,7 +1373,7 @@
 
                 <Spinner
                     android:id="@+id/spinnerHarmVolModDiv6"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="26dp"
                     android:background="@android:color/black"
                     android:entries="@array/spinnerNotes"
@@ -1388,7 +1388,7 @@
 
                 <Spinner
                     android:id="@+id/spinnerHarmVolModDiv11"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="26dp"
                     android:background="@android:color/black"
                     android:entries="@array/spinnerNotes"
@@ -1403,7 +1403,7 @@
 
                 <Spinner
                     android:id="@+id/spinnerHarmVolModDiv8"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="26dp"
                     android:background="@android:color/black"
                     android:entries="@array/spinnerNotes"
@@ -1418,7 +1418,7 @@
 
                 <Spinner
                     android:id="@+id/spinnerHarmVolModDiv7"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="26dp"
                     android:background="@android:color/black"
                     android:entries="@array/spinnerNotes"
@@ -1433,7 +1433,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVol1"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -1459,7 +1459,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVol2"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -1485,7 +1485,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVol3"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -1511,7 +1511,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVol4"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -1537,7 +1537,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVol5"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -1563,7 +1563,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVol6"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -1589,7 +1589,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVolRate3"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -1615,7 +1615,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVol10"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -1641,7 +1641,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVol11"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -1667,7 +1667,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVol12"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -1693,7 +1693,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVolRate2"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -1719,7 +1719,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVol7"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -1745,7 +1745,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVolRate10"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -1771,7 +1771,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVolMod6"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -1797,7 +1797,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVolRate12"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -1823,7 +1823,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVolMod3"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -1849,7 +1849,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVolMod4"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -1875,7 +1875,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVolMod7"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -1901,7 +1901,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVolMod8"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -1927,7 +1927,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVolMod11"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -1953,7 +1953,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVolRate11"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -1979,7 +1979,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVolMod9"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -2005,7 +2005,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVolMod1"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -2031,7 +2031,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVolMod2"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -2057,7 +2057,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVolRate8"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -2083,7 +2083,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVolMod10"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -2109,7 +2109,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVolRate9"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -2135,7 +2135,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVolMod5"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -2161,7 +2161,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVolMod12"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -2187,7 +2187,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVolRate7"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -2213,7 +2213,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVolRate6"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -2239,7 +2239,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVol9"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -2265,7 +2265,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVolRate4"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -2291,7 +2291,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVolRate5"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -2317,7 +2317,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVolRate1"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -2343,7 +2343,7 @@
 
                 <com.rey.material.widget.Slider
                     android:id="@+id/sliderHarmVol8"
-                    android:layout_width="85dp"
+                    android:layout_width="135dp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:keepScreenOn="true"
@@ -2369,7 +2369,7 @@
 
                 <TextView
                     android:id="@+id/textViewVolRate7to12"
-                    android:layout_width="30sp"
+                    android:layout_width="50sp"
                     android:layout_height="16dp"
                     android:gravity="center"
                     android:text="Div"
@@ -2384,7 +2384,7 @@
 
                 <TextView
                     android:id="@+id/textViewVolRetrig7to2"
-                    android:layout_width="30sp"
+                    android:layout_width="50sp"
                     android:layout_height="16dp"
                     android:gravity="center"
                     android:text="Retrig"
@@ -2399,7 +2399,7 @@
 
                 <TextView
                     android:id="@+id/textViewVolRate7to3"
-                    android:layout_width="30sp"
+                    android:layout_width="50sp"
                     android:layout_height="16dp"
                     android:gravity="center"
                     android:text="Sync"
@@ -2414,7 +2414,7 @@
 
                 <TextView
                     android:id="@+id/textViewVolRate7to"
-                    android:layout_width="30sp"
+                    android:layout_width="50sp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:text="Rate"
@@ -2429,7 +2429,7 @@
 
                 <TextView
                     android:id="@+id/textViewVolMod7to12"
-                    android:layout_width="30sp"
+                    android:layout_width="50sp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:text="Mod"
@@ -2444,7 +2444,7 @@
 
                 <TextView
                     android:id="@+id/textViewVolMod1to6"
-                    android:layout_width="30sp"
+                    android:layout_width="50sp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:text="Mod"
@@ -2474,7 +2474,7 @@
 
                 <TextView
                     android:id="@+id/textViewVol1to6"
-                    android:layout_width="30sp"
+                    android:layout_width="50sp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:text="V 1-6"
@@ -2482,14 +2482,14 @@
                     android:textSize="8sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.004"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.05" />
 
                 <TextView
                     android:id="@+id/textViewVolRetrig1to6"
-                    android:layout_width="30sp"
+                    android:layout_width="50sp"
                     android:layout_height="16dp"
                     android:gravity="center"
                     android:text="Retrig"
@@ -2504,7 +2504,7 @@
 
                 <TextView
                     android:id="@+id/textViewVolRate1to3"
-                    android:layout_width="30sp"
+                    android:layout_width="50sp"
                     android:layout_height="16dp"
                     android:gravity="center"
                     android:text="Sync"
@@ -2518,8 +2518,38 @@
                     app:layout_constraintVertical_bias="0.379" />
 
                 <TextView
+                    android:id="@+id/textViewVolRate1to"
+                    android:layout_width="50sp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:text="Rate"
+                    android:textColor="@android:color/white"
+                    android:textSize="8sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.003"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.226" />
+
+                <TextView
+                    android:id="@+id/textViewVolRate1to2"
+                    android:layout_width="50sp"
+                    android:layout_height="16dp"
+                    android:gravity="center"
+                    android:text="Div"
+                    android:textColor="@android:color/white"
+                    android:textSize="8sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.003"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.31" />
+
+                <TextView
                     android:id="@+id/textViewVol7to12"
-                    android:layout_width="30sp"
+                    android:layout_width="50sp"
                     android:layout_height="20dp"
                     android:gravity="center"
                     android:text="V 7-12"
@@ -2534,7 +2564,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModSync12"
-                    android:layout_width="85dp"
+                    android:layout_width="130dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -2546,7 +2576,7 @@
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModSync12"
-                        android:layout_width="82dp"
+                        android:layout_width="127dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmSync12.value}"
@@ -2558,24 +2588,9 @@
                         app:layout_constraintTop_toTopOf="parent" />
                 </android.support.constraint.ConstraintLayout>
 
-                <TextView
-                    android:id="@+id/textViewVolRate1to2"
-                    android:layout_width="30sp"
-                    android:layout_height="16dp"
-                    android:gravity="center"
-                    android:text="Div"
-                    android:textColor="@android:color/white"
-                    android:textSize="8sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.003"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.31" />
-
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModRetrig12"
-                    android:layout_width="85dp"
+                    android:layout_width="130dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -2587,7 +2602,7 @@
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModRetrig12"
-                        android:layout_width="82dp"
+                        android:layout_width="127dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmRetrig12.value}"
@@ -2601,7 +2616,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModRetrig11"
-                    android:layout_width="85dp"
+                    android:layout_width="130dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -2613,7 +2628,7 @@
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModRetrig11"
-                        android:layout_width="82dp"
+                        android:layout_width="127dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmRetrig11.value}"
@@ -2627,7 +2642,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModRetrig10"
-                    android:layout_width="85dp"
+                    android:layout_width="130dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -2639,7 +2654,7 @@
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModRetrig10"
-                        android:layout_width="82dp"
+                        android:layout_width="127dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmRetrig10.value}"
@@ -2651,24 +2666,9 @@
                         app:layout_constraintTop_toTopOf="parent" />
                 </android.support.constraint.ConstraintLayout>
 
-                <TextView
-                    android:id="@+id/textViewVolRate1to"
-                    android:layout_width="30sp"
-                    android:layout_height="20dp"
-                    android:gravity="center"
-                    android:text="Rate"
-                    android:textColor="@android:color/white"
-                    android:textSize="8sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.003"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.226" />
-
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModRetrig9"
-                    android:layout_width="85dp"
+                    android:layout_width="130dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -2680,7 +2680,7 @@
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModRetrig9"
-                        android:layout_width="82dp"
+                        android:layout_width="127dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmRetrig9.value}"
@@ -2694,7 +2694,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModRetrig8"
-                    android:layout_width="85dp"
+                    android:layout_width="130dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -2706,7 +2706,7 @@
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModRetrig8"
-                        android:layout_width="82dp"
+                        android:layout_width="127dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmRetrig8.value}"
@@ -2720,7 +2720,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModRetrig7"
-                    android:layout_width="85dp"
+                    android:layout_width="130dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -2732,7 +2732,7 @@
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModRetrig7"
-                        android:layout_width="82dp"
+                        android:layout_width="127dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmRetrig7.value}"
@@ -2746,7 +2746,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModRetrig6"
-                    android:layout_width="85dp"
+                    android:layout_width="130dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -2758,7 +2758,7 @@
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModRetrig6"
-                        android:layout_width="82dp"
+                        android:layout_width="127dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmRetrig6.value}"
@@ -2772,7 +2772,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModRetrig5"
-                    android:layout_width="85dp"
+                    android:layout_width="130dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -2784,7 +2784,7 @@
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModRetrig5"
-                        android:layout_width="82dp"
+                        android:layout_width="127dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmRetrig5.value}"
@@ -2798,7 +2798,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModRetrig4"
-                    android:layout_width="85dp"
+                    android:layout_width="130dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -2810,7 +2810,7 @@
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModRetrig4"
-                        android:layout_width="82dp"
+                        android:layout_width="127dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmRetrig4.value}"
@@ -2824,7 +2824,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModRetrig3"
-                    android:layout_width="85dp"
+                    android:layout_width="130dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -2836,7 +2836,7 @@
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModRetrig3"
-                        android:layout_width="82dp"
+                        android:layout_width="127dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmRetrig3.value}"
@@ -2850,7 +2850,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModRetrig2"
-                    android:layout_width="85dp"
+                    android:layout_width="130dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -2862,7 +2862,7 @@
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModRetrig2"
-                        android:layout_width="82dp"
+                        android:layout_width="127dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmRetrig2.value}"
@@ -2876,7 +2876,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModRetrig1"
-                    android:layout_width="85dp"
+                    android:layout_width="130dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -2888,7 +2888,7 @@
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModRetrig1"
-                        android:layout_width="82dp"
+                        android:layout_width="127dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmRetrig1.value}"
@@ -2902,7 +2902,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModSync6"
-                    android:layout_width="85dp"
+                    android:layout_width="130dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -2914,7 +2914,7 @@
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModSync6"
-                        android:layout_width="82dp"
+                        android:layout_width="127dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmSync6.value}"
@@ -2928,7 +2928,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModSync5"
-                    android:layout_width="85dp"
+                    android:layout_width="130dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -2940,7 +2940,7 @@
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModSync5"
-                        android:layout_width="82dp"
+                        android:layout_width="127dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmSync5.value}"
@@ -2954,7 +2954,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModSync4"
-                    android:layout_width="85dp"
+                    android:layout_width="130dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -2966,7 +2966,7 @@
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModSync4"
-                        android:layout_width="82dp"
+                        android:layout_width="127dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmSync4.value}"
@@ -2980,7 +2980,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModSync3"
-                    android:layout_width="85dp"
+                    android:layout_width="130dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -2992,7 +2992,7 @@
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModSync3"
-                        android:layout_width="82dp"
+                        android:layout_width="127dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmSync3.value}"
@@ -3006,7 +3006,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModSync2"
-                    android:layout_width="85dp"
+                    android:layout_width="130dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -3018,7 +3018,7 @@
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModSync2"
-                        android:layout_width="82dp"
+                        android:layout_width="127dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmSync2.value}"
@@ -3032,7 +3032,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModSync1"
-                    android:layout_width="85dp"
+                    android:layout_width="130dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -3044,7 +3044,7 @@
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModSync1"
-                        android:layout_width="82dp"
+                        android:layout_width="127dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmSync1.value}"
@@ -3058,7 +3058,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModSync11"
-                    android:layout_width="85dp"
+                    android:layout_width="130dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -3070,7 +3070,7 @@
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModSync11"
-                        android:layout_width="82dp"
+                        android:layout_width="127dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmSync11.value}"
@@ -3084,7 +3084,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModSync10"
-                    android:layout_width="85dp"
+                    android:layout_width="130dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -3096,7 +3096,7 @@
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModSync10"
-                        android:layout_width="82dp"
+                        android:layout_width="127dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmSync10.value}"
@@ -3110,7 +3110,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModSync9"
-                    android:layout_width="85dp"
+                    android:layout_width="130dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -3122,7 +3122,7 @@
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModSync9"
-                        android:layout_width="82dp"
+                        android:layout_width="127dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmSync9.value}"
@@ -3136,7 +3136,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModSync8"
-                    android:layout_width="85dp"
+                    android:layout_width="130dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -3148,7 +3148,7 @@
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModSync8"
-                        android:layout_width="82dp"
+                        android:layout_width="127dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmSync8.value}"
@@ -3162,7 +3162,7 @@
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layouttoggleButtonHarmVolModSync7"
-                    android:layout_width="85dp"
+                    android:layout_width="130dp"
                     android:layout_height="16dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -3174,7 +3174,7 @@
 
                     <ToggleButton
                         android:id="@+id/toggleButtonHarmVolModSync7"
-                        android:layout_width="82dp"
+                        android:layout_width="127dp"
                         android:layout_height="13dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntHarmSync7.value}"
