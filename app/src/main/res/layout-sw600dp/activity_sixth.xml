@@ -557,7 +557,7 @@
             <Spinner
                 android:id="@+id/spinnerY1"
                 android:layout_width="125dp"
-                android:layout_height="21dp"
+                android:layout_height="wrap_content"
                 android:background="@android:color/black"
                 android:entries="@array/spinnerLiveMode"
                 android:popupBackground="@android:color/black"
@@ -571,7 +571,7 @@
             <Spinner
                 android:id="@+id/spinnerY2"
                 android:layout_width="125dp"
-                android:layout_height="21dp"
+                android:layout_height="wrap_content"
                 android:background="@android:color/black"
                 android:entries="@array/spinnerLiveMode"
                 android:popupBackground="@android:color/black"
@@ -585,7 +585,7 @@
             <Spinner
                 android:id="@+id/spinnerX1"
                 android:layout_width="125dp"
-                android:layout_height="21dp"
+                android:layout_height="wrap_content"
                 android:background="@android:color/black"
                 android:entries="@array/spinnerLiveMode"
                 android:popupBackground="@android:color/black"
@@ -599,7 +599,7 @@
             <Spinner
                 android:id="@+id/spinnerX2"
                 android:layout_width="125dp"
-                android:layout_height="21dp"
+                android:layout_height="wrap_content"
                 android:background="@android:color/black"
                 android:entries="@array/spinnerLiveMode"
                 android:popupBackground="@android:color/black"
@@ -619,7 +619,7 @@
                 app:layout_constraintHorizontal_bias="0.936"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.75">
+                app:layout_constraintVertical_bias="0.85">
 
                 <Button
                     android:id="@+id/xyButtonBack2"
@@ -658,7 +658,7 @@
                 app:layout_constraintHorizontal_bias="0.064"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.75">
+                app:layout_constraintVertical_bias="0.85">
 
                 <Button
                     android:id="@+id/xyButtonBack1"
