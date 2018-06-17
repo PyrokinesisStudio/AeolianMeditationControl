@@ -348,7 +348,7 @@
                 android:gravity="center"
                 android:text="Sync"
                 android:textColor="@android:color/white"
-                android:textSize="8sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.52"
@@ -562,13 +562,13 @@
                     android:gravity="center"
                     android:text="Harm"
                     android:textColor="@android:color/white"
-                    android:textSize="8sp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.18"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.08" />
+                    app:layout_constraintVertical_bias="0.05" />
 
                 <TextView
                     android:id="@+id/textViewToMain"
@@ -577,13 +577,13 @@
                     android:gravity="center"
                     android:text="Main"
                     android:textColor="@android:color/white"
-                    android:textSize="8sp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.02"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.08" />
+                    app:layout_constraintVertical_bias="0.05" />
 
                 <TextView
                     android:id="@+id/textViewToFreq"
@@ -592,13 +592,13 @@
                     android:gravity="center"
                     android:text="Freq"
                     android:textColor="@android:color/white"
-                    android:textSize="8sp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.34"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.08" />
+                    app:layout_constraintVertical_bias="0.05" />
 
                 <TextView
                     android:id="@+id/textViewToNoise"
@@ -607,13 +607,13 @@
                     android:gravity="center"
                     android:text="Noise"
                     android:textColor="@android:color/white"
-                    android:textSize="8sp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.08" />
+                    app:layout_constraintVertical_bias="0.05" />
 
                 <TextView
                     android:id="@+id/textViewToEffects"
@@ -622,13 +622,13 @@
                     android:gravity="center"
                     android:text="Effects"
                     android:textColor="@android:color/white"
-                    android:textSize="8sp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.66"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.08" />
+                    app:layout_constraintVertical_bias="0.05" />
 
                 <TextView
                     android:id="@+id/textViewToLive"
@@ -637,13 +637,13 @@
                     android:gravity="center"
                     android:text="XY"
                     android:textColor="@android:color/white"
-                    android:textSize="8sp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.82"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.08" />
+                    app:layout_constraintVertical_bias="0.05" />
 
                 <TextView
                     android:id="@+id/textViewToPlay"
@@ -652,13 +652,13 @@
                     android:gravity="center"
                     android:text="Play"
                     android:textColor="@android:color/white"
-                    android:textSize="8sp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.98"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.08" />
+                    app:layout_constraintVertical_bias="0.05" />
             </android.support.constraint.ConstraintLayout>
 
             <android.support.constraint.ConstraintLayout
@@ -693,7 +693,7 @@
                 android:gravity="center"
                 android:text="Retrig"
                 android:textColor="@android:color/white"
-                android:textSize="8sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.609"
@@ -708,7 +708,7 @@
                 android:gravity="center"
                 android:text="Innit"
                 android:textColor="@android:color/white"
-                android:textSize="8sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.86"
@@ -723,7 +723,7 @@
                 android:gravity="center"
                 android:text="Random"
                 android:textColor="@android:color/white"
-                android:textSize="8sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.97"
@@ -763,7 +763,7 @@
                 android:gravity="center"
                 android:text="Rate Range"
                 android:textColor="@android:color/white"
-                android:textSize="8sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.74"
@@ -2374,7 +2374,7 @@
                     android:gravity="center"
                     android:text="Div"
                     android:textColor="@android:color/white"
-                    android:textSize="8sp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.003"
@@ -2389,7 +2389,7 @@
                     android:gravity="center"
                     android:text="Retrig"
                     android:textColor="@android:color/white"
-                    android:textSize="8sp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.003"
@@ -2404,7 +2404,7 @@
                     android:gravity="center"
                     android:text="Sync"
                     android:textColor="@android:color/white"
-                    android:textSize="8sp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.003"
@@ -2419,7 +2419,7 @@
                     android:gravity="center"
                     android:text="Rate"
                     android:textColor="@android:color/white"
-                    android:textSize="8sp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.003"
@@ -2434,7 +2434,7 @@
                     android:gravity="center"
                     android:text="Mod"
                     android:textColor="@android:color/white"
-                    android:textSize="8sp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.003"
@@ -2449,7 +2449,7 @@
                     android:gravity="center"
                     android:text="Mod"
                     android:textColor="@android:color/white"
-                    android:textSize="8sp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.003"
@@ -2464,7 +2464,7 @@
                     android:gravity="center"
                     android:text="Harmonics Section"
                     android:textColor="@android:color/white"
-                    android:textSize="8sp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -2479,7 +2479,7 @@
                     android:gravity="center"
                     android:text="V 1-6"
                     android:textColor="@android:color/white"
-                    android:textSize="8sp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -2494,7 +2494,7 @@
                     android:gravity="center"
                     android:text="Retrig"
                     android:textColor="@android:color/white"
-                    android:textSize="8sp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.003"
@@ -2509,7 +2509,7 @@
                     android:gravity="center"
                     android:text="Sync"
                     android:textColor="@android:color/white"
-                    android:textSize="8sp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.003"
@@ -2524,7 +2524,7 @@
                     android:gravity="center"
                     android:text="Rate"
                     android:textColor="@android:color/white"
-                    android:textSize="8sp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.003"
@@ -2539,7 +2539,7 @@
                     android:gravity="center"
                     android:text="Div"
                     android:textColor="@android:color/white"
-                    android:textSize="8sp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.003"
@@ -2554,7 +2554,7 @@
                     android:gravity="center"
                     android:text="V 7-12"
                     android:textColor="@android:color/white"
-                    android:textSize="8sp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.003"

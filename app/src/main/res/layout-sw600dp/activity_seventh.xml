@@ -131,7 +131,7 @@
             android:gravity="center"
             android:text="Env On"
             android:textColor="@android:color/white"
-            android:textSize="8sp"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.61"
@@ -173,7 +173,7 @@
             android:gravity="center"
             android:text="Time"
             android:textColor="@android:color/white"
-            android:textSize="8sp"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -260,7 +260,7 @@
             android:gravity="center"
             android:text="Glide"
             android:textColor="@android:color/white"
-            android:textSize="8sp"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.85"
@@ -270,12 +270,12 @@
 
         <TextView
             android:id="@+id/textViewEffectsPowerAll3"
-            android:layout_width="50dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="FX Power"
             android:textColor="@android:color/white"
-            android:textSize="8sp"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.52"
@@ -359,13 +359,13 @@
                 android:gravity="center"
                 android:text="Volume Envelope"
                 android:textColor="@android:color/white"
-                android:textSize="8sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.06" />
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/textViewVolEnvAttack"
@@ -374,7 +374,7 @@
                 android:gravity="center"
                 android:text="Attack"
                 android:textColor="@android:color/white"
-                android:textSize="8sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -389,7 +389,7 @@
                 android:gravity="center"
                 android:text="Decay"
                 android:textColor="@android:color/white"
-                android:textSize="8sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.333"
@@ -404,7 +404,7 @@
                 android:gravity="center"
                 android:text="Sustain"
                 android:textColor="@android:color/white"
-                android:textSize="8sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.666"
@@ -419,7 +419,7 @@
                 android:gravity="center"
                 android:text="Release"
                 android:textColor="@android:color/white"
-                android:textSize="8sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1"
@@ -579,7 +579,7 @@
             android:gravity="center"
             android:text="Octave"
             android:textColor="@android:color/white"
-            android:textSize="8sp"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.76"
@@ -594,7 +594,7 @@
             android:gravity="center"
             android:text="Bend Range"
             android:textColor="@android:color/white"
-            android:textSize="8sp"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.18"
@@ -609,7 +609,7 @@
             android:gravity="center"
             android:text="Source"
             android:textColor="@android:color/white"
-            android:textSize="8sp"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.998"
@@ -624,7 +624,7 @@
             android:gravity="center"
             android:text="Pitch Bend"
             android:textColor="@android:color/white"
-            android:textSize="8sp"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.01"
@@ -639,7 +639,7 @@
             android:gravity="center"
             android:text="Play Section"
             android:textColor="@android:color/white"
-            android:textSize="8sp"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -852,13 +852,13 @@
                 android:gravity="center"
                 android:text="Harm"
                 android:textColor="@android:color/white"
-                android:textSize="8sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.18"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.08" />
+                app:layout_constraintVertical_bias="0.05" />
 
             <TextView
                 android:id="@+id/textViewToMain"
@@ -867,13 +867,13 @@
                 android:gravity="center"
                 android:text="Main"
                 android:textColor="@android:color/white"
-                android:textSize="8sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.02"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.08" />
+                app:layout_constraintVertical_bias="0.05" />
 
             <TextView
                 android:id="@+id/textViewToFreq"
@@ -882,13 +882,13 @@
                 android:gravity="center"
                 android:text="Freq"
                 android:textColor="@android:color/white"
-                android:textSize="8sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.34"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.08" />
+                app:layout_constraintVertical_bias="0.05" />
 
             <TextView
                 android:id="@+id/textViewToNoise"
@@ -897,13 +897,13 @@
                 android:gravity="center"
                 android:text="Noise"
                 android:textColor="@android:color/white"
-                android:textSize="8sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.08" />
+                app:layout_constraintVertical_bias="0.05" />
 
             <TextView
                 android:id="@+id/textViewToEffects"
@@ -912,13 +912,13 @@
                 android:gravity="center"
                 android:text="Effects"
                 android:textColor="@android:color/white"
-                android:textSize="8sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.66"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.08" />
+                app:layout_constraintVertical_bias="0.05" />
 
             <TextView
                 android:id="@+id/textViewToLive"
@@ -927,13 +927,13 @@
                 android:gravity="center"
                 android:text="XY"
                 android:textColor="@android:color/white"
-                android:textSize="8sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.82"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.08" />
+                app:layout_constraintVertical_bias="0.05" />
 
             <TextView
                 android:id="@+id/textViewToPlay"
@@ -942,13 +942,13 @@
                 android:gravity="center"
                 android:text="Play"
                 android:textColor="@android:color/white"
-                android:textSize="8sp"
+                android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.98"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.08" />
+                app:layout_constraintVertical_bias="0.05" />
         </android.support.constraint.ConstraintLayout>
 
         <android.support.constraint.ConstraintLayout
