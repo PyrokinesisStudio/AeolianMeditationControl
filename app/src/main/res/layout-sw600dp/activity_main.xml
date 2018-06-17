@@ -1151,7 +1151,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.73"
-                app:srcCompat="@drawable/oslogo" />
+                app:srcCompat="@drawable/aeolian860" />
 
             <ImageView
                 android:id="@+id/imageViewOsLogo"
