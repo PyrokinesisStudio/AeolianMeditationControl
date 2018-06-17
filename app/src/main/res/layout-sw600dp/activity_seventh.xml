@@ -332,7 +332,7 @@
         <android.support.constraint.ConstraintLayout
             android:id="@+id/layoutEnv"
             android:layout_width="500dp"
-            android:layout_height="45dp"
+            android:layout_height="50dp"
             android:background="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -344,7 +344,7 @@
             <ImageView
                 android:id="@+id/imageViewKeysBack3"
                 android:layout_width="497dp"
-                android:layout_height="42dp"
+                android:layout_height="47dp"
                 android:background="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -365,7 +365,7 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.01" />
 
             <TextView
                 android:id="@+id/textViewVolEnvAttack"

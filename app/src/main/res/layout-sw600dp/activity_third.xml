@@ -290,7 +290,7 @@
             <Spinner
                 android:id="@+id/spinnerNoiseModRateRangeVol"
                 android:layout_width="75dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:background="@android:color/black"
                 android:entries="@array/spinnerRateRange"
                 android:popupBackground="@android:color/black"
@@ -299,13 +299,13 @@
                 app:layout_constraintHorizontal_bias="0.761"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.9"
+                app:layout_constraintVertical_bias="0.915"
                 app:selection="@{obsIntNoiseRateRangeVol.value}" />
 
             <Spinner
                 android:id="@+id/spinnerNoiseModRateRangeCut"
                 android:layout_width="75dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:background="@android:color/black"
                 android:entries="@array/spinnerRateRange"
                 android:popupBackground="@android:color/black"
@@ -314,7 +314,7 @@
                 app:layout_constraintHorizontal_bias="0.761"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.95"
+                app:layout_constraintVertical_bias="0.98"
                 app:selection="@{obsIntNoiseRateRangeCut.value}" />
 
             <android.support.constraint.ConstraintLayout
@@ -706,32 +706,32 @@
             <TextView
                 android:id="@+id/textViewRangeCut"
                 android:layout_width="30dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:gravity="center"
                 android:text="Cut"
                 android:textColor="@android:color/white"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.67"
+                app:layout_constraintHorizontal_bias="0.69"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.94" />
+                app:layout_constraintVertical_bias="0.98" />
 
             <TextView
                 android:id="@+id/textViewRangeVol"
                 android:layout_width="30dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:gravity="center"
                 android:text="Vol"
                 android:textColor="@android:color/white"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.67"
+                app:layout_constraintHorizontal_bias="0.69"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.89" />
+                app:layout_constraintVertical_bias="0.915" />
 
             <TextView
                 android:id="@+id/textViewInnit"
@@ -797,7 +797,7 @@
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.761"
+                app:layout_constraintHorizontal_bias="0.745"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.86" />
@@ -1197,7 +1197,7 @@
                     app:layout_constraintHorizontal_bias="0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0007" />
+                    app:layout_constraintVertical_bias="0.001" />
 
                 <TextView
                     android:id="@+id/textViewNoiseVol"
@@ -1605,7 +1605,7 @@
                 <Spinner
                     android:id="@+id/spinnerNoiseVolModDiv2"
                     android:layout_width="200dp"
-                    android:layout_height="26dp"
+                    android:layout_height="30dp"
                     android:background="@android:color/black"
                     android:entries="@array/spinnerDiv"
                     android:popupBackground="@android:color/black"
@@ -1620,7 +1620,7 @@
                 <Spinner
                     android:id="@+id/spinnerNoiseCutModDiv4"
                     android:layout_width="200dp"
-                    android:layout_height="26dp"
+                    android:layout_height="30dp"
                     android:background="@android:color/black"
                     android:entries="@array/spinnerDiv"
                     android:popupBackground="@android:color/black"
@@ -1635,7 +1635,7 @@
                 <Spinner
                     android:id="@+id/spinnerNoiseVolModDiv3"
                     android:layout_width="200dp"
-                    android:layout_height="26dp"
+                    android:layout_height="30dp"
                     android:background="@android:color/black"
                     android:entries="@array/spinnerDiv"
                     android:popupBackground="@android:color/black"
@@ -1650,7 +1650,7 @@
                 <Spinner
                     android:id="@+id/spinnerNoiseVolModDiv4"
                     android:layout_width="200dp"
-                    android:layout_height="26dp"
+                    android:layout_height="30dp"
                     android:background="@android:color/black"
                     android:entries="@array/spinnerDiv"
                     android:popupBackground="@android:color/black"
@@ -1665,7 +1665,7 @@
                 <Spinner
                     android:id="@+id/spinnerNoiseCutModDiv2"
                     android:layout_width="200dp"
-                    android:layout_height="26dp"
+                    android:layout_height="30dp"
                     android:background="@android:color/black"
                     android:entries="@array/spinnerDiv"
                     android:popupBackground="@android:color/black"
@@ -1680,7 +1680,7 @@
                 <Spinner
                     android:id="@+id/spinnerNoiseCutModDiv3"
                     android:layout_width="200dp"
-                    android:layout_height="26dp"
+                    android:layout_height="30dp"
                     android:background="@android:color/black"
                     android:entries="@array/spinnerDiv"
                     android:popupBackground="@android:color/black"
@@ -1695,7 +1695,7 @@
                 <Spinner
                     android:id="@+id/spinnerNoiseCutModDiv1"
                     android:layout_width="200dp"
-                    android:layout_height="26dp"
+                    android:layout_height="30dp"
                     android:background="@android:color/black"
                     android:entries="@array/spinnerDiv"
                     android:popupBackground="@android:color/black"
@@ -1710,7 +1710,7 @@
                 <Spinner
                     android:id="@+id/spinnerNoiseVolModDiv1"
                     android:layout_width="200dp"
-                    android:layout_height="26dp"
+                    android:layout_height="30dp"
                     android:background="@android:color/black"
                     android:entries="@array/spinnerDiv"
                     android:popupBackground="@android:color/black"

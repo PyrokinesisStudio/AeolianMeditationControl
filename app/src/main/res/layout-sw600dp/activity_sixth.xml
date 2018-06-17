@@ -497,7 +497,7 @@
             <TextView
                 android:id="@+id/textViewX2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:gravity="center"
                 android:text="X"
                 android:textColor="@android:color/white"
@@ -507,12 +507,12 @@
                 app:layout_constraintHorizontal_bias="0.56"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.02" />
+                app:layout_constraintVertical_bias="0.0085" />
 
             <TextView
                 android:id="@+id/textViewX1"
                 android:layout_width="15dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:gravity="center"
                 android:text="X"
                 android:textColor="@android:color/white"
@@ -522,12 +522,12 @@
                 app:layout_constraintHorizontal_bias="0.036"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.02" />
+                app:layout_constraintVertical_bias="0.0085" />
 
             <TextView
                 android:id="@+id/textViewY1"
                 android:layout_width="15dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:gravity="center"
                 android:text="Y"
                 android:textColor="@android:color/white"
@@ -537,12 +537,12 @@
                 app:layout_constraintHorizontal_bias="0.27"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.02" />
+                app:layout_constraintVertical_bias="0.0085" />
 
             <TextView
                 android:id="@+id/textViewY2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:gravity="center"
                 android:text="Y"
                 android:textColor="@android:color/white"
@@ -552,12 +552,12 @@
                 app:layout_constraintHorizontal_bias="0.81"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.02" />
+                app:layout_constraintVertical_bias="0.0085" />
 
             <Spinner
                 android:id="@+id/spinnerY1"
                 android:layout_width="125dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:background="@android:color/black"
                 android:entries="@array/spinnerLiveMode"
                 android:popupBackground="@android:color/black"
@@ -571,7 +571,7 @@
             <Spinner
                 android:id="@+id/spinnerY2"
                 android:layout_width="125dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:background="@android:color/black"
                 android:entries="@array/spinnerLiveMode"
                 android:popupBackground="@android:color/black"
@@ -585,7 +585,7 @@
             <Spinner
                 android:id="@+id/spinnerX1"
                 android:layout_width="125dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:background="@android:color/black"
                 android:entries="@array/spinnerLiveMode"
                 android:popupBackground="@android:color/black"
@@ -599,7 +599,7 @@
             <Spinner
                 android:id="@+id/spinnerX2"
                 android:layout_width="125dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:background="@android:color/black"
                 android:entries="@array/spinnerLiveMode"
                 android:popupBackground="@android:color/black"

@@ -767,7 +767,7 @@
                     <Spinner
                         android:id="@+id/spinnerDecimatorDiv"
                         android:layout_width="75dp"
-                        android:layout_height="20dp"
+                        android:layout_height="wrap_content"
                         android:background="@android:color/black"
                         android:entries="@array/spinnerNotes"
                         android:popupBackground="@android:color/black"
@@ -1124,7 +1124,7 @@
                     <Spinner
                         android:id="@+id/spinnerLpFilterDiv"
                         android:layout_width="75dp"
-                        android:layout_height="20dp"
+                        android:layout_height="wrap_content"
                         android:background="@android:color/black"
                         android:entries="@array/spinnerNotes"
                         android:popupBackground="@android:color/black"
@@ -1696,7 +1696,7 @@
                     <Spinner
                         android:id="@+id/spinnerDelayDiv"
                         android:layout_width="75dp"
-                        android:layout_height="20dp"
+                        android:layout_height="wrap_content"
                         android:background="@android:color/black"
                         android:entries="@array/spinnerNotes"
                         android:popupBackground="@android:color/black"
@@ -1711,7 +1711,7 @@
                     <Spinner
                         android:id="@+id/spinnerDelayDivR"
                         android:layout_width="75dp"
-                        android:layout_height="20dp"
+                        android:layout_height="wrap_content"
                         android:background="@android:color/black"
                         android:entries="@array/spinnerNotes"
                         android:popupBackground="@android:color/black"
@@ -2499,7 +2499,7 @@
                     <Spinner
                         android:id="@+id/spinnerReverbSize"
                         android:layout_width="75dp"
-                        android:layout_height="20dp"
+                        android:layout_height="wrap_content"
                         android:background="@android:color/black"
                         android:entries="@array/spinnerReverbSize"
                         android:popupBackground="@android:color/black"

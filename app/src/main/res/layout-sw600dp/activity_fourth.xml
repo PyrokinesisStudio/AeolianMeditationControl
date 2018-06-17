@@ -766,7 +766,7 @@
                     <Spinner
                         android:id="@+id/spinnerDecimatorDiv"
                         android:layout_width="75dp"
-                        android:layout_height="20dp"
+                        android:layout_height="30dp"
                         android:background="@android:color/black"
                         android:entries="@array/spinnerNotes"
                         android:popupBackground="@android:color/black"
@@ -781,7 +781,7 @@
                     <android.support.constraint.ConstraintLayout
                         android:id="@+id/layouttoggleButtonDecimatorSync"
                         android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_height="20dp"
                         android:background="@android:color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -793,7 +793,7 @@
                         <ToggleButton
                             android:id="@+id/toggleButtonDecimatorSync"
                             android:layout_width="27dp"
-                            android:layout_height="27dp"
+                            android:layout_height="17dp"
                             android:background="#ff4F75A1"
                             android:checked="@{obsIntDecimateSync.value}"
                             android:textOff=" "
@@ -822,7 +822,7 @@
                     <android.support.constraint.ConstraintLayout
                         android:id="@+id/layouttoggleButtonDecimatorRetrig"
                         android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_height="20dp"
                         android:background="@android:color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -834,7 +834,7 @@
                         <ToggleButton
                             android:id="@+id/toggleButtonDecimatorRetrig"
                             android:layout_width="27dp"
-                            android:layout_height="27dp"
+                            android:layout_height="17dp"
                             android:background="#ff4F75A1"
                             android:checked="@{obsIntDecimateRetrig.value}"
                             android:textOff=" "
@@ -863,7 +863,7 @@
                     <android.support.constraint.ConstraintLayout
                         android:id="@+id/layouttoggleButtonDecimator8bit"
                         android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_height="20dp"
                         android:background="@android:color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -875,7 +875,7 @@
                         <ToggleButton
                             android:id="@+id/toggleButtonDecimator8bit"
                             android:layout_width="27dp"
-                            android:layout_height="27dp"
+                            android:layout_height="17dp"
                             android:background="#ff4F75A1"
                             android:checked="@{obsIntDecimate8bit.value}"
                             android:textOff=" "
@@ -919,19 +919,19 @@
                     <android.support.constraint.ConstraintLayout
                         android:id="@+id/layouttoggleButtonDecimatorPower"
                         android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_height="20dp"
                         android:background="@android:color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.99"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.77">
+                        app:layout_constraintVertical_bias="0.75">
 
                         <ToggleButton
                             android:id="@+id/toggleButtonDecimatorPower"
                             android:layout_width="27dp"
-                            android:layout_height="27dp"
+                            android:layout_height="17dp"
                             android:background="#ff4F75A1"
                             android:checked="@{obsIntDecimatePower.value}"
                             android:textOff=" "
@@ -1111,7 +1111,7 @@
                     <ImageView
                         android:id="@+id/imageViewFilterBack"
                         android:layout_width="847dp"
-                        android:layout_height="62sp"
+                        android:layout_height="62dp"
                         android:background="@android:color/black"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1123,7 +1123,7 @@
                     <Spinner
                         android:id="@+id/spinnerLpFilterDiv"
                         android:layout_width="100dp"
-                        android:layout_height="20dp"
+                        android:layout_height="30dp"
                         android:background="@android:color/black"
                         android:entries="@array/spinnerNotes"
                         android:popupBackground="@android:color/black"
@@ -1138,19 +1138,19 @@
                     <android.support.constraint.ConstraintLayout
                         android:id="@+id/layouttoggleButtonLpFilterSync"
                         android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_height="20dp"
                         android:background="@android:color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.636"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.9">
+                        app:layout_constraintVertical_bias="0.85">
 
                         <ToggleButton
                             android:id="@+id/toggleButtonLpFilterSync"
                             android:layout_width="27dp"
-                            android:layout_height="27dp"
+                            android:layout_height="17dp"
                             android:background="#ff4F75A1"
                             android:checked="@{obsIntFilterSync.value}"
                             android:textOff=" "
@@ -1302,19 +1302,19 @@
                     <android.support.constraint.ConstraintLayout
                         android:id="@+id/layouttoggleButtonLpFilterRetrig"
                         android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_height="20dp"
                         android:background="@android:color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.842"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.9">
+                        app:layout_constraintVertical_bias="0.85">
 
                         <ToggleButton
                             android:id="@+id/toggleButtonLpFilterRetrig"
                             android:layout_width="27dp"
-                            android:layout_height="27dp"
+                            android:layout_height="17dp"
                             android:background="#ff4F75A1"
                             android:checked="@{obsIntFilterRetrig.value}"
                             android:textOff=" "
@@ -1354,19 +1354,19 @@
                     <android.support.constraint.ConstraintLayout
                         android:id="@+id/layouttoggleButtonLpFilterInvR"
                         android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_height="20dp"
                         android:background="@android:color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.91"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.9">
+                        app:layout_constraintVertical_bias="0.85">
 
                         <ToggleButton
                             android:id="@+id/toggleButtonLpFilterInvR"
                             android:layout_width="27dp"
-                            android:layout_height="27dp"
+                            android:layout_height="17dp"
                             android:background="#ff4F75A1"
                             android:checked="@{obsIntFilterInv.value}"
                             android:textOff=" "
@@ -1406,19 +1406,19 @@
                     <android.support.constraint.ConstraintLayout
                         android:id="@+id/layouttoggleButtonLpFilterPower"
                         android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_height="20dp"
                         android:background="@android:color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.99"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.9">
+                        app:layout_constraintVertical_bias="0.85">
 
                         <ToggleButton
                             android:id="@+id/toggleButtonLpFilterPower"
                             android:layout_width="27dp"
-                            android:layout_height="27dp"
+                            android:layout_height="17dp"
                             android:background="#ff4F75A1"
                             android:checked="@{obsIntFilterPower.value}"
                             android:textOff=" "
@@ -1669,7 +1669,7 @@
                     <android.support.constraint.ConstraintLayout
                         android:id="@+id/layouttoggleButtonDelaySync"
                         android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_height="20dp"
                         android:background="@android:color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1681,7 +1681,7 @@
                         <ToggleButton
                             android:id="@+id/toggleButtonDelaySync"
                             android:layout_width="27dp"
-                            android:layout_height="27dp"
+                            android:layout_height="17dp"
                             android:background="#ff4F75A1"
                             android:checked="@{obsIntDelaySync.value}"
                             android:textOff=" "
@@ -1695,7 +1695,7 @@
                     <Spinner
                         android:id="@+id/spinnerDelayDiv"
                         android:layout_width="100dp"
-                        android:layout_height="20dp"
+                        android:layout_height="30dp"
                         android:background="@android:color/black"
                         android:entries="@array/spinnerNotes"
                         android:popupBackground="@android:color/black"
@@ -1710,7 +1710,7 @@
                     <Spinner
                         android:id="@+id/spinnerDelayDivR"
                         android:layout_width="100dp"
-                        android:layout_height="20dp"
+                        android:layout_height="30dp"
                         android:background="@android:color/black"
                         android:entries="@array/spinnerNotes"
                         android:popupBackground="@android:color/black"
@@ -1755,7 +1755,7 @@
                     <android.support.constraint.ConstraintLayout
                         android:id="@+id/layouttoggleButtonDelayPower"
                         android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_height="20dp"
                         android:background="@android:color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1767,7 +1767,7 @@
                         <ToggleButton
                             android:id="@+id/toggleButtonDelayPower"
                             android:layout_width="27dp"
-                            android:layout_height="27dp"
+                            android:layout_height="17dp"
                             android:background="#ff4F75A1"
                             android:checked="@{obsIntDelayPower.value}"
                             android:textOff=" "
@@ -1796,7 +1796,7 @@
                     <android.support.constraint.ConstraintLayout
                         android:id="@+id/layouttoggleButtonDelayCross"
                         android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_height="20dp"
                         android:background="@android:color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1808,7 +1808,7 @@
                         <ToggleButton
                             android:id="@+id/toggleButtonDelayCross"
                             android:layout_width="27dp"
-                            android:layout_height="27dp"
+                            android:layout_height="17dp"
                             android:background="#ff4F75A1"
                             android:checked="@{obsIntDelayCross.value}"
                             android:textOff=" "
@@ -2173,7 +2173,7 @@
                     <android.support.constraint.ConstraintLayout
                         android:id="@+id/layouttoggleButtonChorusPower"
                         android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_height="20dp"
                         android:background="@android:color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -2185,7 +2185,7 @@
                         <ToggleButton
                             android:id="@+id/toggleButtonChorusPower"
                             android:layout_width="27dp"
-                            android:layout_height="27dp"
+                            android:layout_height="17dp"
                             android:background="#ff4F75A1"
                             android:checked="@{obsIntChorusPower.value}"
                             android:textOff=" "
@@ -2214,7 +2214,7 @@
                     <android.support.constraint.ConstraintLayout
                         android:id="@+id/layouttoggleButtonChorusCross"
                         android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_height="20dp"
                         android:background="@android:color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -2226,7 +2226,7 @@
                         <ToggleButton
                             android:id="@+id/toggleButtonChorusCross"
                             android:layout_width="27dp"
-                            android:layout_height="27dp"
+                            android:layout_height="17dp"
                             android:background="#ff4F75A1"
                             android:checked="@{obsIntChorusCross.value}"
                             android:textOff=" "
@@ -2496,7 +2496,7 @@
                     <Spinner
                         android:id="@+id/spinnerReverbSize"
                         android:layout_width="100dp"
-                        android:layout_height="20dp"
+                        android:layout_height="30dp"
                         android:background="@android:color/black"
                         android:entries="@array/spinnerReverbSize"
                         android:popupBackground="@android:color/black"
@@ -2631,7 +2631,7 @@
                     <android.support.constraint.ConstraintLayout
                         android:id="@+id/layouttoggleButtonReverbPower"
                         android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_height="20dp"
                         android:background="@android:color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -2643,7 +2643,7 @@
                         <ToggleButton
                             android:id="@+id/toggleButtonReverbPower"
                             android:layout_width="27dp"
-                            android:layout_height="27dp"
+                            android:layout_height="17dp"
                             android:background="#ff4F75A1"
                             android:checked="@{obsIntReverbPower.value}"
                             android:textOff=" "
@@ -2836,7 +2836,7 @@
                         android:gravity="center"
                         android:text="Reverb"
                         android:textColor="@android:color/white"
-                        android:textSize="8sp"
+                        android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="1.0"

@@ -136,6 +136,7 @@
                 android:layout_width="897dp"
                 android:layout_height="497dp"
                 android:background="@android:color/black"
+                android:focusableInTouchMode="true"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -199,7 +200,7 @@
             <Spinner
                 android:id="@+id/spinnerFmRateRange"
                 android:layout_width="100dp"
-                android:layout_height="20dp"
+                android:layout_height="30dp"
                 android:background="@android:color/black"
                 android:entries="@array/spinnerRateRange"
                 android:popupBackground="@android:color/black"
@@ -592,7 +593,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintVertical_bias="0.01" />
 
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/fmModLayout"
@@ -604,7 +605,7 @@
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.95">
+                    app:layout_constraintVertical_bias="0.91">
 
                     <ImageView
                         android:id="@+id/imageViewHarmonicsBack4"
@@ -680,7 +681,7 @@
                     <Spinner
                         android:id="@+id/spinnerFmDepthModDiv"
                         android:layout_width="100dp"
-                        android:layout_height="20dp"
+                        android:layout_height="30dp"
                         android:background="@android:color/black"
                         android:entries="@array/spinnerDiv"
                         android:popupBackground="@android:color/black"
@@ -695,7 +696,7 @@
                     <Spinner
                         android:id="@+id/spinnerFmFreqModDiv"
                         android:layout_width="100dp"
-                        android:layout_height="20dp"
+                        android:layout_height="30dp"
                         android:background="@android:color/black"
                         android:entries="@array/spinnerDiv"
                         android:popupBackground="@android:color/black"
@@ -923,7 +924,7 @@
                         android:gravity="center"
                         android:text="Depth"
                         android:textColor="@android:color/white"
-                        android:textSize="8sp"
+                        android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.413"
@@ -1083,19 +1084,19 @@
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/fmSourceLayout"
                     android:layout_width="320dp"
-                    android:layout_height="200dp"
+                    android:layout_height="150dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.92"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.1">
+                    app:layout_constraintVertical_bias="0.15">
 
                     <ImageView
                         android:id="@+id/imageViewFmBack"
                         android:layout_width="317dp"
-                        android:layout_height="197dp"
+                        android:layout_height="147dp"
                         android:background="@android:color/black"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1116,7 +1117,7 @@
                         app:layout_constraintHorizontal_bias="0.98"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.971"
+                        app:layout_constraintVertical_bias="0.85"
                         app:selection="@{obsIntFmMidiOct.value}" />
 
                     <Spinner
@@ -1131,7 +1132,7 @@
                         app:layout_constraintHorizontal_bias="0.02"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.971"
+                        app:layout_constraintVertical_bias="0.85"
                         app:selection="@{obsIntFmSelect.value}" />
 
                     <Spinner
@@ -1146,7 +1147,7 @@
                         app:layout_constraintHorizontal_bias="0.02"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.385"
+                        app:layout_constraintVertical_bias="0.357"
                         app:selection="@{obsIntFmNote.value}" />
 
                     <TextView
@@ -1231,7 +1232,7 @@
                         app:layout_constraintHorizontal_bias="0.98"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.385" />
+                        app:layout_constraintVertical_bias="0.357" />
 
                     <TextView
                         android:id="@+id/textViewFmSource"
@@ -1253,19 +1254,19 @@
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/freqSourceLayout"
                     android:layout_width="320dp"
-                    android:layout_height="200dp"
+                    android:layout_height="150dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.19"
+                    app:layout_constraintHorizontal_bias="0.1"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.1">
+                    app:layout_constraintVertical_bias="0.15">
 
                     <ImageView
                         android:id="@+id/imageViewSourceBack"
                         android:layout_width="317dp"
-                        android:layout_height="197dp"
+                        android:layout_height="147dp"
                         android:background="@android:color/black"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1284,7 +1285,7 @@
                         app:layout_constraintHorizontal_bias="0.98"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.971"
+                        app:layout_constraintVertical_bias="0.85"
                         app:selection="@{obsIntSourceMidiOct.value}" />
 
                     <Spinner
@@ -1299,7 +1300,7 @@
                         app:layout_constraintHorizontal_bias="0.02"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.971"
+                        app:layout_constraintVertical_bias="0.85"
                         app:selection="@{obsIntSourceSelect.value}" />
 
                     <Spinner
