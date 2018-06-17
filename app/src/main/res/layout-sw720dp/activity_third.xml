@@ -1,0 +1,2666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+    <variable
+        name="obsIntNoiseVol1"
+        type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseVol1" />
+        <variable
+            name="obsIntNoiseVol2"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseVol2" />
+        <variable
+            name="obsIntNoiseVol3"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseVol3" />
+        <variable
+            name="obsIntNoiseVol4"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseVol4" />
+        <variable
+            name="obsIntNoiseVolMod1"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseVolMod1" />
+        <variable
+            name="obsIntNoiseVolMod2"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseVolMod2" />
+        <variable
+            name="obsIntNoiseVolMod3"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseVolMod3" />
+        <variable
+            name="obsIntNoiseVolMod4"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseVolMod4" />
+        <variable
+            name="obsIntNoiseVolRate1"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseVolRate1" />
+        <variable
+            name="obsIntNoiseVolRate2"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseVolRate2" />
+        <variable
+            name="obsIntNoiseVolRate3"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseVolRate3" />
+        <variable
+            name="obsIntNoiseVolRate4"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseVolRate4" />
+        <variable
+            name="obsIntNoiseVolDiv1"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseVolDiv1" />
+        <variable
+            name="obsIntNoiseVolDiv2"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseVolDiv2" />
+        <variable
+            name="obsIntNoiseVolDiv3"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseVolDiv3" />
+        <variable
+            name="obsIntNoiseVolDiv4"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseVolDiv4" />
+        <variable
+            name="obsIntNoiseVolSync1"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseVolSync1" />
+        <variable
+            name="obsIntNoiseVolSync2"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseVolSync2" />
+        <variable
+            name="obsIntNoiseVolSync3"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseVolSync3" />
+        <variable
+            name="obsIntNoiseVolSync4"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseVolSync4" />
+        <variable
+            name="obsIntNoiseVolRetrig1"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseVolRetrig1" />
+        <variable
+            name="obsIntNoiseVolRetrig2"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseVolRetrig2" />
+        <variable
+            name="obsIntNoiseVolRetrig3"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseVolRetrig3" />
+        <variable
+            name="obsIntNoiseVolRetrig4"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseVolRetrig4" />
+        <variable
+            name="obsIntNoiseCut1"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseCut1" />
+        <variable
+            name="obsIntNoiseCut2"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseCut2" />
+        <variable
+            name="obsIntNoiseCut3"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseCut3" />
+        <variable
+            name="obsIntNoiseCut4"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseCut4" />
+        <variable
+            name="obsIntNoiseRes1"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseRes1" />
+        <variable
+            name="obsIntNoiseRes2"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseRes2" />
+        <variable
+            name="obsIntNoiseRes3"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseRes3" />
+        <variable
+            name="obsIntNoiseRes4"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseRes4" />
+        <variable
+            name="obsIntNoiseCutMod1"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseCutMod1" />
+        <variable
+            name="obsIntNoiseCutMod2"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseCutMod2" />
+        <variable
+            name="obsIntNoiseCutMod3"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseCutMod3" />
+        <variable
+            name="obsIntNoiseCutMod4"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseCutMod4" />
+        <variable
+            name="obsIntNoiseCutRate1"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseCutRate1" />
+        <variable
+            name="obsIntNoiseCutRate2"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseCutRate2" />
+        <variable
+            name="obsIntNoiseCutRate3"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseCutRate3" />
+        <variable
+            name="obsIntNoiseCutRate4"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseCutRate4" />
+        <variable
+            name="obsIntNoiseCutDiv1"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseCutDiv1" />
+        <variable
+            name="obsIntNoiseCutDiv2"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseCutDiv2" />
+        <variable
+            name="obsIntNoiseCutDiv3"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseCutDiv3" />
+        <variable
+            name="obsIntNoiseCutDiv4"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseCutDiv4" />
+        <variable
+            name="obsIntNoiseCutSync1"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseCutSync1" />
+        <variable
+            name="obsIntNoiseCutSync2"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseCutSync2" />
+        <variable
+            name="obsIntNoiseCutSync3"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseCutSync3" />
+        <variable
+            name="obsIntNoiseCutSync4"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseCutSync4" />
+        <variable
+            name="obsIntNoiseCutRetrig1"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseCutRetrig1" />
+        <variable
+            name="obsIntNoiseCutRetrig2"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseCutRetrig2" />
+        <variable
+            name="obsIntNoiseCutRetrig3"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseCutRetrig3" />
+        <variable
+            name="obsIntNoiseCutRetrig4"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseCutRetrig4" />
+        <variable
+            name="obsIntNoisePink"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoisePink" />
+        <variable
+            name="obsIntNoiseRateRangeVol"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseRateRangeVol" />
+        <variable
+            name="obsIntNoiseRateRangeCut"
+            type="p.purechords.aeolianmeditationadvancedcontroller.MainActivity.ObsIntNoiseRateRangeCut" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layoutNoisePageBackFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/metal"
+        tools:context=".ThirdActivity">
+
+        <ImageView
+            android:id="@+id/imageViewScrewUL4"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.01"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.02"
+            app:srcCompat="@drawable/screw2" />
+
+        <ImageView
+            android:id="@+id/imageViewScrewLL4"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.01"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.98"
+            app:srcCompat="@drawable/screw2" />
+
+        <ImageView
+            android:id="@+id/imageViewScrewUR4"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.99"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.02"
+            app:srcCompat="@drawable/screw2" />
+
+        <ImageView
+            android:id="@+id/imageViewScrewLR4"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.99"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.98"
+            app:srcCompat="@drawable/screw2" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/layoutNoiseBackground"
+            android:layout_width="1200dp"
+            android:layout_height="650dp"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageViewMainPageBack3"
+                android:layout_width="1197dp"
+                android:layout_height="647dp"
+                android:background="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layouttoggleButtonNoiselModSyncAll"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.53"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.963">
+
+                <ToggleButton
+                    android:id="@+id/toggleButtonNoiseSyncAll"
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:background="#ff4F75A1"
+                    android:textOff=" "
+                    android:textOn=" "
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textViewSyncAll"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Sync"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.53"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.86" />
+
+            <Spinner
+                android:id="@+id/spinnerNoiseModRateRangeVol"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:background="@android:color/black"
+                android:entries="@array/spinnerRateRange"
+                android:popupBackground="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.761"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.915"
+                app:selection="@{obsIntNoiseRateRangeVol.value}" />
+
+            <Spinner
+                android:id="@+id/spinnerNoiseModRateRangeCut"
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:background="@android:color/black"
+                android:entries="@array/spinnerRateRange"
+                android:popupBackground="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.761"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.98"
+                app:selection="@{obsIntNoiseRateRangeCut.value}" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutNavigate"
+                android:layout_width="500dp"
+                android:layout_height="100dp"
+                android:background="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.01"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.99">
+
+                <ImageView
+                    android:id="@+id/imageViewNavigateBack"
+                    android:layout_width="497dp"
+                    android:layout_height="97dp"
+                    android:background="@android:color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layoutToPlayPage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.98"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.6">
+
+                    <Button
+                        android:id="@+id/buttonToPlayPage"
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
+                        android:background="#ff4F75A1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layoutToHarmonicsPage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.18"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.6">
+
+                    <Button
+                        android:id="@+id/buttonToHarmonicsPage"
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
+                        android:background="#ff4F75A1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layoutToSourcePage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.34"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.6">
+
+                    <Button
+                        android:id="@+id/buttonToSourcePage"
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
+                        android:background="#ff4F75A1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.51"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layoutToNoisePage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.6">
+
+                    <Button
+                        android:id="@+id/buttonToNoisePage"
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
+                        android:background="#ff4F75A1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layoutToEffectsPage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.66"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.6">
+
+                    <Button
+                        android:id="@+id/buttonToEffectsPage"
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
+                        android:background="#ff4F75A1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layoutToMainPage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.02"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.6">
+
+                    <Button
+                        android:id="@+id/buttonToMainPage"
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
+                        android:background="#ff4F75A1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layoutToPerformPage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.82"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.6">
+
+                    <Button
+                        android:id="@+id/buttonToPerformPage"
+                        android:layout_width="47dp"
+                        android:layout_height="47dp"
+                        android:background="#ff4F75A1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/textViewToHarmonics"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Harm"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.18"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.05" />
+
+                <TextView
+                    android:id="@+id/textViewToMain"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Main"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.02"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.05" />
+
+                <TextView
+                    android:id="@+id/textViewToFreq"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Freq"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.34"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.05" />
+
+                <TextView
+                    android:id="@+id/textViewToNoise"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Noise"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.05" />
+
+                <TextView
+                    android:id="@+id/textViewToEffects"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Effects"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.66"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.05" />
+
+                <TextView
+                    android:id="@+id/textViewToLive"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="XY"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.82"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.05" />
+
+                <TextView
+                    android:id="@+id/textViewToPlay"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Play"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.98"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.05" />
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layouttoggleButtonNoiseModRetrig"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.963">
+
+                <ToggleButton
+                    android:id="@+id/toggleButtonNoiseModRetrig"
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:background="#ff4F75A1"
+                    android:textOff=" "
+                    android:textOn=" "
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textViewPink"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Pink"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.85"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.86" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layouttoggleButtonNoiseType"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.85"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.963">
+
+                <ToggleButton
+                    android:id="@+id/toggleButtonNoiseType"
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:background="#ff4F75A1"
+                    android:checked="@{obsIntNoisePink.value}"
+                    android:textOff=" "
+                    android:textOn=" "
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textViewRetrig"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Retrig"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.86" />
+
+            <TextView
+                android:id="@+id/textViewRangeCut"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="Cut"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.69"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.98" />
+
+            <TextView
+                android:id="@+id/textViewRangeVol"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="Vol"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.69"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.915" />
+
+            <TextView
+                android:id="@+id/textViewInnit"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Innit"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.92"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.86" />
+
+            <TextView
+                android:id="@+id/textViewRandom"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Random"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.99"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.86" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutNoiseInnit"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.92"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.963">
+
+                <Button
+                    android:id="@+id/buttonNoiseInnit"
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:background="#ff4F75A1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textViewRateRange"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Rate Range"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.745"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.86" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/layoutNoiseRandom"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.99"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.963">
+
+                <Button
+                    android:id="@+id/buttonNoiseRandom"
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:background="#ff4F75A1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/noiseLayout"
+                android:layout_width="1100dp"
+                android:layout_height="525dp"
+                android:background="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.100000024">
+
+                <ImageView
+                    android:id="@+id/imageViewNoiseBack"
+                    android:layout_width="1097dp"
+                    android:layout_height="522dp"
+                    android:background="@android:color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack19"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.095"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.044" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack21"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.095"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.13" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack20"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.095"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.215" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack40"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.398"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.044" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack41"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.398"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.13" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack42"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.398"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.215" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack43"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.7"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.044" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack44"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.7"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.13" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack45"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.7"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.215" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack46"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.044" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack47"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.13" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack48"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.215" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack49"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.095"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.515" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack50"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.095"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.605" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack51"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.095"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.69" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack52"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.095"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.78" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack53"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.402"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.515" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack54"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.402"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.605" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack55"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.402"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.69" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack56"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.402"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.78" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack57"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.703"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.515" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack58"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.703"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.605" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack59"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.703"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.69" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack60"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.703"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.78" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack61"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.515" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack62"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.605" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack63"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.69" />
+
+                <ImageView
+                    android:id="@+id/imageViewSldierBack64"
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/sliderback"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.78" />
+
+                <TextView
+                    android:id="@+id/textViewNoise"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Noise Colors Section"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.001" />
+
+                <TextView
+                    android:id="@+id/textViewNoiseVol"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:text="Vol"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.004"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.05" />
+
+                <TextView
+                    android:id="@+id/textViewNoiseVolMod"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:text="Mod"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.004"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.137" />
+
+                <TextView
+                    android:id="@+id/textViewNoiseVolRetrig"
+                    android:layout_width="60dp"
+                    android:layout_height="16dp"
+                    android:gravity="center"
+                    android:text="Retrig"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.004"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.435" />
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layouttoggleButtonNoiseVolModRetrig1"
+                    android:layout_width="225dp"
+                    android:layout_height="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.101"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.435">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonNoiseVolModRetrig1"
+                        android:layout_width="222dp"
+                        android:layout_height="13dp"
+                        android:background="#ff4F75A1"
+                        android:checked="@{obsIntNoiseVolRetrig1.value}"
+                        android:textOff=" "
+                        android:textOn=" "
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layouttoggleButtonNoiseCutModRetrig1"
+                    android:layout_width="225dp"
+                    android:layout_height="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.101"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.987">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonNoiseCutModRetrig1"
+                        android:layout_width="222dp"
+                        android:layout_height="13dp"
+                        android:background="#ff4F75A1"
+                        android:checked="@{obsIntNoiseCutRetrig1.value}"
+                        android:textOff=" "
+                        android:textOn=" "
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layouttoggleButtonNoiseVolModRetrig2"
+                    android:layout_width="225dp"
+                    android:layout_height="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.402"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.435">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonNoiseVolModRetrig2"
+                        android:layout_width="222dp"
+                        android:layout_height="13dp"
+                        android:background="#ff4F75A1"
+                        android:checked="@{obsIntNoiseVolRetrig2.value}"
+                        android:textOff=" "
+                        android:textOn=" "
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layouttoggleButtonNoiseCutModRetrig2"
+                    android:layout_width="225dp"
+                    android:layout_height="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.402"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.987">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonNoiseCutModRetrig2"
+                        android:layout_width="222dp"
+                        android:layout_height="13dp"
+                        android:background="#ff4F75A1"
+                        android:checked="@{obsIntNoiseCutRetrig2.value}"
+                        android:textOff=" "
+                        android:textOn=" "
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layouttoggleButtonNoiseCutModRetrig4"
+                    android:layout_width="225dp"
+                    android:layout_height="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.995"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.987">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonNoiseCutModRetrig4"
+                        android:layout_width="222dp"
+                        android:layout_height="13dp"
+                        android:background="#ff4F75A1"
+                        android:checked="@{obsIntNoiseCutRetrig4.value}"
+                        android:textOff=" "
+                        android:textOn=" "
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layouttoggleButtonNoiseCutModRetrig3"
+                    android:layout_width="225dp"
+                    android:layout_height="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.703"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.987">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonNoiseCutModRetrig3"
+                        android:layout_width="222dp"
+                        android:layout_height="13dp"
+                        android:background="#ff4F75A1"
+                        android:checked="@{obsIntNoiseCutRetrig3.value}"
+                        android:textOff=" "
+                        android:textOn=" "
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layouttoggleButtonNoiseVolModRetrig3"
+                    android:layout_width="225dp"
+                    android:layout_height="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.703"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.435">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonNoiseVolModRetrig3"
+                        android:layout_width="222dp"
+                        android:layout_height="13dp"
+                        android:background="#ff4F75A1"
+                        android:checked="@{obsIntNoiseVolRetrig3.value}"
+                        android:textOff=" "
+                        android:textOn=" "
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layouttoggleButtonNoiseVolModRetrig4"
+                    android:layout_width="225dp"
+                    android:layout_height="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.995"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.435">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonNoiseVolModRetrig4"
+                        android:layout_width="222dp"
+                        android:layout_height="13dp"
+                        android:background="#ff4F75A1"
+                        android:checked="@{obsIntNoiseVolRetrig4.value}"
+                        android:textOff=" "
+                        android:textOn=" "
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/textViewNoiseVolRate3"
+                    android:layout_width="60dp"
+                    android:layout_height="16dp"
+                    android:gravity="center"
+                    android:text="Div"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.004"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.303" />
+
+                <TextView
+                    android:id="@+id/textViewNoiseVolRate4"
+                    android:layout_width="60dp"
+                    android:layout_height="16dp"
+                    android:gravity="center"
+                    android:text="Sync"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.004"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.367" />
+
+                <TextView
+                    android:id="@+id/textViewNoiseVolRate2"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:text="Rate"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.004"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.221" />
+
+                <TextView
+                    android:id="@+id/textViewNoiseCut"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:text="Res"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.004"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.6" />
+
+                <TextView
+                    android:id="@+id/textViewNoiseCut2"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:text="Cut"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.004"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.513" />
+
+                <TextView
+                    android:id="@+id/textViewNoiseCutMod"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:text="Mod"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.004"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.686" />
+
+                <TextView
+                    android:id="@+id/textViewNoiseCutRetrig"
+                    android:layout_width="60dp"
+                    android:layout_height="16dp"
+                    android:gravity="center"
+                    android:text="Retrig"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.004"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.985" />
+
+                <TextView
+                    android:id="@+id/textViewNoiseCutRate4"
+                    android:layout_width="60dp"
+                    android:layout_height="16dp"
+                    android:gravity="center"
+                    android:text="Sync"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.004"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.914" />
+
+                <TextView
+                    android:id="@+id/textViewNoiseCutRate3"
+                    android:layout_width="60dp"
+                    android:layout_height="16dp"
+                    android:gravity="center"
+                    android:text="Div"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.004"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.846" />
+
+                <TextView
+                    android:id="@+id/textViewNoiseCutRate2"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:text="Rate"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.004"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.773" />
+
+                <Spinner
+                    android:id="@+id/spinnerNoiseVolModDiv2"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/black"
+                    android:entries="@array/spinnerDiv"
+                    android:popupBackground="@android:color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.402"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.293"
+                    app:selection="@{obsIntNoiseVolDiv2.value}" />
+
+                <Spinner
+                    android:id="@+id/spinnerNoiseCutModDiv4"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/black"
+                    android:entries="@array/spinnerDiv"
+                    android:popupBackground="@android:color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.996"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.86"
+                    app:selection="@{obsIntNoiseCutDiv4.value}" />
+
+                <Spinner
+                    android:id="@+id/spinnerNoiseVolModDiv3"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/black"
+                    android:entries="@array/spinnerDiv"
+                    android:popupBackground="@android:color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.703"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.293"
+                    app:selection="@{obsIntNoiseVolDiv3.value}" />
+
+                <Spinner
+                    android:id="@+id/spinnerNoiseVolModDiv4"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/black"
+                    android:entries="@array/spinnerDiv"
+                    android:popupBackground="@android:color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.996"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.293"
+                    app:selection="@{obsIntNoiseVolDiv4.value}" />
+
+                <Spinner
+                    android:id="@+id/spinnerNoiseCutModDiv2"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/black"
+                    android:entries="@array/spinnerDiv"
+                    android:popupBackground="@android:color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.402"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.86"
+                    app:selection="@{obsIntNoiseCutDiv2.value}" />
+
+                <Spinner
+                    android:id="@+id/spinnerNoiseCutModDiv3"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/black"
+                    android:entries="@array/spinnerDiv"
+                    android:popupBackground="@android:color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.703"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.86"
+                    app:selection="@{obsIntNoiseCutDiv3.value}" />
+
+                <Spinner
+                    android:id="@+id/spinnerNoiseCutModDiv1"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/black"
+                    android:entries="@array/spinnerDiv"
+                    android:popupBackground="@android:color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.101"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.86"
+                    app:selection="@{obsIntNoiseCutDiv1.value}" />
+
+                <Spinner
+                    android:id="@+id/spinnerNoiseVolModDiv1"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:background="@android:color/black"
+                    android:entries="@array/spinnerDiv"
+                    android:popupBackground="@android:color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.101"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.293"
+                    app:selection="@{obsIntNoiseVolDiv1.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseVol1"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.050000012"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseVol1.value}" />
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layouttoggleButtonNoiseVolModSync1"
+                    android:layout_width="225dp"
+                    android:layout_height="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.101"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.367">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonNoiseVolModSync1"
+                        android:layout_width="222dp"
+                        android:layout_height="13dp"
+                        android:background="#ff4F75A1"
+                        android:checked="@{obsIntNoiseVolSync1.value}"
+                        android:textOff=" "
+                        android:textOn=" "
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layouttoggleButtonNoiseVolModSync2"
+                    android:layout_width="225dp"
+                    android:layout_height="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.402"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.367">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonNoiseVolModSync2"
+                        android:layout_width="222dp"
+                        android:layout_height="13dp"
+                        android:background="#ff4F75A1"
+                        android:checked="@{obsIntNoiseVolSync2.value}"
+                        android:textOff=" "
+                        android:textOn=" "
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layouttoggleButtonNoiseVolModSync3"
+                    android:layout_width="225dp"
+                    android:layout_height="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.703"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.367">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonNoiseVolModSync3"
+                        android:layout_width="222dp"
+                        android:layout_height="13dp"
+                        android:background="#ff4F75A1"
+                        android:checked="@{obsIntNoiseVolSync3.value}"
+                        android:textOff=" "
+                        android:textOn=" "
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layouttoggleButtonNoiseVolModSync4"
+                    android:layout_width="225dp"
+                    android:layout_height="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.995"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.367">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonNoiseVolModSync4"
+                        android:layout_width="222dp"
+                        android:layout_height="13dp"
+                        android:background="#ff4F75A1"
+                        android:checked="@{obsIntNoiseVolSync4.value}"
+                        android:textOff=" "
+                        android:textOn=" "
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layouttoggleButtonNoiseCutModSync1"
+                    android:layout_width="225dp"
+                    android:layout_height="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.101"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.914">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonNoiseCutModSync1"
+                        android:layout_width="222dp"
+                        android:layout_height="13dp"
+                        android:background="#ff4F75A1"
+                        android:checked="@{obsIntNoiseCutSync1.value}"
+                        android:textOff=" "
+                        android:textOn=" "
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layouttoggleButtonNoiseCutModSync2"
+                    android:layout_width="225dp"
+                    android:layout_height="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.402"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.914">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonNoiseCutModSync2"
+                        android:layout_width="222dp"
+                        android:layout_height="13dp"
+                        android:background="#ff4F75A1"
+                        android:checked="@{obsIntNoiseCutSync2.value}"
+                        android:textOff=" "
+                        android:textOn=" "
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layouttoggleButtonNoiseCutModSync3"
+                    android:layout_width="225dp"
+                    android:layout_height="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.703"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.914">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonNoiseCutModSync3"
+                        android:layout_width="222dp"
+                        android:layout_height="13dp"
+                        android:background="#ff4F75A1"
+                        android:checked="@{obsIntNoiseCutSync3.value}"
+                        android:textOff=" "
+                        android:textOn=" "
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/layouttoggleButtonNoiseCutModSync4"
+                    android:layout_width="225dp"
+                    android:layout_height="16dp"
+                    android:background="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.995"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.914">
+
+                    <ToggleButton
+                        android:id="@+id/toggleButtonNoiseCutModSync4"
+                        android:layout_width="222dp"
+                        android:layout_height="13dp"
+                        android:background="#ff4F75A1"
+                        android:checked="@{obsIntNoiseCutSync4.value}"
+                        android:textOff=" "
+                        android:textOn=" "
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseVol3"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.703"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.050000012"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseVol3.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseVol2"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.402"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.050000012"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseVol2.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseVol4"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.050000012"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseVol4.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseVolMod1"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.101"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.134"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseVolMod1.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseVolMod2"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.402"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.134"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseVolMod2.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseVolMod3"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.703"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.134"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseVolMod3.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseVolMod4"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.134"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseVolMod4.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseVolRate3"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.703"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.221"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseVolRate3.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseVolRate1"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.101"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.221"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseVolRate1.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseVolRate2"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.402"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.221"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseVolRate2.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseVolRate4"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.221"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseVolRate4.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseRes1"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.101"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.6"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseRes1.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseCut1"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.101"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.513"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseCut1.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseCut2"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.402"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.513"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseCut2.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseCut3"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.703"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.513"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseCut3.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseCut4"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.513"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseCut4.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseRes2"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.402"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.6"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseRes2.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseRes3"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.703"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.6"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseRes3.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseRes4"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.6"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseRes4.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseCutRate1"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.101"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.773"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseCutRate1.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseCutRate2"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.402"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.773"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseCutRate2.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseCutRate3"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.703"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.773"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseCutRate3.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseCutRate4"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.773"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseCutRate4.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseCutMod1"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.101"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.686"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseCutMod1.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseCutMod2"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.402"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.686"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseCutMod2.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseCutMod3"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.703"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.686"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseCutMod3.value}" />
+
+                <com.rey.material.widget.Slider
+                    android:id="@+id/sliderNoiseCutMod4"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:keepScreenOn="true"
+                    android:padding="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="15dp"
+                    android:rotation="0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.686"
+                    app:sl_alwaysFillThumb="true"
+                    app:sl_maxValue="127"
+                    app:sl_primaryColor="#7dd0f4"
+                    app:sl_secondaryColor="#7dd0f4"
+                    app:sl_thumbFocusRadius="6dp"
+                    app:sl_thumbRadius="5dp"
+                    app:sl_thumbTouchRadius="25dp"
+                    app:sl_trackSize="1dp"
+                    app:sl_value="@{obsIntNoiseCutMod4.value}" />
+
+            </android.support.constraint.ConstraintLayout>
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

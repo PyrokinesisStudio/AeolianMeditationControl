@@ -194,8 +194,8 @@
 
         <android.support.constraint.ConstraintLayout
             android:id="@+id/layoutEffectsPageBackground"
-            android:layout_width="900dp"
-            android:layout_height="500dp"
+            android:layout_width="1200dp"
+            android:layout_height="650dp"
             android:background="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -205,8 +205,8 @@
 
             <ImageView
                 android:id="@+id/imageViewEffectsPageBack"
-                android:layout_width="897dp"
-                android:layout_height="497dp"
+                android:layout_width="1197dp"
+                android:layout_height="647dp"
                 android:background="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -325,8 +325,8 @@
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/layoutNavigate"
-                android:layout_width="380dp"
-                android:layout_height="80dp"
+                android:layout_width="500dp"
+                android:layout_height="100dp"
                 android:background="@android:color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -337,8 +337,8 @@
 
                 <ImageView
                     android:id="@+id/imageViewNavigateBack"
-                    android:layout_width="377dp"
-                    android:layout_height="77dp"
+                    android:layout_width="497dp"
+                    android:layout_height="97dp"
                     android:background="@android:color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -696,8 +696,8 @@
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/layoutEffects"
-                android:layout_width="850dp"
-                android:layout_height="400dp"
+                android:layout_width="1100dp"
+                android:layout_height="525dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -707,7 +707,7 @@
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layoutDecimator"
                     android:layout_width="match_parent"
-                    android:layout_height="65dp"
+                    android:layout_height="85dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -718,8 +718,8 @@
 
                     <ImageView
                         android:id="@+id/imageViewDecimatorBack"
-                        android:layout_width="847dp"
-                        android:layout_height="62dp"
+                        android:layout_width="1097dp"
+                        android:layout_height="82dp"
                         android:background="@android:color/black"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -729,7 +729,7 @@
 
                     <ImageView
                         android:id="@+id/imageViewSldierBack55"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="25dp"
                         android:background="@drawable/sliderback"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -741,7 +741,7 @@
 
                     <ImageView
                         android:id="@+id/imageViewSldierBack56"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="25dp"
                         android:background="@drawable/sliderback"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -753,7 +753,7 @@
 
                     <ImageView
                         android:id="@+id/imageViewSldierBack57"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="25dp"
                         android:background="@drawable/sliderback"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -765,7 +765,7 @@
 
                     <Spinner
                         android:id="@+id/spinnerDecimatorDiv"
-                        android:layout_width="75dp"
+                        android:layout_width="125dp"
                         android:layout_height="30dp"
                         android:background="@android:color/black"
                         android:entries="@array/spinnerNotes"
@@ -806,7 +806,7 @@
 
                     <TextView
                         android:id="@+id/textViewDecimatorMod"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Mod"
@@ -888,7 +888,7 @@
 
                     <TextView
                         android:id="@+id/textViewDecimatorDiv"
-                        android:layout_width="75dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Div"
@@ -903,7 +903,7 @@
 
                     <TextView
                         android:id="@+id/textViewDecimatorRate"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Rate"
@@ -1004,7 +1004,7 @@
 
                     <TextView
                         android:id="@+id/textViewDecimatorReduce"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Reduce"
@@ -1019,7 +1019,7 @@
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderDecimatorMod"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="15dp"
                         android:gravity="center"
                         android:keepScreenOn="true"
@@ -1045,7 +1045,7 @@
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderDecimatorRate"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="15dp"
                         android:gravity="center"
                         android:keepScreenOn="true"
@@ -1071,7 +1071,7 @@
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderDecimatorReduce"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="15dp"
                         android:gravity="center"
                         android:keepScreenOn="true"
@@ -1099,7 +1099,7 @@
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layoutFilter"
                     android:layout_width="match_parent"
-                    android:layout_height="65dp"
+                    android:layout_height="85dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -1110,8 +1110,8 @@
 
                     <ImageView
                         android:id="@+id/imageViewFilterBack"
-                        android:layout_width="847dp"
-                        android:layout_height="62dp"
+                        android:layout_width="1097dp"
+                        android:layout_height="82dp"
                         android:background="@android:color/black"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1122,7 +1122,7 @@
 
                     <Spinner
                         android:id="@+id/spinnerLpFilterDiv"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="30dp"
                         android:background="@android:color/black"
                         android:entries="@array/spinnerNotes"
@@ -1163,7 +1163,7 @@
 
                     <ImageView
                         android:id="@+id/imageViewSldierBack50"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="25dp"
                         android:background="@drawable/sliderback"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -1175,7 +1175,7 @@
 
                     <ImageView
                         android:id="@+id/imageViewSldierBack51"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="25dp"
                         android:background="@drawable/sliderback"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -1187,7 +1187,7 @@
 
                     <ImageView
                         android:id="@+id/imageViewSldierBack52"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="25dp"
                         android:background="@drawable/sliderback"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -1199,7 +1199,7 @@
 
                     <ImageView
                         android:id="@+id/imageViewSldierBack53"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="25dp"
                         android:background="@drawable/sliderback"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -1211,7 +1211,7 @@
 
                     <ImageView
                         android:id="@+id/imageViewSldierBack54"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="25dp"
                         android:background="@drawable/sliderback"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -1223,7 +1223,7 @@
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderLpFilterCut"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="15dp"
                         android:gravity="center"
                         android:keepScreenOn="true"
@@ -1249,7 +1249,7 @@
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderLpFilterRes"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="15dp"
                         android:gravity="center"
                         android:keepScreenOn="true"
@@ -1275,7 +1275,7 @@
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderLpFilterEnv"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="15dp"
                         android:gravity="center"
                         android:keepScreenOn="true"
@@ -1327,7 +1327,7 @@
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderLpFilterMod"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="15dp"
                         android:gravity="center"
                         android:keepScreenOn="true"
@@ -1379,7 +1379,7 @@
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderLpFilterRate"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="15dp"
                         android:gravity="center"
                         android:keepScreenOn="true"
@@ -1446,7 +1446,7 @@
 
                     <TextView
                         android:id="@+id/textViewFilterRes"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Res"
@@ -1461,7 +1461,7 @@
 
                     <TextView
                         android:id="@+id/textViewFilterEnv"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Env"
@@ -1521,7 +1521,7 @@
 
                     <TextView
                         android:id="@+id/textViewFilterMod"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Mod"
@@ -1536,7 +1536,7 @@
 
                     <TextView
                         android:id="@+id/textViewFilterDiv"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Div"
@@ -1551,7 +1551,7 @@
 
                     <TextView
                         android:id="@+id/textViewFilterRate"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Rate"
@@ -1566,7 +1566,7 @@
 
                     <TextView
                         android:id="@+id/textViewFilterCut"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Cut"
@@ -1597,7 +1597,7 @@
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layoutDelay"
                     android:layout_width="match_parent"
-                    android:layout_height="65dp"
+                    android:layout_height="85dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -1608,8 +1608,8 @@
 
                     <ImageView
                         android:id="@+id/imageViewDelayBack"
-                        android:layout_width="847dp"
-                        android:layout_height="62dp"
+                        android:layout_width="1097dp"
+                        android:layout_height="82dp"
                         android:background="@android:color/black"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -1620,7 +1620,7 @@
 
                     <ImageView
                         android:id="@+id/imageViewSldierBack58"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="25dp"
                         android:background="@drawable/sliderback"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -1632,7 +1632,7 @@
 
                     <ImageView
                         android:id="@+id/imageViewSldierBack59"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="25dp"
                         android:background="@drawable/sliderback"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -1644,7 +1644,7 @@
 
                     <ImageView
                         android:id="@+id/imageViewSldierBack61"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="25dp"
                         android:background="@drawable/sliderback"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -1656,7 +1656,7 @@
 
                     <ImageView
                         android:id="@+id/imageViewSldierBack60"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="25dp"
                         android:background="@drawable/sliderback"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -1694,7 +1694,7 @@
 
                     <Spinner
                         android:id="@+id/spinnerDelayDiv"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="30dp"
                         android:background="@android:color/black"
                         android:entries="@array/spinnerNotes"
@@ -1724,7 +1724,7 @@
 
                     <TextView
                         android:id="@+id/textViewDelayDivL"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Div L"
@@ -1739,7 +1739,7 @@
 
                     <TextView
                         android:id="@+id/textViewDelayDivR"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Div R"
@@ -1780,7 +1780,7 @@
 
                     <TextView
                         android:id="@+id/textViewDelayFeed"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Feed"
@@ -1821,7 +1821,7 @@
 
                     <TextView
                         android:id="@+id/textViewDelayWet"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Wet"
@@ -1881,7 +1881,7 @@
 
                     <TextView
                         android:id="@+id/textViewDelayTime"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Time L"
@@ -1896,7 +1896,7 @@
 
                     <TextView
                         android:id="@+id/textViewDelayTimeR"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Time R"
@@ -1926,7 +1926,7 @@
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderDelayFeed"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="15dp"
                         android:gravity="center"
                         android:keepScreenOn="true"
@@ -1952,7 +1952,7 @@
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderDelayWet"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="15dp"
                         android:gravity="center"
                         android:keepScreenOn="true"
@@ -1978,7 +1978,7 @@
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderDelayTime"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="15dp"
                         android:gravity="center"
                         android:keepScreenOn="true"
@@ -2004,7 +2004,7 @@
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderDelayTimeR"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="15dp"
                         android:gravity="center"
                         android:keepScreenOn="true"
@@ -2032,7 +2032,7 @@
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layoutChorus"
                     android:layout_width="match_parent"
-                    android:layout_height="65dp"
+                    android:layout_height="85dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -2043,8 +2043,8 @@
 
                     <ImageView
                         android:id="@+id/imageViewChorusBack"
-                        android:layout_width="847dp"
-                        android:layout_height="62dp"
+                        android:layout_width="1097dp"
+                        android:layout_height="82dp"
                         android:background="@android:color/black"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -2055,7 +2055,7 @@
 
                     <ImageView
                         android:id="@+id/imageViewSldierBack63"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="25dp"
                         android:background="@drawable/sliderback"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -2067,7 +2067,7 @@
 
                     <ImageView
                         android:id="@+id/imageViewSldierBack64"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="25dp"
                         android:background="@drawable/sliderback"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -2079,7 +2079,7 @@
 
                     <ImageView
                         android:id="@+id/imageViewSldierBack65"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="25dp"
                         android:background="@drawable/sliderback"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -2091,7 +2091,7 @@
 
                     <ImageView
                         android:id="@+id/imageViewSldierBack66"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="25dp"
                         android:background="@drawable/sliderback"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -2103,7 +2103,7 @@
 
                     <ImageView
                         android:id="@+id/imageViewSldierBack67"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="25dp"
                         android:background="@drawable/sliderback"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -2115,7 +2115,7 @@
 
                     <ImageView
                         android:id="@+id/imageViewSldierBack72"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="25dp"
                         android:background="@drawable/sliderback"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -2157,7 +2157,7 @@
 
                     <TextView
                         android:id="@+id/textViewChorusDepth"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Depth"
@@ -2198,7 +2198,7 @@
 
                     <TextView
                         android:id="@+id/textViewChorusFeedL"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Feed L"
@@ -2239,7 +2239,7 @@
 
                     <TextView
                         android:id="@+id/textViewChorusFeedR"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Feed R"
@@ -2254,7 +2254,7 @@
 
                     <TextView
                         android:id="@+id/textViewChorusWet"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Wet"
@@ -2269,7 +2269,7 @@
 
                     <TextView
                         android:id="@+id/textViewChorusDelay"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Delay"
@@ -2284,7 +2284,7 @@
 
                     <TextView
                         android:id="@+id/textViewChorusRate"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Rate"
@@ -2314,7 +2314,7 @@
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderChorusDepth"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="15dp"
                         android:gravity="center"
                         android:keepScreenOn="true"
@@ -2340,7 +2340,7 @@
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderChorusDelay"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="15dp"
                         android:gravity="center"
                         android:keepScreenOn="true"
@@ -2366,7 +2366,7 @@
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderChorusFeed"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="15dp"
                         android:gravity="center"
                         android:keepScreenOn="true"
@@ -2392,7 +2392,7 @@
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderChorusFeedR"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="15dp"
                         android:gravity="center"
                         android:keepScreenOn="true"
@@ -2418,7 +2418,7 @@
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderChorusWet"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="15dp"
                         android:gravity="center"
                         android:keepScreenOn="true"
@@ -2444,7 +2444,7 @@
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderChorusRate"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="15dp"
                         android:gravity="center"
                         android:keepScreenOn="true"
@@ -2472,7 +2472,7 @@
                 <android.support.constraint.ConstraintLayout
                     android:id="@+id/layoutReverb"
                     android:layout_width="match_parent"
-                    android:layout_height="65dp"
+                    android:layout_height="85dp"
                     android:background="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -2483,8 +2483,8 @@
 
                     <ImageView
                         android:id="@+id/imageViewReverbBack"
-                        android:layout_width="847dp"
-                        android:layout_height="62dp"
+                        android:layout_width="1097dp"
+                        android:layout_height="82dp"
                         android:background="@android:color/black"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -2495,7 +2495,7 @@
 
                     <Spinner
                         android:id="@+id/spinnerReverbSize"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="30dp"
                         android:background="@android:color/black"
                         android:entries="@array/spinnerReverbSize"
@@ -2510,7 +2510,7 @@
 
                     <ImageView
                         android:id="@+id/imageViewSldierBack70"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="25dp"
                         android:background="@drawable/sliderback"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -2522,7 +2522,7 @@
 
                     <ImageView
                         android:id="@+id/imageViewSldierBack78"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="25dp"
                         android:background="@drawable/sliderback"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -2534,7 +2534,7 @@
 
                     <ImageView
                         android:id="@+id/imageViewSldierBack79"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="25dp"
                         android:background="@drawable/sliderback"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -2546,7 +2546,7 @@
 
                     <ImageView
                         android:id="@+id/imageViewSldierBack69"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="25dp"
                         android:background="@drawable/sliderback"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -2558,7 +2558,7 @@
 
                     <ImageView
                         android:id="@+id/imageViewSldierBack71"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="25dp"
                         android:background="@drawable/sliderback"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -2570,7 +2570,7 @@
 
                     <TextView
                         android:id="@+id/textViewReverbSize"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Type"
@@ -2585,7 +2585,7 @@
 
                     <TextView
                         android:id="@+id/textViewReverbDelay"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Delay"
@@ -2600,7 +2600,7 @@
 
                     <TextView
                         android:id="@+id/textViewReverbHp"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Highpass"
@@ -2615,7 +2615,7 @@
 
                     <TextView
                         android:id="@+id/textViewReverbWidth"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Stereo"
@@ -2671,7 +2671,7 @@
 
                     <TextView
                         android:id="@+id/textViewReverbDamp"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Damp"
@@ -2686,7 +2686,7 @@
 
                     <TextView
                         android:id="@+id/textViewReverbWet"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="Wet"
@@ -2701,7 +2701,7 @@
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderReverbDelay"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="15dp"
                         android:gravity="center"
                         android:keepScreenOn="true"
@@ -2727,7 +2727,7 @@
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderReverbHp"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="15dp"
                         android:gravity="center"
                         android:keepScreenOn="true"
@@ -2753,7 +2753,7 @@
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderReverbWet"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="15dp"
                         android:gravity="center"
                         android:keepScreenOn="true"
@@ -2779,7 +2779,7 @@
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderReverbWidth"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="15dp"
                         android:gravity="center"
                         android:keepScreenOn="true"
@@ -2805,7 +2805,7 @@
 
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderReverbDamp"
-                        android:layout_width="100dp"
+                        android:layout_width="125dp"
                         android:layout_height="15dp"
                         android:gravity="center"
                         android:keepScreenOn="true"
