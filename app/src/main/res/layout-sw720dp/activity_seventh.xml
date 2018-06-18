@@ -146,7 +146,7 @@
             android:background="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.85"
+            app:layout_constraintHorizontal_bias="0.82"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.963">
@@ -168,7 +168,7 @@
 
         <TextView
             android:id="@+id/textViewGlideTime"
-            android:layout_width="125dp"
+            android:layout_width="175dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Time"
@@ -176,26 +176,26 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.99"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.86" />
 
         <ImageView
             android:id="@+id/imageViewSldierBack84"
-            android:layout_width="125dp"
+            android:layout_width="175dp"
             android:layout_height="20dp"
             android:background="@drawable/sliderback"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.99"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.92" />
 
         <ImageView
             android:id="@+id/imageViewSldierBack83"
-            android:layout_width="125dp"
+            android:layout_width="175dp"
             android:layout_height="20dp"
             android:background="@drawable/sliderback"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -207,7 +207,7 @@
 
         <com.rey.material.widget.Slider
             android:id="@+id/sliderPitchBend"
-            android:layout_width="125dp"
+            android:layout_width="175dp"
             android:layout_height="20dp"
             android:gravity="center"
             android:keepScreenOn="true"
@@ -231,7 +231,7 @@
 
         <com.rey.material.widget.Slider
             android:id="@+id/sliderGlideTime"
-            android:layout_width="125dp"
+            android:layout_width="175dp"
             android:layout_height="20dp"
             android:gravity="center"
             android:keepScreenOn="true"
@@ -239,7 +239,7 @@
             android:rotation="0"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.99"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.92"
@@ -263,7 +263,7 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.85"
+            app:layout_constraintHorizontal_bias="0.82"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.86" />
@@ -292,7 +292,7 @@
             android:popupBackground="@android:color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.76"
+            app:layout_constraintHorizontal_bias="0.74"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.93" />
@@ -307,7 +307,7 @@
             android:popupBackground="@android:color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.997"
+            app:layout_constraintHorizontal_bias="0.99"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.091"
@@ -315,7 +315,7 @@
 
         <Spinner
             android:id="@+id/spinnerBendRange"
-            android:layout_width="125dp"
+            android:layout_width="150dp"
             android:layout_height="30dp"
             android:background="#000000"
             android:entries="@array/spinnerBendRange"
@@ -331,7 +331,7 @@
 
         <android.support.constraint.ConstraintLayout
             android:id="@+id/layoutEnv"
-            android:layout_width="500dp"
+            android:layout_width="700dp"
             android:layout_height="50dp"
             android:background="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -343,7 +343,7 @@
 
             <ImageView
                 android:id="@+id/imageViewKeysBack3"
-                android:layout_width="497dp"
+                android:layout_width="697dp"
                 android:layout_height="47dp"
                 android:background="@android:color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -369,7 +369,7 @@
 
             <TextView
                 android:id="@+id/textViewVolEnvAttack"
-                android:layout_width="125dp"
+                android:layout_width="175dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Attack"
@@ -384,7 +384,7 @@
 
             <TextView
                 android:id="@+id/textViewVolEnvDecay"
-                android:layout_width="125dp"
+                android:layout_width="175dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Decay"
@@ -399,7 +399,7 @@
 
             <TextView
                 android:id="@+id/textViewVolEnvSustain"
-                android:layout_width="125dp"
+                android:layout_width="175dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Sustain"
@@ -414,7 +414,7 @@
 
             <TextView
                 android:id="@+id/textViewVolEnvRelease"
-                android:layout_width="125dp"
+                android:layout_width="175dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Release"
@@ -429,7 +429,7 @@
 
             <ImageView
                 android:id="@+id/imageViewSldierBack68"
-                android:layout_width="125dp"
+                android:layout_width="175dp"
                 android:layout_height="20dp"
                 android:background="@drawable/sliderback"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -441,7 +441,7 @@
 
             <ImageView
                 android:id="@+id/imageViewSldierBack82"
-                android:layout_width="125dp"
+                android:layout_width="175dp"
                 android:layout_height="20dp"
                 android:background="@drawable/sliderback"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -453,7 +453,7 @@
 
             <ImageView
                 android:id="@+id/imageViewSldierBack81"
-                android:layout_width="125dp"
+                android:layout_width="175dp"
                 android:layout_height="20dp"
                 android:background="@drawable/sliderback"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -465,7 +465,7 @@
 
             <ImageView
                 android:id="@+id/imageViewSldierBack80"
-                android:layout_width="125dp"
+                android:layout_width="175dp"
                 android:layout_height="20dp"
                 android:background="@drawable/sliderback"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -477,7 +477,7 @@
 
             <com.rey.material.widget.Slider
                 android:id="@+id/sliderEnvS"
-                android:layout_width="125dp"
+                android:layout_width="175dp"
                 android:layout_height="20dp"
                 android:gravity="center"
                 android:keepScreenOn="true"
@@ -501,7 +501,7 @@
 
             <com.rey.material.widget.Slider
                 android:id="@+id/sliderEnvA"
-                android:layout_width="125dp"
+                android:layout_width="175dp"
                 android:layout_height="20dp"
                 android:gravity="center"
                 android:keepScreenOn="true"
@@ -525,7 +525,7 @@
 
             <com.rey.material.widget.Slider
                 android:id="@+id/sliderEnvR"
-                android:layout_width="125dp"
+                android:layout_width="175dp"
                 android:layout_height="20dp"
                 android:gravity="center"
                 android:keepScreenOn="true"
@@ -549,7 +549,7 @@
 
             <com.rey.material.widget.Slider
                 android:id="@+id/sliderEnvD"
-                android:layout_width="125dp"
+                android:layout_width="175dp"
                 android:layout_height="20dp"
                 android:gravity="center"
                 android:keepScreenOn="true"
@@ -582,14 +582,14 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.76"
+            app:layout_constraintHorizontal_bias="0.74"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.86" />
 
         <TextView
             android:id="@+id/textViewBendRange"
-            android:layout_width="125dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Bend Range"
@@ -612,14 +612,14 @@
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.998"
+            app:layout_constraintHorizontal_bias="0.99"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.057" />
 
         <TextView
             android:id="@+id/textViewPitchBend"
-            android:layout_width="125dp"
+            android:layout_width="175dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Pitch Bend"

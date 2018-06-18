@@ -727,42 +727,6 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <ImageView
-                        android:id="@+id/imageViewSldierBack55"
-                        android:layout_width="100dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/sliderback"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.002"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.83" />
-
-                    <ImageView
-                        android:id="@+id/imageViewSldierBack56"
-                        android:layout_width="100dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/sliderback"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.323"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.83" />
-
-                    <ImageView
-                        android:id="@+id/imageViewSldierBack57"
-                        android:layout_width="100dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/sliderback"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.162"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.83" />
-
                     <Spinner
                         android:id="@+id/spinnerDecimatorDiv"
                         android:layout_width="75dp"
@@ -1161,66 +1125,6 @@
                             app:layout_constraintTop_toTopOf="parent" />
                     </android.support.constraint.ConstraintLayout>
 
-                    <ImageView
-                        android:id="@+id/imageViewSldierBack50"
-                        android:layout_width="100dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/sliderback"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.88" />
-
-                    <ImageView
-                        android:id="@+id/imageViewSldierBack51"
-                        android:layout_width="100dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/sliderback"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.136"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.88" />
-
-                    <ImageView
-                        android:id="@+id/imageViewSldierBack52"
-                        android:layout_width="100dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/sliderback"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.273"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.88" />
-
-                    <ImageView
-                        android:id="@+id/imageViewSldierBack53"
-                        android:layout_width="100dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/sliderback"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.41"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.88" />
-
-                    <ImageView
-                        android:id="@+id/imageViewSldierBack54"
-                        android:layout_width="100dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/sliderback"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.546"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.88" />
-
                     <com.rey.material.widget.Slider
                         android:id="@+id/sliderLpFilterCut"
                         android:layout_width="100dp"
@@ -1618,54 +1522,6 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.5" />
 
-                    <ImageView
-                        android:id="@+id/imageViewSldierBack58"
-                        android:layout_width="100dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/sliderback"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.16"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.83" />
-
-                    <ImageView
-                        android:id="@+id/imageViewSldierBack59"
-                        android:layout_width="100dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/sliderback"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.695"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.83" />
-
-                    <ImageView
-                        android:id="@+id/imageViewSldierBack61"
-                        android:layout_width="100dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/sliderback"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.895"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.83" />
-
-                    <ImageView
-                        android:id="@+id/imageViewSldierBack60"
-                        android:layout_width="100dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/sliderback"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.002"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.83" />
-
                     <android.support.constraint.ConstraintLayout
                         android:id="@+id/layouttoggleButtonDelaySync"
                         android:layout_width="30dp"
@@ -2053,78 +1909,6 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.5" />
 
-                    <ImageView
-                        android:id="@+id/imageViewSldierBack63"
-                        android:layout_width="100dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/sliderback"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.002"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.79" />
-
-                    <ImageView
-                        android:id="@+id/imageViewSldierBack64"
-                        android:layout_width="100dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/sliderback"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.324"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.79" />
-
-                    <ImageView
-                        android:id="@+id/imageViewSldierBack65"
-                        android:layout_width="100dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/sliderback"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.1635"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.79" />
-
-                    <ImageView
-                        android:id="@+id/imageViewSldierBack66"
-                        android:layout_width="100dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/sliderback"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.485"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.79" />
-
-                    <ImageView
-                        android:id="@+id/imageViewSldierBack67"
-                        android:layout_width="100dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/sliderback"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.87"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.79" />
-
-                    <ImageView
-                        android:id="@+id/imageViewSldierBack72"
-                        android:layout_width="100dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/sliderback"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.645"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.79" />
-
                     <TextView
                         android:id="@+id/textViewChorusPower"
                         android:layout_width="wrap_content"
@@ -2507,66 +2291,6 @@
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.75"
                         app:selection="@{obsIntReverbSize.value}" />
-
-                    <ImageView
-                        android:id="@+id/imageViewSldierBack70"
-                        android:layout_width="100dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/sliderback"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.484"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.79" />
-
-                    <ImageView
-                        android:id="@+id/imageViewSldierBack78"
-                        android:layout_width="100dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/sliderback"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.16"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.79" />
-
-                    <ImageView
-                        android:id="@+id/imageViewSldierBack79"
-                        android:layout_width="100dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/sliderback"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.321"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.79" />
-
-                    <ImageView
-                        android:id="@+id/imageViewSldierBack69"
-                        android:layout_width="100dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/sliderback"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.645"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.79" />
-
-                    <ImageView
-                        android:id="@+id/imageViewSldierBack71"
-                        android:layout_width="100dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/sliderback"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.805"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.79" />
 
                     <TextView
                         android:id="@+id/textViewReverbSize"

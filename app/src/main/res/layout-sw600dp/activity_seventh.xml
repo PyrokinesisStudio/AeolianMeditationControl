@@ -181,30 +181,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.86" />
 
-        <ImageView
-            android:id="@+id/imageViewSldierBack84"
-            android:layout_width="125dp"
-            android:layout_height="20dp"
-            android:background="@drawable/sliderback"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.92" />
-
-        <ImageView
-            android:id="@+id/imageViewSldierBack83"
-            android:layout_width="125dp"
-            android:layout_height="20dp"
-            android:background="@drawable/sliderback"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.01"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.091" />
-
         <com.rey.material.widget.Slider
             android:id="@+id/sliderPitchBend"
             android:layout_width="125dp"
@@ -426,54 +402,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.35000002" />
-
-            <ImageView
-                android:id="@+id/imageViewSldierBack68"
-                android:layout_width="125dp"
-                android:layout_height="20dp"
-                android:background="@drawable/sliderback"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.88" />
-
-            <ImageView
-                android:id="@+id/imageViewSldierBack82"
-                android:layout_width="125dp"
-                android:layout_height="20dp"
-                android:background="@drawable/sliderback"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.666"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.88" />
-
-            <ImageView
-                android:id="@+id/imageViewSldierBack81"
-                android:layout_width="125dp"
-                android:layout_height="20dp"
-                android:background="@drawable/sliderback"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.333"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.88" />
-
-            <ImageView
-                android:id="@+id/imageViewSldierBack80"
-                android:layout_width="125dp"
-                android:layout_height="20dp"
-                android:background="@drawable/sliderback"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.88" />
 
             <com.rey.material.widget.Slider
                 android:id="@+id/sliderEnvS"
