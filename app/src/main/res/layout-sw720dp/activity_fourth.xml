@@ -223,7 +223,7 @@
                 app:layout_constraintHorizontal_bias="0.98"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.963">
+                app:layout_constraintVertical_bias="0.958">
 
                 <Button
                     android:id="@+id/buttonEffectsRandom"
@@ -251,7 +251,7 @@
                 app:layout_constraintHorizontal_bias="0.74"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.86" />
+                app:layout_constraintVertical_bias="0.865" />
 
             <TextView
                 android:id="@+id/textViewEffectsInnit2"
@@ -266,7 +266,7 @@
                 app:layout_constraintHorizontal_bias="0.86"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.86" />
+                app:layout_constraintVertical_bias="0.865" />
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/layoutEffectsInnit"
@@ -278,7 +278,7 @@
                 app:layout_constraintHorizontal_bias="0.86"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.963">
+                app:layout_constraintVertical_bias="0.958">
 
                 <Button
                     android:id="@+id/buttonEffectsInnit"
@@ -306,7 +306,7 @@
                 app:layout_constraintHorizontal_bias="0.981"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.86" />
+                app:layout_constraintVertical_bias="0.865" />
 
             <TextView
                 android:id="@+id/textViewDelayChorus"
@@ -321,7 +321,7 @@
                 app:layout_constraintHorizontal_bias="0.625"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.86" />
+                app:layout_constraintVertical_bias="0.865" />
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/layoutNavigate"
@@ -638,7 +638,7 @@
                 app:layout_constraintHorizontal_bias="0.62"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.963">
+                app:layout_constraintVertical_bias="0.958">
 
                 <ToggleButton
                     android:id="@+id/toggleButtonDelayChorus"
@@ -679,7 +679,7 @@
                 app:layout_constraintHorizontal_bias="0.74"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.963">
+                app:layout_constraintVertical_bias="0.958">
 
                 <ToggleButton
                     android:id="@+id/toggleButtonEffectsPowerAll"
@@ -1908,18 +1908,6 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.5" />
-
-                    <ImageView
-                        android:id="@+id/imageViewSldierBack63"
-                        android:layout_width="125dp"
-                        android:layout_height="25dp"
-                        android:background="@drawable/sliderback"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.002"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.79" />
 
                     <TextView
                         android:id="@+id/textViewChorusPower"

@@ -130,7 +130,7 @@
                 app:layout_constraintHorizontal_bias="0.66"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.963">
+                app:layout_constraintVertical_bias="0.958">
 
                 <Button
                     android:id="@+id/buttonTrigger"
@@ -158,7 +158,7 @@
                 app:layout_constraintHorizontal_bias="0.66"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.86" />
+                app:layout_constraintVertical_bias="0.865" />
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/layoutDrone"
@@ -170,7 +170,7 @@
                 app:layout_constraintHorizontal_bias="0.54"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.963">
+                app:layout_constraintVertical_bias="0.958">
 
                 <ToggleButton
                     android:id="@+id/toggleButtonDrone"
@@ -200,7 +200,7 @@
                 app:layout_constraintHorizontal_bias="0.54"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.86" />
+                app:layout_constraintVertical_bias="0.865" />
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/layoutNavigate"

@@ -311,7 +311,7 @@
                 app:layout_constraintHorizontal_bias="0.61"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.963">
+                app:layout_constraintVertical_bias="0.958">
 
                 <ToggleButton
                     android:id="@+id/toggleButtonHarmVolModRetrig"
@@ -354,7 +354,7 @@
                 app:layout_constraintHorizontal_bias="0.52"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.86" />
+                app:layout_constraintVertical_bias="0.865" />
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/layoutNavigate"
@@ -671,7 +671,7 @@
                 app:layout_constraintHorizontal_bias="0.52"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.963">
+                app:layout_constraintVertical_bias="0.958">
 
                 <ToggleButton
                     android:id="@+id/toggleButtonHarmSyncAll"
@@ -699,7 +699,7 @@
                 app:layout_constraintHorizontal_bias="0.609"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.86" />
+                app:layout_constraintVertical_bias="0.865" />
 
             <TextView
                 android:id="@+id/textViewHarmRandom"
@@ -714,7 +714,7 @@
                 app:layout_constraintHorizontal_bias="0.86"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.86" />
+                app:layout_constraintVertical_bias="0.865" />
 
             <TextView
                 android:id="@+id/textViewHarmRandom2"
@@ -729,7 +729,7 @@
                 app:layout_constraintHorizontal_bias="0.97"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.86" />
+                app:layout_constraintVertical_bias="0.865" />
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/layoutHarmonicsInnit"
@@ -741,7 +741,7 @@
                 app:layout_constraintHorizontal_bias="0.86"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.963">
+                app:layout_constraintVertical_bias="0.958">
 
                 <Button
                     android:id="@+id/buttonHarmonicsInnit"
@@ -769,7 +769,7 @@
                 app:layout_constraintHorizontal_bias="0.74"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.86" />
+                app:layout_constraintVertical_bias="0.865" />
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/layoutHarmonicsRandom"
@@ -781,7 +781,7 @@
                 app:layout_constraintHorizontal_bias="0.97"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.963">
+                app:layout_constraintVertical_bias="0.958">
 
                 <Button
                     android:id="@+id/buttonHarmonicsRandom"

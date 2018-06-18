@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
         <variable
@@ -152,7 +152,7 @@
                 app:layout_constraintHorizontal_bias="0.98"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.963">
+                app:layout_constraintVertical_bias="0.958">
 
                 <Button
                     android:id="@+id/buttonSourceRandom"
@@ -180,7 +180,7 @@
                 app:layout_constraintHorizontal_bias="0.86"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.86" />
+                app:layout_constraintVertical_bias="0.865" />
 
             <TextView
                 android:id="@+id/textViewRateRange"
@@ -195,7 +195,7 @@
                 app:layout_constraintHorizontal_bias="0.739"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.86" />
+                app:layout_constraintVertical_bias="0.865" />
 
             <Spinner
                 android:id="@+id/spinnerFmRateRange"
@@ -222,7 +222,7 @@
                 app:layout_constraintHorizontal_bias="0.86"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.963">
+                app:layout_constraintVertical_bias="0.958">
 
                 <Button
                     android:id="@+id/buttonSourceInnit"
@@ -250,7 +250,7 @@
                 app:layout_constraintHorizontal_bias="0.981"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.86" />
+                app:layout_constraintVertical_bias="0.865" />
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/layoutNavigate"
