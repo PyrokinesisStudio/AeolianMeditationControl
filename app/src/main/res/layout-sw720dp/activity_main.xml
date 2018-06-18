@@ -514,7 +514,7 @@
                 android:background="@android:color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.59"
+                app:layout_constraintHorizontal_bias="0.64"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.04">
@@ -666,7 +666,7 @@
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/layoutMix"
-                android:layout_width="350dp"
+                android:layout_width="500dp"
                 android:layout_height="250dp"
                 android:background="@android:color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -678,7 +678,7 @@
 
                 <ImageView
                     android:id="@+id/imageViewMixBack"
-                    android:layout_width="347dp"
+                    android:layout_width="497dp"
                     android:layout_height="247dp"
                     android:background="@android:color/black"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -1113,25 +1113,25 @@
 
             <ImageView
                 android:id="@+id/imageViewAeolianLogo"
-                android:layout_width="960dp"
-                android:layout_height="235dp"
+                android:layout_width="1180dp"
+                android:layout_height="257dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.73"
+                app:layout_constraintVertical_bias="0.679"
                 app:srcCompat="@drawable/aeolian860" />
 
             <ImageView
                 android:id="@+id/imageViewOsLogo"
-                android:layout_width="253dp"
-                android:layout_height="59dp"
+                android:layout_width="347dp"
+                android:layout_height="90dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.96"
+                app:layout_constraintHorizontal_bias="0.98"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.96"
+                app:layout_constraintVertical_bias="0.971"
                 app:srcCompat="@drawable/oslogo" />
 
         </android.support.constraint.ConstraintLayout>

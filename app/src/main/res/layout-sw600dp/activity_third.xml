@@ -1428,8 +1428,6 @@
                         android:id="@+id/toggleButtonNoiseVolModSync1"
                         android:layout_width="187dp"
                         android:layout_height="13dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginRight="8dp"
                         android:background="#ff4F75A1"
                         android:checked="@{obsIntNoiseVolSync1.value}"
                         android:textOff=" "
