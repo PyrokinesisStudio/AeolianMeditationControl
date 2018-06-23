@@ -2358,7 +2358,7 @@ public class MainActivity extends AppCompatActivity {
                 getMyNetAddress();
                 String myMsgAddress = "/1/2525/1/191";
                 OscMessage myOscMessage = new OscMessage(myMsgAddress);
-                myOscMessage.add(Math.round(((position + 1) / 16.0f) * 127.0f));
+                myOscMessage.add(position);
                 oscP5.send(myOscMessage, getBroadcastLocation);
                 midiChan = position;
             }
