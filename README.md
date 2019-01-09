@@ -1,7 +1,7 @@
 # AeolianMeditationAdvancedController
 AMAC Android Studio Java Project
 
-<img src="http://www.faxinadu.net/images/aeolian_1.png">
+<img src="http://www.faxinadu.net/images/aeolian_1.png height="240" width="399">
 
 Aeolian Meditation Control allows the user control of the Aeolian Meditation VSTi and or standalone synthesizer using an Android phone or tablet with full bi-directional control capability. Every parameter on the device is represented on the app, as well as enhanced functionality such as XY pads and randomizers.
 
@@ -17,4 +17,4 @@ oscp5 by sojamo Licensed Under: LGPL-2.1
 https://github.com/sojamo/oscp5
 
 
-<img src="http://www.faxinadu.net/images/aeolian_6.png">
+<img src="http://www.faxinadu.net/images/aeolian_6.png" height="240" width="399">
