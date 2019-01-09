@@ -7,7 +7,7 @@ AMAC Android Studio Java Project
 <br>
 <b>Project</b>
 <br>
-Aeolian Meditation Control allows the user control of the Aeolian Meditation VSTi and or standalone synthesizer using an Android phone or tablet with full bi-directional control capability. Every parameter on the device is represented on the app, as well as enhanced functionality such as XY pads and randomizers.
+Aeolian Meditation Control allows the user control of the <a href="https://oceanswift.net/aeolianmeditation/">Aeolian Meditation VSTi and or standalone synthesizer</a> using an Android phone or tablet with full bi-directional control capability. Every parameter on the device is represented on the app, as well as enhanced functionality such as XY pads and randomizers.
 <br>
 <br>
 The project is written in Java using Android Studio, and implements oscP5 by Sojamo as the OSC control library.
