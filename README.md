@@ -1,4 +1,4 @@
-# AeolianMeditationAdvancedController
+# AeolianMeditationController
 AMAC Android Studio Java Project
 
 <img src="http://www.faxinadu.net/images/aeolian_1.png" height="240" width="399">
