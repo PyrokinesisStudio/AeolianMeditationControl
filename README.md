@@ -20,14 +20,18 @@ Installation
 <br>
 Clone or download the entire repository, open it in Android and run a gradle build.
 <br>
+<br>
 The linked libraries used for the sliders and OSC control are already included in the gradle build, there is no need to download them extra. 
 <br>
 They are:
 <br>
 Material by Rey Licensed Under: Apache License 2.0
+<br>
 https://github.com/rey5137/material
 <br>
+<br>
 oscp5 by sojamo Licensed Under: LGPL-2.1
+<br>
 https://github.com/sojamo/oscp5
 <br>
 <img src="http://www.faxinadu.net/images/aeolian_6.png" height="240" width="399">
